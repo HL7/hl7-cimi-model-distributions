@@ -1,0 +1,40 @@
+archetype (adl_version=2.0.6; rm_release=0.0.1)
+	CIMI-CORE-IndivisibleClinicalStatement.wound_assertion_known_present_stmt.v1.0.0
+
+specialize
+	CIMI-CORE-IndivisibleClinicalStatement.assertion_known_present_stmt.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"My Name <my_email_id@my_org.org>">
+		["organisation"] = <"Org name <http://www.my_org.org>">
+	>
+	copyright = <"Copyright (c) 2016 My Name OR Some Org">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	IndivisibleClinicalStatement[id1.1.1.1.1.1.1] matches {
+		topic matches {
+			use_archetype Assertion [id4.0.1.0.0.1.1, CIMI-CORE-Assertion.wound_assertion.v1]
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1.1.1.1"] = <
+				text = <"Wound assertion statement">
+				description = <"A clinical statement asserting the known presence of a wound.">
+			>
+		>
+	>

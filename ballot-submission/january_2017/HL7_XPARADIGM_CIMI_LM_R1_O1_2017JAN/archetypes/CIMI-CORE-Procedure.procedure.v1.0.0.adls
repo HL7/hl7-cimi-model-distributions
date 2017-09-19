@@ -1,0 +1,167 @@
+archetype (adl_version=2.0.6; rm_release=2.0.2)
+  CIMI-CORE-Procedure.procedure.v1.0.0
+
+specialize
+  CIMI-CORE-Act.act.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Claude Nanjo">
+    ["organisation"] = <"Cognitive Medical Systems">
+    ["email"] = <"cnanjo@gmail.com">
+    ["date"] = <"11/24/2016">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"CIMI base assertion archetype">
+      use = <"Use as a specialisation precursor for other high-level reference archetypes.">
+      keywords = <"evaluation result","observation">
+    >
+  >
+  other_details = <["model_level"] = <"reference">>
+  lifecycle_state = <"unmanaged">
+  other_contributors = <"Linda Bird <lbi@ihtsdo.org>","Joey Coyle <joey@xcoyle.com>","Stan Huff <Stan.Huff@imail.org>","Harold Solbrig <Solbrig.Harold@mayo.edu>","Thomas Beale <thomas.beale@oceaninformatics.com>">
+  custodian_namespace = <"org.opencimi">
+  custodian_organisation = <"Clinical Information Modeling Initiative <http://opencimi.org>">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) Clinical Information Modelling Initiative <http://opencimi.org>">
+  ip_acknowledgements = <
+    ["loinc"] = <"This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use">
+    ["snomed"] = <"This specification includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organization (IHTSDO). All rights reserved. SNOMED CT® was originally created by the College of American Pathologists. 'SNOMED' and 'SNOMED CT' are registered trademarks of the IHTSDO (www.ihtsdo.org). Use of any SNOMED CT content (including codes, identifiers, terms, expressions or derivatives) in any operational system (including any Data Creation System or Data Analysis System as defined in the SNOMED CT Affiliate License Agreement) is subject to the terms and conditions of the SNOMED CT Affiliate License (www.ihtsdo.org/license.pdf) or to a written variation to that agreement that has been agreed and formally executed between the IHTSDO and the Affiliate Licensee.">
+  >
+
+definition
+  Procedure[id1.1.1] matches {
+    name matches {
+      CODED_TEXT[id0.0.1]
+    }
+    description matches {
+      PLAIN_TEXT[id0.0.2]
+    }
+    priority matches {
+      CODED_TEXT[id0.0.3]
+    }
+    site matches {
+      AnatomicalLocation[id0.0.4]
+    }
+    surgicalApproach matches {
+      CODED_TEXT[id0.0.5]
+    }
+    method matches {
+      CODED_TEXT[id0.0.6]
+    }
+    device matches {
+      Device[id0.0.7]
+    }
+    deviceCode matches {
+      CODED_TEXT[id0.0.8]
+    }
+    access matches {
+      CODED_TEXT[id0.0.9]
+    }
+    implant matches {
+      Device[id0.0.10]
+    }
+    implantCode matches {
+      CODED_TEXT[id0.0.11]
+    }
+    usingEnergy matches {
+      CODED_TEXT[id0.0.12]
+    }
+    usingSubstance matches {
+      Substance[id0.0.13]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1"] = <
+        text = <"Procedure">
+        description = <"An action intended to treat, cure, or restore function or structure such as surgical and physical rehabilitation procedures.">
+      >
+      ["id0.0.1"] = <
+        text = <"Name">
+        description = <"Concept representing the type of procedure performed.">
+      >
+      ["id0.0.2"] = <
+        text = <"Description">
+        description = <"An account of the procedure in narrative form.">
+      >
+      ["id0.0.3"] = <
+        text = <"Priority">
+        description = <"Priority assigned to a procedure.">
+      >
+      ["id0.0.4"] = <
+        text = <"Site">
+        description = <"Anatomical location of the procedure.">
+      >
+      ["id0.0.5"] = <
+        text = <"Surgical approach">
+        description = <"The technique used to reach the site of the procedure. Approaches may be through the skin or mucous membrane, through an orifice or external.">
+      >
+      ["id0.0.6"] = <
+        text = <"Method">
+        description = <"Technique or way of accomplishing the procedure. E.g., endoscopic, arthroscopic, etc...">
+      >
+      ["id0.0.7"] = <
+        text = <"Device">
+        description = <"Instrument, apparatus, appliance, software, material, or other article - whether used alone or in combination, associated with the performance of the procedure. For instance,  an endoscope. Note that this differs from an implant which remains in the body after the procedure is performed.">
+      >
+      ["id0.0.8"] = <
+        text = <"Device code">
+        description = <"Instrument, apparatus, appliance, software, material, or other article - whether used alone or in combination, associated with the performance of the procedure. For instance,  an endoscope. Note that this differs from an implant which remains in the body after the procedure is performed.">
+      >
+      ["id0.0.9"] = <
+        text = <"Access">
+        description = <"The route used to access the site of a procedure. It is used to distinguish open, closed, and percutaneous procedures.">
+      >
+      ["id0.0.10"] = <
+        text = <"Implant">
+        description = <"Something placed in a person's body or on its surface during the procedure and remains postoperatively. E.g., stents, tubes, artificial joints, and drains.">
+      >
+      ["id0.0.11"] = <
+        text = <"Implant code">
+        description = <"Concept representing something placed in a person's body or on its surface during the procedure and remains postoperatively. E.g., stents, tubes, artificial joints, and drains.">
+      >
+      ["id0.0.12"] = <
+        text = <"Using energy">
+        description = <"The energy used to execute the procedure. E.g., gamma rays.">
+      >
+      ["id0.0.13"] = <
+        text = <"Using substance">
+        description = <"Substance used to execute the action of a procedure. E.g., radiographic contrast media.">
+      >
+    >
+  >
+
+  term_bindings = <
+    ["snomed-ct"] = <
+      items = <
+        ["id0.0.1"] = <http://snomed.info/id/363589002> -- |Associated procedure (attribute)|
+        ["id0.0.3"] = <http://snomed.info/id/260870009> -- |Priority (attribute)|
+        ["id0.0.4"] = <http://snomed.info/id/363704007> -- |Procedure site (attribute)|
+        ["id0.0.5"] = <http://snomed.info/id/424876005> -- |Surgical approach (attribute)|
+        ["id0.0.6"] = <http://snomed.info/id/260686004> -- |Method (attribute)|
+        ["id0.0.7"] = <http://snomed.info/id/405815000> -- |Procedure device (attribute)|
+        ["id0.0.8"] = <http://snomed.info/id/405815000> -- |Procedure device (attribute)|
+        ["id0.0.9"] = <http://snomed.info/id/260507000> -- |Access (attribute)|
+        ["id0.0.10"] = <http://snomed.info/id/260846005> -- |Type of device (attribute)|
+        ["id0.0.11"] = <http://snomed.info/id/260846005> -- |Type of device (attribute)|
+        ["id0.0.12"] = <http://snomed.info/id/424244007> -- |Using energy (attribute)|
+        ["id0.0.13"] = <http://snomed.info/id/424361007> -- |Using substance (attribute)|
+      >
+    >
+    ["loinc"] = <
+      items = <
+        ["id0.0.1"] = <http://loinc.org/id/29300-1> -- | Procedure Type|
+        ["id0.0.5"] = <http://loinc.org/id/21938-6> -- | Surgical approach |
+        ["id0.0.7"] = <http://loinc.org/id/74711-3> -- |Unique device identifier |
+        ["id0.0.8"] = <http://loinc.org/id/74711-3> -- |Unique device identifier |
+      >
+    >
+  >

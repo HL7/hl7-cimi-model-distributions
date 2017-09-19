@@ -1,0 +1,17 @@
+<Configuration>
+    <XmiFiles>
+        <XmiFile>
+            <FileName>CIMI_RM_CORE.v0.0.1.mdzip</FileName>
+            <FilePath>/Users/cnanjo/repository/projects/archetypes/uml/xmi/CIMI_RM_CORE.v0.0.1.xml</FilePath>
+        </XmiFile>
+        <XmiFile>
+            <FileName>CIMI_RM_FOUNDATION.v0.0.1.mdzip</FileName>
+            <FilePath>/Users/cnanjo/repository/projects/archetypes/uml/xmi/CIMI_RM_FOUNDATION.v0.0.1.xml</FilePath>
+        </XmiFile>
+        <XmiFile>
+            <FileName>CIMI_RM_CLINICAL.v0.0.1.mdzip</FileName>
+            <FilePath>/Users/cnanjo/repository/projects/archetypes/uml/xmi/CIMI_RM_CLINICAL.v0.0.1.xml</FilePath>
+        </XmiFile>
+    </XmiFiles>
+    <OutputDirectory>/Users/cnanjo/repository/projects/archetypes/ballot_jan_2017/reference_model/</OutputDirectory>
+</Configuration>
