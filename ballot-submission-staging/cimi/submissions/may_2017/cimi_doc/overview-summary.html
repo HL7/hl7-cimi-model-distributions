@@ -1,0 +1,1816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+    <title>Overview (CIMI Reference Model )</title>
+    <meta name="date" content="2016-01-11">
+    <meta name="keywords" content="Clinical Information Model Initiative (CIMI)">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+if (location.href.indexOf('is-external=true') == -1) {
+    parent.document.title="Overview (CIMI Reference Model)";
+}
+//-->
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+    <!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+    <!--   -->
+</a>
+    <ul class="navList" title="Navigation">
+        <li class="navBarCell1Rev">Overview</li>
+        <!--
+        <li>Package</li>
+        <li>Class</li>
+        <li>Use</li>
+        <li><a href="overview-tree.html">Tree</a></li>
+        <li><a href="deprecated-list.html">Deprecated</a></li>
+        <li><a href="index-files/index-1.html">Index</a></li>
+        <li><a href="help-doc.html">Help</a></li>
+        -->
+    </ul>
+    <div class="aboutLanguage"><em><strong>HL7&trade;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></div>
+</div>
+<div class="subNav">
+    <ul class="navList">
+        <li>Prev</li>
+        <li>Next</li>
+    </ul>
+    <ul class="navList">
+        <li><a href="index.html?overview-summary.html" target="_top">Frames</a></li>
+        <li><a href="overview-summary.html" target="_top">No Frames</a></li>
+    </ul>
+    <ul class="navList" id="allclasses_navbar_top">
+        <li><a href="allclasses-noframe.html">All Classes</a></li>
+    </ul>
+    <div>
+        <script type="text/javascript"><!--
+        allClassesLink = document.getElementById("allclasses_navbar_top");
+        if(window==top) {
+            allClassesLink.style.display = "block";
+        }
+        else {
+            allClassesLink.style.display = "none";
+        }
+        //-->
+        </script>
+    </div>
+    <a name="skip-navbar_top">
+        <!--   -->
+    </a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+    <h1 class="title">Clinical Information Model Initiative (CIMI) Reference Model Specification</h1>
+</div>
+<div class="header">
+    <div class="subTitle">
+        <div class="block">Welcome to the HL7 CIMI Reference Model Documentation Version 0.0.2 generated on Fri, 24 Mar 2017 12:31:06 -0700.</div>
+    </div>
+    <p>Please click <a href="overview.html">here</a> for a high level UML view of the core model.</p>
+    <p>Please click <a href="CIMIArchitectureGuide/CIMIArchitectureGuide.html">here</a> to view the CIMI Architecture Guide</p>
+    <p>Please click <a href="CIMIStyleGuide/CIMIStyleGuide.html">here</a> to view the CIMI Style Guide</p>
+    <p>Please click <a href="CIMIClinicalExample/CIMIClinicalExample.html">here</a> to view a clinical example on the use of CIMI models for the development of Detailed Clinical Models</p>
+    <p>An archetype viewer has been made available <a href="http://models.opencimi.org/may_ballot_2017" target="_blank">here</a></p>
+</div>
+<div class="contentContainer">
+    <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Classes and definitions">
+        <caption><span>Classes</span><span class="tabEnd">&nbsp;</span></caption>
+        <tr>
+            <th class="colFirst" scope="col">Classes</th>
+            <th class="colLast" scope="col">Description</th>
+        </tr>
+        <tbody>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Absent.html">Absent</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context indicating the known absence of a finding in the subject of information. If the finding is suspected to be absent, use the known or suspected present context instead.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/AbstractDurableEncounter.html">AbstractDurableEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Contains properties common to multiple kinds of Encounters which last more than a few hours. Such encounters typically include an admission and discharge process.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Accreditation.html">Accreditation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type supporting the capture of accreditation information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/TopicCore/Act.html">Act</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Description of a healthcare action, independent of action context.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/ActionContext.html">ActionContext</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The ActionContext class aligns with the SNOMED Situations with Explicit Context and provides the context for the Act topic of a clinical statement. For instance, a statement about a procedure may specify that the procedure has been proposed, ordered, planned, performed or possibly not performed. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/ActorName.html">ActorName</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The name of an actor - typically either the name of a person or of an organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/AddressLine.html">AddressLine</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An address line.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Admission.html">Admission</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A record about the admission of a patient to a facility generally for the provision of care.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/AdvanceDirective.html">AdvanceDirective</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Patient or proxy-supplied prospective instructions for treatment.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Age.html">Age</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type for the capture of age-related information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/AMOUNT.html">AMOUNT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class defining the concept of relative quantified amounts. For relative quantities, the +&#39; and -&#39; operators are defined.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/AnatomicalLocation.html">AnatomicalLocation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A part of the body.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Annotation.html">Annotation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Text node with optional attribution</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Any.html">Any</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract supertype. Usually maps to a type like “Any” or “Object” in an object system. Defined here to provide the value and reference equality semantics.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Core/ARCHETYPED.html">ARCHETYPED</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Archetypes act as the configuration basis for the particular structures of instances defined by the reference model. To enable archetypes to be used to create valid data, key classes in the reference model act as root points for archetyping; accordingly, these classes have the archetype_details attribute set.
+
+An instance of the class ARCHETYPED contains the relevant archetype identification information, allowing generating archetypes to be matched up with data instances.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Array.html">Array</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">physical container of items indexed by number</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/Assertion.html">Assertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Clinical Assertions assert the existence of clinical conditions, diseases, symptoms, etc. in the patient.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Core/ASSOCIATION_CLASS.html">ASSOCIATION_CLASS</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract parent type for an association class.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Provenance/Attribution.html">Attribution</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Attribution provides a formal pattern and reusable structure for attributes of a record that describes an activity in a process involved in producing, delivering or otherwise influencing that resource. Attribution provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
+
+Attribution provides a common reference model pattern that may be included directly within a clinical statement (e.g., the metadata associated with the recording of a clinical statement in a system) or within the Provenance pattern when it is preferrable to have such information external to but referencing the clinical statement (see Provenance). Note that, when included directly within a clinical statement, updates made to attribution attribute values will result in a versioning change in the instance. When part of the Provenance class, updates to provenance do not result in an update of the clinical statement referenced by the Provenance class (see Provenance.target).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Party/BASE_ACTOR.html">BASE_ACTOR</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An entity acting as an actor assuming a role in a participation. For instance, a person may act as a provider in an encounter with a patient.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/BASE_ENTITY.html">BASE_ENTITY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Parent class for all entities.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Party/BASE_ROLE.html">BASE_ROLE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Capacity in which an actor is involved in an activity. For instance, &#39;attending physician&#39;.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/BaseAddress.html">BaseAddress</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for addresses to be specialized based on regional and realm-specific needs.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/BaseAssertion.html">BaseAssertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base assertion class required for specialization hierarchies. Associates with a key=&#39;Assertion&#39;, a name with the specific assertion being made.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ClinicalStatement/BaseClinicalStatement.html">BaseClinicalStatement</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified. The ClinicalStatement class provides the core pattern for more specific clinical statement archetypes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system.
+
+The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model. 
+
+A clinical statement is composed of the StatementTopic class (grouping of attributes for capturing information about a procedure or a clinical finding) and the StatementContext class (grouping of attributes providing the context for the statement topic such as whether a procedure was performed, requested, not performed or whether a finding is suspected present or absent in the patient). At the archetype level, the topic and context components are coordinated to form the clinical statement. For instance, the composition of the ProcedureTopic with the NotPerformed context indicates that the given procedure was not performed. 
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/BaseEncounter.html">BaseEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract encounter class.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/EvaluationResult/BaseEvaluationResult.html">BaseEvaluationResult</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for evaluation results to support model hierarchies and negation. Associates with a clinical question (key) a value (result).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/BiometricData.html">BiometricData</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type supporting the capture of biometric information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/BirthData.html">BirthData</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type supporting the capture of birth-related information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Boolean.html">Boolean</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">logical True&amp;#47;False values; usually physically represented as an integer, but need not be</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/BradenAssessment.html">BradenAssessment</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A Braden Assessment represents the Braden score used to assess an adult patient&#39;s susceptibility to skin breakdown. The summation of the scores range is from 6-23.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Byte.html">Byte</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">a type whose value is an 8-bit value.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Character.html">Character</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">a type whose value is a member of an 8-bit character-set (ISO: &#39;repertoire&#39;).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Citizenship.html">Citizenship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type supporting the capture of citizenship information. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Association/ClinicalStatementAssociation.html">ClinicalStatementAssociation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Association class used to represent the relationship between a class and one or more clinical statements where the relationship is qualified by one or more attributes.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/CLUSTER.html">CLUSTER</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class representing a reusable structure in a model such as an address or an entity such as a device.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/CODED_TEXT.html">CODED_TEXT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A text item whose value must be the rubric from a controlled terminology, the key (i.e. the code&#39;) of which is the code attribute. In other words: a CODED_TEXT is a combination of a CODE_PHRASE (effectively a code) and the rubric of that term, from a terminology service, in the language in which the data was authored.
+
+Since CODED_TEXT is a subtype of TEXT, it can be used in place of it, effectively allowing the type TEXT to mean a text item, which may optionally be coded.
+
+Misuse: If the intention is to represent a term code attached in some way to a fragment of plain text, CODED_TEXT should not be used.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/COMPOSITE_ENTRY.html">COMPOSITE_ENTRY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An composite entry composed of other ENTRY components. COMPOUND_ENTRYs can be arbitrarily nested and can be treated as a unit (e.g., a complex medication orderable).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/COMPOSITION.html">COMPOSITION</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A composition is considered the unit of modification of the record, the unit of transmission in record extracts, and the unit of attestation by authorising clinicians. In this latter sense, it may be considered equivalent to a signed document.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ClinicalStatement/CompoundClinicalStatement.html">CompoundClinicalStatement</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Clinical statement representing multiple units of information that are treated as a whole such as a panel. A compound clinical statement is a collection of independent clinical statement, whether indivisible or compound.
+
+Note that complex medications are indivisible clinical statements even though their structure may be a composite data structure. They are generally treated as an independent entry in a record and their parts do not constitute independent entries in a record.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/ContactInformation.html">ContactInformation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents contact details such as an emergency contact or contact information for a next-of-kin.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/CONTENT.html">CONTENT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract ancestor of all concrete content types. A unit of content that makes up a composition - e.g., a clinical statement in a patient record, a simple or composite action is a knowledge document.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/COUNT.html">COUNT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Countable quantities. Used for countable types such as pregnancies and steps (taken by a physiotherapy patient), number of cigarettes smoked in a day.
+
+Misuse: Not to be used for amounts of physical entities (which all have units).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/DATA_VALUE.html">DATA_VALUE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Serves as a common ancestor of all CIMI complex types.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/DATE.html">DATE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents an absolute point in time, as measured on the Gregorian calendar, and specified only to the day. Semantics defined by ISO 8601. Used for recording dates in real world time. The partial form is used for approximate birth dates, dates of death, etc.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/DATE_TIME.html">DATE_TIME</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents an absolute point in time, specified to the second. Semantics defined by ISO 8601.
+
+Used for recording a precise point in real world time, and for approximate time stamps, e.g. the origin of a HISTORY in an OBSERVATION which is only partially known.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/DeathData.html">DeathData</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Information of about a death event.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Device.html">Device</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">This resource identifies an instance or a type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device. Medical devices includes durable (reusable) medical equipment, implantable devices, as well as disposable equipment used for diagnostic, treatment, and research for healthcare and public health. Non-medical devices may include items such as a machine, cellphone, computer, application, etc.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/DeviceAssertion.html">DeviceAssertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An assertion about the use of a device. At this time, the class is a placeholder.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Diagnosis.html">Diagnosis</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The list of diagnosis relevant to this encounter where a diagnosis is defined as &#39;a.The act or process of identifying or determining the nature and cause of a disease or injury through evaluation of patient history, examination, and&amp;#47;or review of laboratory data. b.The opinion derived from such an evaluation&#39; American Heritage Dictionary</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/DimensionalFeature.html">DimensionalFeature</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Feature&#39;s physical attributes such as a growth or wound.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Discharge.html">Discharge</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A record pertaining to the discharge of a patient from an institution.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/DispenseBase.html">DispenseBase</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for dispense contexts.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/DispenseEvent.html">DispenseEvent</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Record of the dispensing event.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/DispenseInstructions.html">DispenseInstructions</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Medication dispensing instructions for prospective clinical statements.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/Dosage.html">Dosage</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Pattern for the dosing of a medication. Currently the same pattern is used for retrospective and prospective statements.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/DURATION.html">DURATION</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents a period of time with respect to a notional point in time, which is not specified. A sign may be used to indicate the duration is backwards in time rather than forwards.
+
+NOTE
+a deviation from ISO8601 is supported, allowing the W&#39; designator to be mixed with other designators. See assumed types section in the Support IM.
+Used for recording the duration of something in the real world, particularly when there is a need a) to represent the duration in customary format, i.e. days, hours, minutes etc, and b) if it will be used in computational operations with date&amp;#47;time quantities, i.e. additions, subtractions etc.
+
+Misuse: Durations cannot be used to represent points in time, or intervals of time.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/EHR_URI.html">EHR_URI</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A EHR_URI is a URI which has the scheme name &#39;ehr&#39;, and which can only reference items in EHRs.
+
+Used to reference items in an EHR, which may be the same as the current EHR (containing this link), or another.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/ElectronicContact.html">ElectronicContact</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Data structure representing an electronic contact such as an email address.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/EmergencyEncounter.html">EmergencyEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Emergency is an encounter without a scheduled appointment and urgent clinical services are required.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Relationship/EmployerRelationship.html">EmployerRelationship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An employee relationship between a party and an organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/ENCAPSULATED.html">ENCAPSULATED</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class defining the common meta-data of all types of encapsulated data.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Encounter.html">Encounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An interaction between a patient and a practitioner under the auspices of a given organization for the purpose of providing healthcare-related service(s). It is important to understand that if the there is a change in provider or organization, by definition a new encounter will be generated. For example, if a patient is moved from Surgery to Post-Op, a new encounter is generated. Similarly, if a patient receives care from 2 nurses while in Post-Op, there will be 2 encounters.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Entitlement.html">Entitlement</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Indicates characteristic of patient that may requires special consideration in handling or information disclosure - e.g., royalty, celebrity, felon, etc...</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Entity.html">Entity</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Root class for material entities such as anatomical locations, devices, and substances.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/ENTRY.html">ENTRY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An ENTRY is the root of a logical item of hard clinical information created in the clinical statement context, within a clinical session or of clinical knowledge in a knowledge artifact. 
+
+With regards to clinical information entries, there can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured&amp;#47;created in the event documented by the enclosing Composition.
+
+An ENTRY is also the minimal unit of information any query should return, since a whole ENTRY (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/EvaluationResult/EvaluationResult.html">EvaluationResult</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The outcome of an evaluation of a characteristic. This model holds a &#39;question&#39; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/TopicCore/Event.html">Event</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An non-clinical event such as a natural disaster. Topic allows the capture of information related to such events when they pertain to the clinical context associated with a given patient.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/EventContext.html">EventContext</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context associated with non-clinical events such as floods, accidents, and tornadoes.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/TopicCore/Finding.html">Finding</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The characteristics looked for in medical investigations or diagnostics and the outcome.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/FindingContext.html">FindingContext</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The FindingContext class aligns with the SNOMED Situation with Explicit Context for findings and provides the context for the EvaluationResult and Assertion topics of a clinical statement. For instance, a statement about findings may state that the finding was observed present or absent.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/FindingSiteAssertion.html">FindingSiteAssertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An assertion about a finding found on the body.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/GenericAddress.html">GenericAddress</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A generic address pattern that can be assembled from address parts. Note that this pattern will likely be deprecated in the future in favor of more expressive and extensible address specifications.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Party/HealthCareConsumerRole.html">HealthCareConsumerRole</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Role assumed by an entity acting as a health care consumer.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Party/HealthCareProviderIndividualRole.html">HealthCareProviderIndividualRole</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A healthcare provider role associated with a person.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Party/HealthCareProviderOrganizationRole.html">HealthCareProviderOrganizationRole</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A non-person health care entity such as a medical group or other organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Relationship/HealthCareProviderRelationship.html">HealthCareProviderRelationship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A relationship between an actor and a healthcare provider.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Party/HealthCareProviderRole.html">HealthCareProviderRole</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Role associated with the delivery of health care as opposed to a consumer of health care.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/HomeBasePrimaryCareEncounter.html">HomeBasePrimaryCareEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Patient is being treated &#39;In-Home&#39; for this encounter.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Hospice.html">Hospice</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A hospice encounter.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/IDENTIFIER.html">IDENTIFIER</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type for representing identifiers of real-world entities. Typical identifiers include drivers licence number, social security number, veterans affairs number, prescription id, order id, and so on.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ClinicalStatement/IndivisibleClinicalStatement.html">IndivisibleClinicalStatement</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified. The ClinicalStatement class provides the core pattern for more specific clinical statement archetypes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system.
+
+The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model. 
+
+A clinical statement is composed of the StatementTopic class (grouping of attributes for capturing information about a procedure or a clinical finding) and the StatementContext class (grouping of attributes providing the context for the statement topic such as whether a procedure was performed, requested, not performed or whether a finding is suspected present or absent in the patient). At the archetype level, the topic and context components are coordinated to form the clinical statement. For instance, the composition of the ProcedureTopic with the NotPerformed context indicates that the given procedure was not performed. 
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Industry.html">Industry</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type representing an industry.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Ingredient.html">Ingredient</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A components that go to make up the described item.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/InpatientEncounter.html">InpatientEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Patient has been admitted to the facility and assigned a bed.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/INSTANT.html">INSTANT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An instant in time - known at least to the second and always includes a time zone. Note: This is intended for precisely observed times (typically system logs etc.), and not human-reported times - for them, use date and dateTime. instant is a more constrained dateTime</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Integer.html">Integer</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An integer type</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Association/Interpretation.html">Interpretation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The interpretation provided by the containing type for the set of clinical statements that comprise the target of the relationship. 
+
+For instance, Assertion.interpretation can be interpreted as follows: the assertion interprets the set of clinical statements specified as the range of Assertion.interpretation.target and the interpretation is specified by the Assertion.interpretation.hasInterpretation code.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/INTERVAL_VALUE.html">INTERVAL_VALUE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Generic class defining an interval (i.e. range) of a comparable type. An interval is a contiguous subrange of a comparable base type. Used to define intervals of dates, times, quantities (whose units match) and so on. The type parameter, T, must be a descendant of the type ORDERED_VALUE, which is necessary (but not sufficient) for instances to be compared (strictly_comparable is also needed).
+
+The basic semantics are derived from the class Interval&amp;lt;T&amp;gt;, described in the support RM.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Association/Justification.html">Justification</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Asserted clinical justification to perform or not perform an act such as a diagnostic test, a medication treatment, or a procedure.
+
+The justification can be specified as a code or as a clinical statement, e.g., code for diabetes (ICD-9-CM 250.0) or a Condition occurrence statement (with diabetes code) documented elsewhere in a patient&#39;s record.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/KnownOrSuspectedPresent.html">KnownOrSuspectedPresent</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context indicating that finding is known present or suspected present.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Procedure/LaboratoryProcedure.html">LaboratoryProcedure</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Specialization of Procedure that represents a procedure performed on a collected specimen such as a blood panel or a biopsy.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/EvaluationResult/LaboratoryTestResult.html">LaboratoryTestResult</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Measurement resulted from a laboratory.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/LanguageCapability.html">LanguageCapability</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type representing proficiency in a language.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/List.html">List</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">container of items, implied order, non-unique membership</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Core/LOCATABLE.html">LOCATABLE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Most classes in the CIMI reference model inherit from the LOCATABLE class, which defines the idea of &#39;locatability in an archetyped structure&#39;. LOCATABLE defines a runtime name and an archetype_node_id. The archetype_node_id is the standardised semantic code for a node and comes from the corresponding node in the archetype used to create the data. The only exception is at archetype root points in data, where archetype_node_id carries the archetype identifier in string form rather than an interior node id from an archetype. LOCATABLE also provides the attribute archetype_details, which is non-Void for archetype root points in data, and carries meta-data relevant to root points. The name attribute carries a name created at runtime. The &#39;meaning&#39; of any node is derived formally from the archetype by obtaining the text value for the archetype_node_id code from the archetype ontology section, in the language required.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Location.html">Location</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Data structure representing a geographical location such as a location on a map.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/LocationName.html">LocationName</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Data structure capturing the name of a location</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/LongTermCare.html">LongTermCare</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A long term care encounter.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Medication.html">Medication</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Class representing a medication. It covers the ingredients and the packaging for a medication.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/MedicationAct.html">MedicationAct</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for the act of prescribing, documenting, administering, or dispensing a medication.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/MedicationAdministration.html">MedicationAdministration</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The act of administering a medication. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/MedicationDispense.html">MedicationDispense</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The act of dispensing a medication whether prospective or retrospective.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/MedicationDispensePerformance.html">MedicationDispensePerformance</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context for the documentation of a medication dispense event.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/MedicationOrder.html">MedicationOrder</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context for a medication order.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/MedicationPackage.html">MedicationPackage</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A package for a medication.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/MedicationProduct.html">MedicationProduct</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Information that only applies to medication products (not packages).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/MULTIMEDIA.html">MULTIMEDIA</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A specialisation of DV_ENCAPSULATED for audiovisual and biosignal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of DV_ENCAPSULATED.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Relationship/NextOfKinRelationship.html">NextOfKinRelationship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Relationship to specify the next of kin relationship between two parties.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/NonCompletion.html">NonCompletion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A record that a clinical act was initiated by not completed. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/NonPerformance.html">NonPerformance</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A record that a clinical act was not performed and&amp;#47;or never initiated. Do not use this context if the act was initiated or started but aborted or cancelled. Use the NotPerformed context instead.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Occupation.html">Occupation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An association between a person and a kind of job that the person has held.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Order.html">Order</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An instruction by a healthcare provider to another healthcare provider to perform some act.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/ORDERED_VALUE.html">ORDERED_VALUE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/ORDINAL.html">ORDINAL</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Models rankings and scores, e.g. pain, Apgar values, etc, where there is a) implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. Note that although the term ordinal&#39; in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values:
+
+-3, -2, -1, 0, 1, 2, 3  — reflex response values
+0, 1, 2  — Apgar values
+This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. {neg, trace, , , } are used for leucocytes, protein, nitrites etc; for non-haemolysed blood {neg, trace, moderate}; for haemolysed blood small, moderate, large}.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Organization.html">Organization</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An organization</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/OrganizationName.html">OrganizationName</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The name of an organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Relationship/OrganizationRelationship.html">OrganizationRelationship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The relationship between an actor and an organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/OutpatientVisit.html">OutpatientVisit</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">One or more encounters at one site within a specified length of time.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/PARSABLE.html">PARSABLE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Encapsulated data expressed as a parsable String. The internal model of the data item is not described in the openEHR model in common with other encapsulated types, but in this case, the form of the data is assumed to be plaintext, rather than compressed or other types of large binary data.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Part.html">Part</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A component of a name or an address.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Party/PARTICIPATION.html">PARTICIPATION</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any participation of a Party in some activity, which is not explicitly in the model, e.g. assisting nurse. Can be used to record past or future participations. Should not be used in place of more permanent relationships between demographic entities.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Party/PARTY.html">PARTY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A party involved in an activity. PARTY has two specializations: ACTOR and ROLE.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Party/PARTY_RELATIONSHIP.html">PARTY_RELATIONSHIP</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Association class relating two parties such as the association of an actor with one or more roles.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/PartyName.html">PartyName</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract supertype for the name of a party.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Relationship/PartyRelationship.html">PartyRelationship</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A relationship between two parties.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/PatientEducation/PatientEducationPerformed.html">PatientEducationPerformed</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context associated with the performance of an educational intervention.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/PatientEducation/PatientRelatedEducation.html">PatientRelatedEducation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">This class captures information about counselling or education provided to (or an attempt to provide to) the Patient or to the Patient&#39;s representative and provides a means to note how well the Patient understood the information provided. Patient Education may be in the form of written instructions – either pre-defined materials, or personalized instructions – as well as oral counseling. In the case of pre-defined written materials, the educationalMaterialsProvided property may be used to identify the kind of material provided rather than reproducing the text of that material in this class. When personalized written instructions are provided, the text of such instructions can be placed in the textProvided property. The textProvided property may also be used to store a summary of an oral conversation with the Patient.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Performance.html">Performance</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Context indicating actual performance or execution of a healthcare-related action, e.g., 3rd dose of Hepatitis B vaccine administered on Dec 4th 2012, appendectomy performed today.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Person.html">Person</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An entity representing a person.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/PersonName.html">PersonName</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The generic representation of the name of a person. The name of a person can vary greatly across cultures and countries.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/PersonNameDetailed.html">PersonNameDetailed</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">NEED TO CONSIDER REFACTORING THIS CLASS</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/PharmacyPromise.html">PharmacyPromise</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">This class represents the prescription context from the perspective of the filling system (i.e., the pharmacy) whereas the Pharmacy Request represents the prescription from the ordering system (i.e., the prescriber). This class is a subtype of the more general Healthcare Promise, which describes properties common to all types or Orders from the filling system perspective– this class adds those properties which are specific to medication orders. This class is called Pharmacy Promise rather than Pharmacy Order following the HL7 V3 convention to use the term Promise to indicate that it is from the filling system’s perspective. There are many properties which are identical to the Order; this is because the pharmacy may change the order, within prescribed limits, for example substituting a generic drug for a brand-named one.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/EvaluationResult/PhysicalEvaluationResult.html">PhysicalEvaluationResult</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Measurement resulting from a physical assessment procedure.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/PLAIN_TEXT.html">PLAIN_TEXT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Plain text potentially with simple formatting</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Plan.html">Plan</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Description of action that is planned to be performed. Typically, this would include a time at which the action is scheduled to be performed.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/POSITIVE_INTEGER_COUNT.html">POSITIVE_INTEGER_COUNT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An integer whose value is greater than zero.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/PresenceAbsenceContext.html">PresenceAbsenceContext</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for contexts asserting presence or absence of a finding.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Procedure/Procedure.html">Procedure</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An action intended to treat, cure, or restore function or structure such as surgical and physical rehabilitation procedures.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/ProductBatch.html">ProductBatch</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Information about a group of medication produced or packaged from one production run.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Promise.html">Promise</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An order from the perspective of a fulfillment system. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/PROPORTION.html">PROPORTION</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. The valid_proportion_kind property of the PROPORTION_KIND class is used to control the type attribute to be one of a defined set.
+
+Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width (RDW).
+
+Misuse: Should not be used to represent things like blood pressure which are often written using a &#39;&amp;#47;&#39; character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) “6&amp;#47;24” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Proposal.html">Proposal</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An offer or a suggestion to perform a healthcare act. A recommendation to a provider is an example of proposal made by a CDS system. A proposal must be accepted by an entity in order for it to be performed.
+</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/ProposalAgainst.html">ProposalAgainst</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Concept represents a recommendation from a clinical decision support system or advice from a consultation to not perform an act.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Provenance/Provenance.html">Provenance</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The Provenance pattern supports the attachment of attribution information to one or more clinical statements and is not part of the clinical statements themselves.
+
+The attachment of provenance information to a clinical statement in this manner does not impact the versioning of the clinical statement target since attribution information is external to the statement.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Qualification.html">Qualification</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Education, training or special skills.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/QualitativeReferenceRange.html">QualitativeReferenceRange</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A qualitative reference range specified by a code - e.g., abnormal, severely abnormal.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/QUANTIFIED.html">QUANTIFIED</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class defining the concept of true quantified values, i.e. values which are not only ordered, but which have a precise magnitude.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/QuantitativeReferenceRange.html">QuantitativeReferenceRange</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A reference range specifying a quantity interval.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/QUANTITY.html">QUANTITY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Quantitified type representing scientific quantities, i.e. quantities expressed as a magnitude and units. Units were inspired by the Unified Code for Units of Measure (UCUM), developed by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute.
+
+Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/RATIO.html">RATIO</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A parameterizable ratio.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/Real.html">Real</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">32-bit real numbers in any interoperable representation, including single-width IEEE floating point</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/ReferenceRange.html">ReferenceRange</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A reference range for the specific instance after lookup from, say, a reference range table given specific criteria. Note that this reference range is not definitional in nature but rather refers to the reference range considered for the given observation for a subject.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Referral.html">Referral</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Registration.html">Registration</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">NEED DEFINITION</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/Request.html">Request</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An request by a healthcare provider or system to another healthcare provider or system to perform some act.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Residency.html">Residency</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type supporting the capture of residency information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/RiskAssertion.html">RiskAssertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An assertion about a risk to the patient. At this time, the class is a placeholder.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Party/Role.html">Role</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A role in a participation.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/SECTION.html">SECTION</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents a heading in a heading structure, or section tree . Can also be used to represent a collection of entries without metadata. (For collections of entries with shared metadata, use COMPOUND _ENTRY instead). Created according to archetyped structures for typical headings such as SOAP, physical examination, but also pathology result heading structures. Should not be used instead of ENTRY hierarchical structures.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/ShortStay.html">ShortStay</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An encounter that is similar to outpatient but the patient is admitted to a bed.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Provenance/Signature.html">Signature</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A digital signature along with supporting context. The signature may be electronic&amp;#47;cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/SIMPLE_ENTRY.html">SIMPLE_ENTRY</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An ENTRY representing an atomic unit of information that is identifiable and can be referenced independently of a parent context such as a specific hematocrit measurement viewed in isolation of its parent panel.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Specimen.html">Specimen</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Sample for analysis</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Procedure/SpecimenCollection.html">SpecimenCollection</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Attribution specific to the collection of a specimen.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/SpecimenContainer.html">SpecimenContainer</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Direct container of specimen (tube&amp;#47;slide, etc.)</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/SpecimenTreatment.html">SpecimenTreatment</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Treatment performed on the specimen.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/ContextCore/StatementContext.html">StatementContext</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Compositional and reusable grouping of clinical statement attributes that provides the context for the topic of a clinical statement. The StatementContext class aligns with the SNOMED CT Situations with Explicit Context. The StatementContext provides the expressivity required to specify that an act was performed or not performed or that a finding was asserted to be present or absent for the given subject of information. It also often holds provenance information relevant to the context of the clinical statement. It is important to note that by default the context applies to the conjunction of the attribute specified in the statement. For instance, if a clinical statement has a topic describing a rash on left arm and a context of &#39;absent&#39;, then the statement states that the subject of interest did not have a rash on the left arm but might have had one on the right arm.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/TopicCore/StatementTopic.html">StatementTopic</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of the statement. StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the provenance of this information (the who, when, where, how, why of the information recorded).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Street.html">Street</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The name of a street.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/StreetNumber.html">StreetNumber</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The number of a residence in a street.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/String.html">String</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">represents unicode-enabled strings</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Participation/SubjectOfInformation.html">SubjectOfInformation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The subject of information of a clinical statement.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/Substance.html">Substance</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A homogeneous material with a definite composition.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/SubstanceContainer.html">SubstanceContainer</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A specific package&amp;#47;container of the substance.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/SubstitutionBase.html">SubstitutionBase</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Base class for prospective and retrospective medication substitution information.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/SubstitutionInformation.html">SubstitutionInformation</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Information about a substitution that was performed.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Pharmacy/SubstitutionInstruction.html">SubstitutionInstruction</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Substitution instructions for prospective dispense clinical statements.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Procedure/SurgicalProcedure.html">SurgicalProcedure</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A surgical procedure.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/TERM_MAPPING.html">TERM_MAPPING</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents a coded term mapped to a TEXT, and the relative match of the target term with respect to the mapped item. Plain or coded text items may appear in the EHR for which one or mappings in alternative terminologies are required. Mappings are only used to enable computer processing, so they can only be instances of CODED_TEXT. Used for adding classification terms (e.g. adding ICD classifiers to SNOMED descriptive terms), or mapping into equivalents in other terminologies (e.g. across nursing vocabularies).</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/TEXT.html">TEXT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract parent for text and coded text item, which may contain any amount of legal characters arranged as e.g. words, sentences etc (i.e. one TEXT may be more than one word). Visual formatting and hyperlinks may be included.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/TIME.html">TIME</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Represents an absolute point in time from an origin usually interpreted as meaning the start of the current day, specified to a fraction of a second. Semantics defined by ISO 8601.
+
+Used for recording real world times, rather than scientifically measured fine amounts of time. The partial form is used for approximate times of events and substance administrations.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Timing.html">Timing</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A timing schedule that specifies an event that may occur multiple times</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/TimingRepeat.html">TimingRepeat</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">When an event is to occur.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/Transfer.html">Transfer</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">The act of transferring a patient from one location or responsible organization to another. Note that a transfer from organization to another will, by definition, trigger a new encounter. Note that a transfer from one location to another may trigger a new encounter depending on whether the responsible organization has changed. A movement from one bed within the same ward to another probably will not, but a movement from one ward to another probably would.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/Tunneling.html">Tunneling</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">whether tunneling is present</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/Undermining.html">Undermining</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">whether undermining is present</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Entity/UnitOfDistribution.html">UnitOfDistribution</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Abstract class representing a substance container or package.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/UNSIGNED_INTEGER_COUNT.html">UNSIGNED_INTEGER_COUNT</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An integer whose value is greater or equal to zero.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Primitive_Types/URI.html">URI</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A URI</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/URI_VALUE.html">URI_VALUE</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A reference to an object which conforms to the Universal Resource Identifier (URI) standard. See &#39;Universal Resource Identifiers in WWW&#39; by Tim Berners-Lee at http:&amp;#47;&amp;#47;www.ietf.org&amp;#47;rfc&amp;#47;rfc3986.txt. This is a World-Wide Web RFC for global identification of resources. See http:&amp;#47;&amp;#47;www.w3.org&amp;#47;Addressing for a starting point on URIs.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/Use.html">Use</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Structure capturing usage preferences for, say, a name, an address, or contact information. </div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/CommonDataStructures/USPostalAddress.html">USPostalAddress</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Type representing an address.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Foundation_RM/Foundation/VIRTUAL_CLUSTER.html">VIRTUAL_CLUSTER</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">A dependent model structure designed to support attribute reuse but which may be ignored by tooling such as code generators. This allows grouping of attributes to be used in a number of compositional structures in order to encourage pattern reuse and consistency but which can be structurally flattened in a derived artifact (e.g., a java class representing the composition). An example of this pattern is the CIMI Clinical Statement pattern which combines statement context and topic to build the set of relevant clinical statements.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Encounter/VirtualEncounter.html">VirtualEncounter</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Services provided includes Telehealth, Web health etc.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/WoundAssertion.html">WoundAssertion</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">An assertion of a wound.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/WoundBedAndEdge.html">WoundBedAndEdge</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Characteristics of the wound&#39;s base and its edge.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/WoundDressing.html">WoundDressing</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Description of the dressing on a wound.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Clinical/Assertion/WoundExudate.html">WoundExudate</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Description of the exudate from a wound.</div>
+                </td>
+            </tr>
+            <tr class="altColor">
+                <td class="colFirst">
+                        <a href="CIMI_Reference_Model/Data_Value_Types/YESNO.html">YESNO</a>
+                </td>
+                <td class="colLast">
+                        <div class="block">Items which are truly boolean data, such as true&amp;#47;false or yes&amp;#47;no answers. For such data, it is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results are in fact true or false.
+
+Misuse: The DV_BOOLEAN class should not be used as a replacement for naively modelled enumerated types such as male&amp;#47;female etc. Such values should be coded, and in any case the enumeration often has more than two values.</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="footer"><a name="overview_description">
+    <!--   -->
+</a>
+    <div class="subTitle">
+        <div class="block">This document is the API specification for the CIMI Reference Model</div>
+    </div>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+    <!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+    <!--   -->
+</a>
+    <ul class="navList" title="Navigation">
+        <li class="navBarCell1Rev">Overview</li>
+        <li>Package</li>
+        <li>Class</li>
+        <li>Use</li>
+        <li><a href="overview-tree.html">Tree</a></li>
+        <li><a href="deprecated-list.html">Deprecated</a></li>
+        <li><a href="index-files/index-1.html">Index</a></li>
+        <li><a href="help-doc.html">Help</a></li>
+    </ul>
+    <div class="aboutLanguage"><em><strong>CIMI Reference Model</strong></em></div>
+</div>
+<div class="subNav">
+    <ul class="navList">
+        <li>Prev</li>
+        <li>Next</li>
+    </ul>
+    <ul class="navList">
+        <li><a href="index.html?overview-summary.html" target="_top">Frames</a></li>
+        <li><a href="overview-summary.html" target="_top">No Frames</a></li>
+    </ul>
+    <ul class="navList" id="allclasses_navbar_bottom">
+        <li><a href="allclasses-noframe.html">All Classes</a></li>
+    </ul>
+    <div>
+        <script type="text/javascript"><!--
+        allClassesLink = document.getElementById("allclasses_navbar_bottom");
+        if(window==top) {
+            allClassesLink.style.display = "block";
+        }
+        else {
+            allClassesLink.style.display = "none";
+        }
+        //-->
+        </script>
+    </div>
+    <a name="skip-navbar_bottom">
+        <!--   -->
+    </a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<!--<p class="legalCopy"><small><font size="-1"> <a href="https://docs.google.com/spreadsheets/d/1HFSSdGC7e4szzXu5wJH12c0x-nyS80LLRV68zzfovPU/edit#gid=0">Submit your comments</a> <br>For further API reference and developer documentation, see <a href="#" target="_blank">CIMI Documentation</a>. That documentation contains more detailed, developer-targeted descriptions, with conceptual overviews, definitions of terms, workarounds, and working code examples.<br> <a href="#">Copyright</a> &#x00a9; 2017 HL7 and/or its affiliates.  All rights reserved. Use is subject to <a href="#">license terms</a>. </font></small></p>-->
+</body>
+</html>
