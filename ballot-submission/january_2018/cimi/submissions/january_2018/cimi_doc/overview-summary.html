@@ -35,7 +35,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
     <ul class="navList">
@@ -70,14 +72,14 @@ if (location.href.indexOf('is-external=true') == -1) {
 </div>
 <div class="header">
     <div class="subTitle">
-        <div class="block">Welcome to the HL7 CIMI Reference Model Documentation Version 0.0.4 generated on Wed, 13 Dec 2017 11:37:40 -0800.</div>
+        <div class="block">Welcome to the HL7 CIMI Reference Model Documentation Version 0.0.4 generated on Thu, 14 Dec 2017 17:22:22 -0800.</div>
     </div>
     <p>Please click <a href="overview.html">here</a> for a high level UML view of the core model.</p>
     <p>Please click <a href="CIMIArchitectureGuide/CIMIArchitectureGuide.html">here</a> to view the CIMI Architecture Guide</p>
     <!--<p>Please click <a href="CIMIStyleGuide/CIMIStyleGuide.html">here</a> to view the CIMI Style Guide</p>
     <p>Please click <a href="CIMIClinicalExample/CIMIClinicalExample.html">here</a> to view a clinical example on the use of CIMI models for the development of Detailed Clinical Models</p>
     <p>An archetype viewer has been made available <a href="http://models.opencimi.org/may_ballot_2017" target="_blank">here</a></p>-->
-</div> <!-- Implementations must provide this class -->
+</div> <!-- Implementations can provide this class in the supplemental files folder-->
 <div class="contentContainer">
     <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Classes and definitions">
         <caption><span>Classes</span><span class="tabEnd">&nbsp;</span></caption>
@@ -167,7 +169,7 @@ Note that the manifestation of the adverse reaction is captured in FindingTopic.
                         <a href="CIMI_Clinical/AdverseSensitivityToSubstance/AdverseSensitivityToSubstance.html">AdverseSensitivityToSubstance</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A finding related to an individual’s risk of harm from exposure to a substance or class of substances.</div>
+                        <div class="block">A finding related to an individual&#39;s risk of harm from exposure to a substance or class of substances.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -191,7 +193,7 @@ Note that the manifestation of the adverse reaction is captured in FindingTopic.
                         <a href="CIMI_Reference_Model/PrimitiveTypes/Any.html">Any</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">Abstract supertype. Usually maps to a type like “Any” or “Object” in an object system. Defined here to provide the value and reference equality semantics.</div>
+                        <div class="block">Abstract supertype. Usually maps to a type like &quot;Any&quot; or &quot;Object&quot; in an object system. Defined here to provide the value and reference equality semantics.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -251,7 +253,7 @@ Attribution provides a common reference model pattern that may be included direc
                         <a href="CIMI_Reference_Model/PrimitiveTypes/Boolean.html">Boolean</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">logical True&amp;#47;False values; usually physically represented as an integer, but need not be</div>
+                        <div class="block">logical True/False values; usually physically represented as an integer, but need not be</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -285,7 +287,7 @@ Note: this class does not represent the assessment instrument itself which is co
                         <a href="CIMI_Reference_Model/PrimitiveTypes/Character.html">Character</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">a type whose value is a member of an 8-bit character-set (ISO: &#39;repertoire&#39;).</div>
+                        <div class="block">a type whose value is a member of an 8-bit character-set (ISO: &quot;repertoire&quot;).</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -410,7 +412,7 @@ A clinical statement is composed of the StatementTopic class (grouping of attrib
                         <a href="CIMI_Reference_Model/DataTypes/DateTime.html">DateTime</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A date, date and time or partial date (e.g. just year or year + month) as used in human communication. If hours and minutes are specified, a time zone SHALL be populated. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. Dates SHALL be valid dates. The time &#39;24:00&#39; is not allowed.</div>
+                        <div class="block">A date, date and time or partial date (e.g. just year or year + month) as used in human communication. If hours and minutes are specified, a time zone SHALL be populated. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored. Dates SHALL be valid dates. The time &quot;24:00&quot; is not allowed.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -458,7 +460,7 @@ A clinical statement is composed of the StatementTopic class (grouping of attrib
                         <a href="CIMI_Clinical/Encounter/Diagnosis.html">Diagnosis</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and&amp;#47;or review of laboratory data. </div>
+                        <div class="block">A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. </div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -604,7 +606,7 @@ A clinical statement is composed of the StatementTopic class (grouping of attrib
                         <a href="CIMI_Clinical/EvaluationResult/EvaluationResult.html">EvaluationResult</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">The outcome of an evaluation of a characteristic. This model holds a &#39;question&#39; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
+                        <div class="block">The outcome of an evaluation of a characteristic. This model holds a &quot;question&quot; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
 </div>
                 </td>
             </tr>
@@ -629,7 +631,7 @@ A clinical statement is composed of the StatementTopic class (grouping of attrib
                         <a href="CIMI_Clinical/Role/FamilyMembership.html">FamilyMembership</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A role played in the subject’s family, such as parent or sibling. Family members do not have to be related by blood, and can include social connections subjectively recognized by the subject as “family”.  </div>
+                        <div class="block">A role played in the subject&#39;s family, such as parent or sibling. Family members do not have to be related by blood, and can include social connections subjectively recognized by the subject as &quot;family&quot;.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -766,7 +768,7 @@ A clinical statement is composed of the StatementTopic class (grouping of attrib
                         <a href="CIMI_Clinical/Encounter/HomeBasePrimaryCareEncounter.html">HomeBasePrimaryCareEncounter</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">Patient is being treated &#39;In-Home&#39; for this encounter.</div>
+                        <div class="block">Patient is being treated &quot;In-Home&quot; for this encounter.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1018,7 +1020,7 @@ Experimental</div>
                         <a href="CIMI_Clinical/ContextCore/NonPerformance.html">NonPerformance</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A record that a clinical act was not performed and&amp;#47;or never initiated. Do not use this context if the act was initiated or started but aborted or cancelled. Use the NotPerformed context instead.</div>
+                        <div class="block">A record that a clinical act was not performed and/or never initiated. Do not use this context if the act was initiated or started but aborted or cancelled. Use the NotPerformed context instead.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1058,8 +1060,8 @@ Experimental</div>
                         <a href="CIMI_Reference_Model/DataTypes/OrdinalConcept.html">OrdinalConcept</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, …} or numbers like Agar values {0, 1, 2, 3, …}.
-Note that although the term “ordinal” in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
+                        <div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, ...} or numbers like Agar values {0, 1, 2, 3, ...}.
+Note that although the term &quot;ordinal&quot; in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
 </div>
                 </td>
             </tr>
@@ -1116,7 +1118,7 @@ Note that although the term “ordinal” in mathematics means natural numbers o
                         <a href="CIMI_Clinical/PatientEducation/PatientRelatedEducation.html">PatientRelatedEducation</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">This class captures information about counselling or education provided to (or an attempt to provide to) the Patient or to the Patient&#39;s representative and provides a means to note how well the Patient understood the information provided. Patient Education may be in the form of written instructions – either pre-defined materials, or personalized instructions – as well as oral counseling. </div>
+                        <div class="block">This class captures information about counselling or education provided to (or an attempt to provide to) the Patient or to the Patient&#39;s representative and provides a means to note how well the Patient understood the information provided. Patient Education may be in the form of written instructions - either pre-defined materials, or personalized instructions - as well as oral counseling.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1290,7 +1292,7 @@ The attachment of provenance information to a clinical statement in this manner 
                         <a href="CIMI_Reference_Model/DataTypes/Ratio.html">Ratio</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A parameterizable ratio, where the numerator and denominator should not be reduced to a decimal, such as 3 tablets&amp;#47;day. </div>
+                        <div class="block">A parameterizable ratio, where the numerator and denominator should not be reduced to a decimal, such as 3 tablets/day. </div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1404,7 +1406,7 @@ Note that attributes of the actor (an entity) that remain constant regardless of
                         <a href="CIMI_Clinical/Provenance/Signature.html">Signature</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A digital signature along with supporting context. The signature may be electronic&amp;#47;cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div>
+                        <div class="block">A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1526,7 +1528,7 @@ EXAMPLES: slide, tube, box, jar </div>
                         <a href="CIMI_Reference_Model/DataTypes/TermMapping.html">TermMapping</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">Represents an alternative (“mapped”) Concept associated with a source concept (i.e., CodedText.concept or the textual value of the CodedText when no equivalent concept has been defined), and the relative match of the mapped Concept with respect to the source Concept. Mappings may be used to add classification terms (e.g. adding ICD classifiers to SNOMED descriptive terms), for computational convenience, or to provide equivalents in other terminologies (e.g. across nursing vocabularies).</div>
+                        <div class="block">Represents an alternative (&quot;mapped&quot;) Concept associated with a source concept (i.e., CodedText.concept or the textual value of the CodedText when no equivalent concept has been defined), and the relative match of the mapped Concept with respect to the source Concept. Mappings may be used to add classification terms (e.g. adding ICD classifiers to SNOMED descriptive terms), for computational convenience, or to provide equivalents in other terminologies (e.g. across nursing vocabularies).</div>
                 </td>
             </tr>
             <tr class="altColor">
@@ -1630,7 +1632,7 @@ EXAMPLES: slide, tube, box, jar </div>
                         <a href="CIMI_Reference_Model/DataTypes/UriType.html">UriType</a>
                 </td>
                 <td class="colLast">
-                        <div class="block">A reference to an object which conforms to the Universal Resource Identifier (URI) standard. See &#39;Universal Resource Identifiers in WWW&#39; by Tim Berners-Lee at http:&amp;#47;&amp;#47;www.ietf.org&amp;#47;rfc&amp;#47;rfc3986.txt.</div>
+                        <div class="block">A reference to an object which conforms to the Universal Resource Identifier (URI) standard. See &quot;Universal Resource Identifiers in WWW&quot; by Tim Berners-Lee at http://www.ietf.org/rfc/rfc3986.txt.</div>
                 </td>
             </tr>
             <tr class="altColor">

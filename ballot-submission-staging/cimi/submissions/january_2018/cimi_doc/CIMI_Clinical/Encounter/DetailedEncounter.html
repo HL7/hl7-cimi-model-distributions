@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -243,7 +245,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>accountStatus</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains the account status.&#39; - HL7 Version 2.8, PV1-41. Note that HL7 does not suggest any values for this code (in User-defined Table 117).</div>
+                                            <div class="block">&quot;Contains the account status.&quot; - HL7 Version 2.8, PV1-41. Note that HL7 does not suggest any values for this code (in User-defined Table 117).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -252,8 +254,8 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>alternateVisitId</code></td>
                                     <td class="colMiddle"><code><strong>List&lt;Identifier&gt;</strong></code>
-                                            <div class="block">&#39;Contains the alternative, temporary, or pending optional visit ID number to be used if needed. Multiple alternate identifiers may be sent.&#39; - HL7 Version 2.8, PV1-50
-Uniquely identifies this patient visit using an identification scheme other than the one used for the &#39;id&#39; property. This allows for different systems or organizations to assign different identifiers to the same visit.</div>
+                                            <div class="block">&quot;Contains the alternative, temporary, or pending optional visit ID number to be used if needed. Multiple alternate identifiers may be sent.&quot; - HL7 Version 2.8, PV1-50
+Uniquely identifies this patient visit using an identification scheme other than the one used for the &quot;id&quot; property. This allows for different systems or organizations to assign different identifiers to the same visit.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>0..*</strong></code>
@@ -262,8 +264,8 @@ Uniquely identifies this patient visit using an identification scheme other than
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>ambulatoryStatus</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Indicates any permanent or transient handicapped conditions.&#39; - HL7 Version 2.8, PV1-15.
-Possible values include (from HL7 V2 Table 9): No functional limitations; Ambulates with assistive device; Wheelchair&amp;#47;stretcher bound; Comatose - non-responsive; Disoriented; Vision impaired; Hearing impaired; Speech impaired; Non-English speaking; Functional level unknown; Oxygen therapy; Special equipment (tubes, IVs, catheters); Amputee; Mastectomy; Paraplegic; Pregnant.</div>
+                                            <div class="block">&quot;Indicates any permanent or transient handicapped conditions.&quot; - HL7 Version 2.8, PV1-15.
+Possible values include (from HL7 V2 Table 9): No functional limitations; Ambulates with assistive device; Wheelchair/stretcher bound; Comatose - non-responsive; Disoriented; Vision impaired; Hearing impaired; Speech impaired; Non-English speaking; Functional level unknown; Oxygen therapy; Special equipment (tubes, IVs, catheters); Amputee; Mastectomy; Paraplegic; Pregnant.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -272,7 +274,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>chargePriceIndicator</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains the code used to determine which price schedule is to be used for room and bed charges.&#39; - HL7 Version 2.8, PV1-21. Note that HL7 does not suggest any values for this code (in User-defined Table 32).</div>
+                                            <div class="block">&quot;Contains the code used to determine which price schedule is to be used for room and bed charges.&quot; - HL7 Version 2.8, PV1-21. Note that HL7 does not suggest any values for this code (in User-defined Table 32).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -281,7 +283,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>chiefComplaint</code></td>
                                     <td class="colMiddle"><code><strong>Text</strong></code>
-                                            <div class="block">Describes the primary reason, in the patient&#39;s words, for the encounter&amp;#47;visit. This field contrasts with the reasonForVisit, which is the clinician&#39;s assessment of the reason for the encounter&amp;#47;visit. </div>
+                                            <div class="block">Describes the primary reason, in the patient&#39;s words, for the encounter/visit. This field contrasts with the reasonForVisit, which is the clinician&#39;s assessment of the reason for the encounter/visit. </div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -299,7 +301,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>financialClass</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains the financial class(es) assigned to the patient for the purpose of identifying sources of reimbursement.&#39; - HL7 Version 2.8, PV1-20 Note that HL7 does not suggest any values for this code (in User-defined Table 64).</div>
+                                            <div class="block">&quot;Contains the financial class(es) assigned to the patient for the purpose of identifying sources of reimbursement.&quot; - HL7 Version 2.8, PV1-20 Note that HL7 does not suggest any values for this code (in User-defined Table 64).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -308,7 +310,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>hospitalService</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains the treatment or type of surgery that the patient is scheduled to receive.&#39; - HL7 Version 2.8, PV1-10. Possible Values (from HL7 Table 69) include: Cardiac Service, Medical Service, Pulmonary Service, Surgical Service, Urology Service.</div>
+                                            <div class="block">&quot;Contains the treatment or type of surgery that the patient is scheduled to receive.&quot; - HL7 Version 2.8, PV1-10. Possible Values (from HL7 Table 69) include: Cardiac Service, Medical Service, Pulmonary Service, Surgical Service, Urology Service.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -317,7 +319,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>isEmploymentRelated</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Specifies whether a patient&#39;s illness was job-related.&#39; - HL7 Version 2.8, PV2-15</div>
+                                            <div class="block">&quot;Specifies whether a patient&#39;s illness was job-related.&quot; - HL7 Version 2.8, PV2-15</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -335,7 +337,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>patientClass</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;This field is used by systems to categorize patients by site. It does not have a consistent industry-wide definition. It is subject to site specific variations.&#39; - HL7 Version 2.8, PV1-2. HL7 Version 2 has the following suggested values (table 4): Emergency; Inpatient; Outpatient; Preadmit; Recurring patient; Obstetrics; Commercial Account; Not Applicable; Unknown.</div>
+                                            <div class="block">&quot;This field is used by systems to categorize patients by site. It does not have a consistent industry-wide definition. It is subject to site specific variations.&quot; - HL7 Version 2.8, PV1-2. HL7 Version 2 has the following suggested values (table 4): Emergency; Inpatient; Outpatient; Preadmit; Recurring patient; Obstetrics; Commercial Account; Not Applicable; Unknown.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -344,7 +346,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>patientType</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains site-specific values that identify the patient type.&#39; - HL7 Version 2.8, PV1-18 Note that HL7 does not suggest any values for this code (in User-defined Table 18).</div>
+                                            <div class="block">&quot;Contains site-specific values that identify the patient type.&quot; - HL7 Version 2.8, PV1-18 Note that HL7 does not suggest any values for this code (in User-defined Table 18).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -353,7 +355,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>previousServiceDate</code></td>
                                     <td class="colMiddle"><code><strong>TemporalValue</strong></code>
-                                            <div class="block">&#39;Contains the date of previous service for the same recurring condition. This may be a required field for billing certain illnesses (e.g., accident related) to a third party.&#39; - HL7 Version 2.8, PV2-14.</div>
+                                            <div class="block">&quot;Contains the date of previous service for the same recurring condition. This may be a required field for billing certain illnesses (e.g., accident related) to a third party.&quot; - HL7 Version 2.8, PV2-14.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -362,7 +364,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>publicityCode</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;Contains a user-defined code indicating what level of publicity is allowed for a specific visit.&#39; - HL7 Version 2.8, PV2-21. Possible values include (from HL7 V2 Table 215): Family only; No Publicity; Other; Unknown.</div>
+                                            <div class="block">&quot;Contains a user-defined code indicating what level of publicity is allowed for a specific visit.&quot; - HL7 Version 2.8, PV2-21. Possible values include (from HL7 V2 Table 215): Family only; No Publicity; Other; Unknown.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -371,7 +373,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>reasonForVisit</code></td>
                                     <td class="colMiddle"><code><strong>List&lt;Concept&gt;</strong></code>
-                                            <div class="block">The reason for the encounter&amp;#47;visit from the clinician&#39;s point of view. This field contrasts with the chiefComplaint, which is the patient&#39;s description of the reason for the encounter&amp;#47;visit.</div>
+                                            <div class="block">The reason for the encounter/visit from the clinician&#39;s point of view. This field contrasts with the chiefComplaint, which is the patient&#39;s description of the reason for the encounter/visit.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>0..*</strong></code>
@@ -389,7 +391,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>servicingFacility</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;This field is used in a multiple facility environment, e.g., multiple campuses or buildings, to indicate the healthcare facility with which this visit is associated.&#39; - HL7 Version 2.8, PV1-39. Note that HL7 does not suggest any values for this code (in User-defined Table 115).</div>
+                                            <div class="block">&quot;This field is used in a multiple facility environment, e.g., multiple campuses or buildings, to indicate the healthcare facility with which this visit is associated.&quot; - HL7 Version 2.8, PV1-39. Note that HL7 does not suggest any values for this code (in User-defined Table 115).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -407,7 +409,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>specialCourtesy</code></td>
                                     <td class="colMiddle"><code><strong>List&lt;Concept&gt;</strong></code>
-                                            <div class="block">&#39;Indicates whether the patient will be extended certain special courtesies.&#39; - HL7 Version 2.8, PV1-22. Note that HL7 does not suggest any values for this code (in User-defined Table 45).</div>
+                                            <div class="block">&quot;Indicates whether the patient will be extended certain special courtesies.&quot; - HL7 Version 2.8, PV1-22. Note that HL7 does not suggest any values for this code (in User-defined Table 45).</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>0..*</strong></code>
@@ -425,7 +427,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>assignedPatientLocation</code></td>
                                     <td class="colMiddle"><code><strong>Location</strong></code>
-                                            <div class="block">&#39;This field contains the patient&#39;s initial assigned location or the location to which the patient is being moved. The first component may be the nursing station for inpatient locations, or clinic or department, for locations other than inpatient. For canceling a transaction or discharging a patient, the current location (after the cancellation event or before the discharge event) should be in this field.&#39; - HL7 Version 2.8, PV1-3</div>
+                                            <div class="block">&quot;This field contains the patient&#39;s initial assigned location or the location to which the patient is being moved. The first component may be the nursing station for inpatient locations, or clinic or department, for locations other than inpatient. For canceling a transaction or discharging a patient, the current location (after the cancellation event or before the discharge event) should be in this field.&quot; - HL7 Version 2.8, PV1-3</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -435,7 +437,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                     <td class="colFirst"><code><strong>pendingLocation</code></td>
                                     <td class="colMiddle"><code><strong>Location</strong></code>
                                             <div class="block">	
-&#39;Indicates the point of care, room, bed, healthcare facility ID, and bed status to which the patient may be moved. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient.&#39; - HL7 Version 2.8, PV1-42</div>
+&quot;Indicates the point of care, room, bed, healthcare facility ID, and bed status to which the patient may be moved. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient.&quot; - HL7 Version 2.8, PV1-42</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -444,7 +446,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>serviceDeliveryLocation</code></td>
                                     <td class="colMiddle"><code><strong>Location</strong></code>
-                                            <div class="block">&#39;The location to which the patient is assigned. It is a role played by a place at which services may be provided. Note that a single physical place can play multiple service delivery location roles each with its own attributes. For example, a Podiatry clinic and Research clinic may meet on alternate days in the same physical location; each clinic uses its own mailing address and telephone number.&#39; (HL7)</div>
+                                            <div class="block">&quot;The location to which the patient is assigned. It is a role played by a place at which services may be provided. Note that a single physical place can play multiple service delivery location roles each with its own attributes. For example, a Podiatry clinic and Research clinic may meet on alternate days in the same physical location; each clinic uses its own mailing address and telephone number.&quot; (HL7)</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -453,7 +455,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>temporaryLocation</code></td>
                                     <td class="colMiddle"><code><strong>Location</strong></code>
-                                            <div class="block">&#39;Contains a location other than the assigned location required for a temporary period of time (e.g., OR, operating theatre, etc.).&#39; - HL7 Version 2.8, PV1-11</div>
+                                            <div class="block">&quot;Contains a location other than the assigned location required for a temporary period of time (e.g., OR, operating theatre, etc.).&quot; - HL7 Version 2.8, PV1-11</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -462,7 +464,7 @@ Possible values include (from HL7 V2 Table 9): No functional limitations; Ambula
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>priorTemporaryLocation</code></td>
                                     <td class="colMiddle"><code><strong>List&lt;Location&gt;</strong></code>
-                                            <div class="block">&#39;This field is used to reflect the patient&#39;s temporary location (such as the operating room&amp;#47;theatre or x-ray) prior to a transfer from a temporary location to an actual location, or from a temporary location to another temporary location. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient.&#39; - HL7 Version 2.8, PV1-43</div>
+                                            <div class="block">&quot;This field is used to reflect the patient&#39;s temporary location (such as the operating room/theatre or x-ray) prior to a transfer from a temporary location to an actual location, or from a temporary location to another temporary location. The first component may be the nursing station for inpatient locations, or the clinic, department, or home for locations other than inpatient.&quot; - HL7 Version 2.8, PV1-43</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>0..*</strong></code>

@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -97,8 +99,8 @@ if (location.href.indexOf('is-external=true') == -1) {
     <div class="description">
         <dl>
             <dt>Documentation:</dt>
-            <dd><div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, …} or numbers like Agar values {0, 1, 2, 3, …}.
-Note that although the term “ordinal” in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
+            <dd><div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, ...} or numbers like Agar values {0, 1, 2, 3, ...}.
+Note that although the term &quot;ordinal&quot; in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
 </div></dd>
         </dl>
         <dl>
@@ -146,8 +148,8 @@ Note that although the term “ordinal” in mathematics means natural numbers o
                 <pre>public abstract class <span class="strong">OrdinalConcept</span>
 extends <a href="../../../java/lang/Object.html" title="class in java.lang">Object</a>
 implements <a href="../../../javax/swing/border/Border.html" title="interface in javax.swing.border">Border</a>, <a href="../../../java/io/Serializable.html" title="interface in java.io">Serializable</a></pre>
-                <div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, …} or numbers like Agar values {0, 1, 2, 3, …}.
-Note that although the term “ordinal” in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
+                <div class="block">Represents rankings and scores, e.g. pain, Apgar values, etc, where there is a) an implied ordering, b) no implication that the distance between each value is constant, and c) the total number of values is finite. This class can be used for recording symbolic values, e.g., the results on a urinalysis strip {neg, trace, moderate, ...} or numbers like Agar values {0, 1, 2, 3, ...}.
+Note that although the term &quot;ordinal&quot; in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point, for example {-3, -2, -1, 0, 1, 2, 3} for reflex response values.
 </div>
             </li>
         </ul>
@@ -190,7 +192,7 @@ Note that although the term “ordinal” in mathematics means natural numbers o
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>positionInSet</code></td>
                                     <td class="colMiddle"><code><strong>Integer</strong></code>
-                                            <div class="block">The rank order in the enumeration of values, used for sorting. While any integer value can be used, the values need to reflect the order in the set. For example, ordering as {1, 2, 3, …} has the same effect as ordering as {0, 1, 2, …}</div>
+                                            <div class="block">The rank order in the enumeration of values, used for sorting. While any integer value can be used, the values need to reflect the order in the set. For example, ordering as {1, 2, 3, ...} has the same effect as ordering as {0, 1, 2, ...}</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>1..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>

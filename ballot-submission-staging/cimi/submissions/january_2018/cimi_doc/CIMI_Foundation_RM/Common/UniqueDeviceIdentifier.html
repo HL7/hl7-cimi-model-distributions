@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -204,7 +206,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>jurisdiction</code></td>
                                     <td class="colMiddle"><code><strong>UriType</strong></code>
-                                            <div class="block">The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace. with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http:&amp;#47;&amp;#47;hl7.org&amp;#47;fhir&amp;#47;NamingSystem&amp;#47;fda-udi.</div>
+                                            <div class="block">The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace. with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/fda-udi.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -231,7 +233,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>issuer</code></td>
                                     <td class="colMiddle"><code><strong>UriType</strong></code>
-                                            <div class="block">Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include : 1) GS1: http:&amp;#47;&amp;#47;hl7.org&amp;#47;fhir&amp;#47;NamingSystem&amp;#47;gs1-di, 2) HIBCC: http:&amp;#47;&amp;#47;hl7.org&amp;#47;fhir&amp;#47;NamingSystem&amp;#47;hibcc-dI, 3) ICCBBA for blood containers: http:&amp;#47;&amp;#47;hl7.org&amp;#47;fhir&amp;#47;NamingSystem&amp;#47;iccbba-blood-di, 4) ICCBA for other devices: http:&amp;#47;&amp;#47;hl7.org&amp;#47;fhir&amp;#47;NamingSystem&amp;#47;iccbba-other-di.</div>
+                                            <div class="block">Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include : 1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, 2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-dI, 3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, 4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>

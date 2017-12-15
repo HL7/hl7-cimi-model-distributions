@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -209,7 +211,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>key</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">The concept representing the finding or action that is the topic of the statement. For actions, the key represents the action being described. For findings, the key represents the “question” or property being investigated. For evaluation result findings, the key contains a concept for an observable entity, such as systolic blood pressure. For assertion findings (which by nature lack an explicit question), the key contains a default concept signifying that an assertion is being made. In all cases, the key describes the topic independent of the context** of the action or the finding.</div>
+                                            <div class="block">The concept representing the finding or action that is the topic of the statement. For actions, the key represents the action being described. For findings, the key represents the &quot;question&quot; or property being investigated. For evaluation result findings, the key contains a concept for an observable entity, such as systolic blood pressure. For assertion findings (which by nature lack an explicit question), the key contains a default concept signifying that an assertion is being made. In all cases, the key describes the topic independent of the context of the action or the finding.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>1..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>

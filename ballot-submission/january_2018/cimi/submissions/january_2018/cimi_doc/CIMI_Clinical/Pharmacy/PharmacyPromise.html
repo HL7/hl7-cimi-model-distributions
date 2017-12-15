@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -227,7 +229,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>isHospitalSupplySelfAdministered</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">A flag indicating that the medication given to the patient is to be self-administered and is to be supplied by the hospital’s pharmacy while they are an inpatient.</div>
+                                            <div class="block">A flag indicating that the medication given to the patient is to be self-administered and is to be supplied by the hospital&#39;s pharmacy while they are an inpatient.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -299,7 +301,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>scheduleType</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">&#39;This describes the type of schedule for the dispensing of the medication(s) that make up the order. PRE-OP orders are usually considered to be ON-CALL orders, and orders dispensed as MULTI-DOSE CONTAINERS are usually considered to be FILL ON REQUEST orders. C=Continuous, O=One Time, P=PRN, R=Fill On Request, OC=On Call.&#39; (VistA)</div>
+                                            <div class="block">&quot;This describes the type of schedule for the dispensing of the medication(s) that make up the order. PRE-OP orders are usually considered to be ON-CALL orders, and orders dispensed as MULTI-DOSE CONTAINERS are usually considered to be FILL ON REQUEST orders. C=Continuous, O=One Time, P=PRN, R=Fill On Request, OC=On Call.&quot; (VistA)</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -309,10 +311,10 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                     <td class="colFirst"><code><strong>substitution</code></td>
                                     <td class="colMiddle"><code><strong>SubstitutionInformation</strong></code>
                                             <div class="block">If the Pharmacist has changed the kind of medication to be dispensed to the patient from the one originally ordered by the prescriber, this property provides a categorization of the kind of substitution that was made.
-&#39;Refer to HL7 Table 0167 - Substitution Status in Chapter 2C for suggested values.&#39; - HL7 Version 2.8, RXD-11.
-&#39;Refer to HL7 Table 0167 - Substitution Status in Chapter 2C for suggested values.&#39; - HL7 Version 2.8, RXE-9.
-&#39;Product&amp;#47;Service Substitution, coded&#39; - NCPDP Script (Field 4457, Data Dictionary 201104)
-&#39;Code indicating whether or not the prescriber’s instructions regarding generic substitution were followed.&#39; - NCPDP Telecommunication (Field 408-D8, Data Dictionary 201104).
+&quot;Refer to HL7 Table 0167 - Substitution Status in Chapter 2C for suggested values.&quot; - HL7 Version 2.8, RXD-11.
+&quot;Refer to HL7 Table 0167 - Substitution Status in Chapter 2C for suggested values.&quot; - HL7 Version 2.8, RXE-9.
+&quot;Product/Service Substitution, coded&quot; - NCPDP Script (Field 4457, Data Dictionary 201104)
+&quot;Code indicating whether or not the prescriber&#39;s instructions regarding generic substitution were followed.&quot; - NCPDP Telecommunication (Field 408-D8, Data Dictionary 201104).
 
 -----
 Possible values include (from HL7 Table 167): 
@@ -346,7 +348,7 @@ Substitution Allowed By Prescriber but Plan Requests Brand - Patient&#39;s Plan 
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>totalDailyDose</code></td>
                                     <td class="colMiddle"><code><strong>Quantity</strong></code>
-                                            <div class="block">&#39;The total daily dose for this particular pharmaceutical as expressed in terms of actual dispense units.&#39; - HL7 Version 2.8, RXE-19.</div>
+                                            <div class="block">&quot;The total daily dose for this particular pharmaceutical as expressed in terms of actual dispense units.&quot; - HL7 Version 2.8, RXE-19.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>

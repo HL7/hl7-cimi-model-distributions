@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -196,7 +198,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>disposition</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">Contains the patient&#39;s anticipated location or status following the encounter (i.e., discharged to home, expired, etc.). In the US, use the Official Uniform Billing (UB) 04 2008 numeric codes found on form locator 17. Note that while the encounter is still &#39;active&#39; (i.e., the encounter does not have an end date yet) this attribute should be interpreted as the expected discharge disposition. When the encounter is &#39;completed&#39; this attribute contains the actual discharge disposition.</div>
+                                            <div class="block">Contains the patient&#39;s anticipated location or status following the encounter (i.e., discharged to home, expired, etc.). In the US, use the Official Uniform Billing (UB) 04 2008 numeric codes found on form locator 17. Note that while the encounter is still &quot;active&quot; (i.e., the encounter does not have an end date yet) this attribute should be interpreted as the expected discharge disposition. When the encounter is &quot;completed&quot; this attribute contains the actual discharge disposition.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
@@ -232,7 +234,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>dischargeFromLocation</code></td>
                                     <td class="colMiddle"><code><strong>Location</strong></code>
-                                            <div class="block">&#39;The location to which the patient is assigned. It is a role played by a place at which services may be provided. Note that a single physical place can play multiple service delivery location roles each with its own attributes. For example, a Podiatry clinic and Research clinic may meet on alternate days in the same physical location; each clinic uses its own mailing address and telephone number.&#39; (HL7)</div>
+                                            <div class="block">&quot;The location to which the patient is assigned. It is a role played by a place at which services may be provided. Note that a single physical place can play multiple service delivery location roles each with its own attributes. For example, a Podiatry clinic and Research clinic may meet on alternate days in the same physical location; each clinic uses its own mailing address and telephone number.&quot; (HL7)</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>

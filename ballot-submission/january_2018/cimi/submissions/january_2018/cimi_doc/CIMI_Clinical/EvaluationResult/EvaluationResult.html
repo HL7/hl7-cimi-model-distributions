@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -97,7 +99,7 @@ if (location.href.indexOf('is-external=true') == -1) {
     <div class="description">
         <dl>
             <dt>Documentation:</dt>
-            <dd><div class="block">The outcome of an evaluation of a characteristic. This model holds a &#39;question&#39; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
+            <dd><div class="block">The outcome of an evaluation of a characteristic. This model holds a &quot;question&quot; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
 </div></dd>
         </dl>
         <dl>
@@ -157,7 +159,7 @@ if (location.href.indexOf('is-external=true') == -1) {
                 <pre>public abstract class <span class="strong">EvaluationResult</span>
 extends <a href="../../../java/lang/Object.html" title="class in java.lang">Object</a>
 implements <a href="../../../javax/swing/border/Border.html" title="interface in javax.swing.border">Border</a>, <a href="../../../java/io/Serializable.html" title="interface in java.io">Serializable</a></pre>
-                <div class="block">The outcome of an evaluation of a characteristic. This model holds a &#39;question&#39; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
+                <div class="block">The outcome of an evaluation of a characteristic. This model holds a &quot;question&quot; in the key and holds a value in the result. This value is further qualified through the model&#39;s properties.
 </div>
             </li>
         </ul>
@@ -263,7 +265,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="rowColor">
                                     <td class="colFirst"><code><strong>precondition</code></td>
                                     <td class="colMiddle"><code><strong>List&lt;Concept&gt;</strong></code>
-                                            <div class="block">Describes the previously existing conditions or states that could affect a measurement or assessment, for example, a patient’s weight taken while clothed, height with or without shoes, blood pressure taken while standing or lying down. Precondition aligns with the SNOMED CT Observable model attribute 704326004 |Precondition (attribute)|</div>
+                                            <div class="block">Describes the previously existing conditions or states that could affect a measurement or assessment, for example, a patient&#39;s weight taken while clothed, height with or without shoes, blood pressure taken while standing or lying down. Precondition aligns with the SNOMED CT Observable model attribute 704326004 |Precondition (attribute)|</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>0..*</strong></code>

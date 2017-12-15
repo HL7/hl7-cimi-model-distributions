@@ -41,7 +41,9 @@ if (location.href.indexOf('is-external=true') == -1) {
         <li><a href="../../../help-doc.html">Help</a></li>
         -->
     </ul>
-    <div class="aboutLanguage"><em><strong>Reference Model Viewer</strong></em></div>
+    <div class="aboutLanguage">
+        <a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a> <!-- Looks for branding.ftlh in supplemental files and, if not found, defaults to generic branding.ftlh -->
+    </div>
 </div>
 <div class="subNav">
 <!--
@@ -97,7 +99,7 @@ if (location.href.indexOf('is-external=true') == -1) {
     <div class="description">
         <dl>
             <dt>Documentation:</dt>
-            <dd><div class="block">A digital signature along with supporting context. The signature may be electronic&amp;#47;cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div></dd>
+            <dd><div class="block">A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div></dd>
         </dl>
         <dl>
             <dt>Ancestors:</dt>
@@ -137,7 +139,7 @@ if (location.href.indexOf('is-external=true') == -1) {
                 <pre>public abstract class <span class="strong">Signature</span>
 extends <a href="../../../java/lang/Object.html" title="class in java.lang">Object</a>
 implements <a href="../../../javax/swing/border/Border.html" title="interface in javax.swing.border">Border</a>, <a href="../../../java/io/Serializable.html" title="interface in java.io">Serializable</a></pre>
-                <div class="block">A digital signature along with supporting context. The signature may be electronic&amp;#47;cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div>
+                <div class="block">A digital signature along with supporting context. The signature may be electronic/cryptographic in nature, or a graphical image representing a hand-written signature, or a signature process. Different Signature approaches have different utilities.</div>
             </li>
         </ul>
 -->
@@ -215,7 +217,7 @@ implements <a href="../../../javax/swing/border/Border.html" title="interface in
                                 <tr class="altColor">
                                     <td class="colFirst"><code><strong>mimeType</code></td>
                                     <td class="colMiddle"><code><strong>Concept</strong></code>
-                                            <div class="block">A mime type that indicates the technical format of the signature. Important mime types are application&amp;#47;signature+xml for X ML DigSig, application&amp;#47;jwt for JWT, and image&amp;#47;* for a graphical image of a signature, etc.</div>
+                                            <div class="block">A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jwt for JWT, and image/* for a graphical image of a signature, etc.</div>
                                     </td>
                                     <td class="colMiddle"><code><strong>0..1</strong></code>
                                     <td class="colLast"><code><strong>N/A</strong></code>
