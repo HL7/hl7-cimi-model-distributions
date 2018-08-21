@@ -1,0 +1,454 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-datatypes-PhotographicImage-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW PhotographicImage Logical Model</b></p>\n  <p/>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-PhotographicImage-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.datatypes.PhotographicImage"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PhotographicImageModel",
+  "title": "SW PhotographicImage Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "72170-4"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-datatypes-PhotographicImage-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-datatypes-PhotographicImage-model",
+        "path": "cimi-datatypes-PhotographicImage-model",
+        "short": "PhotographicImage",
+        "definition": "PhotographicImage",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.binaryData",
+        "path": "cimi-datatypes-PhotographicImage-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.contentType",
+        "path": "cimi-datatypes-PhotographicImage-model.contentType",
+        "short": "Mime type of the content, with charset etc.",
+        "definition": "Mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.language",
+        "path": "cimi-datatypes-PhotographicImage-model.language",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0023008"
+          }
+        ],
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+        "path": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+        "short": "URI where data can be found.",
+        "definition": "URI where data can be found.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.resourceSize",
+        "path": "cimi-datatypes-PhotographicImage-model.resourceSize",
+        "short": "Number of bytes of content in the resource (if url provided)",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.resourceSize",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.hash",
+        "path": "cimi-datatypes-PhotographicImage-model.hash",
+        "short": "A hash code of the data (sha-1, base64ed)",
+        "definition": "A hash code of the data (sha-1, base64ed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.hash",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.title",
+        "path": "cimi-datatypes-PhotographicImage-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.creationTime",
+        "path": "cimi-datatypes-PhotographicImage-model.creationTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the information was recorded in the system of record.",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.creationTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-datatypes-PhotographicImage-model",
+        "path": "cimi-datatypes-PhotographicImage-model",
+        "short": "PhotographicImage",
+        "definition": "PhotographicImage",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.binaryData",
+        "path": "cimi-datatypes-PhotographicImage-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.contentType",
+        "path": "cimi-datatypes-PhotographicImage-model.contentType",
+        "short": "Mime type of the content, with charset etc.",
+        "definition": "Mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.language",
+        "path": "cimi-datatypes-PhotographicImage-model.language",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0023008"
+          }
+        ],
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+        "path": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+        "short": "URI where data can be found.",
+        "definition": "URI where data can be found.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.resourceLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.resourceSize",
+        "path": "cimi-datatypes-PhotographicImage-model.resourceSize",
+        "short": "Number of bytes of content in the resource (if url provided)",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.resourceSize",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.hash",
+        "path": "cimi-datatypes-PhotographicImage-model.hash",
+        "short": "A hash code of the data (sha-1, base64ed)",
+        "definition": "A hash code of the data (sha-1, base64ed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.hash",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.title",
+        "path": "cimi-datatypes-PhotographicImage-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-PhotographicImage-model.creationTime",
+        "path": "cimi-datatypes-PhotographicImage-model.creationTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the information was recorded in the system of record.",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-PhotographicImage-model.creationTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

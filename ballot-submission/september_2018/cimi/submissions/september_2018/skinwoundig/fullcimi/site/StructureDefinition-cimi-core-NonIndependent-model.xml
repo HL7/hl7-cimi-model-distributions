@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-core-NonIndependent-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW NonIndependent Logical Model</b></p>
+  <p>Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-NonIndependent-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.core.NonIndependent"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="NonIndependentModel"/>
+  <title value="SW NonIndependent Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-core-NonIndependent-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-core-NonIndependent-model">
+      <path value="cimi-core-NonIndependent-model"/>
+      <definition value="Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-NonIndependent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-core-NonIndependent-model">
+      <path value="cimi-core-NonIndependent-model"/>
+      <definition value="Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-NonIndependent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

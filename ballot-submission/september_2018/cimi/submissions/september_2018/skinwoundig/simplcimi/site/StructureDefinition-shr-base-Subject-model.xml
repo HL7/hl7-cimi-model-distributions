@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-Subject-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Subject Logical Model</b></p>
+  <p>The person, place, event, condition, other statement that this statement addresses or belongs to.
+For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Subject-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.Subject"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SubjectModel"/>
+  <title value="SW Subject Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-Subject-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-Subject-model">
+      <path value="shr-base-Subject-model"/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Subject-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Subject-model.value">
+      <path value="shr-base-Subject-model.value"/>
+      <short value="Statement representing the person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="Statement representing the person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Subject-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-Subject-model">
+      <path value="shr-base-Subject-model"/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Subject-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Subject-model.value">
+      <path value="shr-base-Subject-model.value"/>
+      <short value="Statement representing the person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="Statement representing the person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Subject-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

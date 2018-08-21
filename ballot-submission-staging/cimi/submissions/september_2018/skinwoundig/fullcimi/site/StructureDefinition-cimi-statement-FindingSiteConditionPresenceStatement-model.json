@@ -1,0 +1,1483 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW FindingSiteConditionPresenceStatement Logical Model</b></p>\n  <p>Presence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-FindingSiteConditionPresenceStatement-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.FindingSiteConditionPresenceStatement"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "FindingSiteConditionPresenceStatementModel",
+  "title": "SW FindingSiteConditionPresenceStatement Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Presence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C1268086"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+        "definition": "Presence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+        "short": "A file that contains audio, video, image, or similar content.",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+        "short": "Whether an assessment has been confirmed by testing or observation.",
+        "definition": "Whether an assessment has been confirmed by testing or observation.\nCIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "88878-4"
+          }
+        ],
+        "short": "The end, remission or resolution.",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+        "short": "The degree of confidence in a conclusion or assertion.",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-problem"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72369-2"
+          }
+        ],
+        "short": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "definition": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+        "short": "The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives",
+        "definition": "The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalStatement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+        "short": "A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier.",
+        "definition": "A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+        "short": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
+        "definition": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/condition-clinical"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+        "short": "The time at which a condition or condition was first identified in a healthcare context.",
+        "definition": "The time at which a condition or condition was first identified in a healthcare context.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89251-3",
+            "display": "Condition present on admission"
+          }
+        ],
+        "short": "If the problem or condition existed before the current episode of care.",
+        "definition": "If the problem or condition existed before the current episode of care.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0392364"
+          }
+        ],
+        "short": "Degree of harshness or extent of a symptom, disorder, or condition.",
+        "definition": "Degree of harshness or extent of a symptom, disorder, or condition.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/condition-severity"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3858539",
+            "display": "Criticality"
+          }
+        ],
+        "short": "The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.",
+        "definition": "The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0699749"
+          }
+        ],
+        "short": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "definition": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Stage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+        "definition": "Presence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+        "short": "A file that contains audio, video, image, or similar content.",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.media",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+        "short": "Whether an assessment has been confirmed by testing or observation.",
+        "definition": "Whether an assessment has been confirmed by testing or observation.\nCIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.verificationStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "88878-4"
+          }
+        ],
+        "short": "The end, remission or resolution.",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+        "short": "The degree of confidence in a conclusion or assertion.",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.topicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-problem"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.category",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72369-2"
+          }
+        ],
+        "short": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "definition": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.anatomicalLocation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+        "short": "The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives",
+        "definition": "The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionCause",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalStatement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+        "short": "A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier.",
+        "definition": "A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.conditionIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+        "short": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
+        "definition": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.clinicalStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/condition-clinical"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+        "short": "The time at which a condition or condition was first identified in a healthcare context.",
+        "definition": "The time at which a condition or condition was first identified in a healthcare context.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.whenClinicallyRecognized",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89251-3",
+            "display": "Condition present on admission"
+          }
+        ],
+        "short": "If the problem or condition existed before the current episode of care.",
+        "definition": "If the problem or condition existed before the current episode of care.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.presentOnAdmission",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0392364"
+          }
+        ],
+        "short": "Degree of harshness or extent of a symptom, disorder, or condition.",
+        "definition": "Degree of harshness or extent of a symptom, disorder, or condition.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/condition-severity"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3858539",
+            "display": "Criticality"
+          }
+        ],
+        "short": "The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.",
+        "definition": "The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.criticality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+        "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0699749"
+          }
+        ],
+        "short": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "definition": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-FindingSiteConditionPresenceStatement-model.stage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Stage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-SequenceNumber-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW SequenceNumber Logical Model</b></p>\n  <p>The sequence number for this specimen in a collection of specimens.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SequenceNumber-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.SequenceNumber"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SequenceNumberModel",
+  "title": "SW SequenceNumber Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The sequence number for this specimen in a collection of specimens.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-SequenceNumber-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-SequenceNumber-model",
+        "path": "cimi-entity-SequenceNumber-model",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SequenceNumber-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SequenceNumber-model.value",
+        "path": "cimi-entity-SequenceNumber-model.value",
+        "short": "Code representing the sequence number for this specimen in a collection of specimens.",
+        "definition": "Code representing the sequence number for this specimen in a collection of specimens.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SequenceNumber-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-SequenceNumber-model",
+        "path": "cimi-entity-SequenceNumber-model",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SequenceNumber-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SequenceNumber-model.value",
+        "path": "cimi-entity-SequenceNumber-model.value",
+        "short": "Code representing the sequence number for this specimen in a collection of specimens.",
+        "definition": "Code representing the sequence number for this specimen in a collection of specimens.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SequenceNumber-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

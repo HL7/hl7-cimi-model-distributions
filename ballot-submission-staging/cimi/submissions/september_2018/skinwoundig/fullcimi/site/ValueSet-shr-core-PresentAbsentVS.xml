@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="shr-core-PresentAbsentVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW PresentAbsentVS ValueSet</b></p>
+<p>Whether a feature or condition is present or absent.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.core.PresentAbsentVS"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="PresentAbsentVS"/>
+  <title value="SW PresentAbsentVS ValueSet"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Whether a feature or condition is present or absent."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="52101004"/>
+        <display value="Present (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="2667000"/>
+        <display value="Absent (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

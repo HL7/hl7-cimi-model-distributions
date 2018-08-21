@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-SpecimenQuantity-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW SpecimenQuantity Logical Model</b></p>
+  <p>Quantity of specimen within container.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenQuantity-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.SpecimenQuantity"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SpecimenQuantityModel"/>
+  <title value="SW SpecimenQuantity Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Quantity of specimen within container."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-SpecimenQuantity-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-SpecimenQuantity-model">
+      <path value="cimi-entity-SpecimenQuantity-model"/>
+      <definition value="Quantity of specimen within container."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-SpecimenQuantity-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-SpecimenQuantity-model.value">
+      <path value="cimi-entity-SpecimenQuantity-model.value"/>
+      <short value="SimpleQuantity representing quantity of specimen within container."/>
+      <definition value="SimpleQuantity representing quantity of specimen within container."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-SpecimenQuantity-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-SpecimenQuantity-model">
+      <path value="cimi-entity-SpecimenQuantity-model"/>
+      <definition value="Quantity of specimen within container."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-SpecimenQuantity-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-SpecimenQuantity-model.value">
+      <path value="cimi-entity-SpecimenQuantity-model.value"/>
+      <short value="SimpleQuantity representing quantity of specimen within container."/>
+      <definition value="SimpleQuantity representing quantity of specimen within container."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-SpecimenQuantity-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

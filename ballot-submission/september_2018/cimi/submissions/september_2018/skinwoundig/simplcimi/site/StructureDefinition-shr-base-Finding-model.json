@@ -1,0 +1,219 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-Finding-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Finding Logical Model</b></p>\n  <p>A determination, such as an observation, assertion, opinion, fact, or judgment.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Finding-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.Finding"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "FindingModel",
+  "title": "SW Finding Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A determination, such as an observation, assertion, opinion, fact, or judgment.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-Finding-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-Finding-model",
+        "path": "shr-base-Finding-model",
+        "definition": "A determination, such as an observation, assertion, opinion, fact, or judgment.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Finding-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Finding-model.findingStatus",
+        "path": "shr-base-Finding-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-base-Finding-model.relevantTime",
+        "path": "shr-base-Finding-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Finding-model.findingMethod",
+        "path": "shr-base-Finding-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-Finding-model",
+        "path": "shr-base-Finding-model",
+        "definition": "A determination, such as an observation, assertion, opinion, fact, or judgment.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Finding-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Finding-model.findingStatus",
+        "path": "shr-base-Finding-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-base-Finding-model.relevantTime",
+        "path": "shr-base-Finding-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Finding-model.findingMethod",
+        "path": "shr-base-Finding-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Finding-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

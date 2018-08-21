@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Role-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Role Logical Model</b></p>
+  <p>Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Role-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Role"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="RoleModel"/>
+  <title value="SW Role Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Capacity in which an actor is involved in an activity. For instance, &#39;attending physician&#39;. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Role-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Role-model">
+      <path value="cimi-entity-Role-model"/>
+      <definition value="Capacity in which an actor is involved in an activity. For instance, &#39;attending physician&#39;. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Role-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Role-model">
+      <path value="cimi-entity-Role-model"/>
+      <definition value="Capacity in which an actor is involved in an activity. For instance, &#39;attending physician&#39;. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Role-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

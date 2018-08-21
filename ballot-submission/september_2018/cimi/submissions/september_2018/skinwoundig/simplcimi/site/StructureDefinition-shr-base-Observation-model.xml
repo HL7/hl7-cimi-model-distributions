@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-Observation-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Observation Logical Model</b></p>
+  <p>A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Observation-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.Observation"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ObservationModel"/>
+  <title value="SW Observation Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-Observation-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-Observation-model">
+      <path value="shr-base-Observation-model"/>
+      <definition value="A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Observation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.findingStatus">
+      <path value="shr-base-Observation-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="shr-base-Observation-model.relevantTime">
+      <path value="shr-base-Observation-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.findingMethod">
+      <path value="shr-base-Observation-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.subject">
+      <path value="shr-base-Observation-model.subject"/>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.observableCode">
+      <path value="shr-base-Observation-model.observableCode"/>
+      <short value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <definition value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.observableCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.resultValue">
+      <path value="shr-base-Observation-model.resultValue"/>
+      <short value="The finding itself, such as the blood pressure value recorded."/>
+      <definition value="The finding itself, such as the blood pressure value recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.resultValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"/>
+      </type>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"/>
+      </type>
+      <type>
+        <code value="time"/>
+      </type>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.qualifier">
+      <path value="shr-base-Observation-model.qualifier"/>
+      <short value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <definition value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Observation-model.qualifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-Observation-model">
+      <path value="shr-base-Observation-model"/>
+      <definition value="A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Observation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.findingStatus">
+      <path value="shr-base-Observation-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="shr-base-Observation-model.relevantTime">
+      <path value="shr-base-Observation-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.findingMethod">
+      <path value="shr-base-Observation-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.subject">
+      <path value="shr-base-Observation-model.subject"/>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.observableCode">
+      <path value="shr-base-Observation-model.observableCode"/>
+      <short value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <definition value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.observableCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.resultValue">
+      <path value="shr-base-Observation-model.resultValue"/>
+      <short value="The finding itself, such as the blood pressure value recorded."/>
+      <definition value="The finding itself, such as the blood pressure value recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Observation-model.resultValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"/>
+      </type>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"/>
+      </type>
+      <type>
+        <code value="time"/>
+      </type>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Observation-model.qualifier">
+      <path value="shr-base-Observation-model.qualifier"/>
+      <short value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <definition value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Observation-model.qualifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

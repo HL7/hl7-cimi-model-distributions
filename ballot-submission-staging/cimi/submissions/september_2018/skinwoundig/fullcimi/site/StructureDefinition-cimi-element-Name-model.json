@@ -1,0 +1,225 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-Name-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Name Logical Model</b></p>\n  <p>Abstract supertype for the name of an entity.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Name-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.Name"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NameModel",
+  "title": "SW Name Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Abstract supertype for the name of an entity.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-Name-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-Name-model",
+        "path": "cimi-element-Name-model",
+        "definition": "Abstract supertype for the name of an entity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Name-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.nameAsText",
+        "path": "cimi-element-Name-model.nameAsText",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Name-model.nameAsText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.purpose",
+        "path": "cimi-element-Name-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Name-model.purpose",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.effectiveTimePeriod",
+        "path": "cimi-element-Name-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Name-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-Name-model",
+        "path": "cimi-element-Name-model",
+        "definition": "Abstract supertype for the name of an entity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Name-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.nameAsText",
+        "path": "cimi-element-Name-model.nameAsText",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Name-model.nameAsText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.purpose",
+        "path": "cimi-element-Name-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Name-model.purpose",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Name-model.effectiveTimePeriod",
+        "path": "cimi-element-Name-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Name-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

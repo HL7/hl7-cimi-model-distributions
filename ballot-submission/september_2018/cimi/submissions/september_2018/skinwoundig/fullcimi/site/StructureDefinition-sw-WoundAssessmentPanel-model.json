@@ -1,0 +1,3101 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundAssessmentPanel-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundAssessmentPanel Logical Model</b></p>\n  <p>Group of observations regarding the properties and severity of a wound.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentPanel-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundAssessmentPanel"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundAssessmentPanelModel",
+  "title": "SW WoundAssessmentPanel Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Group of observations regarding the properties and severity of a wound.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "39135-9"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundAssessmentPanel-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundAssessmentPanel-model",
+        "path": "sw-WoundAssessmentPanel-model",
+        "definition": "Group of observations regarding the properties and severity of a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.personOfRecord",
+        "path": "sw-WoundAssessmentPanel-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.recorded",
+        "path": "sw-WoundAssessmentPanel-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.signed",
+        "path": "sw-WoundAssessmentPanel-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.additionalText",
+        "path": "sw-WoundAssessmentPanel-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode",
+        "path": "sw-WoundAssessmentPanel-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.id",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.extension",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.system",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.version",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.code",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "424975005",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "sw-WoundAssessmentPanel-model.contextCode.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.userSelected",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.statementTopic",
+        "path": "sw-WoundAssessmentPanel-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.statementTopic",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.encounter",
+        "path": "sw-WoundAssessmentPanel-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+        "path": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "80338-7"
+          }
+        ],
+        "short": "Overall assessement of whether the wound is within normal parameters.",
+        "definition": "Overall assessement of whether the wound is within normal parameters.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL3816-7"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.relevantTime",
+        "path": "sw-WoundAssessmentPanel-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.findingMethod",
+        "path": "sw-WoundAssessmentPanel-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.photographicImage",
+        "path": "sw-WoundAssessmentPanel-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4"
+          }
+        ],
+        "short": "PhotographicImage",
+        "definition": "PhotographicImage",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode",
+        "path": "sw-WoundAssessmentPanel-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.topicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.id",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.extension",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.system",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://loinc.org",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.version",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.code",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "39135-9",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "sw-WoundAssessmentPanel-model.topicCode.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.userSelected",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.resultValue",
+        "path": "sw-WoundAssessmentPanel-model.resultValue",
+        "short": "The finding itself, such as the blood pressure value recorded.",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.resultValue",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.exceptionValue",
+        "path": "sw-WoundAssessmentPanel-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.exceptionValue",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.deltaFlag",
+        "path": "sw-WoundAssessmentPanel-model.deltaFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1705241"
+          }
+        ],
+        "short": "Indicator of significant change (delta) from the last or previous measurement.",
+        "definition": "Indicator of significant change (delta) from the last or previous measurement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.deltaFlag",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-DeltaFlagVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.category",
+        "path": "sw-WoundAssessmentPanel-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.category",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-category"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+        "path": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72369-2"
+          }
+        ],
+        "short": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "definition": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.device",
+        "path": "sw-WoundAssessmentPanel-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.device",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.specimen",
+        "path": "sw-WoundAssessmentPanel-model.specimen",
+        "short": "A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.",
+        "definition": "A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.specimen",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Specimen-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.precondition",
+        "path": "sw-WoundAssessmentPanel-model.precondition",
+        "short": "A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
+        "definition": "A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.precondition",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.referenceRange",
+        "path": "sw-WoundAssessmentPanel-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent",
+        "short": "A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.",
+        "definition": "A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89252-1",
+            "display": "Episode of Wound"
+          }
+        ],
+        "short": "Wound episode refers to a period of the wound, an incident in the course of a wound",
+        "definition": "Wound episode refers to a period of the wound, an incident in the course of a wound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89253-9"
+          }
+        ],
+        "short": "Whether a condition is improving, worsening, stable, or resolved.",
+        "definition": "Whether a condition is improving, worsening, stable, or resolved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72301-5"
+          }
+        ],
+        "short": "A description of the skin around the wound (periwound). Color, induration, warmth and edema should be assessed. Redness of the surrounding skin can be indicative of unrelieved pressure. Irritation of the surrounding skin can result from exposure to feces or urine, a reaction to the dressing or tape, or inappropriate removal of dressing or tape. Redness, tenderness, warmth and swelling are classical clinical signs of infection. [Reference: Brown, P., 2009]",
+        "definition": "A description of the skin around the wound (periwound). Color, induration, warmth and edema should be assessed. Redness of the surrounding skin can be indicative of unrelieved pressure. Irritation of the surrounding skin can result from exposure to feces or urine, a reaction to the dressing or tape, or inappropriate removal of dressing or tape. Redness, tenderness, warmth and swelling are classical clinical signs of infection. [Reference: Brown, P., 2009]",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89250-5"
+          }
+        ],
+        "short": "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.",
+        "definition": "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+        "short": "Is the wound associated with a device or pressure point?",
+        "definition": "Is the wound associated with a device or pressure point?",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72298-3"
+          }
+        ],
+        "short": "The presence or absence of wound tunneling.",
+        "definition": "The presence or absence of wound tunneling.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingPresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72295-9"
+          }
+        ],
+        "short": "The presence or absence of wound undermining.",
+        "definition": "The presence or absence of wound undermining.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89259-6"
+          }
+        ],
+        "short": "The presence or absence of wound exudate.",
+        "definition": "The presence or absence of wound exudate.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudatePresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers",
+        "short": "PanelMembers represent the elements of a group of a related but independent evaluations.",
+        "definition": "PanelMembers represent the elements of a group of a related but independent evaluations.\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an ExceptionValue indicating why the value is not present. The subject of a finding can be the entire patient, or an entity such as a location body structure, intervention, or condition. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89254-7"
+          }
+        ],
+        "short": "The appearance of the base (bed) of the wound, together with the percentage of the bed with each type of appearance.",
+        "definition": "The appearance of the base (bed) of the wound, together with the percentage of the bed with each type of appearance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+        "short": "Color of part or all of the wound base (bed), and the percentage of the area with that color.",
+        "definition": "Color of part or all of the wound base (bed), and the percentage of the area with that color.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89256-2"
+          }
+        ],
+        "short": "The state of the tissue at the edge of the wound.",
+        "definition": "The state of the tissue at the edge of the wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89257-0"
+          }
+        ],
+        "short": "A discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. The track is invariably lined with granulation tissue. In chronic cases this may be augmented with epithelial tissue.",
+        "definition": "A discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. The track is invariably lined with granulation tissue. In chronic cases this may be augmented with epithelial tissue.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89258-8"
+          }
+        ],
+        "short": "Assessment of deep tissue (subcutaneous fat and muscle) damage around the wound margin. Undermining are narrow sinus tracts  away from the wound margins and go downward into the wound.",
+        "definition": "Assessment of deep tissue (subcutaneous fat and muscle) damage around the wound margin. Undermining are narrow sinus tracts  away from the wound margins and go downward into the wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72292-6"
+          }
+        ],
+        "short": "Description of the fluid produced by a wound.",
+        "definition": "Description of the fluid produced by a wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72287-6"
+          }
+        ],
+        "short": "The estimated or measured dimensions of a wound.",
+        "definition": "The estimated or measured dimensions of a wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.woundIdentifier",
+        "path": "sw-WoundAssessmentPanel-model.woundIdentifier",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "81666-0"
+          }
+        ],
+        "short": "A human-readable identifier for the lesion; e.g., a letter or integer.",
+        "definition": "A human-readable identifier for the lesion; e.g., a letter or integer.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.woundIdentifier",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundAssessmentPanel-model",
+        "path": "sw-WoundAssessmentPanel-model",
+        "definition": "Group of observations regarding the properties and severity of a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.personOfRecord",
+        "path": "sw-WoundAssessmentPanel-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.recorded",
+        "path": "sw-WoundAssessmentPanel-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.signed",
+        "path": "sw-WoundAssessmentPanel-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.additionalText",
+        "path": "sw-WoundAssessmentPanel-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode",
+        "path": "sw-WoundAssessmentPanel-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.id",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.extension",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.system",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.version",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.code",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "424975005",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "sw-WoundAssessmentPanel-model.contextCode.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.contextCode.userSelected",
+        "path": "sw-WoundAssessmentPanel-model.contextCode.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.statementTopic",
+        "path": "sw-WoundAssessmentPanel-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.statementTopic",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.encounter",
+        "path": "sw-WoundAssessmentPanel-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+        "path": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "80338-7"
+          }
+        ],
+        "short": "Overall assessement of whether the wound is within normal parameters.",
+        "definition": "Overall assessement of whether the wound is within normal parameters.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.woundAssessmentInterpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL3816-7"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.relevantTime",
+        "path": "sw-WoundAssessmentPanel-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.findingMethod",
+        "path": "sw-WoundAssessmentPanel-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.photographicImage",
+        "path": "sw-WoundAssessmentPanel-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4"
+          }
+        ],
+        "short": "PhotographicImage",
+        "definition": "PhotographicImage",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode",
+        "path": "sw-WoundAssessmentPanel-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.topicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.id",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.extension",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.system",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://loinc.org",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.version",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.code",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "39135-9",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "sw-WoundAssessmentPanel-model.topicCode.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.topicCode.userSelected",
+        "path": "sw-WoundAssessmentPanel-model.topicCode.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.resultValue",
+        "path": "sw-WoundAssessmentPanel-model.resultValue",
+        "short": "The finding itself, such as the blood pressure value recorded.",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.resultValue",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.exceptionValue",
+        "path": "sw-WoundAssessmentPanel-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.exceptionValue",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.deltaFlag",
+        "path": "sw-WoundAssessmentPanel-model.deltaFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1705241"
+          }
+        ],
+        "short": "Indicator of significant change (delta) from the last or previous measurement.",
+        "definition": "Indicator of significant change (delta) from the last or previous measurement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.deltaFlag",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-DeltaFlagVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.category",
+        "path": "sw-WoundAssessmentPanel-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.category",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-category"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+        "path": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72369-2"
+          }
+        ],
+        "short": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "definition": "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.anatomicalLocation",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.device",
+        "path": "sw-WoundAssessmentPanel-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.device",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.specimen",
+        "path": "sw-WoundAssessmentPanel-model.specimen",
+        "short": "A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.",
+        "definition": "A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.specimen",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Specimen-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.precondition",
+        "path": "sw-WoundAssessmentPanel-model.precondition",
+        "short": "A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
+        "definition": "A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.precondition",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.referenceRange",
+        "path": "sw-WoundAssessmentPanel-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent",
+        "short": "A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.",
+        "definition": "A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89252-1",
+            "display": "Episode of Wound"
+          }
+        ],
+        "short": "Wound episode refers to a period of the wound, an incident in the course of a wound",
+        "definition": "Wound episode refers to a period of the wound, an incident in the course of a wound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundEpisode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89253-9"
+          }
+        ],
+        "short": "Whether a condition is improving, worsening, stable, or resolved.",
+        "definition": "Whether a condition is improving, worsening, stable, or resolved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTrend",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72301-5"
+          }
+        ],
+        "short": "A description of the skin around the wound (periwound). Color, induration, warmth and edema should be assessed. Redness of the surrounding skin can be indicative of unrelieved pressure. Irritation of the surrounding skin can result from exposure to feces or urine, a reaction to the dressing or tape, or inappropriate removal of dressing or tape. Redness, tenderness, warmth and swelling are classical clinical signs of infection. [Reference: Brown, P., 2009]",
+        "definition": "A description of the skin around the wound (periwound). Color, induration, warmth and edema should be assessed. Redness of the surrounding skin can be indicative of unrelieved pressure. Irritation of the surrounding skin can result from exposure to feces or urine, a reaction to the dressing or tape, or inappropriate removal of dressing or tape. Redness, tenderness, warmth and swelling are classical clinical signs of infection. [Reference: Brown, P., 2009]",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPeriwoundDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89250-5"
+          }
+        ],
+        "short": "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.",
+        "definition": "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundVisibleInternalStructure",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+        "short": "Is the wound associated with a device or pressure point?",
+        "definition": "Is the wound associated with a device or pressure point?",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundPressureUlcerAssociation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72298-3"
+          }
+        ],
+        "short": "The presence or absence of wound tunneling.",
+        "definition": "The presence or absence of wound tunneling.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundTunnelingPresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingPresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72295-9"
+          }
+        ],
+        "short": "The presence or absence of wound undermining.",
+        "definition": "The presence or absence of wound undermining.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundUnderminingPresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+        "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89259-6"
+          }
+        ],
+        "short": "The presence or absence of wound exudate.",
+        "definition": "The presence or absence of wound exudate.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.evaluationComponent.woundExudatePresentOrAbsent",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudatePresentOrAbsent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers",
+        "short": "PanelMembers represent the elements of a group of a related but independent evaluations.",
+        "definition": "PanelMembers represent the elements of a group of a related but independent evaluations.\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an ExceptionValue indicating why the value is not present. The subject of a finding can be the entire patient, or an entity such as a location body structure, intervention, or condition. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89254-7"
+          }
+        ],
+        "short": "The appearance of the base (bed) of the wound, together with the percentage of the bed with each type of appearance.",
+        "definition": "The appearance of the base (bed) of the wound, together with the percentage of the bed with each type of appearance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedAppearanceObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+        "short": "Color of part or all of the wound base (bed), and the percentage of the area with that color.",
+        "definition": "Color of part or all of the wound base (bed), and the percentage of the area with that color.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundBedColorObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89256-2"
+          }
+        ],
+        "short": "The state of the tissue at the edge of the wound.",
+        "definition": "The state of the tissue at the edge of the wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundEdgeObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89257-0"
+          }
+        ],
+        "short": "A discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. The track is invariably lined with granulation tissue. In chronic cases this may be augmented with epithelial tissue.",
+        "definition": "A discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. The track is invariably lined with granulation tissue. In chronic cases this may be augmented with epithelial tissue.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundTunnelingObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89258-8"
+          }
+        ],
+        "short": "Assessment of deep tissue (subcutaneous fat and muscle) damage around the wound margin. Undermining are narrow sinus tracts  away from the wound margins and go downward into the wound.",
+        "definition": "Assessment of deep tissue (subcutaneous fat and muscle) damage around the wound margin. Undermining are narrow sinus tracts  away from the wound margins and go downward into the wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundUnderminingObservation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72292-6"
+          }
+        ],
+        "short": "Description of the fluid produced by a wound.",
+        "definition": "Description of the fluid produced by a wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundExudateObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+        "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72287-6"
+          }
+        ],
+        "short": "The estimated or measured dimensions of a wound.",
+        "definition": "The estimated or measured dimensions of a wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.panelMembers.observation.woundSizeObservation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentPanel-model.woundIdentifier",
+        "path": "sw-WoundAssessmentPanel-model.woundIdentifier",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "81666-0"
+          }
+        ],
+        "short": "A human-readable identifier for the lesion; e.g., a letter or integer.",
+        "definition": "A human-readable identifier for the lesion; e.g., a letter or integer.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentPanel-model.woundIdentifier",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

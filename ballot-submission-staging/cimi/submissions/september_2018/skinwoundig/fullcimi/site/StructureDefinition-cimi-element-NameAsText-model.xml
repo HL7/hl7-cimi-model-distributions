@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-element-NameAsText-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW NameAsText Logical Model</b></p>
+  <p>The name as plain unstructured or semi-structured text.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-NameAsText-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.element.NameAsText"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="NameAsTextModel"/>
+  <title value="SW NameAsText Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The name as plain unstructured or semi-structured text."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-element-NameAsText-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-element-NameAsText-model">
+      <path value="cimi-element-NameAsText-model"/>
+      <definition value="The name as plain unstructured or semi-structured text."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-NameAsText-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-NameAsText-model.value">
+      <path value="cimi-element-NameAsText-model.value"/>
+      <short value="String representing the name as plain unstructured or semi-structured text."/>
+      <definition value="String representing the name as plain unstructured or semi-structured text."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-NameAsText-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-element-NameAsText-model">
+      <path value="cimi-element-NameAsText-model"/>
+      <definition value="The name as plain unstructured or semi-structured text."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-NameAsText-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-NameAsText-model.value">
+      <path value="cimi-element-NameAsText-model.value"/>
+      <short value="String representing the name as plain unstructured or semi-structured text."/>
+      <definition value="String representing the name as plain unstructured or semi-structured text."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-NameAsText-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

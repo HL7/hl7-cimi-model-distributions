@@ -1,0 +1,2441 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ExchangeForm-WoundComprehensiveHistory Logical Model</b></p>\n  <p>A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "sw.ExchangeForm-WoundComprehensiveHistory" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "ExchangeForm-WoundComprehensiveHistoryModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW ExchangeForm-WoundComprehensiveHistory Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound."];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:416462003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "416462003" ];
+         fhir:Coding.display [ fhir:value "Wound (disorder)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ];
+         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system" ];
+       fhir:ElementDefinition.short [ fhir:value "Identity of the terminology system" ];
+       fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ];
+       fhir:ElementDefinition.comment [ fhir:value "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to be unambiguous about the source of the definition of the symbol." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.system" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.fixedUri [ fhir:value "http://loinc.org" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.3" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./codeSystem" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version" ];
+       fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ];
+       fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ];
+       fhir:ElementDefinition.comment [ fhir:value "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.version" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.7" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./codeSystemVersion" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code" ];
+       fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ];
+       fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to refer to a particular code in the system." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.code" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "39135-9" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./code" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display" ];
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display" ];
+       fhir:ElementDefinition.short [ fhir:value "Representation defined by the system" ];
+       fhir:ElementDefinition.definition [ fhir:value "A representation of the meaning of the code in the system, following the rules of the system." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.display" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.2 - but note this is not well followed" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "CV.displayName" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected" ];
+       fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." ];
+       fhir:ElementDefinition.comment [ fhir:value "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." ];
+       fhir:ElementDefinition.requirements [ fhir:value "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.userSelected" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Sometimes implied by being first" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "CD.codingRationale" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72300-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72300-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:11373-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11373-8" ];
+         fhir:Coding.display [ fhir:value "InjuryCause" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39111-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39111-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:85585-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "85585-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.definition [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89251-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89251-3" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:88878-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "88878-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The end, remission or resolution of a disease." ];
+       fhir:ElementDefinition.definition [ fhir:value "The end, remission or resolution of a disease." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:tbd" ];
+         fhir:Coding.code [ fhir:value "TBD" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Is the wound associated with a device or pressure point?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Is the wound associated with a device or pressure point?" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89252-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89252-1" ];
+         fhir:Coding.display [ fhir:value "Episode of Wound" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:80338-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "80338-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Overall assessement of whether the wound is within normal parameters." ];
+       fhir:ElementDefinition.definition [ fhir:value "Overall assessement of whether the wound is within normal parameters." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72170-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72170-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.definition [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89253-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89253-9" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether a condition is improving, worsening, stable, or resolved." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether a condition is improving, worsening, stable, or resolved." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72301-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72301-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A description of the skin around the wound (periwound)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of the skin around the wound (periwound)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89250-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89250-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72371-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72371-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72370-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72370-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39132-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39132-6" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of a portion or entire wound base (bed)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of a portion or entire wound base (bed)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89255-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89255-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Wound bed area identified by color/​Area of wound bed." ];
+       fhir:ElementDefinition.definition [ fhir:value "Wound bed area identified by color/​Area of wound bed." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89256-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89256-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The state of the tissue at the edge of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The state of the tissue at the edge of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39133-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39133-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of Wound edge." ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of Wound edge." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39125-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39125-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Width of the wound (perpendicular to longest dimension)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Width of the wound (perpendicular to longest dimension)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39127-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39127-6" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Depth of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Depth of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39126-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39126-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Length of the wound (longest dimension)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Length of the wound (longest dimension)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89260-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89260-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39116-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39116-9" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Drainage amount of wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Drainage amount of wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39122-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39122-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72289-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72289-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72290-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72290-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72288-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72288-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Odor of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Odor of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:1561000124108;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "1561000124108" ];
+         fhir:Coding.display [ fhir:value "Wound tunneling (observable entity)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of a wound tunnel." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of a wound tunnel." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 40;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72296-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72296-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The length of a wound tunnel, in cm." ];
+       fhir:ElementDefinition.definition [ fhir:value "The length of a wound tunnel, in cm." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72297-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72297-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Clock position of wound tunnel" ];
+       fhir:ElementDefinition.definition [ fhir:value "Clock position of wound tunnel" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:454341000124104;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "454341000124104" ];
+         fhir:Coding.display [ fhir:value "Wound undermining (observable entity)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of wound undermining." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of wound undermining." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72293-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72293-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Length of wound undermining." ];
+       fhir:ElementDefinition.definition [ fhir:value "Length of wound undermining." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72294-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72294-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Clock position of wound undermining" ];
+       fhir:ElementDefinition.definition [ fhir:value "Clock position of wound undermining" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:416462003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "416462003" ];
+         fhir:Coding.display [ fhir:value "Wound (disorder)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ];
+         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system" ];
+       fhir:ElementDefinition.short [ fhir:value "Identity of the terminology system" ];
+       fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ];
+       fhir:ElementDefinition.comment [ fhir:value "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to be unambiguous about the source of the definition of the symbol." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.system" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.fixedUri [ fhir:value "http://loinc.org" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.3" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./codeSystem" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version" ];
+       fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ];
+       fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ];
+       fhir:ElementDefinition.comment [ fhir:value "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.version" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.7" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./codeSystemVersion" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code" ];
+       fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ];
+       fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to refer to a particular code in the system." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.code" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.fixedCode [ fhir:value "39135-9" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./code" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display" ];
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display" ];
+       fhir:ElementDefinition.short [ fhir:value "Representation defined by the system" ];
+       fhir:ElementDefinition.definition [ fhir:value "A representation of the meaning of the code in the system, following the rules of the system." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.display" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.2 - but note this is not well followed" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "CV.displayName" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected" ];
+       fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." ];
+       fhir:ElementDefinition.comment [ fhir:value "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." ];
+       fhir:ElementDefinition.requirements [ fhir:value "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Coding.userSelected" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Sometimes implied by being first" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "CD.codingRationale" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72300-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72300-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:11373-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11373-8" ];
+         fhir:Coding.display [ fhir:value "InjuryCause" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39111-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39111-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:85585-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "85585-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.definition [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89251-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89251-3" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:88878-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "88878-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The end, remission or resolution of a disease." ];
+       fhir:ElementDefinition.definition [ fhir:value "The end, remission or resolution of a disease." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:tbd" ];
+         fhir:Coding.code [ fhir:value "TBD" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Is the wound associated with a device or pressure point?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Is the wound associated with a device or pressure point?" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89252-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89252-1" ];
+         fhir:Coding.display [ fhir:value "Episode of Wound" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:80338-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "80338-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Overall assessement of whether the wound is within normal parameters." ];
+       fhir:ElementDefinition.definition [ fhir:value "Overall assessement of whether the wound is within normal parameters." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72170-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72170-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.definition [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89253-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89253-9" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether a condition is improving, worsening, stable, or resolved." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether a condition is improving, worsening, stable, or resolved." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72301-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72301-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A description of the skin around the wound (periwound)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of the skin around the wound (periwound)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89250-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89250-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72371-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72371-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72370-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72370-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39132-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39132-6" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of a portion or entire wound base (bed)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of a portion or entire wound base (bed)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89255-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89255-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Wound bed area identified by color/​Area of wound bed." ];
+       fhir:ElementDefinition.definition [ fhir:value "Wound bed area identified by color/​Area of wound bed." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89256-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89256-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The state of the tissue at the edge of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The state of the tissue at the edge of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39133-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39133-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of Wound edge." ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of Wound edge." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39125-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39125-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Width of the wound (perpendicular to longest dimension)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Width of the wound (perpendicular to longest dimension)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39127-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39127-6" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Depth of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Depth of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39126-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39126-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Length of the wound (longest dimension)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Length of the wound (longest dimension)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89260-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89260-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39116-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39116-9" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Drainage amount of wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Drainage amount of wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39122-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39122-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72289-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72289-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Color of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Color of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72290-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72290-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72288-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72288-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Odor of exudate from wound" ];
+       fhir:ElementDefinition.definition [ fhir:value "Odor of exudate from wound" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:1561000124108;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "1561000124108" ];
+         fhir:Coding.display [ fhir:value "Wound tunneling (observable entity)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of a wound tunnel." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of a wound tunnel." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 40;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72296-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72296-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The length of a wound tunnel, in cm." ];
+       fhir:ElementDefinition.definition [ fhir:value "The length of a wound tunnel, in cm." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72297-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72297-5" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Clock position of wound tunnel" ];
+       fhir:ElementDefinition.definition [ fhir:value "Clock position of wound tunnel" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:454341000124104;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "454341000124104" ];
+         fhir:Coding.display [ fhir:value "Wound undermining (observable entity)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of wound undermining." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of wound undermining." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72293-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72293-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Length of wound undermining." ];
+       fhir:ElementDefinition.definition [ fhir:value "Length of wound undermining." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.id [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72294-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72294-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Clock position of wound undermining" ];
+       fhir:ElementDefinition.definition [ fhir:value "Clock position of wound undermining" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

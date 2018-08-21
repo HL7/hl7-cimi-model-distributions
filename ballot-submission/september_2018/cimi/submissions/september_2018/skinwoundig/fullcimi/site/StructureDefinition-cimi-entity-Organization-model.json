@@ -1,0 +1,479 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Organization-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Organization Logical Model</b></p>\n  <p>A social or legal structure formed by human beings.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Organization"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "OrganizationModel",
+  "title": "SW Organization Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A social or legal structure formed by human beings.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C1561598"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Organization-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Organization-model",
+        "path": "cimi-entity-Organization-model",
+        "definition": "A social or legal structure formed by human beings.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationName",
+        "path": "cimi-entity-Organization-model.organizationName",
+        "short": "The name of the organization.",
+        "definition": "The name of the organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationAlias",
+        "path": "cimi-entity-Organization-model.organizationAlias",
+        "short": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "definition": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationAlias",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationIdentifier",
+        "path": "cimi-entity-Organization-model.organizationIdentifier",
+        "short": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "definition": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationIdentifier",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationIdentifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.type",
+        "path": "cimi-entity-Organization-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/organization-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Organization-model.address",
+        "path": "cimi-entity-Organization-model.address",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0682130"
+          }
+        ],
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.address",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.contactPoint",
+        "path": "cimi-entity-Organization-model.contactPoint",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2986441"
+          }
+        ],
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.contactPoint",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.activeFlag",
+        "path": "cimi-entity-Organization-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.activeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.partOf",
+        "path": "cimi-entity-Organization-model.partOf",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Organization-model",
+        "path": "cimi-entity-Organization-model",
+        "definition": "A social or legal structure formed by human beings.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationName",
+        "path": "cimi-entity-Organization-model.organizationName",
+        "short": "The name of the organization.",
+        "definition": "The name of the organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationAlias",
+        "path": "cimi-entity-Organization-model.organizationAlias",
+        "short": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "definition": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationAlias",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.organizationIdentifier",
+        "path": "cimi-entity-Organization-model.organizationIdentifier",
+        "short": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "definition": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.organizationIdentifier",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationIdentifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.type",
+        "path": "cimi-entity-Organization-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/organization-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Organization-model.address",
+        "path": "cimi-entity-Organization-model.address",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0682130"
+          }
+        ],
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.address",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.contactPoint",
+        "path": "cimi-entity-Organization-model.contactPoint",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2986441"
+          }
+        ],
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Organization-model.contactPoint",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.activeFlag",
+        "path": "cimi-entity-Organization-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.activeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Organization-model.partOf",
+        "path": "cimi-entity-Organization-model.partOf",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Organization-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

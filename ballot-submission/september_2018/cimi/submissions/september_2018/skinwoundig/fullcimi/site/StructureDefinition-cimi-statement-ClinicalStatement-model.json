@@ -1,0 +1,395 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-ClinicalStatement-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ClinicalStatement Logical Model</b></p>\n  <p>A special type of information entry consisting of a topic and a context.\nThe ClinicalStatement class provides the core pattern for more specific clinical statement classes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system. The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalStatement-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.ClinicalStatement"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ClinicalStatementModel",
+  "title": "SW ClinicalStatement Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A special type of information entry consisting of a topic and a context.\nThe ClinicalStatement class provides the core pattern for more specific clinical statement classes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system. The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-ClinicalStatement-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-ClinicalStatement-model",
+        "path": "cimi-statement-ClinicalStatement-model",
+        "definition": "A special type of information entry consisting of a topic and a context.\nThe ClinicalStatement class provides the core pattern for more specific clinical statement classes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system. The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.personOfRecord",
+        "path": "cimi-statement-ClinicalStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.personOfRecord",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.recorded",
+        "path": "cimi-statement-ClinicalStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.signed",
+        "path": "cimi-statement-ClinicalStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.additionalText",
+        "path": "cimi-statement-ClinicalStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.contextCode",
+        "path": "cimi-statement-ClinicalStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.statementTopic",
+        "path": "cimi-statement-ClinicalStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.encounter",
+        "path": "cimi-statement-ClinicalStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-ClinicalStatement-model",
+        "path": "cimi-statement-ClinicalStatement-model",
+        "definition": "A special type of information entry consisting of a topic and a context.\nThe ClinicalStatement class provides the core pattern for more specific clinical statement classes, such as a statement that a finding has been found in a patient or that a procedure has been proposed by a clinical decision support system. The ClinicalStatement pattern defines the core attributes common to most clinical statements and specifies a composition pattern that encourage model component reuse and better alignment with the SNOMED CT Concept Model.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.personOfRecord",
+        "path": "cimi-statement-ClinicalStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.personOfRecord",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.recorded",
+        "path": "cimi-statement-ClinicalStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.signed",
+        "path": "cimi-statement-ClinicalStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.additionalText",
+        "path": "cimi-statement-ClinicalStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.contextCode",
+        "path": "cimi-statement-ClinicalStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.statementTopic",
+        "path": "cimi-statement-ClinicalStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ClinicalStatement-model.encounter",
+        "path": "cimi-statement-ClinicalStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ClinicalStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

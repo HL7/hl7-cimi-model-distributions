@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundBedColorCluster-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundBedColorCluster Logical Model</b></p>
+  <p>The color of a percentage area of the wound bed (base)</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundBedColorCluster"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundBedColorClusterModel"/>
+  <title value="SW WoundBedColorCluster Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The color of a percentage area of the wound bed (base)"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundBedColorCluster-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundBedColorCluster-model">
+      <path value="sw-WoundBedColorCluster-model"/>
+      <definition value="The color of a percentage area of the wound bed (base)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.typeCode">
+      <path value="sw-WoundBedColorCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement">
+      <path value="sw-WoundBedColorCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement.woundBedColor">
+      <path value="sw-WoundBedColorCluster-model.statement.woundBedColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39132-6"/>
+      </code>
+      <short value="Color of a portion or entire wound base (bed)."/>
+      <definition value="Color of a portion or entire wound base (bed)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement.woundBedColor"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage">
+      <path value="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89255-4"/>
+      </code>
+      <short value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <definition value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundBedColorCluster-model">
+      <path value="sw-WoundBedColorCluster-model"/>
+      <definition value="The color of a percentage area of the wound bed (base)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.typeCode">
+      <path value="sw-WoundBedColorCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement">
+      <path value="sw-WoundBedColorCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement.woundBedColor">
+      <path value="sw-WoundBedColorCluster-model.statement.woundBedColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39132-6"/>
+      </code>
+      <short value="Color of a portion or entire wound base (bed)."/>
+      <definition value="Color of a portion or entire wound base (bed)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement.woundBedColor"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage">
+      <path value="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89255-4"/>
+      </code>
+      <short value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <definition value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedColorCluster-model.statement.woundBedColorPercentage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="shr-entity-ConditionVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW ConditionVS ValueSet</b></p>
+<p>Value set of Snomed codes corresponding to disorders.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/ValueSet/shr-entity-ConditionVS"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.entity.ConditionVS"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ConditionVS"/>
+  <title value="SW ConditionVS ValueSet"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Value set of Snomed codes corresponding to disorders."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="404684003"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

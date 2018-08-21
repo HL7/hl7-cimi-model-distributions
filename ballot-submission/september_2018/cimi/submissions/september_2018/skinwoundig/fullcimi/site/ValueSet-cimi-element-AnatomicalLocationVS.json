@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cimi-element-AnatomicalLocationVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW AnatomicalLocationVS ValueSet</b></p>\n<p>Codes that describe normal and pathologic anatomic systems, regions, cavities, and spaces.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalLocationVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.AnatomicalLocationVS"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "AnatomicalLocationVS",
+  "title": "SW AnatomicalLocationVS ValueSet",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes that describe normal and pathologic anatomic systems, regions, cavities, and spaces.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "123037004"
+          }
+        ]
+      }
+    ]
+  }
+}

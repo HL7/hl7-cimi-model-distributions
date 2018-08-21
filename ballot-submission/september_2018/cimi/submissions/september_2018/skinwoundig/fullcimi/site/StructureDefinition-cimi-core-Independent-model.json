@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-Independent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Independent Logical Model</b></p>\n  <p>Base class for classes in CIMI that stand alone. Analogous to FHIR's DomainResource.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Independent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.Independent"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "IndependentModel",
+  "title": "SW Independent Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Base class for classes in CIMI that stand alone. Analogous to FHIR's DomainResource.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-Independent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-Independent-model",
+        "path": "cimi-core-Independent-model",
+        "definition": "Base class for classes in CIMI that stand alone. Analogous to FHIR's DomainResource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Independent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-Independent-model",
+        "path": "cimi-core-Independent-model",
+        "definition": "Base class for classes in CIMI that stand alone. Analogous to FHIR's DomainResource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Independent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-WrittenLanguageProficiency-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WrittenLanguageProficiency Logical Model</b></p>\n  <p>Accuracy and fluency of reading and writing in a language.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-WrittenLanguageProficiency-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.WrittenLanguageProficiency"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WrittenLanguageProficiencyModel",
+  "title": "SW WrittenLanguageProficiency Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Accuracy and fluency of reading and writing in a language.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0586739"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-WrittenLanguageProficiency-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-WrittenLanguageProficiency-model",
+        "path": "cimi-entity-WrittenLanguageProficiency-model",
+        "definition": "Accuracy and fluency of reading and writing in a language.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-WrittenLanguageProficiency-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-WrittenLanguageProficiency-model.value",
+        "path": "cimi-entity-WrittenLanguageProficiency-model.value",
+        "short": "Code representing accuracy and fluency of reading and writing in a language.",
+        "definition": "Code representing accuracy and fluency of reading and writing in a language.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-WrittenLanguageProficiency-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-PerformanceGradingScaleVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-WrittenLanguageProficiency-model",
+        "path": "cimi-entity-WrittenLanguageProficiency-model",
+        "definition": "Accuracy and fluency of reading and writing in a language.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-WrittenLanguageProficiency-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-WrittenLanguageProficiency-model.value",
+        "path": "cimi-entity-WrittenLanguageProficiency-model.value",
+        "short": "Code representing accuracy and fluency of reading and writing in a language.",
+        "definition": "Code representing accuracy and fluency of reading and writing in a language.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-WrittenLanguageProficiency-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-PerformanceGradingScaleVS"
+          }
+        }
+      }
+    ]
+  }
+}

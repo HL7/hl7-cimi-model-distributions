@@ -1,0 +1,468 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cimi-entity-Organization-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Organization Logical Model</b></p>\n  <p>A social or legal structure formed by human beings.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "cimi.entity.Organization" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "OrganizationModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW Organization Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "A social or legal structure formed by human beings."];
+  fhir:StructureDefinition.keyword [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+     fhir:Coding.code [ fhir:value "C1561598" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "cimi-entity-Organization-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A social or legal structure formed by human beings." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+       fhir:ElementDefinition.short [ fhir:value "The name of the organization." ];
+       fhir:ElementDefinition.definition [ fhir:value "The name of the organization." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+       fhir:ElementDefinition.short [ fhir:value "A list of alternate names that the organization is known as, or was known as in the past." ];
+       fhir:ElementDefinition.definition [ fhir:value "A list of alternate names that the organization is known as, or was known as in the past." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationIdentifier-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.type" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.type" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0332307" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/organization-type>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/organization-type" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.address" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.address" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0682130" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)." ];
+       fhir:ElementDefinition.definition [ fhir:value "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.address" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C2986441" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An electronic means of contacting an organization or individual." ];
+       fhir:ElementDefinition.definition [ fhir:value "An electronic means of contacting an organization or individual." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+       fhir:ElementDefinition.short [ fhir:value "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI." ];
+       fhir:ElementDefinition.definition [ fhir:value "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.partOf" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.partOf" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1561598" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.definition [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.partOf" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A social or legal structure formed by human beings." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+       fhir:ElementDefinition.short [ fhir:value "The name of the organization." ];
+       fhir:ElementDefinition.definition [ fhir:value "The name of the organization." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationName" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+       fhir:ElementDefinition.short [ fhir:value "A list of alternate names that the organization is known as, or was known as in the past." ];
+       fhir:ElementDefinition.definition [ fhir:value "A list of alternate names that the organization is known as, or was known as in the past." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationAlias" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.organizationIdentifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationIdentifier-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.type" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.type" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0332307" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/organization-type>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/organization-type" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.address" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.address" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0682130" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)." ];
+       fhir:ElementDefinition.definition [ fhir:value "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.address" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C2986441" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An electronic means of contacting an organization or individual." ];
+       fhir:ElementDefinition.definition [ fhir:value "An electronic means of contacting an organization or individual." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.contactPoint" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+       fhir:ElementDefinition.short [ fhir:value "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI." ];
+       fhir:ElementDefinition.definition [ fhir:value "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.activeFlag" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-entity-Organization-model.partOf" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Organization-model.partOf" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1561598" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.definition [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Organization-model.partOf" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/organization-type> a fhir:ValueSet .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/cimi-entity-Organization-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

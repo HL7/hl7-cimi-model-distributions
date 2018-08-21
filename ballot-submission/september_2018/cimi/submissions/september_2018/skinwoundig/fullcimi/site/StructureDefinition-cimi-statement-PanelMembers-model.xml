@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-PanelMembers-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW PanelMembers Logical Model</b></p>
+  <p>PanelMembers represent the elements of a group of a related but independent evaluations.
+Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-PanelMembers-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.PanelMembers"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="PanelMembersModel"/>
+  <title value="SW PanelMembers Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="PanelMembers represent the elements of a group of a related but independent evaluations.&#xA;Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-PanelMembers-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-PanelMembers-model">
+      <path value="cimi-statement-PanelMembers-model"/>
+      <definition value="PanelMembers represent the elements of a group of a related but independent evaluations.&#xA;Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-PanelMembers-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-PanelMembers-model.observation">
+      <path value="cimi-statement-PanelMembers-model.observation"/>
+      <short value="Represents the result of evaluations (measurements, tests, or questions) that have been performed."/>
+      <definition value="Represents the result of evaluations (measurements, tests, or questions) that have been performed.&#xA;Observation has a value representing the result (answer), or an ExceptionValue indicating why the value is not present. The subject of a finding can be the entire patient, or an entity such as a location body structure, intervention, or condition. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-PanelMembers-model.observation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-PanelMembers-model">
+      <path value="cimi-statement-PanelMembers-model"/>
+      <definition value="PanelMembers represent the elements of a group of a related but independent evaluations.&#xA;Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-PanelMembers-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-PanelMembers-model.observation">
+      <path value="cimi-statement-PanelMembers-model.observation"/>
+      <short value="Represents the result of evaluations (measurements, tests, or questions) that have been performed."/>
+      <definition value="Represents the result of evaluations (measurements, tests, or questions) that have been performed.&#xA;Observation has a value representing the result (answer), or an ExceptionValue indicating why the value is not present. The subject of a finding can be the entire patient, or an entity such as a location body structure, intervention, or condition. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-PanelMembers-model.observation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

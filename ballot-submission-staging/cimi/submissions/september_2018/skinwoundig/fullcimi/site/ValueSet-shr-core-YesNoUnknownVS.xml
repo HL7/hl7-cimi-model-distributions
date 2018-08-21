@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="shr-core-YesNoUnknownVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW YesNoUnknownVS ValueSet</b></p>
+<p>Code set indicating yes, no, or unknown.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.core.YesNoUnknownVS"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="YesNoUnknownVS"/>
+  <title value="SW YesNoUnknownVS ValueSet"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Code set indicating yes, no, or unknown."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/sw/CodeSystem/shr-core-YesNoUnknownCS"/>
+      <concept>
+        <code value="yes"/>
+        <display value="Yes, or true"/>
+      </concept>
+      <concept>
+        <code value="no"/>
+        <display value="No, or false"/>
+      </concept>
+      <concept>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

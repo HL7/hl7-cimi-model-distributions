@@ -1,0 +1,681 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cimi-encounter-Encounter-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Encounter Logical Model</b></p>\n  <p>A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "cimi.encounter.Encounter" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "EncounterModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW Encounter Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "cimi-encounter-Encounter-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0027361" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+       fhir:ElementDefinition.short [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+       fhir:ElementDefinition.short [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0947611" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.definition [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+       fhir:ElementDefinition.short [ fhir:value "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." ];
+       fhir:ElementDefinition.definition [ fhir:value "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+       fhir:ElementDefinition.short [ fhir:value "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-ActEncounterCode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1948053" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A period of time defined by a start and end time, date, or year." ];
+       fhir:ElementDefinition.definition [ fhir:value "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.status" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.status" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0449438" ]
+       ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The current standing or state." ];
+       fhir:ElementDefinition.definition [ fhir:value "The current standing or state." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.status.valueCode:code" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.status.valueCode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "code" ];
+       fhir:ElementDefinition.short [ fhir:value "Choice of types representing the current standing or state." ];
+       fhir:ElementDefinition.definition [ fhir:value "Choice of types representing the current standing or state." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.status.valueCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/encounter-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/encounter-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+       fhir:ElementDefinition.short [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.definition [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+       fhir:ElementDefinition.short [ fhir:value "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data." ];
+       fhir:ElementDefinition.definition [ fhir:value "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Diagnosis-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0747978" ];
+         fhir:Coding.display [ fhir:value "Progress Note" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An entry concerning a patient where the result is a narrative text." ];
+       fhir:ElementDefinition.definition [ fhir:value "An entry concerning a patient where the result is a narrative text." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalNote-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0027361" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.personOfRecord" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+       fhir:ElementDefinition.short [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.recorded" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+       fhir:ElementDefinition.short [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.signed" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0947611" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.definition [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.additionalText" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+       fhir:ElementDefinition.short [ fhir:value "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." ];
+       fhir:ElementDefinition.definition [ fhir:value "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.encounterClass" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+       fhir:ElementDefinition.short [ fhir:value "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.encounterType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-ActEncounterCode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1948053" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A period of time defined by a start and end time, date, or year." ];
+       fhir:ElementDefinition.definition [ fhir:value "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.timePeriod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.status" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.status" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0449438" ]
+       ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The current standing or state." ];
+       fhir:ElementDefinition.definition [ fhir:value "The current standing or state." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.status.valueCode:code" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.status.valueCode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "code" ];
+       fhir:ElementDefinition.short [ fhir:value "Choice of types representing the current standing or state." ];
+       fhir:ElementDefinition.definition [ fhir:value "Choice of types representing the current standing or state." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.status.valueCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/encounter-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/encounter-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+       fhir:ElementDefinition.short [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.definition [ fhir:value "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.partOf" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+       fhir:ElementDefinition.short [ fhir:value "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data." ];
+       fhir:ElementDefinition.definition [ fhir:value "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.diagnosis" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Diagnosis-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0747978" ];
+         fhir:Coding.display [ fhir:value "Progress Note" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "An entry concerning a patient where the result is a narrative text." ];
+       fhir:ElementDefinition.definition [ fhir:value "An entry concerning a patient where the result is a narrative text." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-encounter-Encounter-model.clinicalNote" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalNote-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/v3-ActEncounterCode> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/encounter-status> a fhir:ValueSet .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/cimi-encounter-Encounter-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "SW-basic-resource-type",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW Basic Resource Type CodeSystem</b></p>\n<p>Codes representing profiles on the Basic resource.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/sw",
+    "value": "SW-basic-resource-type"
+  },
+  "version": "1.0.0",
+  "name": "BasicResourceType",
+  "title": "SW Basic Resource Type CodeSystem",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes representing profiles on the Basic resource.",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 7,
+  "concept": [
+    {
+      "code": "cimi-entity-Person",
+      "display": "SW Person Profile"
+    },
+    {
+      "code": "cimi-entity-Entity",
+      "display": "SW Entity Profile"
+    },
+    {
+      "code": "cimi-entity-SpecimenTreatment",
+      "display": "SW SpecimenTreatment Profile"
+    },
+    {
+      "code": "cimi-entity-SpecimenContainer",
+      "display": "SW SpecimenContainer Profile"
+    },
+    {
+      "code": "cimi-statement-ConditionAbsenceStatement",
+      "display": "SW ConditionAbsenceStatement Profile"
+    },
+    {
+      "code": "cimi-statement-FindingSiteConditionAbsenceStatement",
+      "display": "SW FindingSiteConditionAbsenceStatement Profile"
+    },
+    {
+      "code": "sw-WoundAbsenceAssertion",
+      "display": "SW WoundAbsenceAssertion Profile"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-core-Attribution-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Attribution Logical Model</b></p>
+  <p>Information ascribing the record to a particular contributor or responsible person.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.core.Attribution"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="AttributionModel"/>
+  <title value="SW Attribution Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Information ascribing the record to a particular contributor or responsible person."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-core-Attribution-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-core-Attribution-model">
+      <path value="cimi-core-Attribution-model"/>
+      <definition value="Information ascribing the record to a particular contributor or responsible person."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-Attribution-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.entityOrRole">
+      <path value="cimi-core-Attribution-model.entityOrRole"/>
+      <short value="CIMI parent class for both Entity and Role."/>
+      <definition value="CIMI parent class for both Entity and Role."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.entityOrRole"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-EntityOrRole-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.recordedOn">
+      <path value="cimi-core-Attribution-model.recordedOn"/>
+      <short value="The time of the attribution action."/>
+      <definition value="The time of the attribution action."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.recordedOn"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.signature">
+      <path value="cimi-core-Attribution-model.signature"/>
+      <short value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <definition value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.signature"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-core-Attribution-model">
+      <path value="cimi-core-Attribution-model"/>
+      <definition value="Information ascribing the record to a particular contributor or responsible person."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-Attribution-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.entityOrRole">
+      <path value="cimi-core-Attribution-model.entityOrRole"/>
+      <short value="CIMI parent class for both Entity and Role."/>
+      <definition value="CIMI parent class for both Entity and Role."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.entityOrRole"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-EntityOrRole-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.recordedOn">
+      <path value="cimi-core-Attribution-model.recordedOn"/>
+      <short value="The time of the attribution action."/>
+      <definition value="The time of the attribution action."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.recordedOn"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Attribution-model.signature">
+      <path value="cimi-core-Attribution-model.signature"/>
+      <short value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <definition value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Attribution-model.signature"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

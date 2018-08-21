@@ -1,0 +1,51 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-ClinicalStatement.clinical_statement.v0.0.1
+
+specialize
+  SHR-CORE-InformationEntry.information_entry.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Sean Muir">
+    ["organisation"] = <"JP Systems">
+    ["email"] = <"">
+    ["date"] = <"2018-8-21">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SkinAndWound">
+      use = <"SkinAndWound">
+      keywords = <"fsw","clinical statement">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Jay Lyle <>, Galen Mulrooney <>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  ClinicalStatement[id1.1] matches {
+    topicCode matches {
+      TopicCode[id0.2]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1"] = <
+        text = <"ClinicalStatement">
+        description = <"Description">
+      >
+      ["id0.2"] = <
+        text = <"TopicCode">
+        description = <"The concept representing the finding or action that is the topic of the statement.
+                      For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+      >
+    >
+  >

@@ -1,0 +1,351 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundExudateAppearance-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundExudateAppearance Logical Model</b></p>\n  <p>Appearance of exudate from wound</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundExudateAppearance"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundExudateAppearanceModel",
+  "title": "SW WoundExudateAppearance Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Appearance of exudate from wound",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "72290-0"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundExudateAppearance-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundExudateAppearance-model",
+        "path": "sw-WoundExudateAppearance-model",
+        "definition": "Appearance of exudate from wound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.value",
+        "path": "sw-WoundExudateAppearance-model.value",
+        "short": "Code representing appearance of exudate from wound",
+        "definition": "Code representing appearance of exudate from wound",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.11/expansion"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.topicCode",
+        "path": "sw-WoundExudateAppearance-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.exceptionValue",
+        "path": "sw-WoundExudateAppearance-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.interpretation",
+        "path": "sw-WoundExudateAppearance-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.referenceRange",
+        "path": "sw-WoundExudateAppearance-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundExudateAppearance-model",
+        "path": "sw-WoundExudateAppearance-model",
+        "definition": "Appearance of exudate from wound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.value",
+        "path": "sw-WoundExudateAppearance-model.value",
+        "short": "Code representing appearance of exudate from wound",
+        "definition": "Code representing appearance of exudate from wound",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.11/expansion"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.topicCode",
+        "path": "sw-WoundExudateAppearance-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.exceptionValue",
+        "path": "sw-WoundExudateAppearance-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.interpretation",
+        "path": "sw-WoundExudateAppearance-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundExudateAppearance-model.referenceRange",
+        "path": "sw-WoundExudateAppearance-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundExudateAppearance-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

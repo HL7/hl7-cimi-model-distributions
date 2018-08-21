@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "SW-basic-resource-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW Basic Resource Type CodeSystem</b></p>\n<p>Codes representing profiles on the Basic resource.</p>\n</div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "SW-basic-resource-type" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.0.0"];
+  fhir:CodeSystem.name [ fhir:value "BasicResourceType"];
+  fhir:CodeSystem.title [ fhir:value "SW Basic Resource Type CodeSystem"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Codes representing profiles on the Basic resource."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "11"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "shr-base-ExistentialFinding" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW ExistentialFinding Profile" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "shr-base-ObjectPresentOrAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW ObjectPresentOrAbsent Profile" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "shr-entity-BodyStructurePresentOrAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW BodyStructurePresentOrAbsent Profile" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "shr-entity-Condition" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW Condition Profile" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundPresentOrAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundPresentOrAbsent Profile" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-Wound" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW Wound Profile" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundAbsent Profile" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundTunnelPresentOrAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundTunnelPresentOrAbsent Profile" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundTunnel" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundTunnel Profile" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundUnderminingPresentOrAbsent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundUnderminingPresentOrAbsent Profile" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "sw-WoundUndermining" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SW WoundUndermining Profile" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/CodeSystem/SW-basic-resource-type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

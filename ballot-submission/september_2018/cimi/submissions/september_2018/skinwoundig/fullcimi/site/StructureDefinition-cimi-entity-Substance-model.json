@@ -1,0 +1,363 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Substance-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Substance Logical Model</b></p>\n  <p>Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Substance"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SubstanceModel",
+  "title": "SW Substance Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0439861"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Substance-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Substance-model",
+        "path": "cimi-entity-Substance-model",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Substance-model.type",
+        "path": "cimi-entity-Substance-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.category",
+        "path": "cimi-entity-Substance-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-category"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+        "path": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-status"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.additionalText",
+        "path": "cimi-entity-Substance-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Substance-model.ingredient",
+        "path": "cimi-entity-Substance-model.ingredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a non-medication substance.",
+        "definition": "Specifies an material component in a non-medication substance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model.ingredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Ingredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Substance-model",
+        "path": "cimi-entity-Substance-model",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Substance-model.type",
+        "path": "cimi-entity-Substance-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.category",
+        "path": "cimi-entity-Substance-model.category",
+        "short": "The type, kind, or class of this item.",
+        "definition": "The type, kind, or class of this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-category"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+        "path": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.activeFlagAsaCodeableConcept",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-status"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Substance-model.additionalText",
+        "path": "cimi-entity-Substance-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Substance-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Substance-model.ingredient",
+        "path": "cimi-entity-Substance-model.ingredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a non-medication substance.",
+        "definition": "Specifies an material component in a non-medication substance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Substance-model.ingredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Ingredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

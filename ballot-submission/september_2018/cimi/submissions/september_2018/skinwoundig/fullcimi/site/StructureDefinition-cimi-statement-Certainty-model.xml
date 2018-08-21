@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-Certainty-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Certainty Logical Model</b></p>
+  <p>The degree of confidence in a conclusion or assertion.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Certainty-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.Certainty"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="CertaintyModel"/>
+  <title value="SW Certainty Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The degree of confidence in a conclusion or assertion."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-Certainty-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-Certainty-model">
+      <path value="cimi-statement-Certainty-model"/>
+      <definition value="The degree of confidence in a conclusion or assertion."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Certainty-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Certainty-model.value">
+      <path value="cimi-statement-Certainty-model.value"/>
+      <short value="Code representing the degree of confidence in a conclusion or assertion."/>
+      <definition value="Code representing the degree of confidence in a conclusion or assertion."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Certainty-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-Certainty-model">
+      <path value="cimi-statement-Certainty-model"/>
+      <definition value="The degree of confidence in a conclusion or assertion."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Certainty-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Certainty-model.value">
+      <path value="cimi-statement-Certainty-model.value"/>
+      <short value="Code representing the degree of confidence in a conclusion or assertion."/>
+      <definition value="Code representing the degree of confidence in a conclusion or assertion."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Certainty-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

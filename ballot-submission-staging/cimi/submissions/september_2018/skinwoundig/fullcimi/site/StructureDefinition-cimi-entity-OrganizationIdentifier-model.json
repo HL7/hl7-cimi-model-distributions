@@ -1,0 +1,401 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-OrganizationIdentifier-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW OrganizationIdentifier Logical Model</b></p>\n  <p>An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationIdentifier-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.OrganizationIdentifier"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "OrganizationIdentifierModel",
+  "title": "SW OrganizationIdentifier Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-OrganizationIdentifier-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model",
+        "path": "cimi-entity-OrganizationIdentifier-model",
+        "definition": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.value",
+        "path": "cimi-entity-OrganizationIdentifier-model.value",
+        "short": "String representing an identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "definition": "String representing an identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.purpose",
+        "path": "cimi-entity-OrganizationIdentifier-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-use"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.type",
+        "path": "cimi-entity-OrganizationIdentifier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+        "path": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+        "short": "A formal terminology system.",
+        "definition": "A formal terminology system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+        "path": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.issuer",
+        "path": "cimi-entity-OrganizationIdentifier-model.issuer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "An organization who issues a qualification, identifier, or license.",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model",
+        "path": "cimi-entity-OrganizationIdentifier-model",
+        "definition": "An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.value",
+        "path": "cimi-entity-OrganizationIdentifier-model.value",
+        "short": "String representing an identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "definition": "String representing an identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.purpose",
+        "path": "cimi-entity-OrganizationIdentifier-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-use"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.type",
+        "path": "cimi-entity-OrganizationIdentifier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+        "path": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+        "short": "A formal terminology system.",
+        "definition": "A formal terminology system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.codeSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+        "path": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationIdentifier-model.issuer",
+        "path": "cimi-entity-OrganizationIdentifier-model.issuer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "An organization who issues a qualification, identifier, or license.",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationIdentifier-model.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

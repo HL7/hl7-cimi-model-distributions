@@ -1,0 +1,419 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundPressureUlcerAssociation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundPressureUlcerAssociation Logical Model</b></p>\n  <p>Is the wound associated with a device or pressure point?</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundPressureUlcerAssociation"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundPressureUlcerAssociationModel",
+  "title": "SW WoundPressureUlcerAssociation Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Is the wound associated with a device or pressure point?",
+  "keyword": [
+    {
+      "system": "urn:tbd",
+      "code": "TBD"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundPressureUlcerAssociation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model",
+        "path": "sw-WoundPressureUlcerAssociation-model",
+        "definition": "Is the wound associated with a device or pressure point?",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+        "path": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+        "path": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+        "path": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.subject",
+        "path": "sw-WoundPressureUlcerAssociation-model.subject",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "416462003",
+            "display": "Wound (disorder)"
+          }
+        ],
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.observableCode",
+        "path": "sw-WoundPressureUlcerAssociation-model.observableCode",
+        "short": "A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.",
+        "definition": "A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.observableCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.resultValue",
+        "path": "sw-WoundPressureUlcerAssociation-model.resultValue",
+        "short": "The finding itself, such as the blood pressure value recorded.",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.resultValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.qualifier",
+        "path": "sw-WoundPressureUlcerAssociation-model.qualifier",
+        "short": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "definition": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.qualifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model",
+        "path": "sw-WoundPressureUlcerAssociation-model",
+        "definition": "Is the wound associated with a device or pressure point?",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+        "path": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+        "path": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+        "path": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.subject",
+        "path": "sw-WoundPressureUlcerAssociation-model.subject",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "416462003",
+            "display": "Wound (disorder)"
+          }
+        ],
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.observableCode",
+        "path": "sw-WoundPressureUlcerAssociation-model.observableCode",
+        "short": "A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.",
+        "definition": "A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.observableCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.resultValue",
+        "path": "sw-WoundPressureUlcerAssociation-model.resultValue",
+        "short": "The finding itself, such as the blood pressure value recorded.",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.resultValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundPressureUlcerAssociation-model.qualifier",
+        "path": "sw-WoundPressureUlcerAssociation-model.qualifier",
+        "short": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "definition": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPressureUlcerAssociation-model.qualifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-GroupCharacteristic-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW GroupCharacteristic Logical Model</b></p>\n  <p>An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-GroupCharacteristic-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.GroupCharacteristic"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "GroupCharacteristicModel",
+  "title": "SW GroupCharacteristic Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0599755"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-GroupCharacteristic-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-GroupCharacteristic-model",
+        "path": "cimi-entity-GroupCharacteristic-model",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.value[x]",
+        "path": "cimi-entity-GroupCharacteristic-model.value[x]",
+        "short": "Choice of types representing an inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "definition": "Choice of types representing an inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+        "path": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+        "short": "A code describing the characteristic present, absent, or having a value in this group.",
+        "definition": "A code describing the characteristic present, absent, or having a value in this group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+        "path": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0680251"
+          }
+        ],
+        "short": "If true, exclude the subjects that match the criterion.",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.timePeriod",
+        "path": "cimi-entity-GroupCharacteristic-model.timePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-GroupCharacteristic-model",
+        "path": "cimi-entity-GroupCharacteristic-model",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.value[x]",
+        "path": "cimi-entity-GroupCharacteristic-model.value[x]",
+        "short": "Choice of types representing an inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "definition": "Choice of types representing an inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+        "path": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+        "short": "A code describing the characteristic present, absent, or having a value in this group.",
+        "definition": "A code describing the characteristic present, absent, or having a value in this group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.groupCharacteristicCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+        "path": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0680251"
+          }
+        ],
+        "short": "If true, exclude the subjects that match the criterion.",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.excludeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-GroupCharacteristic-model.timePeriod",
+        "path": "cimi-entity-GroupCharacteristic-model.timePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-GroupCharacteristic-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

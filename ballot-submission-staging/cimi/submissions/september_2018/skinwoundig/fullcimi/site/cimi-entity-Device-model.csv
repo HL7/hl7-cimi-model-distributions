@@ -1,0 +1,20 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-entity-Device-model","","","",0,*,"","","","","","A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model",0,*,"",""
+"cimi-entity-Device-model.type","","","",1,1,"","","","Coding {[]} {[]}
+","The most specific code (lowest level term) describing the kind or sort of thing being represented.","The most specific code (lowest level term) describing the kind or sort of thing being represented.","","","","","","","","","",,"required","","http://hl7.org/fhir/us/sw/ValueSet/cimi-entity-DeviceVS","http://ncimeta.nci.nih.gov#C0332307
+",,,,"cimi-entity-Device-model.type",1,1,"",""
+"cimi-entity-Device-model.deviceUdi","","","",0,*,"","","","string {[]} {[]}
+","Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.","Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.deviceUdi",0,*,"",""
+"cimi-entity-Device-model.vendorModelNumber","","","",0,1,"","","","string {[]} {[]}
+","The model number of the device, assigned by the manufacturer or vendor.","The model number of the device, assigned by the manufacturer or vendor.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.vendorModelNumber",0,1,"",""
+"cimi-entity-Device-model.manufacturerName","","","",0,1,"","","","string {[]} {[]}
+","The name of the company who produce the device.","The name of the company who produce the device.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.manufacturerName",0,1,"",""
+"cimi-entity-Device-model.manufactureDate","","","",0,1,"","","","dateTime {[]} {[]}
+","When the item (medication, device, etc.) was produced.","When the item (medication, device, etc.) was produced.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.manufactureDate",0,1,"",""
+"cimi-entity-Device-model.expirationDate","","","",0,1,"","","","dateTime {[]} {[]}
+","When the item (medication, device, etc.) will expire.","When the item (medication, device, etc.) will expire.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.expirationDate",0,1,"",""
+"cimi-entity-Device-model.version","","","",0,1,"","","","string {[]} {[]}
+id {[]} {[]}","A number or code associated with the product that identifies a particular release iteration.","A number or code associated with the product that identifies a particular release iteration.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C0333052
+",,,,"cimi-entity-Device-model.version",0,1,"",""
+"cimi-entity-Device-model.url","","","",0,1,"","","","uri {[]} {[]}
+","A unique URL on which the device may be contacted directly.","A unique URL on which the device may be contacted directly.","","","","","","","","","",,,,,"",,,,"cimi-entity-Device-model.url",0,1,"",""

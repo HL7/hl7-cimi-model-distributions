@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundTypeEtiology-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundTypeEtiology Logical Model</b></p>\n  <p>A specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundTypeEtiology"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundTypeEtiologyModel",
+  "title": "SW WoundTypeEtiology Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "11373-8",
+      "display": "Injury cause"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundTypeEtiology-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundTypeEtiology-model",
+        "path": "sw-WoundTypeEtiology-model",
+        "definition": "A specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundTypeEtiology-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTypeEtiology-model.value",
+        "path": "sw-WoundTypeEtiology-model.value",
+        "short": "Code representing a specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "definition": "Code representing a specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTypeEtiology-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.3/expansion"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundTypeEtiology-model",
+        "path": "sw-WoundTypeEtiology-model",
+        "definition": "A specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundTypeEtiology-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTypeEtiology-model.value",
+        "path": "sw-WoundTypeEtiology-model.value",
+        "short": "Code representing a specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "definition": "Code representing a specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTypeEtiology-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.3/expansion"
+          }
+        }
+      }
+    ]
+  }
+}

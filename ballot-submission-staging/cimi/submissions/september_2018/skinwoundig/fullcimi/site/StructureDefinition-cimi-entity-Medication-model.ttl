@@ -1,0 +1,558 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cimi-entity-Medication-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Medication Logical Model</b></p>\n  <p>A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "cimi.entity.Medication" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "MedicationModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW Medication Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines."];
+  fhir:StructureDefinition.keyword [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+     fhir:Coding.code [ fhir:value "C0013227" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "cimi-entity-Medication-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.type" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.type" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0332307" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0013058" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The form in which active and/or inert ingredient(s) are physically presented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The form in which active and/or inert ingredient(s) are physically presented." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-form-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-form-codes" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.brand" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.brand" ];
+       fhir:ElementDefinition.short [ fhir:value "If the product is branded, and if so, the brand name of a product." ];
+       fhir:ElementDefinition.definition [ fhir:value "If the product is branded, and if so, the brand name of a product." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.brand" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+       fhir:ElementDefinition.short [ fhir:value "True if the medication is available to consumers without a prescription." ];
+       fhir:ElementDefinition.definition [ fhir:value "True if the medication is available to consumers without a prescription." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C3176062" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Specifies an material component in a medication." ];
+       fhir:ElementDefinition.definition [ fhir:value "Specifies an material component in a medication." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MedicationIngredient-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1561598" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1114744" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The organization producing the product or test." ];
+       fhir:ElementDefinition.definition [ fhir:value "The organization producing the product or test." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1115660" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch." ];
+       fhir:ElementDefinition.definition [ fhir:value "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+       fhir:ElementDefinition.short [ fhir:value "When the item (medication, device, etc.) will expire." ];
+       fhir:ElementDefinition.definition [ fhir:value "When the item (medication, device, etc.) will expire." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.package" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.package" ];
+       fhir:ElementDefinition.short [ fhir:value "The kind of container the medication comes in." ];
+       fhir:ElementDefinition.definition [ fhir:value "The kind of container the medication comes in." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.package" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-package-form>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-package-form" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.type" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.type" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0332307" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The most specific code (lowest level term) describing the kind or sort of thing being represented." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0013058" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The form in which active and/or inert ingredient(s) are physically presented." ];
+       fhir:ElementDefinition.definition [ fhir:value "The form in which active and/or inert ingredient(s) are physically presented." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.doseForm" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-form-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-form-codes" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.brand" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.brand" ];
+       fhir:ElementDefinition.short [ fhir:value "If the product is branded, and if so, the brand name of a product." ];
+       fhir:ElementDefinition.definition [ fhir:value "If the product is branded, and if so, the brand name of a product." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.brand" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+       fhir:ElementDefinition.short [ fhir:value "True if the medication is available to consumers without a prescription." ];
+       fhir:ElementDefinition.definition [ fhir:value "True if the medication is available to consumers without a prescription." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.overTheCounter" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C3176062" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Specifies an material component in a medication." ];
+       fhir:ElementDefinition.definition [ fhir:value "Specifies an material component in a medication." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.medicationIngredient" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MedicationIngredient-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1561598" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1114744" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The organization producing the product or test." ];
+       fhir:ElementDefinition.definition [ fhir:value "The organization producing the product or test." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.manufacturer" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C1115660" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch." ];
+       fhir:ElementDefinition.definition [ fhir:value "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.lotNumber" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+       fhir:ElementDefinition.short [ fhir:value "When the item (medication, device, etc.) will expire." ];
+       fhir:ElementDefinition.definition [ fhir:value "When the item (medication, device, etc.) will expire." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.expirationDate" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-entity-Medication-model.package" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-entity-Medication-model.package" ];
+       fhir:ElementDefinition.short [ fhir:value "The kind of container the medication comes in." ];
+       fhir:ElementDefinition.definition [ fhir:value "The kind of container the medication comes in." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-entity-Medication-model.package" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-package-form>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-package-form" ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes> a fhir:us .
+
+<http://hl7.org/fhir/ValueSet/medication-form-codes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/medication-package-form> a fhir:ValueSet .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/cimi-entity-Medication-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

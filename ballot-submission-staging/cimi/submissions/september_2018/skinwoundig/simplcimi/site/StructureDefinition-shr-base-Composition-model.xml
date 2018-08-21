@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-Composition-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Composition Logical Model</b></p>
+  <p>A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.Composition"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="CompositionModel"/>
+  <title value="SW Composition Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-Composition-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-Composition-model">
+      <path value="shr-base-Composition-model"/>
+      <definition value="A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Composition-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.subject">
+      <path value="shr-base-Composition-model.subject"/>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Composition-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.typeCode">
+      <path value="shr-base-Composition-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Composition-model.typeCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.statement">
+      <path value="shr-base-Composition-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Composition-model.statement"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-Composition-model">
+      <path value="shr-base-Composition-model"/>
+      <definition value="A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Composition-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.subject">
+      <path value="shr-base-Composition-model.subject"/>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Composition-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.typeCode">
+      <path value="shr-base-Composition-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-Composition-model.typeCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-Composition-model.statement">
+      <path value="shr-base-Composition-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-Composition-model.statement"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

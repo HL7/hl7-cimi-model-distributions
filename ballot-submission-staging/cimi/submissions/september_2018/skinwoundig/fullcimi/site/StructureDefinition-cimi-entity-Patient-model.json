@@ -1,0 +1,137 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Patient-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Patient Logical Model</b></p>\n  <p>A person in the role of a patient.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Patient-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Patient"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PatientModel",
+  "title": "SW Patient Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A person in the role of a patient.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C1299487"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Patient-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Patient-model",
+        "path": "cimi-entity-Patient-model",
+        "definition": "A person in the role of a patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Patient-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Patient-model.person",
+        "path": "cimi-entity-Patient-model.person",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "A person relevant to the health or social situation of the subject (including the person of record him or herself).",
+        "definition": "A person relevant to the health or social situation of the subject (including the person of record him or herself).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Patient-model.person",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Patient-model",
+        "path": "cimi-entity-Patient-model",
+        "definition": "A person in the role of a patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Patient-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Patient-model.person",
+        "path": "cimi-entity-Patient-model.person",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "A person relevant to the health or social situation of the subject (including the person of record him or herself).",
+        "definition": "A person relevant to the health or social situation of the subject (including the person of record him or herself).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Patient-model.person",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

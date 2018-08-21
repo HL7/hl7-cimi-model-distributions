@@ -1,0 +1,65 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-ObjectPresentOrAbsent.object_present_or_absent.v0.0.1
+
+specialize
+  SHR-CORE-ExistentialFinding.existential_finding.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      use = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      keywords = <"shr.base","object present or absent">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  ObjectPresentOrAbsent[id1.1.1.1] matches {
+    subject matches {
+      Subject[id0.0.0.2]
+    }
+    objectTypeCode matches {
+      ObjectTypeCode[id0.0.0.3]
+    }
+    objectIdentifier matches {
+      ObjectIdentifier[id0.0.0.4]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1"] = <
+        text = <"ObjectPresentOrAbsent">
+        description = <"An assertion of a physical or conceptual entity, relationship, role, situation, condition, or phenomenon present or absent.">
+      >
+      ["id0.0.0.2"] = <
+        text = <"Subject">
+        description = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+                      For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+      >
+      ["id0.0.0.3"] = <
+        text = <"ObjectTypeCode">
+        description = <"A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.">
+      >
+      ["id0.0.0.4"] = <
+        text = <"ObjectIdentifier">
+        description = <"For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.">
+      >
+    >
+  >

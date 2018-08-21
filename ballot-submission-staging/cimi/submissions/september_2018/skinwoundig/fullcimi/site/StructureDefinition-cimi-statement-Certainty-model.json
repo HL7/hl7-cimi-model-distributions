@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-Certainty-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Certainty Logical Model</b></p>\n  <p>The degree of confidence in a conclusion or assertion.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Certainty-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.Certainty"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "CertaintyModel",
+  "title": "SW Certainty Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The degree of confidence in a conclusion or assertion.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-Certainty-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-Certainty-model",
+        "path": "cimi-statement-Certainty-model",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Certainty-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Certainty-model.value",
+        "path": "cimi-statement-Certainty-model.value",
+        "short": "Code representing the degree of confidence in a conclusion or assertion.",
+        "definition": "Code representing the degree of confidence in a conclusion or assertion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Certainty-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-Certainty-model",
+        "path": "cimi-statement-Certainty-model",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Certainty-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Certainty-model.value",
+        "path": "cimi-statement-Certainty-model.value",
+        "short": "Code representing the degree of confidence in a conclusion or assertion.",
+        "definition": "Code representing the degree of confidence in a conclusion or assertion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Certainty-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

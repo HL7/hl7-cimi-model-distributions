@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-element-Prefix-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Prefix Logical Model</b></p>
+  <p>Contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Prefix-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.element.Prefix"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="PrefixModel"/>
+  <title value="SW Prefix Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C3476361"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-element-Prefix-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-element-Prefix-model">
+      <path value="cimi-element-Prefix-model"/>
+      <definition value="Contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Prefix-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Prefix-model.value">
+      <path value="cimi-element-Prefix-model.value"/>
+      <short value="String representing contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <definition value="String representing contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Prefix-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-element-Prefix-model">
+      <path value="cimi-element-Prefix-model"/>
+      <definition value="Contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Prefix-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Prefix-model.value">
+      <path value="cimi-element-Prefix-model.value"/>
+      <short value="String representing contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <definition value="String representing contains a set of honorific terms that typically appear before a person&#39;s name, for example Mr., Mrs., Dr., etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Prefix-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

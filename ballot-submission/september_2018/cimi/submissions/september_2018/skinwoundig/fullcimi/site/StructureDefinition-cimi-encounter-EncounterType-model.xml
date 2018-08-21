@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-encounter-EncounterType-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW EncounterType Logical Model</b></p>
+  <p>Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-EncounterType-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.encounter.EncounterType"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="EncounterTypeModel"/>
+  <title value="SW EncounterType Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-encounter-EncounterType-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-encounter-EncounterType-model">
+      <path value="cimi-encounter-EncounterType-model"/>
+      <definition value="Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-encounter-EncounterType-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-encounter-EncounterType-model.value">
+      <path value="cimi-encounter-EncounterType-model.value"/>
+      <short value="Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <definition value="Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-encounter-EncounterType-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-encounter-EncounterType-model">
+      <path value="cimi-encounter-EncounterType-model"/>
+      <definition value="Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-encounter-EncounterType-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-encounter-EncounterType-model.value">
+      <path value="cimi-encounter-EncounterType-model.value"/>
+      <short value="Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <definition value="Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-encounter-EncounterType-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

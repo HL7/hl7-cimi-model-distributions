@@ -1,0 +1,137 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Manufacturer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Manufacturer Logical Model</b></p>\n  <p>The organization producing the product or test.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Manufacturer-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Manufacturer"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ManufacturerModel",
+  "title": "SW Manufacturer Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The organization producing the product or test.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C1114744"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Manufacturer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Manufacturer-model",
+        "path": "cimi-entity-Manufacturer-model",
+        "definition": "The organization producing the product or test.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Manufacturer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Manufacturer-model.value",
+        "path": "cimi-entity-Manufacturer-model.value",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "Organization representing the organization producing the product or test.",
+        "definition": "Organization representing the organization producing the product or test.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Manufacturer-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Manufacturer-model",
+        "path": "cimi-entity-Manufacturer-model",
+        "definition": "The organization producing the product or test.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Manufacturer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Manufacturer-model.value",
+        "path": "cimi-entity-Manufacturer-model.value",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "Organization representing the organization producing the product or test.",
+        "definition": "Organization representing the organization producing the product or test.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Manufacturer-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

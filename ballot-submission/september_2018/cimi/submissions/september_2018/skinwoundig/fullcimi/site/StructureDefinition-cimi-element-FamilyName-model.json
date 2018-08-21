@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-FamilyName-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW FamilyName Logical Model</b></p>\n  <p>The portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-FamilyName-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.FamilyName"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "FamilyNameModel",
+  "title": "SW FamilyName Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "45394-4"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-FamilyName-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-FamilyName-model",
+        "path": "cimi-element-FamilyName-model",
+        "definition": "The portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-FamilyName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-FamilyName-model.value",
+        "path": "cimi-element-FamilyName-model.value",
+        "short": "String representing the portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "definition": "String representing the portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-FamilyName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-FamilyName-model",
+        "path": "cimi-element-FamilyName-model",
+        "definition": "The portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-FamilyName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-FamilyName-model.value",
+        "path": "cimi-element-FamilyName-model.value",
+        "short": "String representing the portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "definition": "String representing the portion of a person's name that reflects the genealogy of the person. In western cultures, this is the 'last' name. In eastern cultures, the family name appears before the person's given name(s). In some cultures (e.g. Eritrea) the family name of a son is the first name of his father. (Source: HL7 V3).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-FamilyName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Composition.composition.v0.0.1
+
+specialize
+  SHR-CORE-Statement.statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      use = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      keywords = <"shr.base","composition">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Composition[id1.1] matches {
+    subject matches {
+      Subject[id0.2]
+    }
+    typeCode matches {
+      TypeCode[id0.3]
+    }
+    statement matches {
+      Statement[id0.4]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1"] = <
+        text = <"Composition">
+        description = <"A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.">
+      >
+      ["id0.2"] = <
+        text = <"Subject">
+        description = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+                      For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+      >
+      ["id0.3"] = <
+        text = <"TypeCode">
+        description = <"A code that describes the type of composition or section, such as a section or document type identifier.">
+      >
+      ["id0.4"] = <
+        text = <"Statement">
+        description = <"Base class for all types of clinical statements.">
+      >
+    >
+  >

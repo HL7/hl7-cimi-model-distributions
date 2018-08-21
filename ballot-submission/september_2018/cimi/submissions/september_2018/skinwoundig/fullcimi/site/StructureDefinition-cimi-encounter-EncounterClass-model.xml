@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-encounter-EncounterClass-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW EncounterClass Logical Model</b></p>
+  <p>Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-EncounterClass-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.encounter.EncounterClass"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="EncounterClassModel"/>
+  <title value="SW EncounterClass Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-encounter-EncounterClass-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-encounter-EncounterClass-model">
+      <path value="cimi-encounter-EncounterClass-model"/>
+      <definition value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-encounter-EncounterClass-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-encounter-EncounterClass-model.value">
+      <path value="cimi-encounter-EncounterClass-model.value"/>
+      <short value="Code representing concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <definition value="Code representing concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-encounter-EncounterClass-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-encounter-EncounterClass-model">
+      <path value="cimi-encounter-EncounterClass-model"/>
+      <definition value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-encounter-EncounterClass-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-encounter-EncounterClass-model.value">
+      <path value="cimi-encounter-EncounterClass-model.value"/>
+      <short value="Code representing concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <definition value="Code representing concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-encounter-EncounterClass-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

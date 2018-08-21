@@ -1,0 +1,48 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-WoundDepth.wound_depth.v0.0.1
+
+specialize
+  SHR-CORE-QuantitativeObservation.quantitative_observation.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"Assertions, observations and measurements related to wounds.">
+      use = <"Assertions, observations and measurements related to wounds.">
+      keywords = <"sw","wound depth">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  WoundDepth[id1.1.1.1.1] matches {
+    /subject/value matches { Wound[id0.0.0.0.3] }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1"] = <
+        text = <"WoundDepth">
+        description = <"Depth of the wound.">
+      >
+      ["id0.0.0.0.3"] = <
+        text = <"Wound">
+        description = <"The presence of a wound.">
+      >
+    >
+  >

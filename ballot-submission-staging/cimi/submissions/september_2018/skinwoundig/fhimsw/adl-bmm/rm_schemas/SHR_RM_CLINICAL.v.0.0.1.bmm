@@ -1,0 +1,992 @@
+-- Basic Metamodel Syntax Version
+bmm_version = <"2.1">
+
+-- ----------------------------------
+-- schema identification
+-- (schema_id computed as <rm_publisher>_<schema_name>_<rm_release>)
+-- ----------------------------------
+rm_publisher = <"SHR">
+schema_name = <"RM_CLINICAL">
+rm_release = <"0.0.1">
+model_name = <"CORE">
+
+-- ----------------------------------
+-- schema documentation
+-- ----------------------------------
+schema_revision = <"Fri Jul 28 17:57:05 PDT 2017">
+schema_lifecycle_state = <"dstu">
+schema_description = <"RM_CLINICAL.v0.0.1 - Schema generated from CIMPL">
+
+
+-- ----------------------------------
+-- archetyping
+-- ----------------------------------
+archetype_rm_closure_packages = <"SHR_CLINICAL.Fsw, SHR_CLINICAL.ShrBase, SHR_CLINICAL.ShrCore">
+includes = <
+	["1"] = <
+		id = <"shr_rm_primitives_0.0.1">
+	>
+>
+packages = <
+	["SHR_Clinical"] = <
+		name = <"SHR_Clinical">
+		packages = <
+			["Fsw"] = <
+				name = <"Fsw">
+				classes = <"InformationEntry", "Comment", "ContentVersion", "Identifier", "RecordStatus", "SourceRecordType", "SourceSystem", "Recorded", "ClinicalStatement", "ContextCode", "TemporalContext", "Cosigned", "Signed", "Verified", "DateReported", "InformationSource", "IsPatientReported", "ResultStatus", "ObservationStatement", "PanelMembers", "Category", "DataAbsentReason", "DateTime", "DateTimeIssued", "DeltaFlag", "Description", "Method", "ObservedCharacteristic", "Reliability", "DerivedFrom", "PartOf", "WoundSiteIdentification", "WoundAssertion", "WoundBed", "WoundEdge", "WoundExudate", "WoundSize", "WoundTunneling", "WoundUndermining", "WoundAssessment", "DateOfOnsetOfImpairment", "IsExudatePresent", "IsTunnelingPresent", "IsUnderminingPresent", "PeriwoundDescription", "PressureUlcerStage", "VisibleStructure", "WoundHealingAssessment", "WoundTrend", "DateAbated", "InjuryCause", "WasPresentOnAdmission", "WoundEpisode", "WoundIdentifier", "WoundType", "WoundSite", "BodyLocationQualifier", "LateralityComponent", "BedAreaPercentageByAppearance", "BedAreaPercentageByColor", "WoundBaseAppearance", "WoundBaseColor", "WoundEdgeColor", "EdgeDescription", "ExudateAppearance", "WoundExudateColor", "DrainageAmount", "Odor", "WoundArea", "WoundDepth", "WoundLength", "WoundWidth", "TunnelingClockPosition", "TunnelingLength", "UnderminingClockPosition", "UnderminingLength">
+			>
+			["ShrBase"] = <
+				name = <"ShrBase">
+				classes = <"Narrative", "NarrativeQualifier">
+			>
+			["ShrCore"] = <
+				name = <"ShrCore">
+				classes = <"EvaluationComponent", "CodedEvaluationComponent", "Units", "Interpretation", "TopicCode", "ExceptionValue", "Quantity", "Comparator", "Coding", "CodeSystem", "CodeSystemVersion", "CodeableConcept", "DisplayText">
+			>
+		>
+	>
+>
+
+class_definitions = <
+	["InformationEntry"] = <
+		documentation = <"Description">
+		name = <"InformationEntry">
+		properties = <
+			["comment"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"comment">
+				type = <"Comment">
+			>
+		>
+	>
+	["Comment"] = <
+		documentation = <"Description">
+		name = <"Comment">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ContentVersion"] = <
+		documentation = <"Description">
+		name = <"ContentVersion">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Identifier"] = <
+		documentation = <"Description">
+		name = <"Identifier">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: id)">
+				name = <"value">
+				type = <"ID">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["RecordStatus"] = <
+		documentation = <"Description">
+		name = <"RecordStatus">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["SourceRecordType"] = <
+		documentation = <"Description">
+		name = <"SourceRecordType">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["SourceSystem"] = <
+		documentation = <"Description">
+		name = <"SourceSystem">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: id)">
+				name = <"value">
+				type = <"ID">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Recorded"] = <
+		documentation = <"Description">
+		name = <"Recorded">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ClinicalStatement"] = <
+		documentation = <"Description">
+		name = <"ClinicalStatement">
+		ancestors = <"InformationEntry", ...>
+		properties = <
+			["topicCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The concept representing the finding or action that is the topic of the statement.
+					For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+				name = <"topicCode">
+				type = <"TopicCode">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ContextCode"] = <
+		documentation = <"Description">
+		name = <"ContextCode">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["TemporalContext"] = <
+		documentation = <"Description">
+		name = <"TemporalContext">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Cosigned"] = <
+		documentation = <"Description">
+		name = <"Cosigned">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Signed"] = <
+		documentation = <"Description">
+		name = <"Signed">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Verified"] = <
+		documentation = <"Description">
+		name = <"Verified">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DateReported"] = <
+		documentation = <"Description">
+		name = <"DateReported">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["InformationSource"] = <
+		documentation = <"Description">
+		name = <"InformationSource">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["IsPatientReported"] = <
+		documentation = <"Description">
+		name = <"IsPatientReported">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: boolean)">
+				name = <"value">
+				type = <"BOOLEAN">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ResultStatus"] = <
+		documentation = <"Description">
+		name = <"ResultStatus">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ObservationStatement"] = <
+		documentation = <"A base class for representing observed facts, including provenance">
+		name = <"ObservationStatement">
+		ancestors = <"ClinicalStatement", ...>
+		properties = <
+			["category"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"category">
+				type = <"Category">
+			>
+			["dataAbsentReason"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"dataAbsentReason">
+				type = <"DataAbsentReason">
+			>
+			["dateTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"dateTime">
+				type = <"DateTime">
+			>
+			["dateTimeIssued"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"dateTimeIssued">
+				type = <"DateTimeIssued">
+			>
+			["description"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"description">
+				type = <"Description">
+			>
+			["evaluationComponent"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.">
+				name = <"evaluationComponent">
+				type = <"EvaluationComponent">
+				cardinality = <|>=0|>
+			>
+			["interpretation"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"interpretation">
+				type = <"Interpretation">
+			>
+			["method"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"method">
+				type = <"Method">
+			>
+			["resultStatus"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"resultStatus">
+				type = <"ResultStatus">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["panelMembers"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PanelMembers represent the elements of a group of a related but independent evaluations.
+					Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.">
+				name = <"panelMembers">
+				type = <"PanelMembers">
+			>
+			["valueChoiceCodeableConcept"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"valueChoiceCodeableConcept">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceQuantity"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+				name = <"valueChoiceQuantity">
+				type = <"Quantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["PanelMembers"] = <
+		documentation = <"PanelMembers represent the elements of a group of a related but independent evaluations.
+			Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.">
+		name = <"PanelMembers">
+		properties = <
+			["observationStatement"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A base class for representing observed facts, including provenance">
+				name = <"observationStatement">
+				type = <"ObservationStatement">
+				cardinality = <|>=0|>
+			>
+		>
+	>
+	["Category"] = <
+		documentation = <"Description">
+		name = <"Category">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DataAbsentReason"] = <
+		documentation = <"Description">
+		name = <"DataAbsentReason">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DateTime"] = <
+		documentation = <"Description">
+		name = <"DateTime">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DateTimeIssued"] = <
+		documentation = <"Description">
+		name = <"DateTimeIssued">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DeltaFlag"] = <
+		documentation = <"Description">
+		name = <"DeltaFlag">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Description"] = <
+		documentation = <"Description">
+		name = <"Description">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.">
+				name = <"value">
+				type = <"Narrative">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Method"] = <
+		documentation = <"Description">
+		name = <"Method">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ObservedCharacteristic"] = <
+		documentation = <"A coded property.">
+		name = <"ObservedCharacteristic">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Reliability"] = <
+		documentation = <"Description">
+		name = <"Reliability">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DerivedFrom"] = <
+		documentation = <"Description">
+		name = <"DerivedFrom">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A base class for representing observed facts, including provenance">
+				name = <"value">
+				type = <"ObservationStatement">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["PartOf"] = <
+		documentation = <"Description">
+		name = <"PartOf">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"value">
+				type = <"ClinicalStatement">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["WoundSiteIdentification"] = <
+		documentation = <"LOINC 72369-2 (Body site identification panel)">
+		name = <"WoundSiteIdentification">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundAssertion"] = <
+		documentation = <"Assertion of the existence of a wound on a patient">
+		name = <"WoundAssertion">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundBed"] = <
+		documentation = <"- LOINC 72372-6 (Wound bed and edge panel)">
+		name = <"WoundBed">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundEdge"] = <
+		documentation = <"- LOINC 89256-2 (Wound edge panel)">
+		name = <"WoundEdge">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundExudate"] = <
+		documentation = <"- LOINC 72292-6 (Wound exudate panel)">
+		name = <"WoundExudate">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundSize"] = <
+		documentation = <"- LOINC 72287-6 (Wound size panel)">
+		name = <"WoundSize">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundTunneling"] = <
+		documentation = <"LOINC 89257-0 (Wound tunneling panel)">
+		name = <"WoundTunneling">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundUndermining"] = <
+		documentation = <"LOINC 89258-8 (Wound undermining panel)">
+		name = <"WoundUndermining">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["WoundAssessment"] = <
+		documentation = <"LOINC 39135-9 (Wound assessment panel)">
+		name = <"WoundAssessment">
+		ancestors = <"ObservationStatement", ...>
+	>
+	["DateOfOnsetOfImpairment"] = <
+		documentation = <"The beginning or first appearance of a mental or physical disorder.">
+		name = <"DateOfOnsetOfImpairment">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["IsExudatePresent"] = <
+		documentation = <"Presence or absence of wound drainage. - LOINC 89259-6 (Presence of wound exudate) In Loinc this is a code with Yes, No values">
+		name = <"IsExudatePresent">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["IsTunnelingPresent"] = <
+		documentation = <"Tunneling of a wound refers to a narrow opening or pathway underneath the skin that may extend in any direction, resulting in dead space with potential for abscess formation. - LOINC 72298-3 (Tunneling of Wound) In Loinc this is a code with Yes, No values">
+		name = <"IsTunnelingPresent">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["IsUnderminingPresent"] = <
+		documentation = <"Undermining of a wound refers to tissue destruction that extends under the intact wound edge. The wound is larger at its base (wound bed) than at the skin surface. With pressure ulcers, undermining may be caused by a bacterial infection or associated with osteomyelitis. - LOINC 72295-9 (Undermining of Wound) In Loinc this is a code with Yes, No values">
+		name = <"IsUnderminingPresent">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["PeriwoundDescription"] = <
+		documentation = <"A description of the skin around the wound (periwound). Color, induration, warmth and edema should be assessed. Redness of the surrounding skin can be indicative of unrelieved pressure. Irritation of the surrounding skin can result from exposure to feces or urine, a reaction to the dressing or tape, or inappropriate removal of dressing or tape. Redness, tenderness, warmth and swelling are classical clinical signs of infection. [Reference: Brown, P., 2009] - LOINC 72301-5 (Description of Periwound)">
+		name = <"PeriwoundDescription">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["PressureUlcerStage"] = <
+		documentation = <"The National Pressure Ulcer Advisory Panel redefined the definition of a pressure ulcer and the stages of pressure ulcers in 2007, including the original 4 stages (Non-blanchable erythema - Stage I, partial thickness – Stage II, full thickness skin loss – Stage III, and full thickness tissue loss – Stage IV) and adding 2 stages on deep tissue injury and unstageable pressure ulcers. As defined by the NPUAP, a pressure ulcer is localized injury to the skin and/or underlying tissue usually over a bony prominence, as a result of pressure, or pressure in combination with shear. - LOINC 72527-5 (Pressure ulcer stage NPUAP)">
+		name = <"PressureUlcerStage">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["VisibleStructure"] = <
+		documentation = <"Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound. - LOINC 89250-5 (Device or anatomic structure visible in wound)">
+		name = <"VisibleStructure">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundHealingAssessment"] = <
+		documentation = <"- LOINC 80338-7 (Wound assessment [Interpretation])">
+		name = <"WoundHealingAssessment">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundTrend"] = <
+		documentation = <"Whether a condition is improving, worsening, stable, or resolved. - LOINC 89253-9 (Trend)">
+		name = <"WoundTrend">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["DateAbated"] = <
+		documentation = <"The date that a condition resolved, went into remission, or was no longer relevant, or the date on which this is expected to occur. This concept is based on the abatement element within the HL7 FHIR Condition Resource. - LOINC 88878-4 (Date of condition abatement)">
+		name = <"DateAbated">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["InjuryCause"] = <
+		documentation = <"- LOINC 11373-8 (Injury cause)">
+		name = <"InjuryCause">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["WasPresentOnAdmission"] = <
+		documentation = <"- LOINC 89251-3 (Condition present on admission)">
+		name = <"WasPresentOnAdmission">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundEpisode"] = <
+		documentation = <"- LOINC 89252-1 (Episode of Wound)">
+		name = <"WoundEpisode">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundIdentifier"] = <
+		documentation = <"The wound number identifies a specific wound in cases where a patient has more than one wound at a given point in time. - LOINC 81666-0 (Wound number [Identifier])">
+		name = <"WoundIdentifier">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundType"] = <
+		documentation = <"- LOINC 72300-7 (Wound type)">
+		name = <"WoundType">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundSite"] = <
+		documentation = <"- LOINC 39111-0 (Body site)">
+		name = <"WoundSite">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["BodyLocationQualifier"] = <
+		documentation = <"- LOINC 39112-8 (Body location qualifier)">
+		name = <"BodyLocationQualifier">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["LateralityComponent"] = <
+		documentation = <"- LOINC 20228-3 (Anatomic part Laterality)">
+		name = <"LateralityComponent">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["BedAreaPercentageByAppearance"] = <
+		documentation = <"The area of the wound that is a specific color out of the total wound bed area (e.g., red 50%, yellow 40%, black 10%). The color is identified using [LOINC: 39132-6]. - LOINC 89255-4 (Wound bed area identified by color/​Area of wound bed)">
+		name = <"BedAreaPercentageByAppearance">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["BedAreaPercentageByColor"] = <
+		documentation = <"The percent of the wound bed appearance is the area of identified wound bed appearance (necrotic, sloughing, etc.; see LOINC 72371-8) compared to the total area of the wound bed. For example, 40% of the wound bed is necrotic. Results can either be subjective or measured. - LOINC 72370-0 (Area of identified wound bed appearance/​Area of wound bed of Wound base)">
+		name = <"BedAreaPercentageByColor">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["WoundBaseAppearance"] = <
+		documentation = <"Described as necrotic, sloughing, fibrinous, granulated, intact, approximated, etc. The wound bed appearance may or may not be differentiated from the wound edge, especially if the wound is healing well. - LOINC 72371-8 (Appearance of Wound base)">
+		name = <"WoundBaseAppearance">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundBaseColor"] = <
+		documentation = <"LOINC 39132-6 (Color of Wound base)">
+		name = <"WoundBaseColor">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundEdgeColor"] = <
+		documentation = <"- LOINC 39133-4 (Color of Wound edge)">
+		name = <"WoundEdgeColor">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["EdgeDescription"] = <
+		documentation = <"- LOINC 72304-9 (Edge of wound description)">
+		name = <"EdgeDescription">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["ExudateAppearance"] = <
+		documentation = <"- LOINC 72290-0 (Appearance of Exudate from wound)">
+		name = <"ExudateAppearance">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundExudateColor"] = <
+		documentation = <"- LOINC 72289-2 (Color of Exudate from wound)">
+		name = <"WoundExudateColor">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["DrainageAmount"] = <
+		documentation = <"- LOINC 39116-9 (Drainage amount of Wound)">
+		name = <"DrainageAmount">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["Odor"] = <
+		documentation = <"- LOINC 72288-4 (Odor of Exudate from wound)">
+		name = <"Odor">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["WoundArea"] = <
+		documentation = <"The area inside the wound edge boundary. Wound length x wound width. - LOINC 89260-4 (Area of wound)">
+		name = <"WoundArea">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["WoundDepth"] = <
+		documentation = <"- LOINC 39127-6 (Depth of Wound)">
+		name = <"WoundDepth">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["WoundLength"] = <
+		documentation = <"- LOINC 39126-8 (Length of Wound)">
+		name = <"WoundLength">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["WoundWidth"] = <
+		documentation = <"- LOINC 39125-0 (Width of Wound)">
+		name = <"WoundWidth">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["TunnelingClockPosition"] = <
+		documentation = <"No Values and id in SNOMED  - LOINC 72297-5 (Tunneling clock position of Wound)">
+		name = <"TunnelingClockPosition">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["TunnelingLength"] = <
+		documentation = <"- LOINC 72296-7 (Tunneling [Length] of Wound)">
+		name = <"TunnelingLength">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["UnderminingClockPosition"] = <
+		documentation = <"No Valueset and id in SNOMED  - LOINC 72294-2 (Undermining clock position of Wound)">
+		name = <"UnderminingClockPosition">
+		ancestors = <"CodedEvaluationComponent", ...>
+	>
+	["UnderminingLength"] = <
+		documentation = <"Undermining of a wound refers to tissue destruction that extends under the intact wound edge. The wound is larger at its base (wound bed) than at the skin surface. With pressure ulcers, undermining may be caused by a bacterial infection or associated with osteomyelitis. - LOINC 72293-4 (Undermining [Length] of Wound">
+		name = <"UnderminingLength">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["EvaluationComponent"] = <
+		documentation = <"A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.">
+		name = <"EvaluationComponent">
+		properties = <
+			["topicCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The concept representing the finding or action that is the topic of the statement.
+					For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+				name = <"topicCode">
+				type = <"TopicCode">
+			>
+			["exceptionValue"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A value describing the reason for a missing value.">
+				name = <"exceptionValue">
+				type = <"ExceptionValue">
+			>
+			["interpretation"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Description">
+				name = <"interpretation">
+				type = <"Interpretation">
+			>
+			["valueChoiceQuantity"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+				name = <"valueChoiceQuantity">
+				type = <"Quantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceCodeableConcept"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"valueChoiceCodeableConcept">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoicedateTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"valueChoicedateTime">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodedEvaluationComponent"] = <
+		documentation = <"-">
+		name = <"CodedEvaluationComponent">
+		ancestors = <"EvaluationComponent", ...>
+	>
+	["Units"] = <
+		documentation = <"Code for the unit of measure of the quantity.">
+		name = <"Units">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+				name = <"value">
+				type = <"Coding">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Interpretation"] = <
+		documentation = <"Description">
+		name = <"Interpretation">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["TopicCode"] = <
+		documentation = <"The concept representing the finding or action that is the topic of the statement.
+			For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+		name = <"TopicCode">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ExceptionValue"] = <
+		documentation = <"A value describing the reason for a missing value.">
+		name = <"ExceptionValue">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Quantity"] = <
+		documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+		name = <"Quantity">
+		properties = <
+			["comparator"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"undefined">
+				name = <"comparator">
+				type = <"Comparator">
+			>
+			["units"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Code for the unit of measure of the quantity.">
+				name = <"units">
+				type = <"Units">
+			>
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: decimal)">
+				name = <"value">
+				type = <"DECIMAL">
+			>
+		>
+	>
+	["Comparator"] = <
+		documentation = <"-">
+		name = <"Comparator">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Coding"] = <
+		documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+		name = <"Coding">
+		properties = <
+			["codeSystem"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A formal terminology system.">
+				name = <"codeSystem">
+				type = <"CodeSystem">
+			>
+			["codeSystemVersion"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The version of the vocabulary being used, if applicable.">
+				name = <"codeSystemVersion">
+				type = <"CodeSystemVersion">
+			>
+			["displayText"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+				name = <"displayText">
+				type = <"DisplayText">
+			>
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+			>
+		>
+	>
+	["CodeSystem"] = <
+		documentation = <"A formal terminology system.">
+		name = <"CodeSystem">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: uri)">
+				name = <"value">
+				type = <"URI">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodeSystemVersion"] = <
+		documentation = <"The version of the vocabulary being used, if applicable.">
+		name = <"CodeSystemVersion">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodeableConcept"] = <
+		documentation = <"A set of codes drawn from different coding systems, representing the same concept.">
+		name = <"CodeableConcept">
+		properties = <
+			["coding"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+				name = <"coding">
+				type = <"Coding">
+				cardinality = <|>=0|>
+			>
+			["displayText"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+				name = <"displayText">
+				type = <"DisplayText">
+			>
+		>
+	>
+	["DisplayText"] = <
+		documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+		name = <"DisplayText">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Narrative"] = <
+		documentation = <"A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.">
+		name = <"Narrative">
+		properties = <
+			["narrativeQualifier"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Additional information on how the narrative was generated, and the scope of information contained.">
+				name = <"narrativeQualifier">
+				type = <"NarrativeQualifier">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: xhtml)">
+				name = <"value">
+				type = <"XHTML">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["NarrativeQualifier"] = <
+		documentation = <"Additional information on how the narrative was generated, and the scope of information contained.">
+		name = <"NarrativeQualifier">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+>
+

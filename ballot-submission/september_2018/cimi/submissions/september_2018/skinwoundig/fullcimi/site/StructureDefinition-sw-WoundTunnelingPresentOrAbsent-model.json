@@ -1,0 +1,351 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundTunnelingPresentOrAbsent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundTunnelingPresentOrAbsent Logical Model</b></p>\n  <p>The presence or absence of wound tunneling.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingPresentOrAbsent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundTunnelingPresentOrAbsent"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundTunnelingPresentOrAbsentModel",
+  "title": "SW WoundTunnelingPresentOrAbsent Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The presence or absence of wound tunneling.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "72298-3"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundTunnelingPresentOrAbsent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model",
+        "definition": "The presence or absence of wound tunneling.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.value",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.value",
+        "short": "Code representing the presence or absence of wound tunneling.",
+        "definition": "Code representing the presence or absence of wound tunneling.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model",
+        "definition": "The presence or absence of wound tunneling.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.value",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.value",
+        "short": "Code representing the presence or absence of wound tunneling.",
+        "definition": "Code representing the presence or absence of wound tunneling.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+        "path": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundTunnelingPresentOrAbsent-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

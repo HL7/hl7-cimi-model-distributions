@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-Onset-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Onset Logical Model</b></p>
+  <p>The beginning or first appearance of a mental or physical disorder.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Onset-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.Onset"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="OnsetModel"/>
+  <title value="SW Onset Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The beginning or first appearance of a mental or physical disorder."/>
+  <keyword>
+    <system value="http://loinc.org"/>
+    <code value="85585-8"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-Onset-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-Onset-model">
+      <path value="cimi-statement-Onset-model"/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Onset-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Onset-model.value[x]">
+      <path value="cimi-statement-Onset-model.value[x]"/>
+      <short value="Choice of types representing the beginning or first appearance of a mental or physical disorder."/>
+      <definition value="Choice of types representing the beginning or first appearance of a mental or physical disorder."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Onset-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-Onset-model">
+      <path value="cimi-statement-Onset-model"/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Onset-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Onset-model.value[x]">
+      <path value="cimi-statement-Onset-model.value[x]"/>
+      <short value="Choice of types representing the beginning or first appearance of a mental or physical disorder."/>
+      <definition value="Choice of types representing the beginning or first appearance of a mental or physical disorder."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Onset-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

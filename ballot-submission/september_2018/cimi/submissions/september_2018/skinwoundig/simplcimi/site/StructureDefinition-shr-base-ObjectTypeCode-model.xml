@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-ObjectTypeCode-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW ObjectTypeCode Logical Model</b></p>
+  <p>A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectTypeCode-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.ObjectTypeCode"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ObjectTypeCodeModel"/>
+  <title value="SW ObjectTypeCode Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-ObjectTypeCode-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-ObjectTypeCode-model">
+      <path value="shr-base-ObjectTypeCode-model"/>
+      <definition value="A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-ObjectTypeCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ObjectTypeCode-model.value">
+      <path value="shr-base-ObjectTypeCode-model.value"/>
+      <short value="Code representing a code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <definition value="Code representing a code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ObjectTypeCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-ObjectTypeCode-model">
+      <path value="shr-base-ObjectTypeCode-model"/>
+      <definition value="A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-ObjectTypeCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ObjectTypeCode-model.value">
+      <path value="shr-base-ObjectTypeCode-model.value"/>
+      <short value="Code representing a code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <definition value="Code representing a code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ObjectTypeCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

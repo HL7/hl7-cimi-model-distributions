@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-Precondition-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Precondition Logical Model</b></p>
+  <p>A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Precondition-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.Precondition"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="PreconditionModel"/>
+  <title value="SW Precondition Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-Precondition-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-Precondition-model">
+      <path value="cimi-statement-Precondition-model"/>
+      <definition value="A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Precondition-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Precondition-model.value[x]">
+      <path value="cimi-statement-Precondition-model.value[x]"/>
+      <short value="Code or Observation representing a description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <definition value="Code or Observation representing a description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Precondition-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-Precondition-model">
+      <path value="cimi-statement-Precondition-model"/>
+      <definition value="A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-Precondition-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-Precondition-model.value[x]">
+      <path value="cimi-statement-Precondition-model.value[x]"/>
+      <short value="Code or Observation representing a description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <definition value="Code or Observation representing a description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-Precondition-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

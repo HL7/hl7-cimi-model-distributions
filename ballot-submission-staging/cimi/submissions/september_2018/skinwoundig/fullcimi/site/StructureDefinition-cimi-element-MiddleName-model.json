@@ -1,0 +1,127 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-MiddleName-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW MiddleName Logical Model</b></p>\n  <p>The person's middle name.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-MiddleName-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.MiddleName"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "MiddleNameModel",
+  "title": "SW MiddleName Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The person's middle name.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "45392-8"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "408677003"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-MiddleName-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-MiddleName-model",
+        "path": "cimi-element-MiddleName-model",
+        "definition": "The person's middle name.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-MiddleName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-MiddleName-model.value",
+        "path": "cimi-element-MiddleName-model.value",
+        "short": "String representing the person's middle name.",
+        "definition": "String representing the person's middle name.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-MiddleName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-MiddleName-model",
+        "path": "cimi-element-MiddleName-model",
+        "definition": "The person's middle name.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-MiddleName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-MiddleName-model.value",
+        "path": "cimi-element-MiddleName-model.value",
+        "short": "String representing the person's middle name.",
+        "definition": "String representing the person's middle name.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-MiddleName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-core-InformationEntry-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW InformationEntry Logical Model</b></p>
+  <p>An entry in a patient record or in a report, generally used for the documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-InformationEntry-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.core.InformationEntry"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="InformationEntryModel"/>
+  <title value="SW InformationEntry Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="An entry in a patient record or in a report, generally used for the documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C1705654"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-core-InformationEntry-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-core-InformationEntry-model">
+      <path value="cimi-core-InformationEntry-model"/>
+      <definition value="An entry in a patient record or in a report, generally used for the documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.personOfRecord">
+      <path value="cimi-core-InformationEntry-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.personOfRecord"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.recorded">
+      <path value="cimi-core-InformationEntry-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.signed">
+      <path value="cimi-core-InformationEntry-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.additionalText">
+      <path value="cimi-core-InformationEntry-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-core-InformationEntry-model">
+      <path value="cimi-core-InformationEntry-model"/>
+      <definition value="An entry in a patient record or in a report, generally used for the documentation of clinical information about a subject of information such as a patient or a relative of the patient, asserted by a particular source, recorded, and potentially verified."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.personOfRecord">
+      <path value="cimi-core-InformationEntry-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.personOfRecord"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.recorded">
+      <path value="cimi-core-InformationEntry-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.signed">
+      <path value="cimi-core-InformationEntry-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-InformationEntry-model.additionalText">
+      <path value="cimi-core-InformationEntry-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-InformationEntry-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

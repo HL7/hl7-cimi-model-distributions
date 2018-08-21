@@ -1,0 +1,254 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Member-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Member Logical Model</b></p>\n  <p>A person or entity in a group.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Member-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Member"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "MemberModel",
+  "title": "SW Member Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A person or entity in a group.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0682343",
+      "display": "Member of Target Group"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Member-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Member-model",
+        "path": "cimi-entity-Member-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Member-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.value[x]",
+        "path": "cimi-entity-Member-model.value[x]",
+        "short": "Choice of types representing a person or entity in a group.",
+        "definition": "Choice of types representing a person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.participationPeriod",
+        "path": "cimi-entity-Member-model.participationPeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.activeFlag",
+        "path": "cimi-entity-Member-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.activeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Member-model",
+        "path": "cimi-entity-Member-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Member-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.value[x]",
+        "path": "cimi-entity-Member-model.value[x]",
+        "short": "Choice of types representing a person or entity in a group.",
+        "definition": "Choice of types representing a person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.participationPeriod",
+        "path": "cimi-entity-Member-model.participationPeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Member-model.activeFlag",
+        "path": "cimi-entity-Member-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Member-model.activeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

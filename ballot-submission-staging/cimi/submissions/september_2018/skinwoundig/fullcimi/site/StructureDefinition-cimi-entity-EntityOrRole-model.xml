@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-EntityOrRole-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW EntityOrRole Logical Model</b></p>
+  <p>CIMI parent class for both Entity and Role.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-EntityOrRole-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.EntityOrRole"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="EntityOrRoleModel"/>
+  <title value="SW EntityOrRole Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="CIMI parent class for both Entity and Role."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-EntityOrRole-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-EntityOrRole-model">
+      <path value="cimi-entity-EntityOrRole-model"/>
+      <definition value="CIMI parent class for both Entity and Role."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-EntityOrRole-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-EntityOrRole-model">
+      <path value="cimi-entity-EntityOrRole-model"/>
+      <definition value="CIMI parent class for both Entity and Role."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-EntityOrRole-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

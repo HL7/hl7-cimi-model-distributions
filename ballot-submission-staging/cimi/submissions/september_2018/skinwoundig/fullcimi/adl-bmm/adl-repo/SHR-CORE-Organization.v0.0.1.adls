@@ -1,0 +1,105 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Organization.organization.v0.0.1
+
+specialize
+  SHR-CORE-Entity.entity.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.entity","organization">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Organization[id1.1.1.1.1] matches {
+    organizationName matches {
+      OrganizationName[id0.0.0.0.2]
+    }
+    organizationAlias matches {
+      OrganizationAlias[id0.0.0.0.3]
+    }
+    organizationIdentifier matches {
+      OrganizationIdentifier[id0.0.0.0.4]
+    }
+    type matches {
+      Type[id0.0.0.0.5]
+    }
+    address matches {
+      Address[id0.0.0.0.6]
+    }
+    contactPoint matches {
+      ContactPoint[id0.0.0.0.7]
+    }
+    activeFlag matches {
+      ActiveFlag[id0.0.0.0.8]
+    }
+    partOf matches {
+      PartOf[id0.0.0.0.9] matches {
+    value matches { Organization[id0.0.0.0.11] }
+  }
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1"] = <
+        text = <"Organization">
+        description = <"A social or legal structure formed by human beings.">
+      >
+      ["id0.0.0.0.2"] = <
+        text = <"OrganizationName">
+        description = <"The name of the organization.">
+      >
+      ["id0.0.0.0.3"] = <
+        text = <"OrganizationAlias">
+        description = <"A list of alternate names that the organization is known as, or was known as in the past.">
+      >
+      ["id0.0.0.0.4"] = <
+        text = <"OrganizationIdentifier">
+        description = <"An identifier of the organization. An NPI preferred, tax id is allowed, and a local id is allowed in addition to ‘authoritative’ identifier">
+      >
+      ["id0.0.0.0.5"] = <
+        text = <"Type">
+        description = <"The most specific code (lowest level term) describing the kind or sort of thing being represented.">
+      >
+      ["id0.0.0.0.6"] = <
+        text = <"Address">
+        description = <"An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).">
+      >
+      ["id0.0.0.0.7"] = <
+        text = <"ContactPoint">
+        description = <"An electronic means of contacting an organization or individual.">
+      >
+      ["id0.0.0.0.8"] = <
+        text = <"ActiveFlag">
+        description = <"If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.">
+      >
+      ["id0.0.0.0.9"] = <
+        text = <"PartOf">
+        description = <"The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.">
+      >
+      ["id0.0.0.0.11"] = <
+        text = <"Organization">
+        description = <"A social or legal structure formed by human beings.">
+      >
+    >
+  >

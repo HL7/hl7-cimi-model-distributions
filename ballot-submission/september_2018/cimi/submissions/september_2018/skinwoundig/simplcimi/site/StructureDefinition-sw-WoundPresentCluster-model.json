@@ -1,0 +1,587 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundPresentCluster-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundPresentCluster Logical Model</b></p>\n  <p>A group of observations that together describe initial observations about a wound.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundPresentCluster"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundPresentClusterModel",
+  "title": "SW WoundPresentCluster Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A group of observations that together describe initial observations about a wound.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundPresentCluster-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundPresentCluster-model",
+        "path": "sw-WoundPresentCluster-model",
+        "definition": "A group of observations that together describe initial observations about a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPresentCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.typeCode",
+        "path": "sw-WoundPresentCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement",
+        "path": "sw-WoundPresentCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement",
+          "min": 1,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.wound",
+        "path": "sw-WoundPresentCluster-model.statement.wound",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "416462003",
+            "display": "Wound (disorder)"
+          }
+        ],
+        "short": "The presence of a wound.",
+        "definition": "The presence of a wound.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.wound",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+        "path": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "39111-0"
+          }
+        ],
+        "short": "Body location of a wound.",
+        "definition": "Body location of a wound.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundType",
+        "path": "sw-WoundPresentCluster-model.statement.woundType",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72300-7"
+          }
+        ],
+        "short": "The type of wound, for example, abrasion or laceration.",
+        "definition": "The type of wound, for example, abrasion or laceration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundType",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+        "path": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "11373-8",
+            "display": "InjuryCause"
+          }
+        ],
+        "short": "The source or key factor in the formation or acquisition of the wound.",
+        "definition": "The source or key factor in the formation or acquisition of the wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundEpisode",
+        "path": "sw-WoundPresentCluster-model.statement.woundEpisode",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89252-1",
+            "display": "Episode of Wound"
+          }
+        ],
+        "short": "Whether the wound is initial or recurrent.",
+        "definition": "Whether the wound is initial or recurrent.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundEpisode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+        "path": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+        "path": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89251-3"
+          }
+        ],
+        "short": "Whether the condition was present when the patient was admitted.",
+        "definition": "Whether the condition was present when the patient was admitted.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.photographicImage",
+        "path": "sw-WoundPresentCluster-model.statement.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4"
+          }
+        ],
+        "short": "A photographic documentation of a condition, location, person, etc...",
+        "definition": "A photographic documentation of a condition, location, person, etc...",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundPresentCluster-model",
+        "path": "sw-WoundPresentCluster-model",
+        "definition": "A group of observations that together describe initial observations about a wound.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPresentCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.typeCode",
+        "path": "sw-WoundPresentCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement",
+        "path": "sw-WoundPresentCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement",
+          "min": 1,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.wound",
+        "path": "sw-WoundPresentCluster-model.statement.wound",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "416462003",
+            "display": "Wound (disorder)"
+          }
+        ],
+        "short": "The presence of a wound.",
+        "definition": "The presence of a wound.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.wound",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+        "path": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "39111-0"
+          }
+        ],
+        "short": "Body location of a wound.",
+        "definition": "Body location of a wound.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundLocationObservation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundType",
+        "path": "sw-WoundPresentCluster-model.statement.woundType",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72300-7"
+          }
+        ],
+        "short": "The type of wound, for example, abrasion or laceration.",
+        "definition": "The type of wound, for example, abrasion or laceration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundType",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+        "path": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "11373-8",
+            "display": "InjuryCause"
+          }
+        ],
+        "short": "The source or key factor in the formation or acquisition of the wound.",
+        "definition": "The source or key factor in the formation or acquisition of the wound.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundTypeEtiology",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.woundEpisode",
+        "path": "sw-WoundPresentCluster-model.statement.woundEpisode",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89252-1",
+            "display": "Episode of Wound"
+          }
+        ],
+        "short": "Whether the wound is initial or recurrent.",
+        "definition": "Whether the wound is initial or recurrent.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.woundEpisode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+        "path": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.timeOfOnset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+        "path": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89251-3"
+          }
+        ],
+        "short": "Whether the condition was present when the patient was admitted.",
+        "definition": "Whether the condition was present when the patient was admitted.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundPresentCluster-model.statement.photographicImage",
+        "path": "sw-WoundPresentCluster-model.statement.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4"
+          }
+        ],
+        "short": "A photographic documentation of a condition, location, person, etc...",
+        "definition": "A photographic documentation of a condition, location, person, etc...",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundPresentCluster-model.statement.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundEdgeColor-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundEdgeColor Logical Model</b></p>\n  <p>Color of Wound edge.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundEdgeColor"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundEdgeColorModel",
+  "title": "SW WoundEdgeColor Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Color of Wound edge.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "39133-4"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundEdgeColor-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundEdgeColor-model",
+        "path": "sw-WoundEdgeColor-model",
+        "definition": "Color of Wound edge.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundEdgeColor-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.value",
+        "path": "sw-WoundEdgeColor-model.value",
+        "short": "Code representing color of Wound edge.",
+        "definition": "Code representing color of Wound edge.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL2338-3"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.topicCode",
+        "path": "sw-WoundEdgeColor-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.exceptionValue",
+        "path": "sw-WoundEdgeColor-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.interpretation",
+        "path": "sw-WoundEdgeColor-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.referenceRange",
+        "path": "sw-WoundEdgeColor-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundEdgeColor-model",
+        "path": "sw-WoundEdgeColor-model",
+        "definition": "Color of Wound edge.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundEdgeColor-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.value",
+        "path": "sw-WoundEdgeColor-model.value",
+        "short": "Code representing color of Wound edge.",
+        "definition": "Code representing color of Wound edge.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL2338-3"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.topicCode",
+        "path": "sw-WoundEdgeColor-model.topicCode",
+        "short": "The concept representing the finding or action that is the topic of the statement.",
+        "definition": "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.topicCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.exceptionValue",
+        "path": "sw-WoundEdgeColor-model.exceptionValue",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.exceptionValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.interpretation",
+        "path": "sw-WoundEdgeColor-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "sw-WoundEdgeColor-model.referenceRange",
+        "path": "sw-WoundEdgeColor-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "sw-WoundEdgeColor-model.referenceRange",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,2150 @@
+
+{ 
+    identifier: 'id',
+    label: 'title',
+    items: [
+        {
+            title: 'Diagrams',
+            top: true,
+            id: '_DIAGRAMS_ROOT_NODE_',
+            icon: 'icon1675463458',
+            children: [
+                {_reference: '_.sH0.e.oII.pE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        },
+        {
+            title: 'FHIM::SkinAndWound::_SkinAndWound',
+            id: '_.sH0.e.oII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.sH0.e.oII.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon1174409746'
+        },
+	
+        {
+            title: 'Models',
+            top: true,
+            id: '_MODELS_ROOT_NODE_',
+            icon: 'icon1675463458',
+            children: [
+                {_reference: '_.oCG.iYH43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+
+        },
+        {
+            title: 'SkinAndWound',
+            id: '_.oCG.iYH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.oCG.iYH43E.e.i.p-.sQQ.z.eVEV.w-top-summary.html',
+            icon: 'icon1675463458',
+            children: [
+                {_reference: '_G2EUUI.q5E.e.iN5Z7T.t_.v.pH.w' },
+                {_reference: '_.nE.wE0IISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_C0.w.d.gIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_64.aI.oII.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_L0D.cUII.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.u.q.v.j0II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.o.a.b.l.sIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_C.o.o3.oIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.e_.fY.cIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.mY15.sIIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.cXV.c.sIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_0O.j.zUJ.y.jE.e.i.v7.f.m.x.d.u.l-.z.g' },
+                {_reference: '_.wQ.g.uRH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.i.d.l6MIIXE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.rBAX.oIIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_NT.j5.sIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_F.tUM.wIIXE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQ.eSAH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.y.tO.lAII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_P_KD.cII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_AIHG.gIIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.y.dO.w.cIJIE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_.wQ.hVUH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_Q.xOL0II.nE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_PON.e.wIIYE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.y.kA.p.gII.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_1J.u.hQI.j-E.e.i.d.u8L3Z.v.k.v.wQ' },
+                {_reference: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_SC.m9MIIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQ.bO.sH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_U.lD.o.oIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.kTNQEI.j-E.e.i.d.u8L3Z.v.k.v.wQ' }
+            ]
+        }
+		,
+        {
+            title: 'WoundPresenceAssertion',
+            id: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQY.y.pX43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.i.n43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.o.n43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.h343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.hH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.kH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.e343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.i.eC.mIIIXE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQY.y.c.n43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: 'bodySiteIdentification',
+            id: '_.wQY.y.pX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.pX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'dateAbated',
+            id: '_.wQY.y.i.n43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.i.n43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'dateOfOnsetOfImpairment',
+            id: '_.wQY.y.o.n43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.o.n43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'injuryCause',
+            id: '_.wQY.y.h343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.h343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'wasPresentOnAdmission',
+            id: '_.wQY.y.hH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.hH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundEpisode',
+            id: '_.wQY.y.kH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.kH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundIdentifier',
+            id: '_.wQY.y.e343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.e343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundObservation',
+            id: '_.i.eC.mIIIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.i.eC.mIIIXE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundType',
+            id: '_.wQY.y.c.n43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQY.y.cH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQY.y.c.n43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundBed',
+            id: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQ.a.n.rX43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.a.n.q.n43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.a.n.oX43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.a.n.pH43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: 'bedAreaPercentageByAppearance',
+            id: '_.wQ.a.n.rX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.a.n.rX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'bedAreaPercentageByColor',
+            id: '_.wQ.a.n.q.n43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.a.n.q.n43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundBaseAppearance ',
+            id: '_.wQ.a.n.oX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.a.n.oX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundBaseColor',
+            id: '_.wQ.a.n.pH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.a.n.oH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.a.n.pH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundTunneling',
+            id: '_.wQ.bO.sH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.bO.sH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQ.bO.t343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.bO.tH43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: 'tunnelingClockPosition',
+            id: '_.wQ.bO.t343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.bO.sH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.bO.t343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'tunnelingLength',
+            id: '_.wQ.bO.tH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.bO.sH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.bO.tH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundExudate',
+            id: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_IT.oC.gII.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.e4HY.kII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_K.i-EYII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.e1.u.y8II.oE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'appearance',
+            id: '_IT.oC.gII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_IT.oC.gII.pE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'color',
+            id: '_.e4HY.kII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.e4HY.kII.oE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'drainageAmount',
+            id: '_K.i-EYII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_K.i-EYII.oE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'odor',
+            id: '_.e1.u.y8II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.wQ.c.c0H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.e1.u.y8II.oE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundSize',
+            id: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.q.j.i6YII.nE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_G.i.aMQIIYE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_G.l1T.sIIYE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_7.c.rN8IIXE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'woundArea',
+            id: '_.q.j.i6YII.nE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.q.j.i6YII.nE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundDepth',
+            id: '_G.i.aMQIIYE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w-content.html#_G.i.aMQIIYE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundLength',
+            id: '_G.l1T.sIIYE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w-content.html#_G.l1T.sIIYE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundWidth',
+            id: '_7.c.rN8IIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.wQ.c.c0X43E.e.i.p-.sQQ.z.eVEV.w-content.html#_7.c.rN8IIXE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'BodySiteIdentification',
+            id: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQ.dD5H43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.dD4X43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.dD5343E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: 'bodySite',
+            id: '_.wQ.dD4X43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.dD4X43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'bodyLocationQualifier',
+            id: '_.wQ.dD5H43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.dD5H43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'laterality',
+            id: '_.wQ.dD5343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.dD4H43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.dD5343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundEdge',
+            id: '_.wQ.eSAH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.eSAH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQ.eSBH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQ.eSAX43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: 'color',
+            id: '_.wQ.eSBH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.eSAH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.eSBH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'description',
+            id: '_.wQ.eSAX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.eSAH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.eSAX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundAssertion_bodySiteIdentification',
+            id: '_.wQ.g.uRH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.g.uRH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_.wQ.g.uRX43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_.wQ.g.uRX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.g.uRH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.g.uRX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'woundObservation_woundEdge',
+            id: '_.wQ.hVUH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.hVUH43E.e.i.p-.sQQ.z.eVEV.w-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_.wQ.hVUX43E.e.i.p-.sQQ.z.eVEV.w' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_.wQ.hVUX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_.wQ.hVUH43E.e.i.p-.sQQ.z.eVEV.w-content.html#_.wQ.hVUX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'WoundType',
+            id: '_U.lD.o.oIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_U.lD.o.oIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_Y7Y.v.sIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.gC0FYIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.iB5.oQIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.i.zTQAIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.j7.xT8IINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.n_FYYIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.q.i.h.l.gIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.s.sC2.wIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.u.b.eNAIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_1.g.i.yQIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.m.yCW.cIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.v_07.sIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.xR.t.aUIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.y.h524IINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_0JY.yEIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_09VX.gIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_4GAY.oIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_5_.s.eIIINE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_6.x.gV.kIINE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Abrasion',
+            id: '_Y7Y.v.sIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_Y7Y.v.sIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Avulsion',
+            id: '_.gC0FYIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.gC0FYIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Bite',
+            id: '_.iB5.oQIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.iB5.oQIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Blister',
+            id: '_.i.zTQAIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.i.zTQAIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Burn',
+            id: '_.j7.xT8IINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.j7.xT8IINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Contusion',
+            id: '_.n_FYYIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.n_FYYIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Crush injury',
+            id: '_.q.i.h.l.gIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.q.i.h.l.gIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Erythema',
+            id: '_.s.sC2.wIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.s.sC2.wIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Fissure',
+            id: '_.u.b.eNAIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.u.b.eNAIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Gunshot wound',
+            id: '_.m.yCW.cIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.m.yCW.cIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Graft',
+            id: '_1.g.i.yQIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_1.g.i.yQIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Laceration',
+            id: '_.v_07.sIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.v_07.sIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Maceration',
+            id: '_.xR.t.aUIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.xR.t.aUIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pressure ulcer',
+            id: '_.y.h524IINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.y.h524IINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Puncture',
+            id: '_0JY.yEIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_0JY.yEIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Rash',
+            id: '_09VX.gIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_09VX.gIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Surgical incision',
+            id: '_4GAY.oIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_4GAY.oIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Trauma',
+            id: '_5_.s.eIIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_5_.s.eIIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Ulcer',
+            id: '_6.x.gV.kIINE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_6.x.gV.kIINE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'StructureType',
+            id: '_.cXV.c.sIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.cXV.c.sIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.eNJH.wIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.d.i.xVEIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.hQ3X.cIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.i.x.h48IIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.vO.z5AIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.k.i.z.pUIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lRV.jQIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.m.x260IIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.o.zE.k.oIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.pYS.x.kIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p.f.i.pEIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.sYGK.kIIOE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.t.yDAEIIOE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Blood vessel',
+            id: '_.eNJH.wIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.eNJH.wIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Bone',
+            id: '_.d.i.xVEIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.d.i.xVEIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Cartilage',
+            id: '_.hQ3X.cIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.hQ3X.cIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Fascia',
+            id: '_.i.x.h48IIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.i.x.h48IIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Foreign body',
+            id: '_.vO.z5AIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.vO.z5AIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Joint capsule',
+            id: '_.k.i.z.pUIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.k.i.z.pUIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Mesh',
+            id: '_.lRV.jQIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lRV.jQIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Muscle',
+            id: '_.m.x260IIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.m.x260IIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Musculoskeletal implant',
+            id: '_.o.zE.k.oIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.zE.k.oIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pin',
+            id: '_.pYS.x.kIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.pYS.x.kIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Prosthesis',
+            id: '_.p.f.i.pEIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p.f.i.pEIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Subcutaneous tissue',
+            id: '_.sYGK.kIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.sYGK.kIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Tendon',
+            id: '_.t.yDAEIIOE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.t.yDAEIIOE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'InjuryCause',
+            id: '_.o.a.b.l.sIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.a.b.l.sIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.p.x.pQQIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p0D.rEIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p19I.gIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p3.uDEIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p5XB0IIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.p7UJ.oIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.y3E.j.sIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.y5.i.o4IIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.y7R.uQIIPE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_3WZ1.wIIPE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Animal bite',
+            id: '_.p.x.pQQIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p.x.pQQIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Device related',
+            id: '_.p0D.rEIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p0D.rEIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Disease related',
+            id: '_.p19I.gIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p19I.gIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Human bite',
+            id: '_.p3.uDEIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p3.uDEIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Insect bite',
+            id: '_.p5XB0IIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p5XB0IIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Moisture related',
+            id: '_.p7UJ.oIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.p7UJ.oIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pressure point related',
+            id: '_.y3E.j.sIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.y3E.j.sIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Self inflicted',
+            id: '_.y5.i.o4IIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.y5.i.o4IIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Shearing force injury',
+            id: '_.y7R.uQIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.y7R.uQIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Trauma',
+            id: '_3WZ1.wIIPE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_3WZ1.wIIPE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundAssessment',
+            id: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.wQY.y.jX43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.q.fO.bEII.nE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.wQ.bO.sX43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.m7_BAII.rE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.wQY.y.qH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.q343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.f.n43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.wQY.y.eH43E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_G2LCAI.q5E.e.iN5Z7T.t_.v.pH.w' },
+                {_reference: '_.y.d0.mUIJIE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_.wQ.a.n.p343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_Q.x0B.sII.nE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_PON.e.wYIYE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.wQY.y.n343E.e.i.p-.sQQ.z.eVEV.w' },
+                {_reference: '_.y.kA.p.gYI.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_1KLNMI.j-E.e.i.d.u8L3Z.v.k.v.wQ' }
+            ]
+        }
+		,
+        {
+            title: 'image',
+            id: '_.wQY.y.jX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.jX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'isExudatePresent',
+            id: '_.q.fO.bEII.nE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.q.fO.bEII.nE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'isTunnelingPresent',
+            id: '_.wQ.bO.sX43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQ.bO.sX43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'isUnderminingPresent',
+            id: '_.m7_BAII.rE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.m7_BAII.rE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'periwoundDescription',
+            id: '_.wQY.y.qH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.qH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'pressureUlcerStage',
+            id: '_.wQY.y.q343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.q343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'visibleStructure',
+            id: '_.wQY.y.f.n43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.f.n43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundAssertion',
+            id: '_G2LCAI.q5E.e.iN5Z7T.t_.v.pH.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_G2LCAI.q5E.e.iN5Z7T.t_.v.pH.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundAsessment',
+            id: '_.wQY.y.eH43E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.eH43E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundBedAndEdge',
+            id: '_.y.d0.mUIJIE.e.iC.vPX2CG.u0.g.g',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.y.d0.mUIJIE.e.iC.vPX2CG.u0.g.g',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundEdge',
+            id: '_.wQ.a.n.p343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQ.a.n.p343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundExudate',
+            id: '_Q.x0B.sII.nE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_Q.x0B.sII.nE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundSize',
+            id: '_PON.e.wYIYE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_PON.e.wYIYE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundTrend',
+            id: '_.wQY.y.n343E.e.i.p-.sQQ.z.eVEV.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.wQY.y.n343E.e.i.p-.sQQ.z.eVEV.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundTunneling',
+            id: '_.y.kA.p.gYI.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_.y.kA.p.gYI.qE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundUndermining',
+            id: '_1KLNMI.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_Y8YG0IIQE.e.i.g.t.sH8VK.e.n.xA-content.html#_1KLNMI.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'WoundEpisode',
+            id: '_AIHG.gIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_AIHG.gIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_B19IYIIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_B6XHQIIRE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Initial',
+            id: '_B19IYIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_B19IYIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Recurrent',
+            id: '_B6XHQIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_B6XHQIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundTrend',
+            id: '_SC.m9MIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_SC.m9MIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.bK7M.kIIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.bIO.d4IIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.bQH1.oIIRE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.bN.nUMIIRE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Improved',
+            id: '_.bIO.d4IIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.bIO.d4IIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Deteriorated',
+            id: '_.bK7M.kIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.bK7M.kIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Stabilized',
+            id: '_.bN.nUMIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.bN.nUMIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Resolved',
+            id: '_.bQH1.oIIRE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.bQH1.oIIRE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'BodySite',
+            id: '_C0.w.d.gIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_C0.w.d.gIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_D.sK.m.oIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_TZ0LQIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D0C.wQIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_L9.gK.sIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_L-.zLMIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D1048IISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_ME.a.rAIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_MA.c.xAIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D.x.f.y.kIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D.y.t6.kIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_MB.lZ.cIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D3UG.sIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_T.eQ.mYIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_T.cUF.oIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_L7.uCAIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D.t.r.p.kIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_D.wD.oIIISE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Abdomen',
+            id: '_D.sK.m.oIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D.sK.m.oIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Upper Extremity-Left',
+            id: '_D.t.r.p.kIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D.t.r.p.kIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Upper Extremity-Right',
+            id: '_D.wD.oIIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D.wD.oIIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Lower Extremity-Left',
+            id: '_D.x.f.y.kIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D.x.f.y.kIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Lower Extremity-Right',
+            id: '_D.y.t6.kIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D.y.t6.kIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Chest',
+            id: '_D0C.wQIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D0C.wQIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Head',
+            id: '_D1048IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D1048IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pelvis',
+            id: '_D3UG.sIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_D3UG.sIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Stomach',
+            id: '_L7.uCAIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_L7.uCAIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Eye-left',
+            id: '_L9.gK.sIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_L9.gK.sIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Eye-right',
+            id: '_L-.zLMIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_L-.zLMIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Liver',
+            id: '_MA.c.xAIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_MA.c.xAIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pancreas',
+            id: '_MB.lZ.cIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_MB.lZ.cIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Kidney',
+            id: '_ME.a.rAIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_ME.a.rAIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Breast',
+            id: '_TZ0LQIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_TZ0LQIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Spine',
+            id: '_T.cUF.oIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_T.cUF.oIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Skull',
+            id: '_T.eQ.mYIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_T.eQ.mYIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'BodyLocationQualifier',
+            id: '_.nE.wE0IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.nE.wE0IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.o.t7CEIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.v.e.jBUIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.o.sISUIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.o.v.aP0IISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.o.w.z-AIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.o.yAQ0IISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.vY6TYIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.v.c2_QIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.v.iQ.c.oIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.v.gU.i8IISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_08F.oEIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_099QUIISE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_1A.e_4IISE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Apical',
+            id: '_.o.sISUIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.sISUIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Anterior',
+            id: '_.o.t7CEIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.t7CEIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Deep',
+            id: '_.o.v.aP0IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.v.aP0IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Distal',
+            id: '_.o.w.z-AIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.w.z-AIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Dorsal',
+            id: '_.o.yAQ0IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.o.yAQ0IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'External',
+            id: '_.vY6TYIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.vY6TYIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Internal',
+            id: '_.v.c2_QIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.v.c2_QIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Anterolateral',
+            id: '_.v.e.jBUIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.v.e.jBUIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Mediolateral',
+            id: '_.v.gU.i8IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.v.gU.i8IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Median',
+            id: '_.v.iQ.c.oIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.v.iQ.c.oIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Peripheral',
+            id: '_08F.oEIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_08F.oEIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Posterior',
+            id: '_099QUIISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_099QUIISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Vertical',
+            id: '_1A.e_4IISE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_1A.e_4IISE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Laterality',
+            id: '_C.o.o3.oIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_C.o.o3.oIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_F.b9T0IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_FVZY0IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_FYV_IIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_F.e7.vUIITE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Left',
+            id: '_FVZY0IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_FVZY0IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Right',
+            id: '_FYV_IIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_FYV_IIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Bilateral',
+            id: '_F.b9T0IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_F.b9T0IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Unilateral',
+            id: '_F.e7.vUIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_F.e7.vUIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'PeriwoundDescription',
+            id: '_.e_.fY.cIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.e_.fY.cIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.lC.gD.wIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lFM.y.cIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.k__.iUIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lIB.c8IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lJ9W.oIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lM.f.tQIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lO6IEIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lQ.y-.cIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lS.gO.oIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lUI.mUIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lXF.z.sIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.lY.z.q8IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.a.jXYIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.b2-8IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.dQ.tIIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.e.sQ.gIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.f-.p8IITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.h.n.o.sIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.i_.h.sIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.o.fF.sIITE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.l.s0.zIIITE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Boggy',
+            id: '_.k__.iUIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.k__.iUIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Blanched',
+            id: '_.lC.gD.wIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lC.gD.wIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Blistered',
+            id: '_.lFM.y.cIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lFM.y.cIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Calloused',
+            id: '_.lIB.c8IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lIB.c8IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Dry',
+            id: '_.lJ9W.oIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lJ9W.oIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Ecchymotic',
+            id: '_.lM.f.tQIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lM.f.tQIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Edematous',
+            id: '_.lO6IEIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lO6IEIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Erythematous',
+            id: '_.lQ.y-.cIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lQ.y-.cIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Excoriated',
+            id: '_.lS.gO.oIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lS.gO.oIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Fluctuant',
+            id: '_.lUI.mUIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lUI.mUIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Friable',
+            id: '_.lXF.z.sIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lXF.z.sIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Hemorrhagic',
+            id: '_.lY.z.q8IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.lY.z.q8IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Indurated',
+            id: '_.l.a.jXYIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.a.jXYIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Lacerated',
+            id: '_.l.b2-8IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.b2-8IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Macerated',
+            id: '_.l.dQ.tIIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.dQ.tIIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Moist',
+            id: '_.l.e.sQ.gIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.e.sQ.gIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Purpuric',
+            id: '_.l.f-.p8IITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.f-.p8IITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Rash',
+            id: '_.l.h.n.o.sIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.h.n.o.sIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Rupture',
+            id: '_.l.i_.h.sIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.i_.h.sIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Scarred',
+            id: '_.l.o.fF.sIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.o.fF.sIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Swollen (inflammed)',
+            id: '_.l.s0.zIIITE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.l.s0.zIIITE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Stage',
+            id: '_.mY15.sIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.mY15.sIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.r.qZS4IIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.r.tZ.j.kIIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.r.w.n2.sIIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.r.z.m5QIIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.r6.k.c4IIVE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_.r2.vF.wIIVE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Category/Stage I: Non-blanchable erythema',
+            id: '_.r.qZS4IIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r.qZS4IIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Category/Stage II: Partial thickness',
+            id: '_.r.tZ.j.kIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r.tZ.j.kIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Category/Stage III: Full thickness skin loss',
+            id: '_.r.w.n2.sIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r.w.n2.sIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Category/Stage IV: Full thickness tissue loss',
+            id: '_.r.z.m5QIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r.z.m5QIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Unstageable/Unclassified: Full thickness skin or tissue loss – depth unknown',
+            id: '_.r2.vF.wIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r2.vF.wIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Suspected Deep Tissue Injury – depth unknown',
+            id: '_.r6.k.c4IIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.r6.k.c4IIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundAssessment',
+            id: '_.rBAX.oIIVE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.rBAX.oIIVE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_T_ZLQIIXE.e.i.g.t.sH8VK.e.n.xA' },
+                {_reference: '_T8K4IIIXE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: 'Within Defined Limits',
+            id: '_T8K4IIIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_T8K4IIIXE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Other, Nursing judgment',
+            id: '_T_ZLQIIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_T_ZLQIIXE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundDrainageAmount',
+            id: '_F.tUM.wIIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_F.tUM.wIIXE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_RKA.p0II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_RF.iZ.gII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_RDT.k4II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_RA.w.nMII.oE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'Scant',
+            id: '_RA.w.nMII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_RA.w.nMII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Moderate',
+            id: '_RDT.k4II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_RDT.k4II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Large',
+            id: '_RF.iZ.gII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_RF.iZ.gII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Copious',
+            id: '_RKA.p0II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_RKA.p0II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'woundAssertion_woundObservation',
+            id: '_.i.d.l6MIIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.i.d.l6MIIXE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon1562698392',
+            children: [
+                {_reference: '_.i.eMXI.oIXE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_.i.eMXI.oIXE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_.i.d.l6MIIXE.e.i.g.t.sH8VK.e.n.xA-content.html#_.i.eMXI.oIXE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'woundObservation_woundSize',
+            id: '_PON.e.wIIYE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_PON.e.wIIYE.e.i.g.t.sH8VK.e.n.xA-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_PON.e.xIIYE.e.i.g.t.sH8VK.e.n.xA' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_PON.e.xIIYE.e.i.g.t.sH8VK.e.n.xA',
+            object: '_PON.e.wIIYE.e.i.g.t.sH8VK.e.n.xA-content.html#_PON.e.xIIYE.e.i.g.t.sH8VK.e.n.xA',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'woundObservation_woundExudate',
+            id: '_Q.xOL0II.nE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Q.xOL0II.nE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_Q.x9.y.s.oI.nE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_Q.x9.y.s.oI.nE.e.iV.v-TY0G.p.n.y.w',
+            object: '_Q.xOL0II.nE.e.iV.v-TY0G.p.n.y.w-content.html#_Q.x9.y.s.oI.nE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'ExudateColor',
+            id: '_.u.q.v.j0II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.u.q.v.j0II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_.w-.g9QII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xI.a.gIII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xJ7.jEII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xWFI.sII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xAJ8AII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xLQ_0II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xB.sNEII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xDCQ4II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xEQ_8II.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xS88MII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xR.d.u.cII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xF.q.uIII.oE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_.xG7SYII.oE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'Blue',
+            id: '_.w-.g9QII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.w-.g9QII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Green',
+            id: '_.xAJ8AII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xAJ8AII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Orange',
+            id: '_.xB.sNEII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xB.sNEII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pink',
+            id: '_.xDCQ4II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xDCQ4II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Red',
+            id: '_.xEQ_8II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xEQ_8II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'White',
+            id: '_.xF.q.uIII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xF.q.uIII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Yellow',
+            id: '_.xG7SYII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xG7SYII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Brown',
+            id: '_.xI.a.gIII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xI.a.gIII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Clay',
+            id: '_.xJ7.jEII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xJ7.jEII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Maroon',
+            id: '_.xLQ_0II.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xLQ_0II.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Violet',
+            id: '_.xR.d.u.cII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xR.d.u.cII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Tan',
+            id: '_.xS88MII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xS88MII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Colorless',
+            id: '_.xWFI.sII.oE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.xWFI.sII.oE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'ExudateAppearance',
+            id: '_L0D.cUII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_L0D.cUII.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_P.iNJEII.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_PZBX4II.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_P.j_40II.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_P.a2.j4II.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_P.d.u4.wII.pE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_P.mO.t.cII.pE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'Sanguinous',
+            id: '_PZBX4II.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_PZBX4II.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Serosanguinous',
+            id: '_P.a2.j4II.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P.a2.j4II.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Serous',
+            id: '_P.d.u4.wII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P.d.u4.wII.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Purulent',
+            id: '_P.iNJEII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P.iNJEII.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Seropurulent',
+            id: '_P.j_40II.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P.j_40II.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Viscous',
+            id: '_P.mO.t.cII.pE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P.mO.t.cII.pE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'woundObservation_woundTunneling',
+            id: '_.y.kA.p.gII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.y.kA.p.gII.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_.y.kA.p.hII.qE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_.y.kA.p.hII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.y.kA.p.gII.qE.e.iV.v-TY0G.p.n.y.w-content.html#_.y.kA.p.hII.qE.e.iV.v-TY0G.p.n.y.w',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'ClockPosition',
+            id: '_64.aI.oII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_64.aI.oII.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_8.f.z.kQII.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_8Z.sVMII.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_A1.tN.gII.rE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_8.b.oO4II.qE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_8.d.a-.oII.qE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: '12 o\'clock',
+            id: '_8Z.sVMII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_8Z.sVMII.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: '3 o\'clock',
+            id: '_8.b.oO4II.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_8.b.oO4II.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: '6 o\'clock',
+            id: '_8.d.a-.oII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_8.d.a-.oII.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: '11 o\'clock',
+            id: '_8.f.z.kQII.qE.e.iV.v-TY0G.p.n.y.w',
+            object: '_8.f.z.kQII.qE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: '1 o\'clock',
+            id: '_A1.tN.gII.rE.e.iV.v-TY0G.p.n.y.w',
+            object: '_A1.tN.gII.rE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundEdgeDescription',
+            id: '_P_KD.cII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_P_KD.cII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_R.u.mA.wII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_R.zO.pIII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_R1C.nAII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_W9.rU.wII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_W5.x.sMII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_R21W.wII.sE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'Attached',
+            id: '_R.u.mA.wII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_R.u.mA.wII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Not attached',
+            id: '_R.zO.pIII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_R.zO.pIII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Poorly defined',
+            id: '_R1C.nAII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_R1C.nAII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Well-defined',
+            id: '_R21W.wII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_R21W.wII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Scabbed',
+            id: '_W5.x.sMII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_W5.x.sMII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Rolled',
+            id: '_W9.rU.wII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_W9.rU.wII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundEdgeColor',
+            id: '_.y.tO.lAII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_.y.tO.lAII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_4IOOEII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_4LM.p.kII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_4U.v.nIII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_3_W.l8II.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_39.a.sQII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_4CG_AII.sE.e.iV.v-TY0G.p.n.y.w' },
+                {_reference: '_4D.v9.wII.sE.e.iV.v-TY0G.p.n.y.w' }
+            ]
+        }
+		,
+        {
+            title: 'Red/Healthy',
+            id: '_39.a.sQII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_39.a.sQII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Pink/Pale',
+            id: '_3_W.l8II.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_3_W.l8II.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Red/Hyperemic',
+            id: '_4CG_AII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_4CG_AII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Yellow',
+            id: '_4D.v9.wII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_4D.v9.wII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Black',
+            id: '_4IOOEII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_4IOOEII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Brown',
+            id: '_4LM.p.kII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_4LM.p.kII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Gray',
+            id: '_4U.v.nIII.sE.e.iV.v-TY0G.p.n.y.w',
+            object: '_4U.v.nIII.sE.e.iV.v-TY0G.p.n.y.w-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'woundObservation_woundBedAndEdge',
+            id: '_.y.dO.w.cIJIE.e.iC.vPX2CG.u0.g.g',
+            object: '_.y.dO.w.cIJIE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_.y.d0.mU4JIE.e.iC.vPX2CG.u0.g.g' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_.y.d0.mU4JIE.e.iC.vPX2CG.u0.g.g',
+            object: '_.y.dO.w.cIJIE.e.iC.vPX2CG.u0.g.g-content.html#_.y.d0.mU4JIE.e.iC.vPX2CG.u0.g.g',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'WoundBaseAppearance',
+            id: '_NT.j5.sIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_NT.j5.sIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon428845724',
+            children: [
+                {_reference: '_PUUQ.gIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_PWGZMIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.bD.x.sIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.d.e.z.kIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.fQ8QIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.h.gX8IJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_PYC58IJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.m.bUMIJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_PZ3.e4IJJE.e.iC.vPX2CG.u0.g.g' },
+                {_reference: '_P.sY.yQIJJE.e.iC.vPX2CG.u0.g.g' }
+            ]
+        }
+		,
+        {
+            title: 'Approximated',
+            id: '_PUUQ.gIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_PUUQ.gIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Dehisced',
+            id: '_PWGZMIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_PWGZMIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Intact',
+            id: '_PYC58IJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_PYC58IJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Non-blanchable erythema',
+            id: '_PZ3.e4IJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_PZ3.e4IJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Epithelialization',
+            id: '_P.bD.x.sIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.bD.x.sIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Eschar',
+            id: '_P.d.e.z.kIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.d.e.z.kIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Fibrinous',
+            id: '_P.fQ8QIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.fQ8QIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Granulation',
+            id: '_P.h.gX8IJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.h.gX8IJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Necrotic',
+            id: '_P.m.bUMIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.m.bUMIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'Sloughing',
+            id: '_P.sY.yQIJJE.e.iC.vPX2CG.u0.g.g',
+            object: '_P.sY.yQIJJE.e.iC.vPX2CG.u0.g.g-content.html',
+            icon: 'icon175114791'
+        }
+		,
+        {
+            title: 'WoundUndermining',
+            id: '_.kTNQEI.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_.kTNQEI.j-E.e.i.d.u8L3Z.v.k.v.wQ-content.html',
+            icon: 'icon50850172',
+            children: [
+                {_reference: '_.kTNQHY.j-E.e.i.d.u8L3Z.v.k.v.wQ' },
+                {_reference: '_.kTNQGY.j-E.e.i.d.u8L3Z.v.k.v.wQ' }
+            ]
+        }
+		,
+        {
+            title: 'underminingClockPosition',
+            id: '_.kTNQHY.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_.kTNQEI.j-E.e.i.d.u8L3Z.v.k.v.wQ-content.html#_.kTNQHY.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'underminingLength',
+            id: '_.kTNQGY.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_.kTNQEI.j-E.e.i.d.u8L3Z.v.k.v.wQ-content.html#_.kTNQGY.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            icon: 'icon501035186'
+        }
+		,
+        {
+            title: 'woundObservation_woundUndermining',
+            id: '_1J.u.hQI.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_1J.u.hQI.j-E.e.i.d.u8L3Z.v.k.v.wQ-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_1KLNM4.j-E.e.i.d.u8L3Z.v.k.v.wQ' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_1KLNM4.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            object: '_1J.u.hQI.j-E.e.i.d.u8L3Z.v.k.v.wQ-content.html#_1KLNM4.j-E.e.i.d.u8L3Z.v.k.v.wQ',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: '',
+            id: '_G2EUUI.q5E.e.iN5Z7T.t_.v.pH.w',
+            object: '_G2EUUI.q5E.e.iN5Z7T.t_.v.pH.w-content.html',
+            icon: 'icon2032731022',
+            children: [
+                {_reference: '_G2PT.cI.q5E.e.iN5Z7T.t_.v.pH.w' }
+            ]
+        }
+		,
+        {
+            title: '',
+            id: '_G2PT.cI.q5E.e.iN5Z7T.t_.v.pH.w',
+            object: '_G2EUUI.q5E.e.iN5Z7T.t_.v.pH.w-content.html#_G2PT.cI.q5E.e.iN5Z7T.t_.v.pH.w',
+            icon: 'icon1861113844'
+        }
+		,
+        {
+            title: 'WoundAbsenceAssertion',
+            id: '_0O.j.zUJ.y.jE.e.i.v7.f.m.x.d.u.l-.z.g',
+            object: '_0O.j.zUJ.y.jE.e.i.v7.f.m.x.d.u.l-.z.g-content.html',
+            icon: 'icon50850172',
+            children: [
+            ]
+        }
+		
+    ]
+}
+
+		

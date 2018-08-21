@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundPresentCluster-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundPresentCluster Logical Model</b></p>
+  <p>A group of observations that together describe initial observations about a wound.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundPresentCluster"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundPresentClusterModel"/>
+  <title value="SW WoundPresentCluster Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A group of observations that together describe initial observations about a wound."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundPresentCluster-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundPresentCluster-model">
+      <path value="sw-WoundPresentCluster-model"/>
+      <definition value="A group of observations that together describe initial observations about a wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.typeCode">
+      <path value="sw-WoundPresentCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement">
+      <path value="sw-WoundPresentCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.wound">
+      <path value="sw-WoundPresentCluster-model.statement.wound"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="416462003"/>
+        <display value="Wound (disorder)"/>
+      </code>
+      <short value="The presence of a wound."/>
+      <definition value="The presence of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.wound"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundLocationObservation">
+      <path value="sw-WoundPresentCluster-model.statement.woundLocationObservation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39111-0"/>
+      </code>
+      <short value="Body location of a wound."/>
+      <definition value="Body location of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundLocationObservation"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundType">
+      <path value="sw-WoundPresentCluster-model.statement.woundType"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72300-7"/>
+      </code>
+      <short value="The type of wound, for example, abrasion or laceration."/>
+      <definition value="The type of wound, for example, abrasion or laceration."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundType"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundTypeEtiology">
+      <path value="sw-WoundPresentCluster-model.statement.woundTypeEtiology"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="11373-8"/>
+        <display value="InjuryCause"/>
+      </code>
+      <short value="The source or key factor in the formation or acquisition of the wound."/>
+      <definition value="The source or key factor in the formation or acquisition of the wound."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundTypeEtiology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundEpisode">
+      <path value="sw-WoundPresentCluster-model.statement.woundEpisode"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89252-1"/>
+        <display value="Episode of Wound"/>
+      </code>
+      <short value="Whether the wound is initial or recurrent."/>
+      <definition value="Whether the wound is initial or recurrent."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundEpisode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.timeOfOnset">
+      <path value="sw-WoundPresentCluster-model.statement.timeOfOnset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.timeOfOnset"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission">
+      <path value="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+      </code>
+      <short value="Whether the condition was present when the patient was admitted."/>
+      <definition value="Whether the condition was present when the patient was admitted."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.photographicImage">
+      <path value="sw-WoundPresentCluster-model.statement.photographicImage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72170-4"/>
+      </code>
+      <short value="A photographic documentation of a condition, location, person, etc..."/>
+      <definition value="A photographic documentation of a condition, location, person, etc..."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.photographicImage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundPresentCluster-model">
+      <path value="sw-WoundPresentCluster-model"/>
+      <definition value="A group of observations that together describe initial observations about a wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.typeCode">
+      <path value="sw-WoundPresentCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement">
+      <path value="sw-WoundPresentCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.wound">
+      <path value="sw-WoundPresentCluster-model.statement.wound"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="416462003"/>
+        <display value="Wound (disorder)"/>
+      </code>
+      <short value="The presence of a wound."/>
+      <definition value="The presence of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.wound"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundLocationObservation">
+      <path value="sw-WoundPresentCluster-model.statement.woundLocationObservation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39111-0"/>
+      </code>
+      <short value="Body location of a wound."/>
+      <definition value="Body location of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundLocationObservation"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundType">
+      <path value="sw-WoundPresentCluster-model.statement.woundType"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72300-7"/>
+      </code>
+      <short value="The type of wound, for example, abrasion or laceration."/>
+      <definition value="The type of wound, for example, abrasion or laceration."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundType"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundTypeEtiology">
+      <path value="sw-WoundPresentCluster-model.statement.woundTypeEtiology"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="11373-8"/>
+        <display value="InjuryCause"/>
+      </code>
+      <short value="The source or key factor in the formation or acquisition of the wound."/>
+      <definition value="The source or key factor in the formation or acquisition of the wound."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundTypeEtiology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.woundEpisode">
+      <path value="sw-WoundPresentCluster-model.statement.woundEpisode"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89252-1"/>
+        <display value="Episode of Wound"/>
+      </code>
+      <short value="Whether the wound is initial or recurrent."/>
+      <definition value="Whether the wound is initial or recurrent."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.woundEpisode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.timeOfOnset">
+      <path value="sw-WoundPresentCluster-model.statement.timeOfOnset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.timeOfOnset"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission">
+      <path value="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+      </code>
+      <short value="Whether the condition was present when the patient was admitted."/>
+      <definition value="Whether the condition was present when the patient was admitted."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundPresentCluster-model.statement.photographicImage">
+      <path value="sw-WoundPresentCluster-model.statement.photographicImage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72170-4"/>
+      </code>
+      <short value="A photographic documentation of a condition, location, person, etc..."/>
+      <definition value="A photographic documentation of a condition, location, person, etc..."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundPresentCluster-model.statement.photographicImage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

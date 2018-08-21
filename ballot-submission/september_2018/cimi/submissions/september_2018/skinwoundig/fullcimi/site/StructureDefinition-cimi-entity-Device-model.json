@@ -1,0 +1,453 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Device-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Device Logical Model</b></p>\n  <p>A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Device"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "DeviceModel",
+  "title": "SW Device Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Device-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Device-model",
+        "path": "cimi-entity-Device-model",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Device-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.type",
+        "path": "cimi-entity-Device-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-entity-DeviceVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Device-model.deviceUdi",
+        "path": "cimi-entity-Device-model.deviceUdi",
+        "short": "Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "definition": "Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Device-model.deviceUdi",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.vendorModelNumber",
+        "path": "cimi-entity-Device-model.vendorModelNumber",
+        "short": "The model number of the device, assigned by the manufacturer or vendor.",
+        "definition": "The model number of the device, assigned by the manufacturer or vendor.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.vendorModelNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.manufacturerName",
+        "path": "cimi-entity-Device-model.manufacturerName",
+        "short": "The name of the company who produce the device.",
+        "definition": "The name of the company who produce the device.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.manufacturerName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.manufactureDate",
+        "path": "cimi-entity-Device-model.manufactureDate",
+        "short": "When the item (medication, device, etc.) was produced.",
+        "definition": "When the item (medication, device, etc.) was produced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.manufactureDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.expirationDate",
+        "path": "cimi-entity-Device-model.expirationDate",
+        "short": "When the item (medication, device, etc.) will expire.",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.version",
+        "path": "cimi-entity-Device-model.version",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0333052"
+          }
+        ],
+        "short": "A number or code associated with the product that identifies a particular release iteration.",
+        "definition": "A number or code associated with the product that identifies a particular release iteration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.url",
+        "path": "cimi-entity-Device-model.url",
+        "short": "A unique URL on which the device may be contacted directly.",
+        "definition": "A unique URL on which the device may be contacted directly.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.url",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Device-model",
+        "path": "cimi-entity-Device-model",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Device-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.type",
+        "path": "cimi-entity-Device-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-entity-DeviceVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Device-model.deviceUdi",
+        "path": "cimi-entity-Device-model.deviceUdi",
+        "short": "Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "definition": "Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Device-model.deviceUdi",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.vendorModelNumber",
+        "path": "cimi-entity-Device-model.vendorModelNumber",
+        "short": "The model number of the device, assigned by the manufacturer or vendor.",
+        "definition": "The model number of the device, assigned by the manufacturer or vendor.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.vendorModelNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.manufacturerName",
+        "path": "cimi-entity-Device-model.manufacturerName",
+        "short": "The name of the company who produce the device.",
+        "definition": "The name of the company who produce the device.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.manufacturerName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.manufactureDate",
+        "path": "cimi-entity-Device-model.manufactureDate",
+        "short": "When the item (medication, device, etc.) was produced.",
+        "definition": "When the item (medication, device, etc.) was produced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.manufactureDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.expirationDate",
+        "path": "cimi-entity-Device-model.expirationDate",
+        "short": "When the item (medication, device, etc.) will expire.",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.version",
+        "path": "cimi-entity-Device-model.version",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0333052"
+          }
+        ],
+        "short": "A number or code associated with the product that identifies a particular release iteration.",
+        "definition": "A number or code associated with the product that identifies a particular release iteration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Device-model.url",
+        "path": "cimi-entity-Device-model.url",
+        "short": "A unique URL on which the device may be contacted directly.",
+        "definition": "A unique URL on which the device may be contacted directly.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Device-model.url",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

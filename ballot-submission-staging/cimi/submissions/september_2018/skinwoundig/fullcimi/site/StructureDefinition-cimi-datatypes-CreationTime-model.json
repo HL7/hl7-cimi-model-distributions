@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-datatypes-CreationTime-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW CreationTime Logical Model</b></p>\n  <p>The point in time when the information was recorded in the system of record.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-CreationTime-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.datatypes.CreationTime"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "CreationTimeModel",
+  "title": "SW CreationTime Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The point in time when the information was recorded in the system of record.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C3669169"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-datatypes-CreationTime-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-datatypes-CreationTime-model",
+        "path": "cimi-datatypes-CreationTime-model",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-CreationTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-CreationTime-model.value",
+        "path": "cimi-datatypes-CreationTime-model.value",
+        "short": "DateTime representing the point in time when the information was recorded in the system of record.",
+        "definition": "DateTime representing the point in time when the information was recorded in the system of record.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-CreationTime-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-datatypes-CreationTime-model",
+        "path": "cimi-datatypes-CreationTime-model",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-CreationTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-CreationTime-model.value",
+        "path": "cimi-datatypes-CreationTime-model.value",
+        "short": "DateTime representing the point in time when the information was recorded in the system of record.",
+        "definition": "DateTime representing the point in time when the information was recorded in the system of record.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-CreationTime-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

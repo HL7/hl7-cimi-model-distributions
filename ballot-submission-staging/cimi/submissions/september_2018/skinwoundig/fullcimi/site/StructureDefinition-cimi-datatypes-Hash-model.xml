@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-datatypes-Hash-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Hash Logical Model</b></p>
+  <p>A hash code of the data (sha-1, base64ed)</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Hash-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.datatypes.Hash"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="HashModel"/>
+  <title value="SW Hash Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A hash code of the data (sha-1, base64ed)"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-datatypes-Hash-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-datatypes-Hash-model">
+      <path value="cimi-datatypes-Hash-model"/>
+      <definition value="A hash code of the data (sha-1, base64ed)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-datatypes-Hash-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-datatypes-Hash-model.value">
+      <path value="cimi-datatypes-Hash-model.value"/>
+      <short value="Base64Binary representing a hash code of the data (sha-1, base64ed)"/>
+      <definition value="Base64Binary representing a hash code of the data (sha-1, base64ed)"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-datatypes-Hash-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-datatypes-Hash-model">
+      <path value="cimi-datatypes-Hash-model"/>
+      <definition value="A hash code of the data (sha-1, base64ed)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-datatypes-Hash-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-datatypes-Hash-model.value">
+      <path value="cimi-datatypes-Hash-model.value"/>
+      <short value="Base64Binary representing a hash code of the data (sha-1, base64ed)"/>
+      <definition value="Base64Binary representing a hash code of the data (sha-1, base64ed)"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-datatypes-Hash-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

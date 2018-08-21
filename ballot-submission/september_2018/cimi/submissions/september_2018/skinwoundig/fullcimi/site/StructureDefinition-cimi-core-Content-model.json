@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-Content-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Content Logical Model</b></p>\n  <p>Abstract ancestor of all concrete content types. A unit of content that makes up a composition - e.g., a clinical statement in a patient record, a simple or composite action is a knowledge document, a catalog entry in a catalog.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Content-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.Content"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ContentModel",
+  "title": "SW Content Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Abstract ancestor of all concrete content types. A unit of content that makes up a composition - e.g., a clinical statement in a patient record, a simple or composite action is a knowledge document, a catalog entry in a catalog.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-Content-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-Content-model",
+        "path": "cimi-core-Content-model",
+        "definition": "Abstract ancestor of all concrete content types. A unit of content that makes up a composition - e.g., a clinical statement in a patient record, a simple or composite action is a knowledge document, a catalog entry in a catalog.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Content-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-Content-model",
+        "path": "cimi-core-Content-model",
+        "definition": "Abstract ancestor of all concrete content types. A unit of content that makes up a composition - e.g., a clinical statement in a patient record, a simple or composite action is a knowledge document, a catalog entry in a catalog.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Content-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-entity-LanguageUsed-model","","","",0,*,"","","","","","Language used for communication by a human, either the subject of record, parent, or other involved person.","","","","","","","","","",,,,,"",,,,"cimi-entity-LanguageUsed-model",0,*,"",""
+"cimi-entity-LanguageUsed-model.value","","","",1,1,"","","","Coding {[]} {[]}
+","Language representing language used for communication by a human, either the subject of record, parent, or other involved person.","Language representing language used for communication by a human, either the subject of record, parent, or other involved person.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/languages","http://ncimeta.nci.nih.gov#C0023008
+",,,,"cimi-entity-LanguageUsed-model.value",1,1,"",""
+"cimi-entity-LanguageUsed-model.spokenLanguageProficiency","","","",0,1,"","","","Coding {[]} {[]}
+","Accuracy and fluency in spoken communication in a language.","Accuracy and fluency in spoken communication in a language.","","","","","","","","","",,"required","","http://hl7.org/fhir/us/sw/ValueSet/shr-core-PerformanceGradingScaleVS","http://ncimeta.nci.nih.gov#C0678997
+",,,,"cimi-entity-LanguageUsed-model.spokenLanguageProficiency",0,1,"",""
+"cimi-entity-LanguageUsed-model.writtenLanguageProficiency","","","",0,1,"","","","Coding {[]} {[]}
+","Accuracy and fluency of reading and writing in a language.","Accuracy and fluency of reading and writing in a language.","","","","","","","","","",,"required","","http://hl7.org/fhir/us/sw/ValueSet/shr-core-PerformanceGradingScaleVS","http://ncimeta.nci.nih.gov#C0586739
+",,,,"cimi-entity-LanguageUsed-model.writtenLanguageProficiency",0,1,"",""
+"cimi-entity-LanguageUsed-model.languageQualifier","","","",0,*,"","","","Coding {[]} {[]}
+","Additional information about a person's use of language.","Additional information about a person's use of language.","","","","","","","","","",,"required","","http://hl7.org/fhir/us/sw/ValueSet/cimi-entity-LanguageQualifierVS","",,,,"cimi-entity-LanguageUsed-model.languageQualifier",0,*,"",""

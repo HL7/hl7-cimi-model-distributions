@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-Statement-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Statement Logical Model</b></p>\n  <p>Base class for all types of clinical statements.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.Statement"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "StatementModel",
+  "title": "SW Statement Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Base class for all types of clinical statements.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-Statement-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-Statement-model",
+        "path": "shr-base-Statement-model",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Statement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-Statement-model",
+        "path": "shr-base-Statement-model",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Statement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

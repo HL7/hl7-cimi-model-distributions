@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="SW-basic-resource-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW Basic Resource Type CodeSystem</b></p>
+<p>Codes representing profiles on the Basic resource.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="SW-basic-resource-type"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="BasicResourceType"/>
+  <title value="SW Basic Resource Type CodeSystem"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing profiles on the Basic resource."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="11"/>
+  <concept>
+    <code value="shr-base-ExistentialFinding"/>
+    <display value="SW ExistentialFinding Profile"/>
+  </concept>
+  <concept>
+    <code value="shr-base-ObjectPresentOrAbsent"/>
+    <display value="SW ObjectPresentOrAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="shr-entity-BodyStructurePresentOrAbsent"/>
+    <display value="SW BodyStructurePresentOrAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="shr-entity-Condition"/>
+    <display value="SW Condition Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundPresentOrAbsent"/>
+    <display value="SW WoundPresentOrAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-Wound"/>
+    <display value="SW Wound Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundAbsent"/>
+    <display value="SW WoundAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundTunnelPresentOrAbsent"/>
+    <display value="SW WoundTunnelPresentOrAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundTunnel"/>
+    <display value="SW WoundTunnel Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundUnderminingPresentOrAbsent"/>
+    <display value="SW WoundUnderminingPresentOrAbsent Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundUndermining"/>
+    <display value="SW WoundUndermining Profile"/>
+  </concept>
+</CodeSystem>

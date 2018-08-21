@@ -1,0 +1,262 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "sw-WoundBedAppearanceCluster-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundBedAppearanceCluster Logical Model</b></p>\n  <p>The appearance of a percentage area of the wound bed (base</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "sw.WoundBedAppearanceCluster" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "WoundBedAppearanceClusterModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW WoundBedAppearanceCluster Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "The appearance of a percentage area of the wound bed (base"];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "sw-WoundBedAppearanceCluster-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "The appearance of a percentage area of the wound bed (base" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72371-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72371-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72370-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72370-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "The appearance of a percentage area of the wound bed (base" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72371-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72371-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.definition [ fhir:value "Appearance of wound base (bed)" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72370-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72370-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

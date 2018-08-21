@@ -1,0 +1,159 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Brand-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Brand Logical Model</b></p>\n  <p>If the product is branded, and if so, the brand name of a product.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Brand"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "BrandModel",
+  "title": "SW Brand Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "If the product is branded, and if so, the brand name of a product.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Brand-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Brand-model",
+        "path": "cimi-entity-Brand-model",
+        "definition": "If the product is branded, and if so, the brand name of a product.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Brand-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Brand-model.value",
+        "path": "cimi-entity-Brand-model.value",
+        "short": "Boolean representing if the product is branded, and if so, the brand name of a product.",
+        "definition": "Boolean representing if the product is branded, and if so, the brand name of a product.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Brand-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Brand-model.brandName",
+        "path": "cimi-entity-Brand-model.brandName",
+        "short": "The marketing name for a brand name product",
+        "definition": "The marketing name for a brand name product",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Brand-model.brandName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Brand-model",
+        "path": "cimi-entity-Brand-model",
+        "definition": "If the product is branded, and if so, the brand name of a product.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Brand-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Brand-model.value",
+        "path": "cimi-entity-Brand-model.value",
+        "short": "Boolean representing if the product is branded, and if so, the brand name of a product.",
+        "definition": "Boolean representing if the product is branded, and if so, the brand name of a product.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Brand-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Brand-model.brandName",
+        "path": "cimi-entity-Brand-model.brandName",
+        "short": "The marketing name for a brand name product",
+        "definition": "The marketing name for a brand name product",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Brand-model.brandName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

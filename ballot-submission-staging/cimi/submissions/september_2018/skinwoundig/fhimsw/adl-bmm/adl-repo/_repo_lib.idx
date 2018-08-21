@@ -1,0 +1,4 @@
+name = <"SHR ADL Archetypes">
+short_name = <"SHR-CORE">
+maintainer = <"MITRE">
+description = <"Core SHR archetypes based on expanded reference model">

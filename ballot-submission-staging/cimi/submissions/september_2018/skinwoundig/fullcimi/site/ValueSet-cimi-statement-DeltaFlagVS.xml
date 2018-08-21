@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-DeltaFlagVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW DeltaFlagVS ValueSet</b></p>
+<p>Indicators for degree of change (delta) from the last or previous measurement.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-DeltaFlagVS"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.DeltaFlagVS"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="DeltaFlagVS"/>
+  <title value="SW DeltaFlagVS ValueSet"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Indicators for degree of change (delta) from the last or previous measurement."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="263703002"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

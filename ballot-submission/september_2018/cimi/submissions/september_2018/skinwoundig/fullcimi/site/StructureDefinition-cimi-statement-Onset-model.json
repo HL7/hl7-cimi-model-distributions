@@ -1,0 +1,147 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-Onset-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Onset Logical Model</b></p>\n  <p>The beginning or first appearance of a mental or physical disorder.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Onset-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.Onset"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "OnsetModel",
+  "title": "SW Onset Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The beginning or first appearance of a mental or physical disorder.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "85585-8"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-Onset-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-Onset-model",
+        "path": "cimi-statement-Onset-model",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Onset-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Onset-model.value[x]",
+        "path": "cimi-statement-Onset-model.value[x]",
+        "short": "Choice of types representing the beginning or first appearance of a mental or physical disorder.",
+        "definition": "Choice of types representing the beginning or first appearance of a mental or physical disorder.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Onset-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-Onset-model",
+        "path": "cimi-statement-Onset-model",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Onset-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Onset-model.value[x]",
+        "path": "cimi-statement-Onset-model.value[x]",
+        "short": "Choice of types representing the beginning or first appearance of a mental or physical disorder.",
+        "definition": "Choice of types representing the beginning or first appearance of a mental or physical disorder.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Onset-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

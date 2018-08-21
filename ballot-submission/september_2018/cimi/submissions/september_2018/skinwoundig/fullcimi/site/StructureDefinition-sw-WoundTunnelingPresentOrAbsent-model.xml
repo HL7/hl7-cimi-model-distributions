@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundTunnelingPresentOrAbsent-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundTunnelingPresentOrAbsent Logical Model</b></p>
+  <p>The presence or absence of wound tunneling.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingPresentOrAbsent-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundTunnelingPresentOrAbsent"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundTunnelingPresentOrAbsentModel"/>
+  <title value="SW WoundTunnelingPresentOrAbsent Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The presence or absence of wound tunneling."/>
+  <keyword>
+    <system value="http://loinc.org"/>
+    <code value="72298-3"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundTunnelingPresentOrAbsent-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model"/>
+      <definition value="The presence or absence of wound tunneling."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.value">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.value"/>
+      <short value="Code representing the presence or absence of wound tunneling."/>
+      <definition value="Code representing the presence or absence of wound tunneling."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.topicCode">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.topicCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue"/>
+      <short value="Reason that a value associated with a test or other finding is missing."/>
+      <definition value="Reason that a value associated with a test or other finding is missing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.interpretation">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.referenceRange">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.referenceRange"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0883335"/>
+      </code>
+      <short value="The usual or acceptable range for a test result."/>
+      <definition value="The usual or acceptable range for a test result."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.referenceRange"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model"/>
+      <definition value="The presence or absence of wound tunneling."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.value">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.value"/>
+      <short value="Code representing the presence or absence of wound tunneling."/>
+      <definition value="Code representing the presence or absence of wound tunneling."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.topicCode">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.topicCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue"/>
+      <short value="Reason that a value associated with a test or other finding is missing."/>
+      <definition value="Reason that a value associated with a test or other finding is missing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.exceptionValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.interpretation">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundTunnelingPresentOrAbsent-model.referenceRange">
+      <path value="sw-WoundTunnelingPresentOrAbsent-model.referenceRange"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0883335"/>
+      </code>
+      <short value="The usual or acceptable range for a test result."/>
+      <definition value="The usual or acceptable range for a test result."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="sw-WoundTunnelingPresentOrAbsent-model.referenceRange"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

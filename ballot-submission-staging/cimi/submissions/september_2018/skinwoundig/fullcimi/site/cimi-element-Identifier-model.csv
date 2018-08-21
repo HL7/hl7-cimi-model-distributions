@@ -1,0 +1,18 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-element-Identifier-model","","","",0,*,"","","","","","A unique string that identifies a specific person or thing.","","","","","","","","","",,,,,"",,,,"cimi-element-Identifier-model",0,*,"",""
+"cimi-element-Identifier-model.value","","","",1,1,"","","","string {[]} {[]}
+","String representing a unique string that identifies a specific person or thing.","String representing a unique string that identifies a specific person or thing.","","","","","","","","","",,,,,"",,,,"cimi-element-Identifier-model.value",1,1,"",""
+"cimi-element-Identifier-model.purpose","","","",0,1,"","","","Coding {[]} {[]}
+","Why the item is used.","Why the item is used.","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/identifier-use","http://ncimeta.nci.nih.gov#C0805701
+",,,,"cimi-element-Identifier-model.purpose",0,1,"",""
+"cimi-element-Identifier-model.type","","","",0,1,"","","","Coding {[]} {[]}
+","The most specific code (lowest level term) describing the kind or sort of thing being represented.","The most specific code (lowest level term) describing the kind or sort of thing being represented.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/identifier-type","http://ncimeta.nci.nih.gov#C0332307
+",,,,"cimi-element-Identifier-model.type",0,1,"",""
+"cimi-element-Identifier-model.codeSystem","","","",0,1,"","","","uri {[]} {[]}
+","A formal terminology system.","A formal terminology system.","","","","","","","","","",,,,,"",,,,"cimi-element-Identifier-model.codeSystem",0,1,"",""
+"cimi-element-Identifier-model.effectiveTimePeriod","","","",0,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model {[]} {[]}
+","The date and time span for which something is active, valid, or in force.","The date and time span for which something is active, valid, or in force.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C2985763
+",,,,"cimi-element-Identifier-model.effectiveTimePeriod",0,1,"",""
+"cimi-element-Identifier-model.issuer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model]]}
+","An organization who issues a qualification, identifier, or license.","An organization who issues a qualification, identifier, or license.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1561598
+",,,,"cimi-element-Identifier-model.issuer",0,1,"",""

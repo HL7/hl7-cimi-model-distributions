@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-AbsenceContextVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW AbsenceContextVS ValueSet</b></p>
+<p>A code describing whether the finding is question is absent, unknown, or not suspected.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.AbsenceContextVS"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="AbsenceContextVS"/>
+  <title value="SW AbsenceContextVS ValueSet"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A code describing whether the finding is question is absent, unknown, or not suspected."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="410516002"/>
+        <display value="Known absent"/>
+      </concept>
+      <concept>
+        <code value="410594000"/>
+        <display value="Definitely not present"/>
+      </concept>
+      <concept>
+        <code value="410593006"/>
+        <display value="Probably not present"/>
+      </concept>
+      <concept>
+        <code value="428263003"/>
+        <display value="NOT suspected"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

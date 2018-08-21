@@ -1,0 +1,16 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"sw-WoundTunnelingPresentOrAbsent-model","","","",0,*,"","","","","","The presence or absence of wound tunneling.","","","","","","","","","",,,,,"",,,,"sw-WoundTunnelingPresentOrAbsent-model",0,*,"",""
+"sw-WoundTunnelingPresentOrAbsent-model.value","","","",1,1,"","","","Coding {[]} {[]}
+","Code representing the presence or absence of wound tunneling.","Code representing the presence or absence of wound tunneling.","","","","","","","","","",,"required","","http://hl7.org/fhir/us/sw/ValueSet/shr-core-PresentAbsentVS","",,,,"sw-WoundTunnelingPresentOrAbsent-model.value",1,1,"",""
+"sw-WoundTunnelingPresentOrAbsent-model.topicCode","","","",0,1,"","","","Coding {[]} {[]}
+","The concept representing the finding or action that is the topic of the statement.","The concept representing the finding or action that is the topic of the statement.
+
+For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.","","","","","","","","","",,,,,"",,,,"sw-WoundTunnelingPresentOrAbsent-model.topicCode",0,1,"",""
+"sw-WoundTunnelingPresentOrAbsent-model.exceptionValue","","","",0,1,"","","","Coding {[]} {[]}
+","Reason that a value associated with a test or other finding is missing.","Reason that a value associated with a test or other finding is missing.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/data-absent-reason","",,,,"sw-WoundTunnelingPresentOrAbsent-model.exceptionValue",0,1,"",""
+"sw-WoundTunnelingPresentOrAbsent-model.interpretation","","","",0,1,"","","","Coding {[]} {[]}
+","A clinical interpretation of a finding (applies to both assertions and observation).","A clinical interpretation of a finding (applies to both assertions and observation).","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/observation-interpretation","http://ncimeta.nci.nih.gov#C0420833
+",,,,"sw-WoundTunnelingPresentOrAbsent-model.interpretation",0,1,"",""
+"sw-WoundTunnelingPresentOrAbsent-model.referenceRange","","","",0,0,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model {[]} {[]}
+","The usual or acceptable range for a test result.","The usual or acceptable range for a test result.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C0883335
+",,,,"sw-WoundTunnelingPresentOrAbsent-model.referenceRange",0,0,"",""

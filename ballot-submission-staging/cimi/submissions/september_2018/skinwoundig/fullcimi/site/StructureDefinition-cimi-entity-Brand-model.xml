@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Brand-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Brand Logical Model</b></p>
+  <p>If the product is branded, and if so, the brand name of a product.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Brand"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="BrandModel"/>
+  <title value="SW Brand Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="If the product is branded, and if so, the brand name of a product."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Brand-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Brand-model">
+      <path value="cimi-entity-Brand-model"/>
+      <definition value="If the product is branded, and if so, the brand name of a product."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Brand-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Brand-model.value">
+      <path value="cimi-entity-Brand-model.value"/>
+      <short value="Boolean representing if the product is branded, and if so, the brand name of a product."/>
+      <definition value="Boolean representing if the product is branded, and if so, the brand name of a product."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Brand-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Brand-model.brandName">
+      <path value="cimi-entity-Brand-model.brandName"/>
+      <short value="The marketing name for a brand name product"/>
+      <definition value="The marketing name for a brand name product"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Brand-model.brandName"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Brand-model">
+      <path value="cimi-entity-Brand-model"/>
+      <definition value="If the product is branded, and if so, the brand name of a product."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Brand-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Brand-model.value">
+      <path value="cimi-entity-Brand-model.value"/>
+      <short value="Boolean representing if the product is branded, and if so, the brand name of a product."/>
+      <definition value="Boolean representing if the product is branded, and if so, the brand name of a product."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Brand-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Brand-model.brandName">
+      <path value="cimi-entity-Brand-model.brandName"/>
+      <short value="The marketing name for a brand name product"/>
+      <definition value="The marketing name for a brand name product"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Brand-model.brandName"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

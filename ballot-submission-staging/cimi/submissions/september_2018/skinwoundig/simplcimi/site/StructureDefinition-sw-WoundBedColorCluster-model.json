@@ -1,0 +1,257 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundBedColorCluster-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundBedColorCluster Logical Model</b></p>\n  <p>The color of a percentage area of the wound bed (base)</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundBedColorCluster"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundBedColorClusterModel",
+  "title": "SW WoundBedColorCluster Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The color of a percentage area of the wound bed (base)",
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundBedColorCluster-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundBedColorCluster-model",
+        "path": "sw-WoundBedColorCluster-model",
+        "definition": "The color of a percentage area of the wound bed (base)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.typeCode",
+        "path": "sw-WoundBedColorCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement",
+        "path": "sw-WoundBedColorCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+        "path": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "39132-6"
+          }
+        ],
+        "short": "Color of a portion or entire wound base (bed).",
+        "definition": "Color of a portion or entire wound base (bed).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+        "path": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89255-4"
+          }
+        ],
+        "short": "Wound bed area identified by color/​Area of wound bed.",
+        "definition": "Wound bed area identified by color/​Area of wound bed.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundBedColorCluster-model",
+        "path": "sw-WoundBedColorCluster-model",
+        "definition": "The color of a percentage area of the wound bed (base)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.typeCode",
+        "path": "sw-WoundBedColorCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement",
+        "path": "sw-WoundBedColorCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+        "path": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "39132-6"
+          }
+        ],
+        "short": "Color of a portion or entire wound base (bed).",
+        "definition": "Color of a portion or entire wound base (bed).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement.woundBedColor",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+        "path": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "89255-4"
+          }
+        ],
+        "short": "Wound bed area identified by color/​Area of wound bed.",
+        "definition": "Wound bed area identified by color/​Area of wound bed.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedColorCluster-model.statement.woundBedColorPercentage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

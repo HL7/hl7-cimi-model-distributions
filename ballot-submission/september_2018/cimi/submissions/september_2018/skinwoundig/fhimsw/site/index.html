@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles" />
+
+  <link href="fhir.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet" />
+  <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+  <link href="jquery-ui.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="assets/ico/favicon.png" />
+
+
+  <body>
+
+    <div id="segment-header" class="segment">
+  <!-- segment-header -->
+  <div class="container">
+    <!-- container -->
+    <a id="logo" no-external="true" href="http://hl7.org/fhir">
+      <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
+    </a>
+    <div id="hl7-status" class="hl7-status">
+      
+      <b>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</b>
+    </div>
+
+    <div id="hl7-nav">
+      <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <!-- container -->
+  </div>
+</div>
+<!-- /segment-header -->
+
+<div id="segment-navbar" class="segment">
+  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">
+    <!-- container -->
+    <!-- HEADER CONTENT -->
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <div class="nav-collapse collapse navbar-inverse-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logical.html">Logical Models</a></li>
+            <li><a href="profiles.html">Profiles</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="valuesets.html">Value Sets</a></li>
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="modeldoc/index.html" target="_blank">Reference Model</a></li>
+            
+          </ul>
+
+        </div>
+        <!-- /.nav-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- /HEADER CONTENT -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-navbar -->
+
+<!-- ============BreadCrumb=============== -->
+
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="Home"><a href="index.html"><b>Home</b></a></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+   <div class="row">
+     <div class="inner-wrapper">
+       <div class="col-12">
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<p>This is a Skin and Wound Assessment FHIR Implementation Guide, based on the CIMI based classes as represented in the Federal Health Information Model (FHIM).</p>
+
+<h1>Background: CIMI and FHIM</h1>
+<p>The Clinical Information Modeling Initiative (CIMI) is focused on creating logical models of healthcare information, independent of implementation technologies and patterns, decoupling clinical content from periodic changes in implementation technology. This Implementation Guide (IG) is part of a demonstration project showing how different groups, with different tools, approach CIMI modeling. To expedite comparison, each group has implemented the same Skin and Wound Assessment domain.</p>
+<p>The Federal Health Information Model (FHIM) is intended to coordinate the efforts of the US Federal government and partner agencies with the development of Electronic Medical Records, information and terminology standards, including the coordination of agency efforts at relevant Standards Development Organizations (SDOs). Similar to CIMI, the FHIM is an information (logical) model rather than a data (implementation)model. Given the similar approach and goals, recent work has focused on harmonization of CIMI and FHIM.</p>
+
+<h1>Approach to Skin and Wound</h1>
+<p>There are many decisions involved with modeling a clinical domain with CIMI, and the Skin and Wound Assessment is no exception. One of the key features of wound assessment is its hierarchical structure. One patient can have multiple wounds, each wound can have multiple tunnels, and each tunnel on each wound on each patient can have a measured length. Approaches to deal with the hierarchical nature of wound assessment include using sub-observations that are nested inside a parent observation, or a panel approach, where independent observations are grouped under panel observation.</p>
+
+<p>Either approach has its pros and cons. A pure component approach keeps everything related to a single wound assessment together, but requires complicated mapping to FHIR, since FHIR observation components cannot have sub-components. A pure panel approach is also feasible,but that approach adds the overhead of a full observation to each sub-observation, and leads to problems pairing up observations that need to be related, such as wound tunnel length and clock direction. In this implementation, we take a hybrid approach, using components wherever possible, and sub-observations where necessary. Panel-type sub-observations are required where the panel observations themselves have sub-observations or components. This identical to the MITRE's "Full CIMI" approach, also part of this demonstration project.</p> 
+
+<p>Another important design decision was to separate the assertion of a wound from the assessment of the wound, based on the use case that repeated assessments of the same wound can occur at different times during the clinical course of the wound. The assertion is made once, and many assessments can be linked to that assertion.</p>
+
+<h1>FHIM Class Hierarchy</h1>
+<p>FHIM has been partially aligned with CIMI (June 2018 edition), with some notable differences regarding CIMI's topic-context pattern. The topic-context pattern requires orchestrating three class hierarchies (InformationEntry, StatementTopic, StatementContext) that must come together to represent clinical statements. FHIM has simplified the topic-context pattern by combining the context hierarchy with the clinical statement hierarchy, completely removing the StatementContext hierarchy. The statement topic class attributes do not appear as separate classes, but are added to the appropriate classes as needed. This simplification was insisted upon by FHIM users who found the CIMI approach confusing.</p>
+<p>Only a small portion of the FHIM class hierarchy is directly involved with modeling wound assessment. ObservationStatement is the main class used to represent observations. The parent classes, ClinicalStatement and InformationEntry, are also included, but other FHIM base classes, such as those for actions, are not. The resulting class hierarchy (reference model) can be explored <a href="modeldoc/index.html">here</a>.</p>
+
+<h1>Terminology and Extensions</h1>
+<p>This guide uses value sets defined in VSAC and LOINC. It does not define its own value sets, and therefore, the reader will not see value sets and code systems on the pages of this guide. However, direct links to the value sets appear as bindings on the corresponding coded elements.</p>
+<p>The are no extensions defined in this guide. Each property that is unique to a skin and wound observation is introduced as a component observation, which does not require an extension. This method is proposed to prevent an explosion of extensions.</p>
+
+<h2>Credits:</h2>
+<p>Core team consisted of Sean Muir, Jay Lyle, Galen Mulrooney, Mark Kramer.</p>
+<p>Domain content was provided by Susan Matney (Intermountain Healthcare). Help, guidance, and wisdom was generously provided by all members of the CIMI Work Group especially the other co-chairs, Dr. Stan Huff, Claude Nanjo, and Richard Esmond.</p>
+<p>This IG was authored using the FHIM export to the <a href="https://github.com/standardhealth/shr-cli/wiki">Clinical Information Modeling and Profiling Language (CIMPL),</a> input to a free, open source toolchain for IG generation from <a href="https://www.mitre.org/">MITRE Corporation</a>.</p>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      
+      HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment), Version: 1.0.0
+      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR &copy; Version: 3.0.1</a>
+      ; Generated on Tue, Aug 21, 2018 17:57-0400.
+    </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Observation.observation.v0.0.1
+
+specialize
+  SHR-CORE-FindingStatement.finding_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing cimi-derived classes representing complete clinical statements. In this specification, these classes derive from the StatementTopic class hierarchy, not ClinicalStatement, which is a significant departure from CIMI. This simplifies the resulting logical models.">
+      use = <"The namespace containing cimi-derived classes representing complete clinical statements. In this specification, these classes derive from the StatementTopic class hierarchy, not ClinicalStatement, which is a significant departure from CIMI. This simplifies the resulting logical models.">
+      keywords = <"cimi.statement","observation">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Observation[id1.1.1.1.1.1.1] matches {
+    topicCode matches {
+      TopicCode[id0.0.0.0.0.0.2]
+    }
+    resultValue matches {
+      ResultValue[id0.0.0.0.0.0.3]
+    }
+    exceptionValue matches {
+      ExceptionValue[id0.0.0.0.0.0.4]
+    }
+    deltaFlag matches {
+      DeltaFlag[id0.0.0.0.0.0.5]
+    }
+    category matches {
+      Category[id0.0.0.0.0.0.6]
+    }
+    anatomicalLocation matches {
+      AnatomicalLocation[id0.0.0.0.0.0.7]
+    }
+    device matches {
+      Device[id0.0.0.0.0.0.8]
+    }
+    specimen matches {
+      Specimen[id0.0.0.0.0.0.9]
+    }
+    precondition matches {
+      Precondition[id0.0.0.0.0.0.10]
+    }
+    referenceRange matches {
+      ReferenceRange[id0.0.0.0.0.0.11]
+    }
+    evaluationComponent matches {
+      EvaluationComponent[id0.0.0.0.0.0.12]
+    }
+    panelMembers matches {
+      PanelMembers[id0.0.0.0.0.0.13]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1.1.1"] = <
+        text = <"Observation">
+        description = <"Represents the result of evaluations (measurements, tests, or questions) that have been performed.
+                      Observation has a value representing the result (answer), or an ExceptionValue indicating why the value is not present. The subject of a finding can be the entire patient, or an entity such as a location body structure, intervention, or condition. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.">
+      >
+      ["id0.0.0.0.0.0.2"] = <
+        text = <"TopicCode">
+        description = <"The concept representing the finding or action that is the topic of the statement.
+                      
+                      For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+      >
+      ["id0.0.0.0.0.0.3"] = <
+        text = <"ResultValue">
+        description = <"The finding itself, such as the blood pressure value recorded.">
+      >
+      ["id0.0.0.0.0.0.4"] = <
+        text = <"ExceptionValue">
+        description = <"Reason that a value associated with a test or other finding is missing.">
+      >
+      ["id0.0.0.0.0.0.5"] = <
+        text = <"DeltaFlag">
+        description = <"Indicator of significant change (delta) from the last or previous measurement.">
+      >
+      ["id0.0.0.0.0.0.6"] = <
+        text = <"Category">
+        description = <"The type, kind, or class of this item.">
+      >
+      ["id0.0.0.0.0.0.7"] = <
+        text = <"AnatomicalLocation">
+        description = <"A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.">
+      >
+      ["id0.0.0.0.0.0.8"] = <
+        text = <"Device">
+        description = <"A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.">
+      >
+      ["id0.0.0.0.0.0.9"] = <
+        text = <"Specimen">
+        description = <"A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.">
+      >
+      ["id0.0.0.0.0.0.10"] = <
+        text = <"Precondition">
+        description = <"A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.">
+      >
+      ["id0.0.0.0.0.0.11"] = <
+        text = <"ReferenceRange">
+        description = <"The usual or acceptable range for a test result.">
+      >
+      ["id0.0.0.0.0.0.12"] = <
+        text = <"EvaluationComponent">
+        description = <"A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.">
+      >
+      ["id0.0.0.0.0.0.13"] = <
+        text = <"PanelMembers">
+        description = <"PanelMembers represent the elements of a group of a related but independent evaluations.
+                      Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.">
+      >
+    >
+  >

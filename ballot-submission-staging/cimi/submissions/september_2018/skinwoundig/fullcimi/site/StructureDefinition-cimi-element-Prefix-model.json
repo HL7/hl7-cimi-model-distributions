@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-Prefix-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Prefix Logical Model</b></p>\n  <p>Contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Prefix-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.Prefix"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PrefixModel",
+  "title": "SW Prefix Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C3476361"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-Prefix-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-Prefix-model",
+        "path": "cimi-element-Prefix-model",
+        "definition": "Contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Prefix-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Prefix-model.value",
+        "path": "cimi-element-Prefix-model.value",
+        "short": "String representing contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "definition": "String representing contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Prefix-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-Prefix-model",
+        "path": "cimi-element-Prefix-model",
+        "definition": "Contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Prefix-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Prefix-model.value",
+        "path": "cimi-element-Prefix-model.value",
+        "short": "String representing contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "definition": "String representing contains a set of honorific terms that typically appear before a person's name, for example Mr., Mrs., Dr., etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Prefix-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

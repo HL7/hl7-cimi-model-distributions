@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-MaritalStatus-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW MaritalStatus Logical Model</b></p>\n  <p>The most recent marital status of a person.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MaritalStatus-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.MaritalStatus"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "MaritalStatusModel",
+  "title": "SW MaritalStatus Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The most recent marital status of a person.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0024819"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-MaritalStatus-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-MaritalStatus-model",
+        "path": "cimi-entity-MaritalStatus-model",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-MaritalStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-MaritalStatus-model.value",
+        "path": "cimi-entity-MaritalStatus-model.value",
+        "short": "Code representing the most recent marital status of a person.",
+        "definition": "Code representing the most recent marital status of a person.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-MaritalStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-MaritalStatus-model",
+        "path": "cimi-entity-MaritalStatus-model",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-MaritalStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-MaritalStatus-model.value",
+        "path": "cimi-entity-MaritalStatus-model.value",
+        "short": "Code representing the most recent marital status of a person.",
+        "definition": "Code representing the most recent marital status of a person.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-MaritalStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      }
+    ]
+  }
+}

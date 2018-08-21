@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-CodedEvaluationComponent-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW CodedEvaluationComponent Logical Model</b></p>
+  <p>An evaluation component whose value is a code (concept).</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-CodedEvaluationComponent-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.CodedEvaluationComponent"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="CodedEvaluationComponentModel"/>
+  <title value="SW CodedEvaluationComponent Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="An evaluation component whose value is a code (concept)."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-CodedEvaluationComponent-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-CodedEvaluationComponent-model">
+      <path value="cimi-statement-CodedEvaluationComponent-model"/>
+      <definition value="An evaluation component whose value is a code (concept)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.value">
+      <path value="cimi-statement-CodedEvaluationComponent-model.value"/>
+      <short value="Code representing an evaluation component whose value is a code (concept)."/>
+      <definition value="Code representing an evaluation component whose value is a code (concept)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.topicCode">
+      <path value="cimi-statement-CodedEvaluationComponent-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.topicCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.exceptionValue">
+      <path value="cimi-statement-CodedEvaluationComponent-model.exceptionValue"/>
+      <short value="Reason that a value associated with a test or other finding is missing."/>
+      <definition value="Reason that a value associated with a test or other finding is missing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.exceptionValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.interpretation">
+      <path value="cimi-statement-CodedEvaluationComponent-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.referenceRange">
+      <path value="cimi-statement-CodedEvaluationComponent-model.referenceRange"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0883335"/>
+      </code>
+      <short value="The usual or acceptable range for a test result."/>
+      <definition value="The usual or acceptable range for a test result."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.referenceRange"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-CodedEvaluationComponent-model">
+      <path value="cimi-statement-CodedEvaluationComponent-model"/>
+      <definition value="An evaluation component whose value is a code (concept)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.value">
+      <path value="cimi-statement-CodedEvaluationComponent-model.value"/>
+      <short value="Code representing an evaluation component whose value is a code (concept)."/>
+      <definition value="Code representing an evaluation component whose value is a code (concept)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.topicCode">
+      <path value="cimi-statement-CodedEvaluationComponent-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.topicCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.exceptionValue">
+      <path value="cimi-statement-CodedEvaluationComponent-model.exceptionValue"/>
+      <short value="Reason that a value associated with a test or other finding is missing."/>
+      <definition value="Reason that a value associated with a test or other finding is missing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.exceptionValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.interpretation">
+      <path value="cimi-statement-CodedEvaluationComponent-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-CodedEvaluationComponent-model.referenceRange">
+      <path value="cimi-statement-CodedEvaluationComponent-model.referenceRange"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0883335"/>
+      </code>
+      <short value="The usual or acceptable range for a test result."/>
+      <definition value="The usual or acceptable range for a test result."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="cimi-statement-CodedEvaluationComponent-model.referenceRange"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ReferenceRange-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

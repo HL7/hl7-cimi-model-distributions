@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-ApplicableAgeRange-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ApplicableAgeRange Logical Model</b></p>\n  <p>The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ApplicableAgeRange-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.ApplicableAgeRange"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ApplicableAgeRangeModel",
+  "title": "SW ApplicableAgeRange Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-ApplicableAgeRange-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-ApplicableAgeRange-model",
+        "path": "cimi-statement-ApplicableAgeRange-model",
+        "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ApplicableAgeRange-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ApplicableAgeRange-model.value",
+        "path": "cimi-statement-ApplicableAgeRange-model.value",
+        "short": "Range representing the age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "definition": "Range representing the age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ApplicableAgeRange-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-ApplicableAgeRange-model",
+        "path": "cimi-statement-ApplicableAgeRange-model",
+        "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ApplicableAgeRange-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ApplicableAgeRange-model.value",
+        "path": "cimi-statement-ApplicableAgeRange-model.value",
+        "short": "Range representing the age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "definition": "Range representing the age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ApplicableAgeRange-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

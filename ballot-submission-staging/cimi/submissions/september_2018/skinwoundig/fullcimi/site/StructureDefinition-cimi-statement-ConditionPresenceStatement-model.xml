@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-ConditionPresenceStatement-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW ConditionPresenceStatement Logical Model</b></p>
+  <p>A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ConditionPresenceStatement-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.ConditionPresenceStatement"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ConditionPresenceStatementModel"/>
+  <title value="SW ConditionPresenceStatement Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A condition that is or may be present in a subject. &#39;Condition&#39; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-ConditionPresenceStatement-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-ConditionPresenceStatement-model">
+      <path value="cimi-statement-ConditionPresenceStatement-model"/>
+      <definition value="A condition that is or may be present in a subject. &#39;Condition&#39; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.personOfRecord">
+      <path value="cimi-statement-ConditionPresenceStatement-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.personOfRecord"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.recorded">
+      <path value="cimi-statement-ConditionPresenceStatement-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.signed">
+      <path value="cimi-statement-ConditionPresenceStatement-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.additionalText">
+      <path value="cimi-statement-ConditionPresenceStatement-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.contextCode">
+      <path value="cimi-statement-ConditionPresenceStatement-model.contextCode"/>
+      <short value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <definition value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.contextCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.statementTopic">
+      <path value="cimi-statement-ConditionPresenceStatement-model.statementTopic"/>
+      <short value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement."/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.statementTopic"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.encounter">
+      <path value="cimi-statement-ConditionPresenceStatement-model.encounter"/>
+      <short value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <definition value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.encounter"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.interpretation">
+      <path value="cimi-statement-ConditionPresenceStatement-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.relevantTime">
+      <path value="cimi-statement-ConditionPresenceStatement-model.relevantTime"/>
+      <short value="The time or time period that the finding addresses."/>
+      <definition value="The time or time period that the finding addresses.&#xA;The clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.findingMethod">
+      <path value="cimi-statement-ConditionPresenceStatement-model.findingMethod"/>
+      <short value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <definition value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.media">
+      <path value="cimi-statement-ConditionPresenceStatement-model.media"/>
+      <short value="A file that contains audio, video, image, or similar content."/>
+      <definition value="A file that contains audio, video, image, or similar content."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.media"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.verificationStatus">
+      <path value="cimi-statement-ConditionPresenceStatement-model.verificationStatus"/>
+      <short value="Whether an assessment has been confirmed by testing or observation."/>
+      <definition value="Whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.verificationStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.onset">
+      <path value="cimi-statement-ConditionPresenceStatement-model.onset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.onset"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.abatement">
+      <path value="cimi-statement-ConditionPresenceStatement-model.abatement"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="88878-4"/>
+      </code>
+      <short value="The end, remission or resolution."/>
+      <definition value="The end, remission or resolution."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.abatement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.certainty">
+      <path value="cimi-statement-ConditionPresenceStatement-model.certainty"/>
+      <short value="The degree of confidence in a conclusion or assertion."/>
+      <definition value="The degree of confidence in a conclusion or assertion."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.certainty"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.topicCode">
+      <path value="cimi-statement-ConditionPresenceStatement-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.topicCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/core/ValueSet/us-core-problem"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.category">
+      <path value="cimi-statement-ConditionPresenceStatement-model.category"/>
+      <short value="The type, kind, or class of this item."/>
+      <definition value="The type, kind, or class of this item."/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.category"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation">
+      <path value="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72369-2"/>
+      </code>
+      <short value="A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart."/>
+      <definition value="A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.conditionCause">
+      <path value="cimi-statement-ConditionPresenceStatement-model.conditionCause"/>
+      <short value="The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives"/>
+      <definition value="The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.conditionCause"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalStatement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier">
+      <path value="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier"/>
+      <short value="A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier."/>
+      <definition value="A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.clinicalStatus">
+      <path value="cimi-statement-ConditionPresenceStatement-model.clinicalStatus"/>
+      <short value="A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition)."/>
+      <definition value="A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.clinicalStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized">
+      <path value="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized"/>
+      <short value="The time at which a condition or condition was first identified in a healthcare context."/>
+      <definition value="The time at which a condition or condition was first identified in a healthcare context."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission">
+      <path value="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+        <display value="Condition present on admission"/>
+      </code>
+      <short value="If the problem or condition existed before the current episode of care."/>
+      <definition value="If the problem or condition existed before the current episode of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.severity">
+      <path value="cimi-statement-ConditionPresenceStatement-model.severity"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0392364"/>
+      </code>
+      <short value="Degree of harshness or extent of a symptom, disorder, or condition."/>
+      <definition value="Degree of harshness or extent of a symptom, disorder, or condition."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.severity"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/condition-severity"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.criticality">
+      <path value="cimi-statement-ConditionPresenceStatement-model.criticality"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C3858539"/>
+        <display value="Criticality"/>
+      </code>
+      <short value="The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality."/>
+      <definition value="The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.criticality"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.stage">
+      <path value="cimi-statement-ConditionPresenceStatement-model.stage"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0699749"/>
+      </code>
+      <short value="The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information."/>
+      <definition value="The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.stage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Stage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-ConditionPresenceStatement-model">
+      <path value="cimi-statement-ConditionPresenceStatement-model"/>
+      <definition value="A condition that is or may be present in a subject. &#39;Condition&#39; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.personOfRecord">
+      <path value="cimi-statement-ConditionPresenceStatement-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.personOfRecord"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.recorded">
+      <path value="cimi-statement-ConditionPresenceStatement-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.signed">
+      <path value="cimi-statement-ConditionPresenceStatement-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.additionalText">
+      <path value="cimi-statement-ConditionPresenceStatement-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.contextCode">
+      <path value="cimi-statement-ConditionPresenceStatement-model.contextCode"/>
+      <short value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <definition value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.contextCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.statementTopic">
+      <path value="cimi-statement-ConditionPresenceStatement-model.statementTopic"/>
+      <short value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement."/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.statementTopic"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.encounter">
+      <path value="cimi-statement-ConditionPresenceStatement-model.encounter"/>
+      <short value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <definition value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.encounter"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.interpretation">
+      <path value="cimi-statement-ConditionPresenceStatement-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.relevantTime">
+      <path value="cimi-statement-ConditionPresenceStatement-model.relevantTime"/>
+      <short value="The time or time period that the finding addresses."/>
+      <definition value="The time or time period that the finding addresses.&#xA;The clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.findingMethod">
+      <path value="cimi-statement-ConditionPresenceStatement-model.findingMethod"/>
+      <short value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <definition value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.media">
+      <path value="cimi-statement-ConditionPresenceStatement-model.media"/>
+      <short value="A file that contains audio, video, image, or similar content."/>
+      <definition value="A file that contains audio, video, image, or similar content."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.media"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.verificationStatus">
+      <path value="cimi-statement-ConditionPresenceStatement-model.verificationStatus"/>
+      <short value="Whether an assessment has been confirmed by testing or observation."/>
+      <definition value="Whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.verificationStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.onset">
+      <path value="cimi-statement-ConditionPresenceStatement-model.onset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.onset"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.abatement">
+      <path value="cimi-statement-ConditionPresenceStatement-model.abatement"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="88878-4"/>
+      </code>
+      <short value="The end, remission or resolution."/>
+      <definition value="The end, remission or resolution."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.abatement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"/>
+      </type>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.certainty">
+      <path value="cimi-statement-ConditionPresenceStatement-model.certainty"/>
+      <short value="The degree of confidence in a conclusion or assertion."/>
+      <definition value="The degree of confidence in a conclusion or assertion."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.certainty"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.topicCode">
+      <path value="cimi-statement-ConditionPresenceStatement-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.topicCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/core/ValueSet/us-core-problem"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.category">
+      <path value="cimi-statement-ConditionPresenceStatement-model.category"/>
+      <short value="The type, kind, or class of this item."/>
+      <definition value="The type, kind, or class of this item."/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.category"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation">
+      <path value="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72369-2"/>
+      </code>
+      <short value="A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart."/>
+      <definition value="A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.anatomicalLocation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.conditionCause">
+      <path value="cimi-statement-ConditionPresenceStatement-model.conditionCause"/>
+      <short value="The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives"/>
+      <definition value="The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.conditionCause"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalStatement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier">
+      <path value="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier"/>
+      <short value="A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier."/>
+      <definition value="A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.conditionIdentifier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.clinicalStatus">
+      <path value="cimi-statement-ConditionPresenceStatement-model.clinicalStatus"/>
+      <short value="A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition)."/>
+      <definition value="A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.clinicalStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized">
+      <path value="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized"/>
+      <short value="The time at which a condition or condition was first identified in a healthcare context."/>
+      <definition value="The time at which a condition or condition was first identified in a healthcare context."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.whenClinicallyRecognized"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission">
+      <path value="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+        <display value="Condition present on admission"/>
+      </code>
+      <short value="If the problem or condition existed before the current episode of care."/>
+      <definition value="If the problem or condition existed before the current episode of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.presentOnAdmission"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.severity">
+      <path value="cimi-statement-ConditionPresenceStatement-model.severity"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0392364"/>
+      </code>
+      <short value="Degree of harshness or extent of a symptom, disorder, or condition."/>
+      <definition value="Degree of harshness or extent of a symptom, disorder, or condition."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.severity"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/condition-severity"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.criticality">
+      <path value="cimi-statement-ConditionPresenceStatement-model.criticality"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C3858539"/>
+        <display value="Criticality"/>
+      </code>
+      <short value="The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality."/>
+      <definition value="The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.criticality"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-ConditionPresenceStatement-model.stage">
+      <path value="cimi-statement-ConditionPresenceStatement-model.stage"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0699749"/>
+      </code>
+      <short value="The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information."/>
+      <definition value="The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-ConditionPresenceStatement-model.stage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Stage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

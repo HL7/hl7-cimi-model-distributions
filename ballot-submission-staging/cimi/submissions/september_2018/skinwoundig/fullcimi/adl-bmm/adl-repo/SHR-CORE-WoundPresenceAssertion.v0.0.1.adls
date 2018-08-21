@@ -1,0 +1,97 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-WoundPresenceAssertion.wound_presence_assertion.v0.0.1
+
+specialize
+  SHR-CORE-FindingSiteConditionPresenceStatement.finding_site_condition_presence_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      use = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      keywords = <"sw","wound presence assertion">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  WoundPresenceAssertion[id1.1.1.1.1.1.1.1.1.1.1] matches {
+    woundType matches {
+      WoundType[id0.0.0.0.0.0.0.0.0.0.2]
+    }
+    device matches {
+      Device[id0.0.0.0.0.0.0.0.0.0.3]
+    }
+    precondition matches {
+      Precondition[id0.0.0.0.0.0.0.0.0.0.4]
+    }
+    /onset/valueChoiceDATETIME matches { DATETIME[id0.0.0.0.0.0.0.0.0.0.6] }
+    /abatement/valueChoiceDATETIME matches { DATETIME[id0.0.0.0.0.0.0.0.0.0.8] }
+    anatomicalLocation matches {
+      WoundAnatomicalLocation[id0.0.0.0.0.0.0.0.0.0.10]
+    }
+    conditionCause matches {
+      WoundTypeEtiology[id0.0.0.0.0.0.0.0.0.0.12]
+    }
+    conditionIdentifier matches {
+      WoundIdentifier[id0.0.0.0.0.0.0.0.0.0.14]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1.1.1.1.1.1.1"] = <
+        text = <"WoundPresenceAssertion">
+        description = <"A determination that a wound that exists at a particular body site.
+                      The WoundIdentifier serves as a link between this assertion and assessments of the wound that might occur at later times. Multiple wound assessments can be associated with a single wound.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.2"] = <
+        text = <"WoundType">
+        description = <"A type code describing the wound or skin injury.
+                      Differentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.3"] = <
+        text = <"Device">
+        description = <"A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.4"] = <
+        text = <"Precondition">
+        description = <"A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. Body position and body site are also qualifiers, but handled separately. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.6"] = <
+        text = <"DATETIME">
+        description = <"-">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.8"] = <
+        text = <"DATETIME">
+        description = <"-">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.10"] = <
+        text = <"WoundAnatomicalLocation">
+        description = <"-">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.12"] = <
+        text = <"WoundTypeEtiology">
+        description = <"A specialization of condition cause, specific to the causes of injuries (or not having injury in the wound absent context).">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.14"] = <
+        text = <"WoundIdentifier">
+        description = <"A human-readable identifier for the lesion; e.g., a letter or integer.">
+      >
+    >
+  >

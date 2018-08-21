@@ -1,0 +1,581 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "sw-WoundPresentCluster-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundPresentCluster Logical Model</b></p>\n  <p>A group of observations that together describe initial observations about a wound.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "sw.WoundPresentCluster" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "WoundPresentClusterModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW WoundPresentCluster Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "A group of observations that together describe initial observations about a wound."];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "sw-WoundPresentCluster-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A group of observations that together describe initial observations about a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:416462003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "416462003" ];
+         fhir:Coding.display [ fhir:value "Wound (disorder)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39111-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39111-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72300-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72300-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:11373-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11373-8" ];
+         fhir:Coding.display [ fhir:value "InjuryCause" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89252-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89252-1" ];
+         fhir:Coding.display [ fhir:value "Episode of Wound" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:85585-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "85585-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.definition [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89251-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89251-3" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72170-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72170-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.definition [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "A group of observations that together describe initial observations about a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that describes the type of composition or section, such as a section or document type identifier." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.typeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+       fhir:ElementDefinition.short [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.definition [ fhir:value "Base class for all types of clinical statements." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a sct:416462003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "416462003" ];
+         fhir:Coding.display [ fhir:value "Wound (disorder)" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The presence of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The presence of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.wound" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:39111-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "39111-0" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "Body location of a wound." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundLocationObservation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72300-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72300-7" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type of wound, for example, abrasion or laceration." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:11373-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11373-8" ];
+         fhir:Coding.display [ fhir:value "InjuryCause" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.definition [ fhir:value "The source or key factor in the formation or acquisition of the wound." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundTypeEtiology" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89252-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89252-1" ];
+         fhir:Coding.display [ fhir:value "Episode of Wound" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the wound is initial or recurrent." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.woundEpisode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:85585-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "85585-8" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.definition [ fhir:value "The beginning or first appearance of a mental or physical disorder." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.timeOfOnset" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:89251-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "89251-3" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the condition was present when the patient was admitted." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.conditionPresentOnAdmission" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72170-4;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72170-4" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.definition [ fhir:value "A photographic documentation of a condition, location, person, etc..." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundPresentCluster-model.statement.photographicImage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/sw-WoundPresentCluster-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

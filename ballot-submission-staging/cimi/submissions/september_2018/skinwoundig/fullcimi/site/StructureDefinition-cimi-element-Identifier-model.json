@@ -1,0 +1,407 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-Identifier-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Identifier Logical Model</b></p>\n  <p>A unique string that identifies a specific person or thing.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Identifier-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.Identifier"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "IdentifierModel",
+  "title": "SW Identifier Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A unique string that identifies a specific person or thing.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0600091"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-Identifier-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-Identifier-model",
+        "path": "cimi-element-Identifier-model",
+        "definition": "A unique string that identifies a specific person or thing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Identifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.value",
+        "path": "cimi-element-Identifier-model.value",
+        "short": "String representing a unique string that identifies a specific person or thing.",
+        "definition": "String representing a unique string that identifies a specific person or thing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.purpose",
+        "path": "cimi-element-Identifier-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-use"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Identifier-model.type",
+        "path": "cimi-element-Identifier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Identifier-model.codeSystem",
+        "path": "cimi-element-Identifier-model.codeSystem",
+        "short": "A formal terminology system.",
+        "definition": "A formal terminology system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.codeSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.effectiveTimePeriod",
+        "path": "cimi-element-Identifier-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.issuer",
+        "path": "cimi-element-Identifier-model.issuer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "An organization who issues a qualification, identifier, or license.",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-Identifier-model",
+        "path": "cimi-element-Identifier-model",
+        "definition": "A unique string that identifies a specific person or thing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Identifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.value",
+        "path": "cimi-element-Identifier-model.value",
+        "short": "String representing a unique string that identifies a specific person or thing.",
+        "definition": "String representing a unique string that identifies a specific person or thing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.purpose",
+        "path": "cimi-element-Identifier-model.purpose",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Why the item is used.",
+        "definition": "Why the item is used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-use"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Identifier-model.type",
+        "path": "cimi-element-Identifier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/identifier-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Identifier-model.codeSystem",
+        "path": "cimi-element-Identifier-model.codeSystem",
+        "short": "A formal terminology system.",
+        "definition": "A formal terminology system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.codeSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.effectiveTimePeriod",
+        "path": "cimi-element-Identifier-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Identifier-model.issuer",
+        "path": "cimi-element-Identifier-model.issuer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          }
+        ],
+        "short": "An organization who issues a qualification, identifier, or license.",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Identifier-model.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

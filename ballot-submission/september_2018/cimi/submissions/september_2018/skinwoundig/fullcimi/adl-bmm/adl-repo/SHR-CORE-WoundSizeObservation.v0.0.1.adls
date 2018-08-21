@@ -1,0 +1,50 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-WoundSizeObservation.wound_size_observation.v0.0.1
+
+specialize
+  SHR-CORE-ComponentOnlyNonLaboratoryObservation.component_only_non_laboratory_observation.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      use = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      keywords = <"sw","wound size observation">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  WoundSizeObservation[id1.1.1.1.1.1.1.1.1.1] matches {
+    woundIdentifier matches {
+      WoundIdentifier[id0.0.0.0.0.0.0.0.0.2]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1.1.1.1.1.1"] = <
+        text = <"WoundSizeObservation">
+        description = <"The estimated or measured dimensions of a wound.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.2"] = <
+        text = <"WoundIdentifier">
+        description = <"A human-readable identifier for the lesion; e.g., a letter or integer.">
+      >
+    >
+  >

@@ -1,0 +1,126 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"sw-ExchangeForm-WoundComprehensiveHistory-model","","","",0,*,"","","","","","A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound.","","","","","","","","","",,,,,"",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.subject","","","",1,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model {[]} {[]}
+","The person, place, event, condition, other statement that this statement addresses or belongs to.","The person, place, event, condition, other statement that this statement addresses or belongs to.
+For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.","","","","","","","","","",,,,,"http://snomed.info/sct#416462003 (Wound (disorder))
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.subject",1,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode","","","",1,1,"","","","Coding {[]} {[]}
+","A code that describes the type of composition or section, such as a section or document type identifier.","A code that describes the type of composition or section, such as a section or document type identifier.","","","","","","","","","",,,,,"",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode",1,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system","","","",1,1,"","","Y","uri {[]} {[]}
+","Identity of the terminology system","The identification of the code system that defines the meaning of the symbol in the code.","The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.","Need to be unambiguous about the source of the definition of the symbol.","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://loinc.org""/>","","","","",,,,,"",,,,"Coding.system",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version","","","",0,1,"","","Y","string {[]} {[]}
+","Version of the system - if relevant","The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.","Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.","","","","","","","","",,,,,"",,,,"Coding.version",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code","","","",1,1,"","","Y","code {[]} {[]}
+","Symbol in syntax defined by the system","A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).","","Need to refer to a particular code in the system.","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""39135-9""/>","","","","",,,,,"",,,,"Coding.code",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display","","","",0,1,"","","Y","string {[]} {[]}
+","Representation defined by the system","A representation of the meaning of the code in the system, following the rules of the system.","","Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.","","","","","","","",,,,,"",,,,"Coding.display",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
+","If this coding was chosen directly by the user","Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).","Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.","This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement","","","",1,1,"","","","","Base class for all types of clinical statements.","Base class for all types of clinical statements.","","","","","","","","","",,,,,"",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement",1,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType","","","",1,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model {[]} {[]}
+","The type of wound, for example, abrasion or laceration.","The type of wound, for example, abrasion or laceration.","","","","","","","","","",,,,,"http://loinc.org#72300-7
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType",1,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model {[]} {[]}
+","The source or key factor in the formation or acquisition of the wound.","The source or key factor in the formation or acquisition of the wound.","","","","","","","","","",,,,,"http://loinc.org#11373-8 (InjuryCause)
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation","","","",1,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model {[]} {[]}
+","Body location of a wound.","Body location of a wound.","","","","","","","","","",,,,,"http://loinc.org#39111-0
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation",1,1,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model {[]} {[]}
+","The beginning or first appearance of a mental or physical disorder.","The beginning or first appearance of a mental or physical disorder.","","","","","","","","","",,,,,"http://loinc.org#85585-8
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model {[]} {[]}
+","Whether the condition was present when the patient was admitted.","Whether the condition was present when the patient was admitted.","","","","","","","","","",,,,,"http://loinc.org#89251-3
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model {[]} {[]}
+","The end, remission or resolution of a disease.","The end, remission or resolution of a disease.","","","","","","","","","",,,,,"http://loinc.org#88878-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model {[]} {[]}
+","Is the wound associated with a device or pressure point?","Is the wound associated with a device or pressure point?","","","","","","","","","",,,,,"urn:tbd#TBD
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model {[]} {[]}
+","Whether the wound is initial or recurrent.","Whether the wound is initial or recurrent.","","","","","","","","","",,,,,"http://loinc.org#89252-1 (Episode of Wound)
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model {[]} {[]}
+","Overall assessement of whether the wound is within normal parameters.","Overall assessement of whether the wound is within normal parameters.","","","","","","","","","",,,,,"http://loinc.org#80338-7
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model {[]} {[]}
+","A photographic documentation of a condition, location, person, etc...","A photographic documentation of a condition, location, person, etc...","","","","","","","","","",,,,,"http://loinc.org#72170-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model {[]} {[]}
+","Whether a condition is improving, worsening, stable, or resolved.","Whether a condition is improving, worsening, stable, or resolved.","","","","","","","","","",,,,,"http://loinc.org#89253-9
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model {[]} {[]}
+","A description of the skin around the wound (periwound).","A description of the skin around the wound (periwound).","","","","","","","","","",,,,,"http://loinc.org#72301-5
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model {[]} {[]}
+","Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.","Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.","","","","","","","","","",,,,,"http://loinc.org#89250-5
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model {[]} {[]}
+","Appearance of wound base (bed)","Appearance of wound base (bed)","","","","","","","","","",,,,,"http://loinc.org#72371-8
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model {[]} {[]}
+","Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance","Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance","","","","","","","","","",,,,,"http://loinc.org#72370-0
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model {[]} {[]}
+","Color of a portion or entire wound base (bed).","Color of a portion or entire wound base (bed).","","","","","","","","","",,,,,"http://loinc.org#39132-6
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model {[]} {[]}
+","Wound bed area identified by color/​Area of wound bed.","Wound bed area identified by color/​Area of wound bed.","","","","","","","","","",,,,,"http://loinc.org#89255-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model {[]} {[]}
+","The state of the tissue at the edge of the wound.","The state of the tissue at the edge of the wound.","","","","","","","","","",,,,,"http://loinc.org#89256-2
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model {[]} {[]}
+","Color of Wound edge.","Color of Wound edge.","","","","","","","","","",,,,,"http://loinc.org#39133-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model {[]} {[]}
+","Width of the wound (perpendicular to longest dimension).","Width of the wound (perpendicular to longest dimension).","","","","","","","","","",,,,,"http://loinc.org#39125-0
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model {[]} {[]}
+","Depth of the wound.","Depth of the wound.","","","","","","","","","",,,,,"http://loinc.org#39127-6
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model {[]} {[]}
+","Length of the wound (longest dimension).","Length of the wound (longest dimension).","","","","","","","","","",,,,,"http://loinc.org#39126-8
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model {[]} {[]}
+","Area of the wound.","Area of the wound.","","","","","","","","","",,,,,"http://loinc.org#89260-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model {[]} {[]}
+","Drainage amount of wound","Drainage amount of wound","","","","","","","","","",,,,,"http://loinc.org#39116-9
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model {[]} {[]}
+","Appearance of exudate from wound","Appearance of exudate from wound","","","","","","","","","",,,,,"http://loinc.org#39122-7
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model {[]} {[]}
+","Color of exudate from wound","Color of exudate from wound","","","","","","","","","",,,,,"http://loinc.org#72289-2
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model {[]} {[]}
+","Appearance of exudate from wound","Appearance of exudate from wound","","","","","","","","","",,,,,"http://loinc.org#72290-0
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model {[]} {[]}
+","Odor of exudate from wound","Odor of exudate from wound","","","","","","","","","",,,,,"http://loinc.org#72288-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model {[]} {[]}
+","The presence of a wound tunnel.","The presence of a wound tunnel.","","","","","","","","","",,,,,"http://snomed.info/sct#1561000124108 (Wound tunneling (observable entity))
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model {[]} {[]}
+","The length of a wound tunnel, in cm.","The length of a wound tunnel, in cm.","","","","","","","","","",,,,,"http://loinc.org#72296-7
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model {[]} {[]}
+","Clock position of wound tunnel","Clock position of wound tunnel","","","","","","","","","",,,,,"http://loinc.org#72297-5
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model {[]} {[]}
+","The presence of wound undermining.","The presence of wound undermining.","","","","","","","","","",,,,,"http://snomed.info/sct#454341000124104 (Wound undermining (observable entity))
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model {[]} {[]}
+","Length of wound undermining.","Length of wound undermining.","","","","","","","","","",,,,,"http://loinc.org#72293-4
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength",0,*,"",""
+"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model {[]} {[]}
+","Clock position of wound undermining","Clock position of wound undermining","","","","","","","","","",,,,,"http://loinc.org#72294-2
+",,,,"sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection",0,*,"",""

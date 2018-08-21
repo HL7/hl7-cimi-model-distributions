@@ -1,0 +1,25 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-entity-Medication-model","","","",0,*,"","","","","","A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.","","","","","","","","","",,,,,"",,,,"cimi-entity-Medication-model",0,*,"",""
+"cimi-entity-Medication-model.type","","","",1,1,"","","","Coding {[]} {[]}
+","The most specific code (lowest level term) describing the kind or sort of thing being represented.","The most specific code (lowest level term) describing the kind or sort of thing being represented.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes","http://ncimeta.nci.nih.gov#C0332307
+",,,,"cimi-entity-Medication-model.type",1,1,"",""
+"cimi-entity-Medication-model.doseForm","","","",0,1,"","","","Coding {[]} {[]}
+","The form in which active and/or inert ingredient(s) are physically presented.","The form in which active and/or inert ingredient(s) are physically presented.","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/medication-form-codes","http://ncimeta.nci.nih.gov#C0013058
+",,,,"cimi-entity-Medication-model.doseForm",0,1,"",""
+"cimi-entity-Medication-model.brand","","","",0,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model {[]} {[]}
+","If the product is branded, and if so, the brand name of a product.","If the product is branded, and if so, the brand name of a product.","","","","","","","","","",,,,,"",,,,"cimi-entity-Medication-model.brand",0,1,"",""
+"cimi-entity-Medication-model.overTheCounter","","","",0,1,"","","","boolean {[]} {[]}
+","True if the medication is available to consumers without a prescription.","True if the medication is available to consumers without a prescription.","","","","","","","","","",,,,,"",,,,"cimi-entity-Medication-model.overTheCounter",0,1,"",""
+"cimi-entity-Medication-model.medicationIngredient","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MedicationIngredient-model {[]} {[]}
+","Specifies an material component in a medication.","Specifies an material component in a medication.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C3176062
+",,,,"cimi-entity-Medication-model.medicationIngredient",0,*,"",""
+"cimi-entity-Medication-model.manufacturer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model]]}
+","The organization producing the product or test.","The organization producing the product or test.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1561598
+http://ncimeta.nci.nih.gov#C1114744",,,,"cimi-entity-Medication-model.manufacturer",0,1,"",""
+"cimi-entity-Medication-model.lotNumber","","","",0,1,"","","","string {[]} {[]}
+","A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.","A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1115660
+",,,,"cimi-entity-Medication-model.lotNumber",0,1,"",""
+"cimi-entity-Medication-model.expirationDate","","","",0,1,"","","","dateTime {[]} {[]}
+","When the item (medication, device, etc.) will expire.","When the item (medication, device, etc.) will expire.","","","","","","","","","",,,,,"",,,,"cimi-entity-Medication-model.expirationDate",0,1,"",""
+"cimi-entity-Medication-model.package","","","",0,1,"","","","Coding {[]} {[]}
+","The kind of container the medication comes in.","The kind of container the medication comes in.","","","","","","","","","",,"example","","http://hl7.org/fhir/ValueSet/medication-package-form","",,,,"cimi-entity-Medication-model.package",0,1,"",""

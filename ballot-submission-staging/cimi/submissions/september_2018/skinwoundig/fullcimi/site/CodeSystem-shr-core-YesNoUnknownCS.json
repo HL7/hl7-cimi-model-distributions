@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "shr-core-YesNoUnknownCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW YesNoUnknownCS CodeSystem</b></p>\n<p>Code set indicating yes, no, or unknown.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/CodeSystem/shr-core-YesNoUnknownCS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/sw",
+    "value": "shr.core.YesNoUnknownCS"
+  },
+  "version": "1.0.0",
+  "name": "YesNoUnknownCS",
+  "title": "SW YesNoUnknownCS CodeSystem",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Code set indicating yes, no, or unknown.",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "yes",
+      "display": "Yes, or true",
+      "definition": "Yes, or true"
+    },
+    {
+      "code": "no",
+      "display": "No, or false",
+      "definition": "No, or false"
+    },
+    {
+      "code": "unknown",
+      "display": "Unknown",
+      "definition": "Unknown"
+    }
+  ]
+}

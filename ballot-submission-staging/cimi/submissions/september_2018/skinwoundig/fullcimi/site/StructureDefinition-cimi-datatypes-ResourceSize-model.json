@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-datatypes-ResourceSize-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ResourceSize Logical Model</b></p>\n  <p>Number of bytes of content in the resource (if url provided)</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-ResourceSize-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.datatypes.ResourceSize"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ResourceSizeModel",
+  "title": "SW ResourceSize Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Number of bytes of content in the resource (if url provided)",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-datatypes-ResourceSize-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-datatypes-ResourceSize-model",
+        "path": "cimi-datatypes-ResourceSize-model",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-ResourceSize-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-ResourceSize-model.value",
+        "path": "cimi-datatypes-ResourceSize-model.value",
+        "short": "UnsignedInt representing number of bytes of content in the resource (if url provided)",
+        "definition": "UnsignedInt representing number of bytes of content in the resource (if url provided)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-ResourceSize-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-datatypes-ResourceSize-model",
+        "path": "cimi-datatypes-ResourceSize-model",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-ResourceSize-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-datatypes-ResourceSize-model.value",
+        "path": "cimi-datatypes-ResourceSize-model.value",
+        "short": "UnsignedInt representing number of bytes of content in the resource (if url provided)",
+        "definition": "UnsignedInt representing number of bytes of content in the resource (if url provided)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-datatypes-ResourceSize-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

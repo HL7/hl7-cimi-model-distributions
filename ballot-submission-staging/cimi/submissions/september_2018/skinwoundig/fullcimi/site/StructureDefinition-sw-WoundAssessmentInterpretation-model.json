@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundAssessmentInterpretation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundAssessmentInterpretation Logical Model</b></p>\n  <p>Overall assessement of whether the wound is within normal parameters.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundAssessmentInterpretation"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundAssessmentInterpretationModel",
+  "title": "SW WoundAssessmentInterpretation Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Overall assessement of whether the wound is within normal parameters.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "80338-7"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundAssessmentInterpretation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundAssessmentInterpretation-model",
+        "path": "sw-WoundAssessmentInterpretation-model",
+        "definition": "Overall assessement of whether the wound is within normal parameters.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentInterpretation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentInterpretation-model.value",
+        "path": "sw-WoundAssessmentInterpretation-model.value",
+        "short": "Code representing overall assessement of whether the wound is within normal parameters.",
+        "definition": "Code representing overall assessement of whether the wound is within normal parameters.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentInterpretation-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL3816-7"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundAssessmentInterpretation-model",
+        "path": "sw-WoundAssessmentInterpretation-model",
+        "definition": "Overall assessement of whether the wound is within normal parameters.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundAssessmentInterpretation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundAssessmentInterpretation-model.value",
+        "path": "sw-WoundAssessmentInterpretation-model.value",
+        "short": "Code representing overall assessement of whether the wound is within normal parameters.",
+        "definition": "Code representing overall assessement of whether the wound is within normal parameters.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundAssessmentInterpretation-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://loinc.org/vs/LL3816-7"
+          }
+        }
+      }
+    ]
+  }
+}

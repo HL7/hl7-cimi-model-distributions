@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-VerificationStatus-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW VerificationStatus Logical Model</b></p>
+  <p>Whether an assessment has been confirmed by testing or observation.
+CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-VerificationStatus-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.VerificationStatus"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="VerificationStatusModel"/>
+  <title value="SW VerificationStatus Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-VerificationStatus-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-VerificationStatus-model">
+      <path value="cimi-statement-VerificationStatus-model"/>
+      <definition value="Whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-VerificationStatus-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-VerificationStatus-model.value">
+      <path value="cimi-statement-VerificationStatus-model.value"/>
+      <short value="Code representing whether an assessment has been confirmed by testing or observation."/>
+      <definition value="Code representing whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-VerificationStatus-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-VerificationStatus-model">
+      <path value="cimi-statement-VerificationStatus-model"/>
+      <definition value="Whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-VerificationStatus-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-VerificationStatus-model.value">
+      <path value="cimi-statement-VerificationStatus-model.value"/>
+      <short value="Code representing whether an assessment has been confirmed by testing or observation."/>
+      <definition value="Code representing whether an assessment has been confirmed by testing or observation.&#xA;CIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-VerificationStatus-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Specimen-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Specimen Logical Model</b></p>
+  <p>A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Specimen-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Specimen"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SpecimenModel"/>
+  <title value="SW Specimen Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Specimen-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Specimen-model">
+      <path value="cimi-entity-Specimen-model"/>
+      <definition value="A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.accessionIdentifier">
+      <path value="cimi-entity-Specimen-model.accessionIdentifier"/>
+      <short value="Identifier assigned by the lab"/>
+      <definition value="Identifier assigned by the lab"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.accessionIdentifier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-AccessionIdentifier-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenStatus">
+      <path value="cimi-entity-Specimen-model.specimenStatus"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0449438"/>
+      </code>
+      <short value="State of the specimen, such as obtained, processed, used."/>
+      <definition value="State of the specimen, such as obtained, processed, used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/specimen-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Specimen-model.type">
+      <path value="cimi-entity-Specimen-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v2-0487"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionSource">
+      <path value="cimi-entity-Specimen-model.collectionSource"/>
+      <short value="The person or thing the sample was obtained from."/>
+      <definition value="The person or thing the sample was obtained from."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionSource"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Patient-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Group-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionTime">
+      <path value="cimi-entity-Specimen-model.collectionTime"/>
+      <short value="When the sample was obtained, as a specific time or time period."/>
+      <definition value="When the sample was obtained, as a specific time or time period."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionMethod">
+      <path value="cimi-entity-Specimen-model.collectionMethod"/>
+      <short value="How the specimen was obtained."/>
+      <definition value="How the specimen was obtained."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionSite">
+      <path value="cimi-entity-Specimen-model.collectionSite"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72369-2"/>
+      </code>
+      <short value="The body site where specimen was collected"/>
+      <definition value="The body site where specimen was collected"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionSite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.sourceSpecimen">
+      <path value="cimi-entity-Specimen-model.sourceSpecimen"/>
+      <short value="Identifier for the source specimen from which this specimen was derived."/>
+      <definition value="Identifier for the source specimen from which this specimen was derived."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.sourceSpecimen"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Specimen-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.receivedTime">
+      <path value="cimi-entity-Specimen-model.receivedTime"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2735124"/>
+      </code>
+      <short value="Time the item was delivered to, or accepted by, the receiving facility or unit."/>
+      <definition value="Time the item was delivered to, or accepted by, the receiving facility or unit."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.receivedTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenContainer">
+      <path value="cimi-entity-Specimen-model.specimenContainer"/>
+      <short value="Direct container of specimen (tube&amp;#47;slide, etc.)"/>
+      <definition value="Direct container of specimen (tube&amp;#47;slide, etc.)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenContainer"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenContainer-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenTreatment">
+      <path value="cimi-entity-Specimen-model.specimenTreatment"/>
+      <short value="Treatment performed on the specimen."/>
+      <definition value="Treatment performed on the specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenTreatment"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenTreatment-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.handlingRisk">
+      <path value="cimi-entity-Specimen-model.handlingRisk"/>
+      <short value="Cautions on the handling of this specimen."/>
+      <definition value="Cautions on the handling of this specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.handlingRisk"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specialHandling">
+      <path value="cimi-entity-Specimen-model.specialHandling"/>
+      <short value="Information about the proper handling of the specimen."/>
+      <definition value="Information about the proper handling of the specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specialHandling"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Specimen-model">
+      <path value="cimi-entity-Specimen-model"/>
+      <definition value="A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.accessionIdentifier">
+      <path value="cimi-entity-Specimen-model.accessionIdentifier"/>
+      <short value="Identifier assigned by the lab"/>
+      <definition value="Identifier assigned by the lab"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.accessionIdentifier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-AccessionIdentifier-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenStatus">
+      <path value="cimi-entity-Specimen-model.specimenStatus"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0449438"/>
+      </code>
+      <short value="State of the specimen, such as obtained, processed, used."/>
+      <definition value="State of the specimen, such as obtained, processed, used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/specimen-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Specimen-model.type">
+      <path value="cimi-entity-Specimen-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v2-0487"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionSource">
+      <path value="cimi-entity-Specimen-model.collectionSource"/>
+      <short value="The person or thing the sample was obtained from."/>
+      <definition value="The person or thing the sample was obtained from."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionSource"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Patient-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Group-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Device-model"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionTime">
+      <path value="cimi-entity-Specimen-model.collectionTime"/>
+      <short value="When the sample was obtained, as a specific time or time period."/>
+      <definition value="When the sample was obtained, as a specific time or time period."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionMethod">
+      <path value="cimi-entity-Specimen-model.collectionMethod"/>
+      <short value="How the specimen was obtained."/>
+      <definition value="How the specimen was obtained."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.collectionSite">
+      <path value="cimi-entity-Specimen-model.collectionSite"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72369-2"/>
+      </code>
+      <short value="The body site where specimen was collected"/>
+      <definition value="The body site where specimen was collected"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.collectionSite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.sourceSpecimen">
+      <path value="cimi-entity-Specimen-model.sourceSpecimen"/>
+      <short value="Identifier for the source specimen from which this specimen was derived."/>
+      <definition value="Identifier for the source specimen from which this specimen was derived."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.sourceSpecimen"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Specimen-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.receivedTime">
+      <path value="cimi-entity-Specimen-model.receivedTime"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2735124"/>
+      </code>
+      <short value="Time the item was delivered to, or accepted by, the receiving facility or unit."/>
+      <definition value="Time the item was delivered to, or accepted by, the receiving facility or unit."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.receivedTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenContainer">
+      <path value="cimi-entity-Specimen-model.specimenContainer"/>
+      <short value="Direct container of specimen (tube&amp;#47;slide, etc.)"/>
+      <definition value="Direct container of specimen (tube&amp;#47;slide, etc.)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenContainer"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenContainer-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specimenTreatment">
+      <path value="cimi-entity-Specimen-model.specimenTreatment"/>
+      <short value="Treatment performed on the specimen."/>
+      <definition value="Treatment performed on the specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specimenTreatment"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenTreatment-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.handlingRisk">
+      <path value="cimi-entity-Specimen-model.handlingRisk"/>
+      <short value="Cautions on the handling of this specimen."/>
+      <definition value="Cautions on the handling of this specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.handlingRisk"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Specimen-model.specialHandling">
+      <path value="cimi-entity-Specimen-model.specialHandling"/>
+      <short value="Information about the proper handling of the specimen."/>
+      <definition value="Information about the proper handling of the specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Specimen-model.specialHandling"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

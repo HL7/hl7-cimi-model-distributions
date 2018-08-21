@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cimi-statement-DeltaFlagVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW DeltaFlagVS ValueSet</b></p>\n<p>Indicators for degree of change (delta) from the last or previous measurement.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-DeltaFlagVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.DeltaFlagVS"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "DeltaFlagVS",
+  "title": "SW DeltaFlagVS ValueSet",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Indicators for degree of change (delta) from the last or previous measurement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "263703002"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Qualification-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Qualification Logical Model</b></p>
+  <p>A right to practice medicine obtained by training and certification.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Qualification-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Qualification"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="QualificationModel"/>
+  <title value="SW Qualification Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A right to practice medicine obtained by training and certification."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C0037778"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Qualification-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Qualification-model">
+      <path value="cimi-entity-Qualification-model"/>
+      <definition value="A right to practice medicine obtained by training and certification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Qualification-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Qualification-model.type">
+      <path value="cimi-entity-Qualification-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Qualification-model.effectiveTimePeriod">
+      <path value="cimi-entity-Qualification-model.effectiveTimePeriod"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2985763"/>
+      </code>
+      <short value="The date and time span for which something is active, valid, or in force."/>
+      <definition value="The date and time span for which something is active, valid, or in force."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.effectiveTimePeriod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Qualification-model.issuer">
+      <path value="cimi-entity-Qualification-model.issuer"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1561598"/>
+      </code>
+      <short value="An organization who issues a qualification, identifier, or license."/>
+      <definition value="An organization who issues a qualification, identifier, or license."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.issuer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Qualification-model">
+      <path value="cimi-entity-Qualification-model"/>
+      <definition value="A right to practice medicine obtained by training and certification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Qualification-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Qualification-model.type">
+      <path value="cimi-entity-Qualification-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Qualification-model.effectiveTimePeriod">
+      <path value="cimi-entity-Qualification-model.effectiveTimePeriod"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2985763"/>
+      </code>
+      <short value="The date and time span for which something is active, valid, or in force."/>
+      <definition value="The date and time span for which something is active, valid, or in force."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.effectiveTimePeriod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Qualification-model.issuer">
+      <path value="cimi-entity-Qualification-model.issuer"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1561598"/>
+      </code>
+      <short value="An organization who issues a qualification, identifier, or license."/>
+      <definition value="An organization who issues a qualification, identifier, or license."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Qualification-model.issuer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

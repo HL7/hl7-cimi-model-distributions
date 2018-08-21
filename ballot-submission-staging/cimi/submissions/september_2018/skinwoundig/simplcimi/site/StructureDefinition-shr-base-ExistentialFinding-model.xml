@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-ExistentialFinding-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW ExistentialFinding Logical Model</b></p>
+  <p>An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.ExistentialFinding"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ExistentialFindingModel"/>
+  <title value="SW ExistentialFinding Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-ExistentialFinding-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-ExistentialFinding-model">
+      <path value="shr-base-ExistentialFinding-model"/>
+      <definition value="An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.findingStatus">
+      <path value="shr-base-ExistentialFinding-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.relevantTime">
+      <path value="shr-base-ExistentialFinding-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.findingMethod">
+      <path value="shr-base-ExistentialFinding-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.presentOrAbsent">
+      <path value="shr-base-ExistentialFinding-model.presentOrAbsent"/>
+      <short value="Whether the object is present or absent, exists or does not exist."/>
+      <definition value="Whether the object is present or absent, exists or does not exist."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.presentOrAbsent"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-ExistentialFinding-model">
+      <path value="shr-base-ExistentialFinding-model"/>
+      <definition value="An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.findingStatus">
+      <path value="shr-base-ExistentialFinding-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.relevantTime">
+      <path value="shr-base-ExistentialFinding-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.findingMethod">
+      <path value="shr-base-ExistentialFinding-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-ExistentialFinding-model.presentOrAbsent">
+      <path value="shr-base-ExistentialFinding-model.presentOrAbsent"/>
+      <short value="Whether the object is present or absent, exists or does not exist."/>
+      <definition value="Whether the object is present or absent, exists or does not exist."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-ExistentialFinding-model.presentOrAbsent"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

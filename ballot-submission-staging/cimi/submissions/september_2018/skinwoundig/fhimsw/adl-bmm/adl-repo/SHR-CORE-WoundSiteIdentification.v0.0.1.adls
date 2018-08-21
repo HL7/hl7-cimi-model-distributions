@@ -1,0 +1,42 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-WoundSiteIdentification.wound_site_identification.v0.0.1
+
+specialize
+  SHR-CORE-ObservationStatement.observation_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Sean Muir">
+    ["organisation"] = <"JP Systems">
+    ["email"] = <"">
+    ["date"] = <"2018-8-21">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SkinAndWound">
+      use = <"SkinAndWound">
+      keywords = <"fsw","wound site identification">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Jay Lyle <>, Galen Mulrooney <>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  WoundSiteIdentification[id1.1.1.1]
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1"] = <
+        text = <"WoundSiteIdentification">
+        description = <"LOINC 72369-2 (Body site identification panel)">
+      >
+    >
+  >

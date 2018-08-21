@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Package-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Package Logical Model</b></p>\n  <p>The kind of container the medication comes in.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Package-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Package"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PackageModel",
+  "title": "SW Package Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The kind of container the medication comes in.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Package-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Package-model",
+        "path": "cimi-entity-Package-model",
+        "definition": "The kind of container the medication comes in.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Package-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Package-model.value",
+        "path": "cimi-entity-Package-model.value",
+        "short": "Code representing the kind of container the medication comes in.",
+        "definition": "Code representing the kind of container the medication comes in.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Package-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Package-model",
+        "path": "cimi-entity-Package-model",
+        "definition": "The kind of container the medication comes in.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Package-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Package-model.value",
+        "path": "cimi-entity-Package-model.value",
+        "short": "Code representing the kind of container the medication comes in.",
+        "definition": "Code representing the kind of container the medication comes in.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Package-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

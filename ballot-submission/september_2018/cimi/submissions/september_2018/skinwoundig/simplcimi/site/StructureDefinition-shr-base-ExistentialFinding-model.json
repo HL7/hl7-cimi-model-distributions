@@ -1,0 +1,273 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-ExistentialFinding-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ExistentialFinding Logical Model</b></p>\n  <p>An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.ExistentialFinding"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ExistentialFindingModel",
+  "title": "SW ExistentialFinding Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-ExistentialFinding-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-ExistentialFinding-model",
+        "path": "shr-base-ExistentialFinding-model",
+        "definition": "An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.findingStatus",
+        "path": "shr-base-ExistentialFinding-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.relevantTime",
+        "path": "shr-base-ExistentialFinding-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.findingMethod",
+        "path": "shr-base-ExistentialFinding-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.presentOrAbsent",
+        "path": "shr-base-ExistentialFinding-model.presentOrAbsent",
+        "short": "Whether the object is present or absent, exists or does not exist.",
+        "definition": "Whether the object is present or absent, exists or does not exist.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.presentOrAbsent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-ExistentialFinding-model",
+        "path": "shr-base-ExistentialFinding-model",
+        "definition": "An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.findingStatus",
+        "path": "shr-base-ExistentialFinding-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.relevantTime",
+        "path": "shr-base-ExistentialFinding-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.findingMethod",
+        "path": "shr-base-ExistentialFinding-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-ExistentialFinding-model.presentOrAbsent",
+        "path": "shr-base-ExistentialFinding-model.presentOrAbsent",
+        "short": "Whether the object is present or absent, exists or does not exist.",
+        "definition": "Whether the object is present or absent, exists or does not exist.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-ExistentialFinding-model.presentOrAbsent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"
+          }
+        }
+      }
+    ]
+  }
+}

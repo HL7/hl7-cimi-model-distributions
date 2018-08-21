@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-datatypes-EmbeddedContent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW EmbeddedContent Logical Model</b></p>\n  <p>Abstract class defining the common metadata of all types of encapsulated data, such as images.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-EmbeddedContent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.datatypes.EmbeddedContent"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "EmbeddedContentModel",
+  "title": "SW EmbeddedContent Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Abstract class defining the common metadata of all types of encapsulated data, such as images.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-datatypes-EmbeddedContent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-datatypes-EmbeddedContent-model",
+        "path": "cimi-datatypes-EmbeddedContent-model",
+        "definition": "Abstract class defining the common metadata of all types of encapsulated data, such as images.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-EmbeddedContent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-datatypes-EmbeddedContent-model",
+        "path": "cimi-datatypes-EmbeddedContent-model",
+        "definition": "Abstract class defining the common metadata of all types of encapsulated data, such as images.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-datatypes-EmbeddedContent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

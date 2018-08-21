@@ -1,0 +1,132 @@
+-- Basic Metamodel Syntax Version
+bmm_version = <"2.1">
+
+-- ----------------------------------
+-- schema identification
+-- (schema_id computed as <rm_publisher>_<schema_name>_<rm_release>)
+-- ----------------------------------
+rm_publisher = <"SHR">
+schema_name = <"RM_Primitives">
+rm_release = <"0.0.1">
+
+-- ----------------------------------
+-- schema documentation
+-- ----------------------------------
+schema_revision = <"Mon Apr 09 21:11:17 PDT 2018">
+schema_lifecycle_state = <"Informative">
+schema_description = <"SHR_RM_Primitives.v0.0.1.mdzip - Schema generated from UML">
+
+
+-- ----------------------------------
+-- archetyping
+-- ----------------------------------
+archetype_rm_closure_packages = <"SHR_Primitives.Primitives">
+packages = <
+	["SHR_Primitives"] = <
+		name = <"SHR_Primitives">
+		packages = <
+			["Primitives"] = <
+				name = <"Primitives">
+				classes = <"BOOLEAN", "INTEGER", "STRING", "DECIMAL", "URI", "BASE64BINARY", "INSTANT", "DATE", "DATETIME", "TIME", "CODE", "OID", "ID", "MARKDOWN", "UNSIGNEDINT", "POSITIVEINT", "XHTML", "TerminologyCode">
+			>
+		>
+	>
+>
+class_definitions = <
+    ["BOOLEAN"] = <
+        documentation = <"BOOLEAN">
+        name = <"BOOLEAN">
+    >
+    ["INTEGER"] = <
+        documentation = <"INTEGER">
+        name = <"INTEGER">
+    >
+    ["STRING"] = <
+        documentation = <"STRING">
+        name = <"STRING">
+    >
+    ["DECIMAL"] = <
+        documentation = <"DECIMAL">
+        name = <"DECIMAL">
+    >
+    ["URI"] = <
+        documentation = <"URI">
+        name = <"URI">
+    >
+    ["BASE64BINARY"] = <
+        documentation = <"BASE64BINARY">
+        name = <"BASE64BINARY">
+    >
+    ["INSTANT"] = <
+        documentation = <"INSTANT">
+        name = <"INSTANT">
+    >
+    ["DATE"] = <
+        documentation = <"DATE">
+        name = <"DATE">
+    >
+    ["DATETIME"] = <
+        documentation = <"DATETIME">
+        name = <"DATETIME">
+    >
+    ["TIME"] = <
+        documentation = <"TIME">
+        name = <"TIME">
+    >
+    ["CODE"] = <
+        documentation = <"CODE">
+        name = <"CODE">
+    >
+    ["OID"] = <
+        documentation = <"OID">
+        name = <"OID">
+    >
+    ["ID"] = <
+        documentation = <"ID">
+        name = <"ID">
+    >
+    ["MARKDOWN"] = <
+        documentation = <"MARKDOWN">
+        name = <"MARKDOWN">
+    >
+    ["UNSIGNEDINT"] = <
+        documentation = <"UNSIGNEDINT">
+        name = <"UNSIGNEDINT">
+    >
+    ["POSITIVEINT"] = <
+        documentation = <"POSITIVEINT">
+        name = <"POSITIVEINT">
+    >
+    ["XHTML"] = <
+        documentation = <"XHTML">
+        name = <"XHTML">
+    >
+    ["TerminologyCode"] = <
+		documentation = <"The representation of a conceptual idea represented by an ontology or controlled vocabulary. ">
+		name = <"TerminologyCode">
+		properties = <
+			["terminologyId"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"An identifier for the terminology system that forms the name space for the code string. E.g., SNOMED CT, LOINC, etc...">
+				name = <"terminologyId">
+				type = <"STRING">
+				is_mandatory = <True>
+			>
+			["terminologyVersion"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The version of the terminology system.">
+				name = <"terminologyVersion">
+				type = <"STRING">
+			>
+			["codeString"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The unique concept identifier in the terminology system name space.">
+				name = <"codeString">
+				type = <"STRING">
+				is_mandatory = <True>
+			>
+			["uri"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The unique resource identifier for this concept reference.">
+				name = <"URI">
+				type = <"URI">
+			>
+		>
+	>
+>

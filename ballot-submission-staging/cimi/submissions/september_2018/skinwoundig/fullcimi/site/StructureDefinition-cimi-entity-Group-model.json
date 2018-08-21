@@ -1,0 +1,437 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Group-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Group Logical Model</b></p>\n  <p>A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Group-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Group"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "GroupModel",
+  "title": "SW Group Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0441833"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Group-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Group-model",
+        "path": "cimi-entity-Group-model",
+        "definition": "A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.activeFlag",
+        "path": "cimi-entity-Group-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.activeFlag",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.type",
+        "path": "cimi-entity-Group-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/group-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Group-model.title",
+        "path": "cimi-entity-Group-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.actual",
+        "path": "cimi-entity-Group-model.actual",
+        "short": "True if the group is an actual group (as opposed to definitional).",
+        "definition": "True if the group is an actual group (as opposed to definitional).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.actual",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.groupCharacteristic",
+        "path": "cimi-entity-Group-model.groupCharacteristic",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0599755"
+          }
+        ],
+        "short": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model.groupCharacteristic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-GroupCharacteristic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.member",
+        "path": "cimi-entity-Group-model.member",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0682343",
+            "display": "Member of Target Group"
+          }
+        ],
+        "short": "A person or entity in a group.",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model.member",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Member-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.count",
+        "path": "cimi-entity-Group-model.count",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0750480"
+          }
+        ],
+        "short": "The number of items (0 or more), as an integer.",
+        "definition": "The number of items (0 or more), as an integer.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.count",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Group-model",
+        "path": "cimi-entity-Group-model",
+        "definition": "A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.activeFlag",
+        "path": "cimi-entity-Group-model.activeFlag",
+        "short": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.activeFlag",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.type",
+        "path": "cimi-entity-Group-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/group-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Group-model.title",
+        "path": "cimi-entity-Group-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.actual",
+        "path": "cimi-entity-Group-model.actual",
+        "short": "True if the group is an actual group (as opposed to definitional).",
+        "definition": "True if the group is an actual group (as opposed to definitional).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.actual",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.groupCharacteristic",
+        "path": "cimi-entity-Group-model.groupCharacteristic",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0599755"
+          }
+        ],
+        "short": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model.groupCharacteristic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-GroupCharacteristic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.member",
+        "path": "cimi-entity-Group-model.member",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0682343",
+            "display": "Member of Target Group"
+          }
+        ],
+        "short": "A person or entity in a group.",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Group-model.member",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Member-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Group-model.count",
+        "path": "cimi-entity-Group-model.count",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0750480"
+          }
+        ],
+        "short": "The number of items (0 or more), as an integer.",
+        "definition": "The number of items (0 or more), as an integer.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Group-model.count",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

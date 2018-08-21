@@ -1,0 +1,129 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-encounter-EncounterType-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW EncounterType Logical Model</b></p>\n  <p>Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-EncounterType-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.encounter.EncounterType"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "EncounterTypeModel",
+  "title": "SW EncounterType Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-encounter-EncounterType-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-encounter-EncounterType-model",
+        "path": "cimi-encounter-EncounterType-model",
+        "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-EncounterType-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-EncounterType-model.value",
+        "path": "cimi-encounter-EncounterType-model.value",
+        "short": "Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "definition": "Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-EncounterType-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-encounter-EncounterType-model",
+        "path": "cimi-encounter-EncounterType-model",
+        "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-EncounterType-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-EncounterType-model.value",
+        "path": "cimi-encounter-EncounterType-model.value",
+        "short": "Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "definition": "Code representing specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-EncounterType-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+          }
+        }
+      }
+    ]
+  }
+}

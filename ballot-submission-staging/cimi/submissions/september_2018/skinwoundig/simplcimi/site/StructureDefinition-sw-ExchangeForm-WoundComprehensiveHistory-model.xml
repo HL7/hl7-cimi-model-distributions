@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW ExchangeForm-WoundComprehensiveHistory Logical Model</b></p>
+  <p>A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.ExchangeForm-WoundComprehensiveHistory"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="ExchangeForm-WoundComprehensiveHistoryModel"/>
+  <title value="SW ExchangeForm-WoundComprehensiveHistory Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+      <definition value="A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.subject">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.subject"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="416462003"/>
+        <display value="Wound (disorder)"/>
+      </code>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system"/>
+      <short value="Identity of the terminology system"/>
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code."/>
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7&#39;s list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously."/>
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://loinc.org"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystem"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version"/>
+      <short value="Version of the system - if relevant"/>
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged."/>
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.version"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystemVersion"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code"/>
+      <short value="Symbol in syntax defined by the system"/>
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
+      <requirements value="Need to refer to a particular code in the system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.code"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="39135-9"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display"/>
+      <short value="Representation defined by the system"/>
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.display"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.2 - but note this is not well followed"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CV.displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected"/>
+      <short value="If this coding was chosen directly by the user"/>
+      <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)."/>
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly &#39;directly chosen&#39; implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."/>
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.userSelected"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Sometimes implied by being first"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CD.codingRationale"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72300-7"/>
+      </code>
+      <short value="The type of wound, for example, abrasion or laceration."/>
+      <definition value="The type of wound, for example, abrasion or laceration."/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="11373-8"/>
+        <display value="InjuryCause"/>
+      </code>
+      <short value="The source or key factor in the formation or acquisition of the wound."/>
+      <definition value="The source or key factor in the formation or acquisition of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39111-0"/>
+      </code>
+      <short value="Body location of a wound."/>
+      <definition value="Body location of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+      </code>
+      <short value="Whether the condition was present when the patient was admitted."/>
+      <definition value="Whether the condition was present when the patient was admitted."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="88878-4"/>
+      </code>
+      <short value="The end, remission or resolution of a disease."/>
+      <definition value="The end, remission or resolution of a disease."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation"/>
+      <code>
+        <system value="urn:tbd"/>
+        <code value="TBD"/>
+      </code>
+      <short value="Is the wound associated with a device or pressure point?"/>
+      <definition value="Is the wound associated with a device or pressure point?"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89252-1"/>
+        <display value="Episode of Wound"/>
+      </code>
+      <short value="Whether the wound is initial or recurrent."/>
+      <definition value="Whether the wound is initial or recurrent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="80338-7"/>
+      </code>
+      <short value="Overall assessement of whether the wound is within normal parameters."/>
+      <definition value="Overall assessement of whether the wound is within normal parameters."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72170-4"/>
+      </code>
+      <short value="A photographic documentation of a condition, location, person, etc..."/>
+      <definition value="A photographic documentation of a condition, location, person, etc..."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89253-9"/>
+      </code>
+      <short value="Whether a condition is improving, worsening, stable, or resolved."/>
+      <definition value="Whether a condition is improving, worsening, stable, or resolved."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72301-5"/>
+      </code>
+      <short value="A description of the skin around the wound (periwound)."/>
+      <definition value="A description of the skin around the wound (periwound)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89250-5"/>
+      </code>
+      <short value="Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound."/>
+      <definition value="Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72371-8"/>
+      </code>
+      <short value="Appearance of wound base (bed)"/>
+      <definition value="Appearance of wound base (bed)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72370-0"/>
+      </code>
+      <short value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <definition value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39132-6"/>
+      </code>
+      <short value="Color of a portion or entire wound base (bed)."/>
+      <definition value="Color of a portion or entire wound base (bed)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89255-4"/>
+      </code>
+      <short value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <definition value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89256-2"/>
+      </code>
+      <short value="The state of the tissue at the edge of the wound."/>
+      <definition value="The state of the tissue at the edge of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39133-4"/>
+      </code>
+      <short value="Color of Wound edge."/>
+      <definition value="Color of Wound edge."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39125-0"/>
+      </code>
+      <short value="Width of the wound (perpendicular to longest dimension)."/>
+      <definition value="Width of the wound (perpendicular to longest dimension)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39127-6"/>
+      </code>
+      <short value="Depth of the wound."/>
+      <definition value="Depth of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39126-8"/>
+      </code>
+      <short value="Length of the wound (longest dimension)."/>
+      <definition value="Length of the wound (longest dimension)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89260-4"/>
+      </code>
+      <short value="Area of the wound."/>
+      <definition value="Area of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39116-9"/>
+      </code>
+      <short value="Drainage amount of wound"/>
+      <definition value="Drainage amount of wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39122-7"/>
+      </code>
+      <short value="Appearance of exudate from wound"/>
+      <definition value="Appearance of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72289-2"/>
+      </code>
+      <short value="Color of exudate from wound"/>
+      <definition value="Color of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72290-0"/>
+      </code>
+      <short value="Appearance of exudate from wound"/>
+      <definition value="Appearance of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72288-4"/>
+      </code>
+      <short value="Odor of exudate from wound"/>
+      <definition value="Odor of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="1561000124108"/>
+        <display value="Wound tunneling (observable entity)"/>
+      </code>
+      <short value="The presence of a wound tunnel."/>
+      <definition value="The presence of a wound tunnel."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72296-7"/>
+      </code>
+      <short value="The length of a wound tunnel, in cm."/>
+      <definition value="The length of a wound tunnel, in cm."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72297-5"/>
+      </code>
+      <short value="Clock position of wound tunnel"/>
+      <definition value="Clock position of wound tunnel"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="454341000124104"/>
+        <display value="Wound undermining (observable entity)"/>
+      </code>
+      <short value="The presence of wound undermining."/>
+      <definition value="The presence of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72293-4"/>
+      </code>
+      <short value="Length of wound undermining."/>
+      <definition value="Length of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72294-2"/>
+      </code>
+      <short value="Clock position of wound undermining"/>
+      <definition value="Clock position of wound undermining"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+      <definition value="A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.subject">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.subject"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="416462003"/>
+        <display value="Wound (disorder)"/>
+      </code>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.system"/>
+      <short value="Identity of the terminology system"/>
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code."/>
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7&#39;s list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously."/>
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://loinc.org"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystem"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.version"/>
+      <short value="Version of the system - if relevant"/>
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged."/>
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.version"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystemVersion"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.code"/>
+      <short value="Symbol in syntax defined by the system"/>
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
+      <requirements value="Need to refer to a particular code in the system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.code"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="39135-9"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.display"/>
+      <short value="Representation defined by the system"/>
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.display"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.2 - but note this is not well followed"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CV.displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.typeCode.userSelected"/>
+      <short value="If this coding was chosen directly by the user"/>
+      <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)."/>
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly &#39;directly chosen&#39; implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."/>
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.userSelected"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Sometimes implied by being first"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CD.codingRationale"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]"/>
+      </mapping>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72300-7"/>
+      </code>
+      <short value="The type of wound, for example, abrasion or laceration."/>
+      <definition value="The type of wound, for example, abrasion or laceration."/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundType"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="11373-8"/>
+        <display value="InjuryCause"/>
+      </code>
+      <short value="The source or key factor in the formation or acquisition of the wound."/>
+      <definition value="The source or key factor in the formation or acquisition of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTypeEtiology"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39111-0"/>
+      </code>
+      <short value="Body location of a wound."/>
+      <definition value="Body location of a wound."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLocationObservation"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="85585-8"/>
+      </code>
+      <short value="The beginning or first appearance of a mental or physical disorder."/>
+      <definition value="The beginning or first appearance of a mental or physical disorder."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfOnset"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89251-3"/>
+      </code>
+      <short value="Whether the condition was present when the patient was admitted."/>
+      <definition value="Whether the condition was present when the patient was admitted."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.conditionPresentOnAdmission"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="88878-4"/>
+      </code>
+      <short value="The end, remission or resolution of a disease."/>
+      <definition value="The end, remission or resolution of a disease."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.timeOfAbatement"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation"/>
+      <code>
+        <system value="urn:tbd"/>
+        <code value="TBD"/>
+      </code>
+      <short value="Is the wound associated with a device or pressure point?"/>
+      <definition value="Is the wound associated with a device or pressure point?"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPressureUlcerAssociation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89252-1"/>
+        <display value="Episode of Wound"/>
+      </code>
+      <short value="Whether the wound is initial or recurrent."/>
+      <definition value="Whether the wound is initial or recurrent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEpisode"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="80338-7"/>
+      </code>
+      <short value="Overall assessement of whether the wound is within normal parameters."/>
+      <definition value="Overall assessement of whether the wound is within normal parameters."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundAssessmentInterpretation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72170-4"/>
+      </code>
+      <short value="A photographic documentation of a condition, location, person, etc..."/>
+      <definition value="A photographic documentation of a condition, location, person, etc..."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.photographicImage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89253-9"/>
+      </code>
+      <short value="Whether a condition is improving, worsening, stable, or resolved."/>
+      <definition value="Whether a condition is improving, worsening, stable, or resolved."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTrend"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72301-5"/>
+      </code>
+      <short value="A description of the skin around the wound (periwound)."/>
+      <definition value="A description of the skin around the wound (periwound)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundPeriwoundDescription"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89250-5"/>
+      </code>
+      <short value="Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound."/>
+      <definition value="Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundVisibleInternalStructure"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72371-8"/>
+      </code>
+      <short value="Appearance of wound base (bed)"/>
+      <definition value="Appearance of wound base (bed)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72370-0"/>
+      </code>
+      <short value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <definition value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedAppearancePercentage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39132-6"/>
+      </code>
+      <short value="Color of a portion or entire wound base (bed)."/>
+      <definition value="Color of a portion or entire wound base (bed)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89255-4"/>
+      </code>
+      <short value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <definition value="Wound bed area identified by color/&#x200B;Area of wound bed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundBedColorPercentage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89256-2"/>
+      </code>
+      <short value="The state of the tissue at the edge of the wound."/>
+      <definition value="The state of the tissue at the edge of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeDescription"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39133-4"/>
+      </code>
+      <short value="Color of Wound edge."/>
+      <definition value="Color of Wound edge."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundEdgeColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39125-0"/>
+      </code>
+      <short value="Width of the wound (perpendicular to longest dimension)."/>
+      <definition value="Width of the wound (perpendicular to longest dimension)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundWidth"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39127-6"/>
+      </code>
+      <short value="Depth of the wound."/>
+      <definition value="Depth of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundDepth"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39126-8"/>
+      </code>
+      <short value="Length of the wound (longest dimension)."/>
+      <definition value="Length of the wound (longest dimension)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="89260-4"/>
+      </code>
+      <short value="Area of the wound."/>
+      <definition value="Area of the wound."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundArea"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39116-9"/>
+      </code>
+      <short value="Drainage amount of wound"/>
+      <definition value="Drainage amount of wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAmount"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="39122-7"/>
+      </code>
+      <short value="Appearance of exudate from wound"/>
+      <definition value="Appearance of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateVolume"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72289-2"/>
+      </code>
+      <short value="Color of exudate from wound"/>
+      <definition value="Color of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateColor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72290-0"/>
+      </code>
+      <short value="Appearance of exudate from wound"/>
+      <definition value="Appearance of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateAppearance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72288-4"/>
+      </code>
+      <short value="Odor of exudate from wound"/>
+      <definition value="Odor of exudate from wound"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundExudateOdor"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="1561000124108"/>
+        <display value="Wound tunneling (observable entity)"/>
+      </code>
+      <short value="The presence of a wound tunnel."/>
+      <definition value="The presence of a wound tunnel."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnel"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72296-7"/>
+      </code>
+      <short value="The length of a wound tunnel, in cm."/>
+      <definition value="The length of a wound tunnel, in cm."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72297-5"/>
+      </code>
+      <short value="Clock position of wound tunnel"/>
+      <definition value="Clock position of wound tunnel"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundTunnelClockDirection"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="454341000124104"/>
+        <display value="Wound undermining (observable entity)"/>
+      </code>
+      <short value="The presence of wound undermining."/>
+      <definition value="The presence of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUndermining"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72293-4"/>
+      </code>
+      <short value="Length of wound undermining."/>
+      <definition value="Length of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingLength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection">
+      <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72294-2"/>
+      </code>
+      <short value="Clock position of wound undermining"/>
+      <definition value="Clock position of wound undermining"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-ExchangeForm-WoundComprehensiveHistory-model.statement.woundUnderminingClockDirection"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

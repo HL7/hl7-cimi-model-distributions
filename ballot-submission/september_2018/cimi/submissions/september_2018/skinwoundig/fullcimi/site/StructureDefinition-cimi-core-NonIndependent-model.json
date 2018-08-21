@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-NonIndependent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW NonIndependent Logical Model</b></p>\n  <p>Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-NonIndependent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.NonIndependent"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "NonIndependentModel",
+  "title": "SW NonIndependent Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-NonIndependent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-NonIndependent-model",
+        "path": "cimi-core-NonIndependent-model",
+        "definition": "Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-NonIndependent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-NonIndependent-model",
+        "path": "cimi-core-NonIndependent-model",
+        "definition": "Parent for classes in CIMI that cannot stand alone. These reusable building blocks/data elements can be used to create classes by composition.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-NonIndependent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

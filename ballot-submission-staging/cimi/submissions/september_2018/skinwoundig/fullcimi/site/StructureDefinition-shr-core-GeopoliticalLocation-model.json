@@ -1,0 +1,81 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-GeopoliticalLocation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW GeopoliticalLocation Logical Model</b></p>\n  <p>The countries of the world and major geopolitical subregions, such as US states.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-GeopoliticalLocation-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.core.GeopoliticalLocation"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "GeopoliticalLocationModel",
+  "title": "SW GeopoliticalLocation Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The countries of the world and major geopolitical subregions, such as US states.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0017446"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-GeopoliticalLocation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-GeopoliticalLocation-model",
+        "path": "shr-core-GeopoliticalLocation-model",
+        "definition": "The countries of the world and major geopolitical subregions, such as US states.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-GeopoliticalLocation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-GeopoliticalLocation-model",
+        "path": "shr-core-GeopoliticalLocation-model",
+        "definition": "The countries of the world and major geopolitical subregions, such as US states.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-GeopoliticalLocation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

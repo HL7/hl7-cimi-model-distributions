@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundBedAppearanceCluster-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundBedAppearanceCluster Logical Model</b></p>
+  <p>The appearance of a percentage area of the wound bed (base</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundBedAppearanceCluster"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundBedAppearanceClusterModel"/>
+  <title value="SW WoundBedAppearanceCluster Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The appearance of a percentage area of the wound bed (base"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundBedAppearanceCluster-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundBedAppearanceCluster-model">
+      <path value="sw-WoundBedAppearanceCluster-model"/>
+      <definition value="The appearance of a percentage area of the wound bed (base"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.typeCode">
+      <path value="sw-WoundBedAppearanceCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement">
+      <path value="sw-WoundBedAppearanceCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance">
+      <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72371-8"/>
+      </code>
+      <short value="Appearance of wound base (bed)"/>
+      <definition value="Appearance of wound base (bed)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage">
+      <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72370-0"/>
+      </code>
+      <short value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <definition value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundBedAppearanceCluster-model">
+      <path value="sw-WoundBedAppearanceCluster-model"/>
+      <definition value="The appearance of a percentage area of the wound bed (base"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.typeCode">
+      <path value="sw-WoundBedAppearanceCluster-model.typeCode"/>
+      <short value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.typeCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement">
+      <path value="sw-WoundBedAppearanceCluster-model.statement"/>
+      <short value="Base class for all types of clinical statements."/>
+      <definition value="Base class for all types of clinical statements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance">
+      <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72371-8"/>
+      </code>
+      <short value="Appearance of wound base (bed)"/>
+      <definition value="Appearance of wound base (bed)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage">
+      <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage"/>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="72370-0"/>
+      </code>
+      <short value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <definition value="Area of wound bed portion appearance/Entire &#x200B;Area of wound bed -- Linked to a wound bed appearance"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

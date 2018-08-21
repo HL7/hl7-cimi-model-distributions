@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundAnatomicalLocation-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundAnatomicalLocation Logical Model</b></p>
+  <p/>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAnatomicalLocation-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundAnatomicalLocation"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundAnatomicalLocationModel"/>
+  <title value="SW WoundAnatomicalLocation Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <keyword>
+    <system value="http://loinc.org"/>
+    <code value="39111-0"/>
+    <display value="Body Site"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundAnatomicalLocation-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundAnatomicalLocation-model">
+      <path value="sw-WoundAnatomicalLocation-model"/>
+      <short value="WoundAnatomicalLocation"/>
+      <definition value="WoundAnatomicalLocation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.value">
+      <path value="sw-WoundAnatomicalLocation-model.value"/>
+      <short value="Code representing the logical model instance"/>
+      <definition value="Code representing the logical model instance"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.laterality">
+      <path value="sw-WoundAnatomicalLocation-model.laterality"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0925205"/>
+        <display value="Anatomical laterality"/>
+      </code>
+      <short value="Anatomical location or specimen further detailing the side(s) of interest."/>
+      <definition value="Anatomical location or specimen further detailing the side(s) of interest."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.laterality"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/bodysite-laterality"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.anatomicalDirection">
+      <path value="sw-WoundAnatomicalLocation-model.anatomicalDirection"/>
+      <code>
+        <system value="https://evs.nci.nih.gov/ftp1/CDISC/SDTM/"/>
+        <code value="C99074"/>
+      </code>
+      <short value="Anatomical location or specimen further detailing directionality."/>
+      <definition value="Anatomical location or specimen further detailing directionality."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.anatomicalDirection"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundAnatomicalLocation-model">
+      <path value="sw-WoundAnatomicalLocation-model"/>
+      <short value="WoundAnatomicalLocation"/>
+      <definition value="WoundAnatomicalLocation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.value">
+      <path value="sw-WoundAnatomicalLocation-model.value"/>
+      <short value="Code representing the logical model instance"/>
+      <definition value="Code representing the logical model instance"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.laterality">
+      <path value="sw-WoundAnatomicalLocation-model.laterality"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0925205"/>
+        <display value="Anatomical laterality"/>
+      </code>
+      <short value="Anatomical location or specimen further detailing the side(s) of interest."/>
+      <definition value="Anatomical location or specimen further detailing the side(s) of interest."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.laterality"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/bodysite-laterality"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundAnatomicalLocation-model.anatomicalDirection">
+      <path value="sw-WoundAnatomicalLocation-model.anatomicalDirection"/>
+      <code>
+        <system value="https://evs.nci.nih.gov/ftp1/CDISC/SDTM/"/>
+        <code value="C99074"/>
+      </code>
+      <short value="Anatomical location or specimen further detailing directionality."/>
+      <definition value="Anatomical location or specimen further detailing directionality."/>
+      <min value="0"/>
+      <max value="0"/>
+      <base>
+        <path value="sw-WoundAnatomicalLocation-model.anatomicalDirection"/>
+        <min value="0"/>
+        <max value="0"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,64 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Practitioner.practitioner.v0.0.1
+
+specialize
+  SHR-CORE-Role.role.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.entity","practitioner">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Practitioner[id1.1.1.1.1] matches {
+    person matches {
+      Person[id0.0.0.0.2]
+    }
+    nationalProviderIdentifier matches {
+      NationalProviderIdentifier[id0.0.0.0.3]
+    }
+    qualification matches {
+      Qualification[id0.0.0.0.4]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1"] = <
+        text = <"Practitioner">
+        description = <"A person who practices a healing art.">
+      >
+      ["id0.0.0.0.2"] = <
+        text = <"Person">
+        description = <"A person relevant to the health or social situation of the subject (including the person of record him or herself).">
+      >
+      ["id0.0.0.0.3"] = <
+        text = <"NationalProviderIdentifier">
+        description = <"A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.">
+      >
+      ["id0.0.0.0.4"] = <
+        text = <"Qualification">
+        description = <"A right to practice medicine obtained by training and certification.">
+      >
+    >
+  >

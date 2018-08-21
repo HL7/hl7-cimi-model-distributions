@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-ExcludeFlag-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ExcludeFlag Logical Model</b></p>\n  <p>If true, exclude the subjects that match the criterion.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-ExcludeFlag-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.ExcludeFlag"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ExcludeFlagModel",
+  "title": "SW ExcludeFlag Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "If true, exclude the subjects that match the criterion.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0680251"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-ExcludeFlag-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-ExcludeFlag-model",
+        "path": "cimi-entity-ExcludeFlag-model",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ExcludeFlag-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ExcludeFlag-model.value",
+        "path": "cimi-entity-ExcludeFlag-model.value",
+        "short": "Boolean representing if true, exclude the subjects that match the criterion.",
+        "definition": "Boolean representing if true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ExcludeFlag-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-ExcludeFlag-model",
+        "path": "cimi-entity-ExcludeFlag-model",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ExcludeFlag-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ExcludeFlag-model.value",
+        "path": "cimi-entity-ExcludeFlag-model.value",
+        "short": "Boolean representing if true, exclude the subjects that match the criterion.",
+        "definition": "Boolean representing if true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ExcludeFlag-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

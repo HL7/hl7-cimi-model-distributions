@@ -1,0 +1,53 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-TimeOfAbatement.time_of_abatement.v0.0.1
+
+specialize
+  SHR-CORE-Observation.observation.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The SHR Core domain contains definitions for a variety of general-purpose elements that are used widely in SHR. These include definitions for coding, expressions of time, quantities, addresses, names, and more.">
+      use = <"The SHR Core domain contains definitions for a variety of general-purpose elements that are used widely in SHR. These include definitions for coding, expressions of time, quantities, addresses, names, and more.">
+      keywords = <"shr.entity","time of abatement">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  TimeOfAbatement[id1.1.1.1] matches {
+    /subject/value matches { Condition[id0.0.0.3] }
+    /resultValue/valueChoiceDATETIME matches { DATETIME[id0.0.0.5] }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1"] = <
+        text = <"TimeOfAbatement">
+        description = <"The end, remission or resolution of a disease.">
+      >
+      ["id0.0.0.3"] = <
+        text = <"Condition">
+        description = <"A disorder of structure or function in a human, animal, or plant, especially one that produces specific signs or symptoms, and is not simply a direct result of physical injury">
+      >
+      ["id0.0.0.5"] = <
+        text = <"DATETIME">
+        description = <"-">
+      >
+    >
+  >

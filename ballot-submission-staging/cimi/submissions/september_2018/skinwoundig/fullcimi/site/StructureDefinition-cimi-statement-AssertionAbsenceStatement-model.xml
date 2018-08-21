@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-AssertionAbsenceStatement-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW AssertionAbsenceStatement Logical Model</b></p>
+  <p>Statement that a finding is absent.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-AssertionAbsenceStatement-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.AssertionAbsenceStatement"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="AssertionAbsenceStatementModel"/>
+  <title value="SW AssertionAbsenceStatement Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Statement that a finding is absent."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-AssertionAbsenceStatement-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-AssertionAbsenceStatement-model">
+      <path value="cimi-statement-AssertionAbsenceStatement-model"/>
+      <definition value="Statement that a finding is absent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.personOfRecord">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.personOfRecord"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.recorded">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.signed">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.additionalText">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.contextCode">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.contextCode"/>
+      <short value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <definition value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.contextCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.statementTopic">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.statementTopic"/>
+      <short value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement."/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.statementTopic"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.encounter">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.encounter"/>
+      <short value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <definition value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.encounter"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.interpretation">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.relevantTime">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.relevantTime"/>
+      <short value="The time or time period that the finding addresses."/>
+      <definition value="The time or time period that the finding addresses.&#xA;The clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.findingMethod">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.findingMethod"/>
+      <short value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <definition value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.media">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.media"/>
+      <short value="A file that contains audio, video, image, or similar content."/>
+      <definition value="A file that contains audio, video, image, or similar content."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.media"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-AssertionAbsenceStatement-model">
+      <path value="cimi-statement-AssertionAbsenceStatement-model"/>
+      <definition value="Statement that a finding is absent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.personOfRecord">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.personOfRecord"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="The person this entry belongs to."/>
+      <definition value="The person this entry belongs to."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.personOfRecord"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.recorded">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.recorded"/>
+      <short value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.recorded"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.signed">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.signed"/>
+      <short value="Provenance information specific to the signing of the clinical statement."/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.signed"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.additionalText">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.additionalText"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0947611"/>
+      </code>
+      <short value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <definition value="A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.additionalText"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.contextCode">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.contextCode"/>
+      <short value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <definition value="Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.contextCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.statementTopic">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.statementTopic"/>
+      <short value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement."/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.statementTopic"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.encounter">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.encounter"/>
+      <short value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <definition value="A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.encounter"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.interpretation">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.interpretation"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0420833"/>
+      </code>
+      <short value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <definition value="A clinical interpretation of a finding (applies to both assertions and observation)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.interpretation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.relevantTime">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.relevantTime"/>
+      <short value="The time or time period that the finding addresses."/>
+      <definition value="The time or time period that the finding addresses.&#xA;The clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.findingMethod">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.findingMethod"/>
+      <short value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <definition value="The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-statement-AssertionAbsenceStatement-model.media">
+      <path value="cimi-statement-AssertionAbsenceStatement-model.media"/>
+      <short value="A file that contains audio, video, image, or similar content."/>
+      <definition value="A file that contains audio, video, image, or similar content."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-AssertionAbsenceStatement-model.media"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

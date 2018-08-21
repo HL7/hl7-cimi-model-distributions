@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-ExpirationDate-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ExpirationDate Logical Model</b></p>\n  <p>When the item (medication, device, etc.) will expire.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-ExpirationDate-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.ExpirationDate"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ExpirationDateModel",
+  "title": "SW ExpirationDate Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "When the item (medication, device, etc.) will expire.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-ExpirationDate-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-ExpirationDate-model",
+        "path": "cimi-entity-ExpirationDate-model",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ExpirationDate-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ExpirationDate-model.value",
+        "path": "cimi-entity-ExpirationDate-model.value",
+        "short": "DateTime representing when the item (medication, device, etc.) will expire.",
+        "definition": "DateTime representing when the item (medication, device, etc.) will expire.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ExpirationDate-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-ExpirationDate-model",
+        "path": "cimi-entity-ExpirationDate-model",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ExpirationDate-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ExpirationDate-model.value",
+        "path": "cimi-entity-ExpirationDate-model.value",
+        "short": "DateTime representing when the item (medication, device, etc.) will expire.",
+        "definition": "DateTime representing when the item (medication, device, etc.) will expire.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ExpirationDate-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

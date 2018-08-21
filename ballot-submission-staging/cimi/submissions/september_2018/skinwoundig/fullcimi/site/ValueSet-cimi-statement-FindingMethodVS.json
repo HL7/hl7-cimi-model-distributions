@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cimi-statement-FindingMethodVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW FindingMethodVS ValueSet</b></p>\n<p/>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.FindingMethodVS"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "FindingMethodVS",
+  "title": "SW FindingMethodVS ValueSet",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org"
+      }
+    ]
+  }
+}

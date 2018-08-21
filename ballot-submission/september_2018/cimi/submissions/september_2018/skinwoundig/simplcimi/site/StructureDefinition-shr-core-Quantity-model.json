@@ -1,0 +1,237 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-Quantity-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Quantity Logical Model</b></p>\n  <p>A quantity with units, whose value may be bounded from above or below, as defined in FHIR</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.core.Quantity"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "QuantityModel",
+  "title": "SW Quantity Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-Quantity-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-Quantity-model",
+        "path": "shr-core-Quantity-model",
+        "definition": "A quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Quantity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Quantity-model.value",
+        "path": "shr-core-Quantity-model.value",
+        "short": "Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "definition": "Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.value",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Quantity-model.comparator",
+        "path": "shr-core-Quantity-model.comparator",
+        "short": "Comparator",
+        "definition": "Comparator",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "shr-core-Quantity-model.units",
+        "path": "shr-core-Quantity-model.units",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Code for the unit of measure of the quantity.",
+        "definition": "Code for the unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-Quantity-model",
+        "path": "shr-core-Quantity-model",
+        "definition": "A quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Quantity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Quantity-model.value",
+        "path": "shr-core-Quantity-model.value",
+        "short": "Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "definition": "Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.value",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Quantity-model.comparator",
+        "path": "shr-core-Quantity-model.comparator",
+        "short": "Comparator",
+        "definition": "Comparator",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "shr-core-Quantity-model.units",
+        "path": "shr-core-Quantity-model.units",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          }
+        ],
+        "short": "Code for the unit of measure of the quantity.",
+        "definition": "Code for the unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Quantity-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS"
+          }
+        }
+      }
+    ]
+  }
+}

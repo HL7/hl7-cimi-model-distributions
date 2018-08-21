@@ -1,0 +1,713 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles" />
+
+  <link href="fhir.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet" />
+  <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+  <link href="jquery-ui.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="assets/ico/favicon.png" />
+
+
+  <body>
+
+    <div id="segment-header" class="segment">
+  <!-- segment-header -->
+  <div class="container">
+    <!-- container -->
+    <a id="logo" no-external="true" href="http://hl7.org/fhir">
+      <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
+    </a>
+    <div id="hl7-status" class="hl7-status">
+      
+      <b>MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</b>
+    </div>
+
+    <div id="hl7-nav">
+      <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <!-- container -->
+  </div>
+</div>
+<!-- /segment-header -->
+
+<div id="segment-navbar" class="segment">
+  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">
+    <!-- container -->
+    <!-- HEADER CONTENT -->
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <div class="nav-collapse collapse navbar-inverse-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logical.html">Logical Models</a></li>
+            <li><a href="profiles.html">Profiles</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="valuesets.html">Value Sets</a></li>
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="modeldoc/index.html" target="_blank">Reference Model</a></li>
+            
+          </ul>
+
+        </div>
+        <!-- /.nav-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- /HEADER CONTENT -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-navbar -->
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Logical Models</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+   <div class="row">
+     <div class="inner-wrapper">
+       <div class="col-12">
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>
+  Primary logical models defined as part of this Implementation Guide
+</h2>
+<table class="codes">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td><a href="StructureDefinition-sw-ClinicalInputForm-PatientWoundSummary-model.html">ClinicalInputForm-PatientWoundSummary</a></td>
+        <td><p>Clinical input form for the initial observation of a wound or wounds on a patient. Includes only basic who/what/where aspects, not the complete assessment. Addresses the use case of a new patient being evaluated for the presence or absence of wounds.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-ClinicalInputForm-WoundAssessment-model.html">ClinicalInputForm-WoundAssessment</a></td>
+        <td><p>Information about a wound at a single time, structured into logical groupings for input or display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-ExchangeForm-WoundComprehensiveHistory-model.html">ExchangeForm-WoundComprehensiveHistory</a></td>
+        <td><p>A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-PhotographicImage-model.html">PhotographicImage</a></td>
+        <td><p>A photographic documentation of a condition, location, person, etc…</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundAbsent-model.html">WoundAbsent</a></td>
+        <td><p>Documents the absence of a wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundArea-model.html">WoundArea</a></td>
+        <td><p>Area of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundAssessmentInterpretation-model.html">WoundAssessmentInterpretation</a></td>
+        <td><p>Overall assessement of whether the wound is within normal parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedAppearance-model.html">WoundBedAppearance</a></td>
+        <td><p>Appearance of wound base (bed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedAppearancePercentage-model.html">WoundBedAppearancePercentage</a></td>
+        <td><p>Area of wound bed portion appearance/Entire ​Area of wound bed – Linked to a wound bed appearance</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundDepth-model.html">WoundDepth</a></td>
+        <td><p>Depth of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundEdgeColor-model.html">WoundEdgeColor</a></td>
+        <td><p>Color of Wound edge.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundEdgeDescription-model.html">WoundEdgeDescription</a></td>
+        <td><p>The state of the tissue at the edge of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundEpisode-model.html">WoundEpisode</a></td>
+        <td><p>Whether the wound is initial or recurrent.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateAmount-model.html">WoundExudateAmount</a></td>
+        <td><p>Drainage amount of wound</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateAppearance-model.html">WoundExudateAppearance</a></td>
+        <td><p>Appearance of exudate from wound</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateColor-model.html">WoundExudateColor</a></td>
+        <td><p>Color of exudate from wound</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateOdor-model.html">WoundExudateOdor</a></td>
+        <td><p>Odor of exudate from wound</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateVolume-model.html">WoundExudateVolume</a></td>
+        <td><p>Appearance of exudate from wound</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundLength-model.html">WoundLength</a></td>
+        <td><p>Length of the wound (longest dimension).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundLocationObservation-model.html">WoundLocationObservation</a></td>
+        <td><p>Body location of a wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-Wound-model.html">Wound</a></td>
+        <td><p>The presence of a wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundPeriwoundDescription-model.html">WoundPeriwoundDescription</a></td>
+        <td><p>A description of the skin around the wound (periwound).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundPresentOrAbsent-model.html">WoundPresentOrAbsent</a></td>
+        <td><p>The presence or absence of a wound.
+Observations and measurements associated with the same wound must link back to the same wound assertion. Therefore, the same wound should not be asserted more than once. The ‘same-as’ relationship can be used to link multiple assertions of the same wound, if necessary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundPressureUlcerAssociation-model.html">WoundPressureUlcerAssociation</a></td>
+        <td><p>Is the wound associated with a device or pressure point?</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTrend-model.html">WoundTrend</a></td>
+        <td><p>Whether a condition is improving, worsening, stable, or resolved.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnelLength-model.html">WoundTunnelLength</a></td>
+        <td><p>The length of a wound tunnel, in cm.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnel-model.html">WoundTunnel</a></td>
+        <td><p>The presence of a wound tunnel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnelPresentOrAbsent-model.html">WoundTunnelPresentOrAbsent</a></td>
+        <td><p>The presence or absence of a discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. Each wound tunnel can be persistently identified to enable tracking of the condition of the tunnel over time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTypeEtiology-model.html">WoundTypeEtiology</a></td>
+        <td><p>The source or key factor in the formation or acquisition of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundType-model.html">WoundType</a></td>
+        <td><p>The type of wound, for example, abrasion or laceration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundUnderminingClockDirection-model.html">WoundUnderminingClockDirection</a></td>
+        <td><p>Clock position of wound undermining</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundUnderminingLength-model.html">WoundUnderminingLength</a></td>
+        <td><p>Length of wound undermining.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundUndermining-model.html">WoundUndermining</a></td>
+        <td><p>The presence of wound undermining.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundUnderminingPresentOrAbsent-model.html">WoundUnderminingPresentOrAbsent</a></td>
+        <td><p>The presence or absence of deep tissue (subcutaneous fat and muscle) damage around the wound margin.
+Undermining are narrow sinus tracts away from the wound margins and go downward into the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundVisibleInternalStructure-model.html">WoundVisibleInternalStructure</a></td>
+        <td><p>Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundWidth-model.html">WoundWidth</a></td>
+        <td><p>Width of the wound (perpendicular to longest dimension).</p>
+</td>
+      </tr>
+      
+  </tbody>
+</table>
+
+<h2 id="supporting-models-header" style="display: none">
+  Supporting logical models defined as part of this Implementation Guide
+</h2>
+<table id="supporting-models-table" class="codes" style="display: none">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td><a href="StructureDefinition-shr-core-BinaryData-model.html">BinaryData</a></td>
+        <td><p>The data itself.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-BodyStructurePresentOrAbsent-model.html">BodyStructurePresentOrAbsent</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Cluster-model.html">Cluster</a></td>
+        <td><p>A collection of statements and groups.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-CodeSystem-model.html">CodeSystem</a></td>
+        <td><p>A formal terminology system.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-CodeSystemVersion-model.html">CodeSystemVersion</a></td>
+        <td><p>The version of the vocabulary being used, if applicable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-CodedObservation-model.html">CodedObservation</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Comparator-model.html">Comparator</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Composition-model.html">Composition</a></td>
+        <td><p>A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-Condition-model.html">Condition</a></td>
+        <td><p>A disorder of structure or function in a human, animal, or plant, especially one that produces specific signs or symptoms, and is not simply a direct result of physical injury</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-ConditionPresentOnAdmission-model.html">ConditionPresentOnAdmission</a></td>
+        <td><p>Whether the condition was present when the patient was admitted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-ContentType-model.html">ContentType</a></td>
+        <td><p>Mime type of the content, with charset etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-CreationTime-model.html">CreationTime</a></td>
+        <td><p>The point in time when the information was recorded in the system of record.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Denominator-model.html">Denominator</a></td>
+        <td><p>The divisor of a fraction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-DisplayText-model.html">DisplayText</a></td>
+        <td><p>A string meant for reading by a person, for example, accompanying a code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-EmbeddedContent-model.html">EmbeddedContent</a></td>
+        <td><p>Abstract class defining the common metadata of all types of encapsulated data, such as images.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ExistentialFinding-model.html">ExistentialFinding</a></td>
+        <td><p>An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-FindingMethod-model.html">FindingMethod</a></td>
+        <td><p>The method used to determine the finding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Finding-model.html">Finding</a></td>
+        <td><p>A determination, such as an observation, assertion, opinion, fact, or judgment.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-FindingStatus-model.html">FindingStatus</a></td>
+        <td><p>Indicates whether the finding is preliminary, amended, final, etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Hash-model.html">Hash</a></td>
+        <td><p>A hash code of the data (sha-1, base64ed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Language-model.html">Language</a></td>
+        <td><p>A human language, spoken or written.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-LowerBound-model.html">LowerBound</a></td>
+        <td><p>The lower limit on a range</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Media-model.html">Media</a></td>
+        <td><p>A file that contains audio, video, image, or similar content.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Numerator-model.html">Numerator</a></td>
+        <td><p>The dividend of a fraction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ObjectIdentifier-model.html">ObjectIdentifier</a></td>
+        <td><p>For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound’s condition over time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ObjectPresentOrAbsent-model.html">ObjectPresentOrAbsent</a></td>
+        <td><p>An assertion of a physical or conceptual entity, relationship, role, situation, condition, or phenomenon present or absent.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ObjectTypeCode-model.html">ObjectTypeCode</a></td>
+        <td><p>A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ObservableCode-model.html">ObservableCode</a></td>
+        <td><p>A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the ‘question code’ that pairs to the ‘answer’ contained in the ResultValue.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Observation-model.html">Observation</a></td>
+        <td><p>A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-Person-model.html">Person</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-PresentOrAbsent-model.html">PresentOrAbsent</a></td>
+        <td><p>Whether the object is present or absent, exists or does not exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Qualifier-model.html">Qualifier</a></td>
+        <td><p>A condition or circumstance associated with an observation that affects the interpretation of the result value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-QuantitativeObservation-model.html">QuantitativeObservation</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Quantity-model.html">Quantity</a></td>
+        <td><p>A quantity with units, whose value may be bounded from above or below, as defined in FHIR</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Range-model.html">Range</a></td>
+        <td><p>An interval defined by a quantitative upper and/or lower bound. One of the two bounds must be specified, and the lower bound must be less than the upper bound. When Quantities are specified, the units of measure must be the same.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Ratio-model.html">Ratio</a></td>
+        <td><p>A unit of measurement for the quotient of the amount of one entity to another.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-RelevantTime-model.html">RelevantTime</a></td>
+        <td><p>The time or time period that the statement addresses.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-ResourceLocation-model.html">ResourceLocation</a></td>
+        <td><p>URI where data can be found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-ResourceSize-model.html">ResourceSize</a></td>
+        <td><p>Number of bytes of content in the resource (if url provided)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-ResultValue-model.html">ResultValue</a></td>
+        <td><p>The finding itself, such as the blood pressure value recorded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-SimpleQuantity-model.html">SimpleQuantity</a></td>
+        <td><p>A quantity where the comparator is not used, as defined in FHIR</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Statement-model.html">Statement</a></td>
+        <td><p>Base class for all types of clinical statements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-Subject-model.html">Subject</a></td>
+        <td><p>The person, place, event, condition, other statement that this statement addresses or belongs to.
+For an existential finding, the Subject is the ‘owner’ of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-TimeOfAbatement-model.html">TimeOfAbatement</a></td>
+        <td><p>The end, remission or resolution of a disease.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-entity-TimeOfOnset-model.html">TimeOfOnset</a></td>
+        <td><p>The beginning or first appearance of a mental or physical disorder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-TimePeriodEnd-model.html">TimePeriodEnd</a></td>
+        <td><p>The time at which something is to end or did end. Boundary is considered inclusive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-TimePeriod-model.html">TimePeriod</a></td>
+        <td><p>A period of time defined by a start and end time, date, or year.
+If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-TimePeriodStart-model.html">TimePeriodStart</a></td>
+        <td><p>The time at which something is to take effect, start, or did start. Boundary is considered inclusive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Title-model.html">Title</a></td>
+        <td><p>A distinguishing word or group of words naming an item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-base-TypeCode-model.html">TypeCode</a></td>
+        <td><p>A code that describes the type of composition or section, such as a section or document type identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-Units-model.html">Units</a></td>
+        <td><p>Code for the unit of measure of the quantity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-shr-core-UpperBound-model.html">UpperBound</a></td>
+        <td><p>The upper limit on a quantitative value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedAndEdgeCluster-model.html">WoundBedAndEdgeCluster</a></td>
+        <td><p>Assessment of the wound bed (base) and edge, including the appearance and color of each.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedAppearanceCluster-model.html">WoundBedAppearanceCluster</a></td>
+        <td><p>The appearance of a percentage area of the wound bed (base</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedColorCluster-model.html">WoundBedColorCluster</a></td>
+        <td><p>The color of a percentage area of the wound bed (base)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedColor-model.html">WoundBedColor</a></td>
+        <td><p>Color of a portion or entire wound base (bed).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundBedColorPercentage-model.html">WoundBedColorPercentage</a></td>
+        <td><p>Wound bed area identified by color/​Area of wound bed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundEdgeCluster-model.html">WoundEdgeCluster</a></td>
+        <td><p>Description of the color and condition of the edige of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundExudateCluster-model.html">WoundExudateCluster</a></td>
+        <td><p>Descriptions of the exudate of the wound. Applicable only if wound exudate is present.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundPresentCluster-model.html">WoundPresentCluster</a></td>
+        <td><p>A group of observations that together describe initial observations about a wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundSizeCluster-model.html">WoundSizeCluster</a></td>
+        <td><p>The dimensions of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnelClockDirection-model.html">WoundTunnelClockDirection</a></td>
+        <td><p>Clock position of wound tunnel</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnelingAndUnderminingCluster-model.html">WoundTunnelingAndUnderminingCluster</a></td>
+        <td><p>Assessment and measurement of tunnels and undermining of the wound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundTunnelingCluster-model.html">WoundTunnelingCluster</a></td>
+        <td><p>Description of a specific single tunnel on a specific wound. Applicable only if tunnel(s) are present</p>
+</td>
+      </tr>
+      <tr>
+        <td><a href="StructureDefinition-sw-WoundUnderminingCluster-model.html">WoundUnderminingCluster</a></td>
+        <td><p>Description of the undermining of the wound. Applicable only if undermining is present</p>
+</td>
+      </tr>
+      
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      
+      MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment), Version: 1.0.0
+      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR &copy; Version: 3.0.1</a>
+      ; Generated on Fri, Aug 17, 2018 15:54-0400.
+    </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

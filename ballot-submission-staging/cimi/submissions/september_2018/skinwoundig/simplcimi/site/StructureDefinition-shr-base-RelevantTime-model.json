@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-RelevantTime-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW RelevantTime Logical Model</b></p>\n  <p>The time or time period that the statement addresses.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-RelevantTime-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.RelevantTime"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "RelevantTimeModel",
+  "title": "SW RelevantTime Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The time or time period that the statement addresses.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-RelevantTime-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-RelevantTime-model",
+        "path": "shr-base-RelevantTime-model",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-RelevantTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-RelevantTime-model.value[x]",
+        "path": "shr-base-RelevantTime-model.value[x]",
+        "short": "DateTime or TimePeriod representing the time or time period that the statement addresses.",
+        "definition": "DateTime or TimePeriod representing the time or time period that the statement addresses.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-RelevantTime-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-RelevantTime-model",
+        "path": "shr-base-RelevantTime-model",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-RelevantTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-RelevantTime-model.value[x]",
+        "path": "shr-base-RelevantTime-model.value[x]",
+        "short": "DateTime or TimePeriod representing the time or time period that the statement addresses.",
+        "definition": "DateTime or TimePeriod representing the time or time period that the statement addresses.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-RelevantTime-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

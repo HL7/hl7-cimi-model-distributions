@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-core-Signed-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Signed Logical Model</b></p>
+  <p>Provenance information specific to the signing of the clinical statement.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Signed-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.core.Signed"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SignedModel"/>
+  <title value="SW Signed Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Provenance information specific to the signing of the clinical statement."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-core-Signed-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-core-Signed-model">
+      <path value="cimi-core-Signed-model"/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-Signed-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Signed-model.value">
+      <path value="cimi-core-Signed-model.value"/>
+      <short value="Attribution representing provenance information specific to the signing of the clinical statement."/>
+      <definition value="Attribution representing provenance information specific to the signing of the clinical statement."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Signed-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-core-Signed-model">
+      <path value="cimi-core-Signed-model"/>
+      <definition value="Provenance information specific to the signing of the clinical statement."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-Signed-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-Signed-model.value">
+      <path value="cimi-core-Signed-model.value"/>
+      <short value="Attribution representing provenance information specific to the signing of the clinical statement."/>
+      <definition value="Attribution representing provenance information specific to the signing of the clinical statement."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-Signed-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

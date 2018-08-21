@@ -1,0 +1,114 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-ObservationStatement.observation_statement.v0.0.1
+
+specialize
+  SHR-CORE-ClinicalStatement.clinical_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Sean Muir">
+    ["organisation"] = <"JP Systems">
+    ["email"] = <"">
+    ["date"] = <"2018-8-21">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SkinAndWound">
+      use = <"SkinAndWound">
+      keywords = <"fsw","observation statement">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Jay Lyle <>, Galen Mulrooney <>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  ObservationStatement[id1.1.1] matches {
+    category matches {
+      Category[id0.0.2]
+    }
+    dataAbsentReason matches {
+      DataAbsentReason[id0.0.3]
+    }
+    dateTime matches {
+      DateTime[id0.0.4]
+    }
+    dateTimeIssued matches {
+      DateTimeIssued[id0.0.5]
+    }
+    description matches {
+      Description[id0.0.6]
+    }
+    evaluationComponent matches {
+      EvaluationComponent[id0.0.7]
+    }
+    interpretation matches {
+      Interpretation[id0.0.8]
+    }
+    method matches {
+      Method[id0.0.9]
+    }
+    resultStatus matches {
+      ResultStatus[id0.0.10]
+    }
+    panelMembers matches {
+      PanelMembers[id0.0.11]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1"] = <
+        text = <"ObservationStatement">
+        description = <"A base class for representing observed facts, including provenance">
+      >
+      ["id0.0.2"] = <
+        text = <"Category">
+        description = <"Description">
+      >
+      ["id0.0.3"] = <
+        text = <"DataAbsentReason">
+        description = <"Description">
+      >
+      ["id0.0.4"] = <
+        text = <"DateTime">
+        description = <"Description">
+      >
+      ["id0.0.5"] = <
+        text = <"DateTimeIssued">
+        description = <"Description">
+      >
+      ["id0.0.6"] = <
+        text = <"Description">
+        description = <"Description">
+      >
+      ["id0.0.7"] = <
+        text = <"EvaluationComponent">
+        description = <"A simplified, non-separable evaluation consisting of a finding code (represented by the Concept), value (or exception value), reference range, and interpretation. The subject of the evaluation component is the same as in the parent evaluation.">
+      >
+      ["id0.0.8"] = <
+        text = <"Interpretation">
+        description = <"Description">
+      >
+      ["id0.0.9"] = <
+        text = <"Method">
+        description = <"Description">
+      >
+      ["id0.0.10"] = <
+        text = <"ResultStatus">
+        description = <"Description">
+      >
+      ["id0.0.11"] = <
+        text = <"PanelMembers">
+        description = <"PanelMembers represent the elements of a group of a related but independent evaluations.
+                      Examples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the Category and Reason are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.">
+      >
+    >
+  >

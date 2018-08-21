@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="SW-basic-resource-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>SW Basic Resource Type CodeSystem</b></p>
+<p>Codes representing profiles on the Basic resource.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="SW-basic-resource-type"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="BasicResourceType"/>
+  <title value="SW Basic Resource Type CodeSystem"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing profiles on the Basic resource."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="cimi-entity-Person"/>
+    <display value="SW Person Profile"/>
+  </concept>
+  <concept>
+    <code value="cimi-entity-Entity"/>
+    <display value="SW Entity Profile"/>
+  </concept>
+  <concept>
+    <code value="cimi-entity-SpecimenTreatment"/>
+    <display value="SW SpecimenTreatment Profile"/>
+  </concept>
+  <concept>
+    <code value="cimi-entity-SpecimenContainer"/>
+    <display value="SW SpecimenContainer Profile"/>
+  </concept>
+  <concept>
+    <code value="cimi-statement-ConditionAbsenceStatement"/>
+    <display value="SW ConditionAbsenceStatement Profile"/>
+  </concept>
+  <concept>
+    <code value="cimi-statement-FindingSiteConditionAbsenceStatement"/>
+    <display value="SW FindingSiteConditionAbsenceStatement Profile"/>
+  </concept>
+  <concept>
+    <code value="sw-WoundAbsenceAssertion"/>
+    <display value="SW WoundAbsenceAssertion Profile"/>
+  </concept>
+</CodeSystem>

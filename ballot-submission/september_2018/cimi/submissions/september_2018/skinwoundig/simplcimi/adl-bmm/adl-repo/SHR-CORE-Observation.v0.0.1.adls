@@ -1,0 +1,72 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Observation.observation.v0.0.1
+
+specialize
+  SHR-CORE-Finding.finding.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      use = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      keywords = <"shr.base","observation">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Observation[id1.1.1] matches {
+    subject matches {
+      Subject[id0.0.2]
+    }
+    observableCode matches {
+      ObservableCode[id0.0.3]
+    }
+    resultValue matches {
+      ResultValue[id0.0.4]
+    }
+    qualifier matches {
+      Qualifier[id0.0.5]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1"] = <
+        text = <"Observation">
+        description = <"A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation.">
+      >
+      ["id0.0.2"] = <
+        text = <"Subject">
+        description = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+                      For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+      >
+      ["id0.0.3"] = <
+        text = <"ObservableCode">
+        description = <"A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.">
+      >
+      ["id0.0.4"] = <
+        text = <"ResultValue">
+        description = <"The finding itself, such as the blood pressure value recorded.">
+      >
+      ["id0.0.5"] = <
+        text = <"Qualifier">
+        description = <"A condition or circumstance associated with an observation that affects the interpretation of the result value.">
+      >
+    >
+  >

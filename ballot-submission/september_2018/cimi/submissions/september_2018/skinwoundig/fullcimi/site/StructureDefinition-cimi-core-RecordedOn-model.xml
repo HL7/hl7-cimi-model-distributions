@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-core-RecordedOn-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW RecordedOn Logical Model</b></p>
+  <p>The time of the attribution action.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-RecordedOn-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.core.RecordedOn"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="RecordedOnModel"/>
+  <title value="SW RecordedOn Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The time of the attribution action."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-core-RecordedOn-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-core-RecordedOn-model">
+      <path value="cimi-core-RecordedOn-model"/>
+      <definition value="The time of the attribution action."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-RecordedOn-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-RecordedOn-model.value">
+      <path value="cimi-core-RecordedOn-model.value"/>
+      <short value="Instant representing the time of the attribution action."/>
+      <definition value="Instant representing the time of the attribution action."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-RecordedOn-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-core-RecordedOn-model">
+      <path value="cimi-core-RecordedOn-model"/>
+      <definition value="The time of the attribution action."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-core-RecordedOn-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-core-RecordedOn-model.value">
+      <path value="cimi-core-RecordedOn-model.value"/>
+      <short value="Instant representing the time of the attribution action."/>
+      <definition value="Instant representing the time of the attribution action."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-core-RecordedOn-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

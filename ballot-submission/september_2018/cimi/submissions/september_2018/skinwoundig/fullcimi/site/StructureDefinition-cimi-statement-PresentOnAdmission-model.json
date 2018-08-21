@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-PresentOnAdmission-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW PresentOnAdmission Logical Model</b></p>\n  <p>If the problem or condition existed before the current episode of care.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-PresentOnAdmission-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.PresentOnAdmission"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PresentOnAdmissionModel",
+  "title": "SW PresentOnAdmission Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "If the problem or condition existed before the current episode of care.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "89251-3",
+      "display": "Condition present on admission"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-PresentOnAdmission-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-PresentOnAdmission-model",
+        "path": "cimi-statement-PresentOnAdmission-model",
+        "definition": "If the problem or condition existed before the current episode of care.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-PresentOnAdmission-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-PresentOnAdmission-model.value",
+        "path": "cimi-statement-PresentOnAdmission-model.value",
+        "short": "Code representing if the problem or condition existed before the current episode of care.",
+        "definition": "Code representing if the problem or condition existed before the current episode of care.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-PresentOnAdmission-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-PresentOnAdmission-model",
+        "path": "cimi-statement-PresentOnAdmission-model",
+        "definition": "If the problem or condition existed before the current episode of care.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-PresentOnAdmission-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-PresentOnAdmission-model.value",
+        "path": "cimi-statement-PresentOnAdmission-model.value",
+        "short": "Code representing if the problem or condition existed before the current episode of care.",
+        "definition": "Code representing if the problem or condition existed before the current episode of care.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-PresentOnAdmission-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS"
+          }
+        }
+      }
+    ]
+  }
+}

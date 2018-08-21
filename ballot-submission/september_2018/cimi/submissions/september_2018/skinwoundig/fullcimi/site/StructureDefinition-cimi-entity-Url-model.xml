@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Url-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Url Logical Model</b></p>
+  <p>A unique URL on which the device may be contacted directly.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Url-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Url"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="UrlModel"/>
+  <title value="SW Url Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A unique URL on which the device may be contacted directly."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Url-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Url-model">
+      <path value="cimi-entity-Url-model"/>
+      <definition value="A unique URL on which the device may be contacted directly."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Url-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Url-model.value">
+      <path value="cimi-entity-Url-model.value"/>
+      <short value="Uri representing a unique URL on which the device may be contacted directly."/>
+      <definition value="Uri representing a unique URL on which the device may be contacted directly."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Url-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Url-model">
+      <path value="cimi-entity-Url-model"/>
+      <definition value="A unique URL on which the device may be contacted directly."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Url-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Url-model.value">
+      <path value="cimi-entity-Url-model.value"/>
+      <short value="Uri representing a unique URL on which the device may be contacted directly."/>
+      <definition value="Uri representing a unique URL on which the device may be contacted directly."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Url-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

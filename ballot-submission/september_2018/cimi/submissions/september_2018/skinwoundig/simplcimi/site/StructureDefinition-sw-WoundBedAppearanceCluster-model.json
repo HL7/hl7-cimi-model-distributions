@@ -1,0 +1,257 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundBedAppearanceCluster-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundBedAppearanceCluster Logical Model</b></p>\n  <p>The appearance of a percentage area of the wound bed (base</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundBedAppearanceCluster"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundBedAppearanceClusterModel",
+  "title": "SW WoundBedAppearanceCluster Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The appearance of a percentage area of the wound bed (base",
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundBedAppearanceCluster-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundBedAppearanceCluster-model",
+        "path": "sw-WoundBedAppearanceCluster-model",
+        "definition": "The appearance of a percentage area of the wound bed (base",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.typeCode",
+        "path": "sw-WoundBedAppearanceCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement",
+        "path": "sw-WoundBedAppearanceCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+        "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72371-8"
+          }
+        ],
+        "short": "Appearance of wound base (bed)",
+        "definition": "Appearance of wound base (bed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+        "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72370-0"
+          }
+        ],
+        "short": "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance",
+        "definition": "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundBedAppearanceCluster-model",
+        "path": "sw-WoundBedAppearanceCluster-model",
+        "definition": "The appearance of a percentage area of the wound bed (base",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.typeCode",
+        "path": "sw-WoundBedAppearanceCluster-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.typeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement",
+        "path": "sw-WoundBedAppearanceCluster-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement",
+          "min": 0,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+        "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72371-8"
+          }
+        ],
+        "short": "Appearance of wound base (bed)",
+        "definition": "Appearance of wound base (bed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+        "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72370-0"
+          }
+        ],
+        "short": "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance",
+        "definition": "Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundBedAppearanceCluster-model.statement.woundBedAppearancePercentage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

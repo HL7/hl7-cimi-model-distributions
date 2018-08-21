@@ -1,0 +1,243 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-encounter-Diagnosis-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Diagnosis Logical Model</b></p>\n  <p>A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Diagnosis-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.encounter.Diagnosis"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "DiagnosisModel",
+  "title": "SW Diagnosis Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-encounter-Diagnosis-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-encounter-Diagnosis-model",
+        "path": "cimi-encounter-Diagnosis-model",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.value",
+        "path": "cimi-encounter-Diagnosis-model.value",
+        "short": "Code representing a diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "definition": "Code representing a diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.priorityRank",
+        "path": "cimi-encounter-Diagnosis-model.priorityRank",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0549179"
+          }
+        ],
+        "short": "An indication of the importance of an action.",
+        "definition": "An indication of the importance of an action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.type",
+        "path": "cimi-encounter-Diagnosis-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/diagnosis-role"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-encounter-Diagnosis-model",
+        "path": "cimi-encounter-Diagnosis-model",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.value",
+        "path": "cimi-encounter-Diagnosis-model.value",
+        "short": "Code representing a diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "definition": "Code representing a diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.priorityRank",
+        "path": "cimi-encounter-Diagnosis-model.priorityRank",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0549179"
+          }
+        ],
+        "short": "An indication of the importance of an action.",
+        "definition": "An indication of the importance of an action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Diagnosis-model.type",
+        "path": "cimi-encounter-Diagnosis-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Diagnosis-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/diagnosis-role"
+          }
+        }
+      }
+    ]
+  }
+}

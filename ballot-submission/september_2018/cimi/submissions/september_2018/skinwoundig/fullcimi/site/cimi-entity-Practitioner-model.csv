@@ -1,0 +1,35 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-entity-Practitioner-model","","","",0,*,"","","","","","A person who practices a healing art.","","","","","","","","","",,,,,"",,,,"cimi-entity-Practitioner-model",0,*,"",""
+"cimi-entity-Practitioner-model.person","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model]]}
+","A person relevant to the health or social situation of the subject (including the person of record him or herself).","A person relevant to the health or social situation of the subject (including the person of record him or herself).","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C0027361
+",,,,"cimi-entity-Practitioner-model.person",1,1,"",""
+"cimi-entity-Practitioner-model.person.humanName","","","",1,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-HumanName-model {[]} {[]}
+","The CIMI person name, constrained to map correctly to FHIR.","The CIMI person name, constrained to map correctly to FHIR.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1547383
+",,,,"cimi-entity-Practitioner-model.person.humanName",1,*,"",""
+"cimi-entity-Practitioner-model.person.dateOfBirth","","","",0,1,"","","","date {[]} {[]}
+http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model {[]} {[]}","A date of birth or approximate year or period (year or date range), if estimated.","A date of birth or approximate year or period (year or date range), if estimated.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C2919018
+http://loinc.org#21112-8",,,,"cimi-entity-Practitioner-model.person.dateOfBirth",0,1,"",""
+"cimi-entity-Practitioner-model.person.administrativeGender","","","",1,1,"","","","code {[]} {[]}
+","A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.","A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/administrative-gender","http://ncimeta.nci.nih.gov#C1550327
+",,,,"cimi-entity-Practitioner-model.person.administrativeGender",1,1,"",""
+"cimi-entity-Practitioner-model.person.address","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model {[]} {[]}
+","An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).","An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C0682130
+",,,,"cimi-entity-Practitioner-model.person.address",0,*,"",""
+"cimi-entity-Practitioner-model.person.headshot","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model {[]} {[]}
+","A photograph showing a person's face.","A photograph showing a person's face.","","","","","","","","","",,,,,"",,,,"cimi-entity-Practitioner-model.person.headshot",0,*,"",""
+"cimi-entity-Practitioner-model.person.contactPoint","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model {[]} {[]}
+","An electronic means of contacting an organization or individual.","An electronic means of contacting an organization or individual.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C2986441
+",,,,"cimi-entity-Practitioner-model.person.contactPoint",0,*,"",""
+"cimi-entity-Practitioner-model.person.languageUsed","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-LanguageUsed-model {[]} {[]}
+","Language used for communication by a human, either the subject of record, parent, or other involved person.","Language used for communication by a human, either the subject of record, parent, or other involved person.","","","","","","","","","",,,,,"",,,,"cimi-entity-Practitioner-model.person.languageUsed",0,*,"",""
+"cimi-entity-Practitioner-model.person.activeFlag","","","",0,1,"","","","boolean {[]} {[]}
+","If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.","If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.","","","","","","","","","",,,,,"",,,,"cimi-entity-Practitioner-model.person.activeFlag",0,1,"",""
+"cimi-entity-Practitioner-model.person.maritalStatus","","","",0,1,"","","","Coding {[]} {[]}
+","The most recent marital status of a person.","The most recent marital status of a person.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/marital-status","http://ncimeta.nci.nih.gov#C0024819
+",,,,"cimi-entity-Practitioner-model.person.maritalStatus",0,1,"",""
+"cimi-entity-Practitioner-model.nationalProviderIdentifier","","","",1,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-NationalProviderIdentifier-model {[]} {[]}
+","A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.","A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1549728
+",,,,"cimi-entity-Practitioner-model.nationalProviderIdentifier",1,1,"",""
+"cimi-entity-Practitioner-model.qualification","","","",0,*,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Qualification-model {[]} {[]}
+","A right to practice medicine obtained by training and certification.","A right to practice medicine obtained by training and certification.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C0037778
+",,,,"cimi-entity-Practitioner-model.qualification",0,*,"",""

@@ -1,0 +1,106 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Medication.medication.v0.0.1
+
+specialize
+  SHR-CORE-Entity.entity.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.entity","medication">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Medication[id1.1.1.1.1] matches {
+    type matches {
+      Type[id0.0.0.0.2]
+    }
+    doseForm matches {
+      DoseForm[id0.0.0.0.3]
+    }
+    brand matches {
+      Brand[id0.0.0.0.4]
+    }
+    overTheCounter matches {
+      OverTheCounter[id0.0.0.0.5]
+    }
+    medicationIngredient matches {
+      MedicationIngredient[id0.0.0.0.6]
+    }
+    manufacturer matches {
+      Manufacturer[id0.0.0.0.7]
+    }
+    lotNumber matches {
+      LotNumber[id0.0.0.0.8]
+    }
+    expirationDate matches {
+      ExpirationDate[id0.0.0.0.9]
+    }
+    package matches {
+      Package[id0.0.0.0.10]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1"] = <
+        text = <"Medication">
+        description = <"A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.">
+      >
+      ["id0.0.0.0.2"] = <
+        text = <"Type">
+        description = <"The most specific code (lowest level term) describing the kind or sort of thing being represented.">
+      >
+      ["id0.0.0.0.3"] = <
+        text = <"DoseForm">
+        description = <"The form in which active and/or inert ingredient(s) are physically presented.">
+      >
+      ["id0.0.0.0.4"] = <
+        text = <"Brand">
+        description = <"If the product is branded, and if so, the brand name of a product.">
+      >
+      ["id0.0.0.0.5"] = <
+        text = <"OverTheCounter">
+        description = <"True if the medication is available to consumers without a prescription.">
+      >
+      ["id0.0.0.0.6"] = <
+        text = <"MedicationIngredient">
+        description = <"Specifies an material component in a medication.">
+      >
+      ["id0.0.0.0.7"] = <
+        text = <"Manufacturer">
+        description = <"The organization producing the product or test.">
+      >
+      ["id0.0.0.0.8"] = <
+        text = <"LotNumber">
+        description = <"A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.">
+      >
+      ["id0.0.0.0.9"] = <
+        text = <"ExpirationDate">
+        description = <"When the item (medication, device, etc.) will expire.">
+      >
+      ["id0.0.0.0.10"] = <
+        text = <"Package">
+        description = <"The kind of container the medication comes in.">
+      >
+    >
+  >

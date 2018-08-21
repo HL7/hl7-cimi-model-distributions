@@ -1,0 +1,418 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-entity-BodyStructurePresentOrAbsent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW BodyStructurePresentOrAbsent Logical Model</b></p>\n  <p/>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.entity.BodyStructurePresentOrAbsent"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "BodyStructurePresentOrAbsentModel",
+  "title": "SW BodyStructurePresentOrAbsent Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "keyword": [
+    {
+      "system": "urn:tbd",
+      "code": "TBD"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-entity-BodyStructurePresentOrAbsent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model",
+        "short": "BodyStructurePresentOrAbsent",
+        "definition": "BodyStructurePresentOrAbsent",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+        "short": "Whether the object is present or absent, exists or does not exist.",
+        "definition": "Whether the object is present or absent, exists or does not exist.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+        "short": "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.",
+        "definition": "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+        "short": "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.",
+        "definition": "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model",
+        "short": "BodyStructurePresentOrAbsent",
+        "definition": "BodyStructurePresentOrAbsent",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+        "short": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+        "short": "The time or time period that the statement addresses.",
+        "definition": "The time or time period that the statement addresses.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+        "short": "The method used to determine the finding.",
+        "definition": "The method used to determine the finding.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+        "short": "Whether the object is present or absent, exists or does not exist.",
+        "definition": "Whether the object is present or absent, exists or does not exist.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.subject",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+        "short": "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.",
+        "definition": "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS"
+          }
+        }
+      },
+      {
+        "id": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+        "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+        "short": "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.",
+        "definition": "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

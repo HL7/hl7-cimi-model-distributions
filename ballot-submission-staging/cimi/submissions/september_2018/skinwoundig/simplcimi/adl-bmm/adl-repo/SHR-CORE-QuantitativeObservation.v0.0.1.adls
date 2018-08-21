@@ -1,0 +1,48 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-QuantitativeObservation.quantitative_observation.v0.0.1
+
+specialize
+  SHR-CORE-Observation.observation.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      use = <"Contains the SHR Entry definition -- the metadata added to any independent item in the SHR.">
+      keywords = <"shr.base","quantitative observation">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Chris Moesel <cmoesel@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  QuantitativeObservation[id1.1.1.1] matches {
+    /resultValue/valueChoiceQuantity matches { Quantity[id0.0.0.3] }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1"] = <
+        text = <"QuantitativeObservation">
+        description = <"-">
+      >
+      ["id0.0.0.3"] = <
+        text = <"Quantity">
+        description = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+      >
+    >
+  >

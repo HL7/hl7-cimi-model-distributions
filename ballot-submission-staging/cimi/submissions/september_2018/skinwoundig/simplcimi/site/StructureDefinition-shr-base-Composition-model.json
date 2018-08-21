@@ -1,0 +1,201 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-Composition-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Composition Logical Model</b></p>\n  <p>A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.Composition"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "CompositionModel",
+  "title": "SW Composition Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-Composition-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-Composition-model",
+        "path": "shr-base-Composition-model",
+        "definition": "A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Composition-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.subject",
+        "path": "shr-base-Composition-model.subject",
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Composition-model.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.typeCode",
+        "path": "shr-base-Composition-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Composition-model.typeCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.statement",
+        "path": "shr-base-Composition-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Composition-model.statement",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-Composition-model",
+        "path": "shr-base-Composition-model",
+        "definition": "A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Composition-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.subject",
+        "path": "shr-base-Composition-model.subject",
+        "short": "The person, place, event, condition, other statement that this statement addresses or belongs to.",
+        "definition": "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Composition-model.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.typeCode",
+        "path": "shr-base-Composition-model.typeCode",
+        "short": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "definition": "A code that describes the type of composition or section, such as a section or document type identifier.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Composition-model.typeCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Composition-model.statement",
+        "path": "shr-base-Composition-model.statement",
+        "short": "Base class for all types of clinical statements.",
+        "definition": "Base class for all types of clinical statements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Composition-model.statement",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

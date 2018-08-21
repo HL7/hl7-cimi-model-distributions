@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-element-Identifier-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Identifier Logical Model</b></p>
+  <p>A unique string that identifies a specific person or thing.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Identifier-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.element.Identifier"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="IdentifierModel"/>
+  <title value="SW Identifier Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A unique string that identifies a specific person or thing."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C0600091"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-element-Identifier-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-element-Identifier-model">
+      <path value="cimi-element-Identifier-model"/>
+      <definition value="A unique string that identifies a specific person or thing."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Identifier-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.value">
+      <path value="cimi-element-Identifier-model.value"/>
+      <short value="String representing a unique string that identifies a specific person or thing."/>
+      <definition value="String representing a unique string that identifies a specific person or thing."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.purpose">
+      <path value="cimi-element-Identifier-model.purpose"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <short value="Why the item is used."/>
+      <definition value="Why the item is used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.purpose"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-use"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Identifier-model.type">
+      <path value="cimi-element-Identifier-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Identifier-model.codeSystem">
+      <path value="cimi-element-Identifier-model.codeSystem"/>
+      <short value="A formal terminology system."/>
+      <definition value="A formal terminology system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.codeSystem"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.effectiveTimePeriod">
+      <path value="cimi-element-Identifier-model.effectiveTimePeriod"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2985763"/>
+      </code>
+      <short value="The date and time span for which something is active, valid, or in force."/>
+      <definition value="The date and time span for which something is active, valid, or in force."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.effectiveTimePeriod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.issuer">
+      <path value="cimi-element-Identifier-model.issuer"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1561598"/>
+      </code>
+      <short value="An organization who issues a qualification, identifier, or license."/>
+      <definition value="An organization who issues a qualification, identifier, or license."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.issuer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-element-Identifier-model">
+      <path value="cimi-element-Identifier-model"/>
+      <definition value="A unique string that identifies a specific person or thing."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Identifier-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.value">
+      <path value="cimi-element-Identifier-model.value"/>
+      <short value="String representing a unique string that identifies a specific person or thing."/>
+      <definition value="String representing a unique string that identifies a specific person or thing."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.purpose">
+      <path value="cimi-element-Identifier-model.purpose"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <short value="Why the item is used."/>
+      <definition value="Why the item is used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.purpose"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-use"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Identifier-model.type">
+      <path value="cimi-element-Identifier-model.type"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <definition value="The most specific code (lowest level term) describing the kind or sort of thing being represented."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Identifier-model.codeSystem">
+      <path value="cimi-element-Identifier-model.codeSystem"/>
+      <short value="A formal terminology system."/>
+      <definition value="A formal terminology system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.codeSystem"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.effectiveTimePeriod">
+      <path value="cimi-element-Identifier-model.effectiveTimePeriod"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2985763"/>
+      </code>
+      <short value="The date and time span for which something is active, valid, or in force."/>
+      <definition value="The date and time span for which something is active, valid, or in force."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.effectiveTimePeriod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Identifier-model.issuer">
+      <path value="cimi-element-Identifier-model.issuer"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1561598"/>
+      </code>
+      <short value="An organization who issues a qualification, identifier, or license."/>
+      <definition value="An organization who issues a qualification, identifier, or license."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Identifier-model.issuer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-Locatable-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Locatable Logical Model</b></p>\n  <p>Abstract top level class in the CIMI hierarchy. The Locatable class reflects CIMI's implementation using Archetype Description Language (ADL). Its attributes (archetype_node_id, name, and archetype_details) are necessary to serialize CIMI definitions in ADL, but have no clinical relevance. To avoid complicating the profiles with irrelevant extensions, the attributes of Locatable have been omitted.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Locatable-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.Locatable"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "LocatableModel",
+  "title": "SW Locatable Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Abstract top level class in the CIMI hierarchy. The Locatable class reflects CIMI's implementation using Archetype Description Language (ADL). Its attributes (archetype_node_id, name, and archetype_details) are necessary to serialize CIMI definitions in ADL, but have no clinical relevance. To avoid complicating the profiles with irrelevant extensions, the attributes of Locatable have been omitted.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-Locatable-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-Locatable-model",
+        "path": "cimi-core-Locatable-model",
+        "definition": "Abstract top level class in the CIMI hierarchy. The Locatable class reflects CIMI's implementation using Archetype Description Language (ADL). Its attributes (archetype_node_id, name, and archetype_details) are necessary to serialize CIMI definitions in ADL, but have no clinical relevance. To avoid complicating the profiles with irrelevant extensions, the attributes of Locatable have been omitted.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Locatable-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-Locatable-model",
+        "path": "cimi-core-Locatable-model",
+        "definition": "Abstract top level class in the CIMI hierarchy. The Locatable class reflects CIMI's implementation using Archetype Description Language (ADL). Its attributes (archetype_node_id, name, and archetype_details) are necessary to serialize CIMI definitions in ADL, but have no clinical relevance. To avoid complicating the profiles with irrelevant extensions, the attributes of Locatable have been omitted.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Locatable-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

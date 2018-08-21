@@ -1,0 +1,1128 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles" />
+
+  <link href="fhir.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet" />
+  <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+  <link href="jquery-ui.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="assets/ico/favicon.png" />
+
+
+  <body>
+
+    <div id="segment-header" class="segment">
+  <!-- segment-header -->
+  <div class="container">
+    <!-- container -->
+    <a id="logo" no-external="true" href="http://hl7.org/fhir">
+      <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
+    </a>
+    <div id="hl7-status" class="hl7-status">
+      
+      <b>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)</b>
+    </div>
+
+    <div id="hl7-nav">
+      <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <!-- container -->
+  </div>
+</div>
+<!-- /segment-header -->
+
+<div id="segment-navbar" class="segment">
+  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">
+    <!-- container -->
+    <!-- HEADER CONTENT -->
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <div class="nav-collapse collapse navbar-inverse-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logical.html">Logical Models</a></li>
+            <li><a href="profiles.html">Profiles</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="valuesets.html">Value Sets</a></li>
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="modeldoc/index.html" target="_blank">Reference Model</a></li>
+            
+          </ul>
+
+        </div>
+        <!-- /.nav-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- /HEADER CONTENT -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-navbar -->
+
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+
+
+      <li><b>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+   <div class="row">
+     <div class="inner-wrapper">
+       <div class="col-12">
+
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<ul class="nav nav-tabs">
+
+  <li><a href="ImplementationGuide-1.html">Content</a></li>
+
+  <li><a href="ImplementationGuide-1.xml.html">XML</a></li>
+
+  <li><a href="ImplementationGuide-1.json.html">JSON</a></li>
+
+  <li class="active"><a href="#">Turtle</a></li>
+
+</ul>
+
+<h2>HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles</h2>
+
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ImplementationGuide;
+  <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;1&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/fsw/ImplementationGuide/1&lt;/pre&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.url">fhir:ImplementationGuide.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/fsw/ImplementationGuide/1&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.version">fhir:ImplementationGuide.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.0.0&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.name">fhir:ImplementationGuide.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.status">fhir:ImplementationGuide.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.fhirVersion">fhir:ImplementationGuide.fhirVersion</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;3.0.1&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package">fhir:ImplementationGuide.package</a> [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;p1&quot; ];
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.name">fhir:ImplementationGuide.package.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Profiles in this Implementation Guide&quot; ];
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">fhir:ImplementationGuide.package.resource</a> [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ObservationStatement.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ObservationStatement&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW ObservationStatement Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundAssertion.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundAssertion&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundAssertion Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundAssessment.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundAssessment&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundAssessment Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundBed.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundBed&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundBed Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundEdge.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundEdge&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundEdge Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundExudate.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundExudate&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundExudate Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundSiteIdentification.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundSiteIdentification&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundSiteIdentification Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundSize.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundSize&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundSize Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundTunneling.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundTunneling&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundTunneling Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundUndermining.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundUndermining&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW WoundUndermining Profile&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;ValueSet-shr-core-AllUnitsVS.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ValueSet/shr-core-AllUnitsVS&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SW AllUnitsVS ValueSet&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-BedAreaPercentageByAppearance-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-BedAreaPercentageByAppearance-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;BedAreaPercentageByAppearanceModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-BedAreaPercentageByColor-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-BedAreaPercentageByColor-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;BedAreaPercentageByColorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-BodyLocationQualifier-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-BodyLocationQualifier-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;BodyLocationQualifierModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Category-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Category-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CategoryModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ClinicalStatement-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ClinicalStatement-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ClinicalStatementModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-CodeSystem-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-CodeSystem-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CodeSystemModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 17;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-CodeSystemVersion-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-CodeSystemVersion-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CodeSystemVersionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 18;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-CodedEvaluationComponent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-CodedEvaluationComponent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CodedEvaluationComponentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 19;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Comment-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Comment-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CommentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 20;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-Comparator-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-Comparator-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ComparatorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 21;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ContentVersion-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ContentVersion-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ContentVersionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 22;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ContextCode-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ContextCode-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ContextCodeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 23;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Cosigned-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Cosigned-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CosignedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 24;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DataAbsentReason-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DataAbsentReason-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DataAbsentReasonModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DateAbated-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DateAbated-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DateAbatedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 26;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DateOfOnsetOfImpairment-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DateOfOnsetOfImpairment-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DateOfOnsetOfImpairmentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 27;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DateReported-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DateReported-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DateReportedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 28;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DateTimeIssued-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DateTimeIssued-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DateTimeIssuedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 29;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DateTime-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DateTime-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DateTimeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 30;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DeltaFlag-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DeltaFlag-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DeltaFlagModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 31;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DerivedFrom-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DerivedFrom-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DerivedFromModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 32;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Description-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Description-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DescriptionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 33;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-DisplayText-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-DisplayText-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DisplayTextModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 34;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-DrainageAmount-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-DrainageAmount-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DrainageAmountModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 35;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-EdgeDescription-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-EdgeDescription-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;EdgeDescriptionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 36;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-EvaluationComponent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-EvaluationComponent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;EvaluationComponentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 37;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-ExceptionValue-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-ExceptionValue-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ExceptionValueModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 38;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ExudateAppearance-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ExudateAppearance-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ExudateAppearanceModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 39;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Identifier-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Identifier-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;IdentifierModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 40;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-InformationEntry-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-InformationEntry-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;InformationEntryModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 41;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-InformationSource-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-InformationSource-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;InformationSourceModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 42;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-InjuryCause-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-InjuryCause-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;InjuryCauseModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 43;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-Interpretation-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-Interpretation-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;InterpretationModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 44;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-IsExudatePresent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-IsExudatePresent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;IsExudatePresentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 45;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-IsPatientReported-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-IsPatientReported-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;IsPatientReportedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 46;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-IsTunnelingPresent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-IsTunnelingPresent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;IsTunnelingPresentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 47;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-IsUnderminingPresent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-IsUnderminingPresent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;IsUnderminingPresentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 48;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-LateralityComponent-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-LateralityComponent-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;LateralityComponentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 49;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Method-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Method-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MethodModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 50;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-base-Narrative-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-base-Narrative-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NarrativeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 51;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-base-NarrativeQualifier-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-base-NarrativeQualifier-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NarrativeQualifierModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 52;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ObservationStatement-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ObservationStatement-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ObservationStatementModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 53;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ObservedCharacteristic-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ObservedCharacteristic-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ObservedCharacteristicModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 54;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Odor-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Odor-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;OdorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 55;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-PanelMembers-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-PanelMembers-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;PanelMembersModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 56;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-PartOf-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-PartOf-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;PartOfModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 57;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-PeriwoundDescription-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-PeriwoundDescription-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;PeriwoundDescriptionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 58;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-PressureUlcerStage-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-PressureUlcerStage-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;PressureUlcerStageModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 59;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-Quantity-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-Quantity-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuantityModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 60;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-RecordStatus-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-RecordStatus-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;RecordStatusModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 61;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Recorded-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Recorded-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;RecordedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 62;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Reliability-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Reliability-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ReliabilityModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 63;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-ResultStatus-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-ResultStatus-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ResultStatusModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 64;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Signed-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Signed-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SignedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 65;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-SourceRecordType-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-SourceRecordType-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SourceRecordTypeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 66;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-SourceSystem-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-SourceSystem-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SourceSystemModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 67;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-TemporalContext-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-TemporalContext-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;TemporalContextModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 68;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-TopicCode-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-TopicCode-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;TopicCodeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 69;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-TunnelingClockPosition-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-TunnelingClockPosition-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;TunnelingClockPositionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 70;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-TunnelingLength-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-TunnelingLength-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;TunnelingLengthModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 71;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-UnderminingClockPosition-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-UnderminingClockPosition-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;UnderminingClockPositionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 72;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-UnderminingLength-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-UnderminingLength-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;UnderminingLengthModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 73;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-shr-core-Units-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/shr-core-Units-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;UnitsModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 74;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-Verified-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-Verified-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;VerifiedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 75;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-VisibleStructure-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-VisibleStructure-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;VisibleStructureModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 76;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WasPresentOnAdmission-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WasPresentOnAdmission-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WasPresentOnAdmissionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 77;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundArea-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundArea-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundAreaModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 78;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundAssertion-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundAssertion-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundAssertionModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 79;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundAssessment-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundAssessment-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundAssessmentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 80;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundBaseAppearance-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundBaseAppearance-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundBaseAppearanceModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 81;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundBaseColor-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundBaseColor-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundBaseColorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 82;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundBed-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundBed-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundBedModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 83;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundDepth-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundDepth-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundDepthModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 84;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundEdgeColor-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundEdgeColor-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundEdgeColorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 85;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundEdge-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundEdge-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundEdgeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 86;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundEpisode-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundEpisode-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundEpisodeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 87;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundExudateColor-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundExudateColor-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundExudateColorModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 88;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundExudate-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundExudate-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundExudateModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 89;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundHealingAssessment-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundHealingAssessment-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundHealingAssessmentModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 90;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundIdentifier-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundIdentifier-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundIdentifierModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 91;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundLength-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundLength-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundLengthModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 92;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundSiteIdentification-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundSiteIdentification-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundSiteIdentificationModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 93;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundSite-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundSite-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundSiteModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 94;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundSize-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundSize-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundSizeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 95;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundTrend-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundTrend-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundTrendModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 96;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundTunneling-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundTunneling-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundTunnelingModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 97;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundType-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundType-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundTypeModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 98;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundUndermining-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundUndermining-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundUnderminingModel&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 99;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-fsw-WoundWidth-model.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/fsw-WoundWidth-model&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;WoundWidthModel&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page">fhir:ImplementationGuide.page</a> [
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.source">fhir:ImplementationGuide.page.source</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;index.html&quot; ];
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.title">fhir:ImplementationGuide.page.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.kind">fhir:ImplementationGuide.page.kind</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;page&quot; ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+        </div>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      
+      HL7 FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment), Version: 1.0.0
+      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR &copy; Version: 3.0.1</a>
+      ; Generated on Tue, Aug 21, 2018 17:57-0400.
+    </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

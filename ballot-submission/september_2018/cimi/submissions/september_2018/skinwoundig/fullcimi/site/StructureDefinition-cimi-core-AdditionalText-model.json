@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-AdditionalText-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW AdditionalText Logical Model</b></p>\n  <p>A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-AdditionalText-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.AdditionalText"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "AdditionalTextModel",
+  "title": "SW AdditionalText Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0947611"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-AdditionalText-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-AdditionalText-model",
+        "path": "cimi-core-AdditionalText-model",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-AdditionalText-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-AdditionalText-model.value",
+        "path": "cimi-core-AdditionalText-model.value",
+        "short": "String representing a text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "String representing a text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-AdditionalText-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-AdditionalText-model",
+        "path": "cimi-core-AdditionalText-model",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-AdditionalText-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-AdditionalText-model.value",
+        "path": "cimi-core-AdditionalText-model.value",
+        "short": "String representing a text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "String representing a text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-AdditionalText-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

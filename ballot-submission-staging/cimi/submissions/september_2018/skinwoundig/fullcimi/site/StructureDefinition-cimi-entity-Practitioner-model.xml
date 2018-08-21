@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Practitioner-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Practitioner Logical Model</b></p>
+  <p>A person who practices a healing art.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Practitioner-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Practitioner"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="PractitionerModel"/>
+  <title value="SW Practitioner Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A person who practices a healing art."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C2220264"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Practitioner-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Practitioner-model">
+      <path value="cimi-entity-Practitioner-model"/>
+      <definition value="A person who practices a healing art."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person">
+      <path value="cimi-entity-Practitioner-model.person"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="A person relevant to the health or social situation of the subject (including the person of record him or herself)."/>
+      <definition value="A person relevant to the health or social situation of the subject (including the person of record him or herself)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.humanName">
+      <path value="cimi-entity-Practitioner-model.person.humanName"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1547383"/>
+      </code>
+      <short value="The CIMI person name, constrained to map correctly to FHIR."/>
+      <definition value="The CIMI person name, constrained to map correctly to FHIR."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.humanName"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-HumanName-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.dateOfBirth">
+      <path value="cimi-entity-Practitioner-model.person.dateOfBirth"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2919018"/>
+      </code>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="21112-8"/>
+      </code>
+      <short value="A date of birth or approximate year or period (year or date range), if estimated."/>
+      <definition value="A date of birth or approximate year or period (year or date range), if estimated."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.dateOfBirth"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.administrativeGender">
+      <path value="cimi-entity-Practitioner-model.person.administrativeGender"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1550327"/>
+      </code>
+      <short value="A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender."/>
+      <definition value="A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.administrativeGender"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.address">
+      <path value="cimi-entity-Practitioner-model.person.address"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0682130"/>
+      </code>
+      <short value="An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)."/>
+      <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.address"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.headshot">
+      <path value="cimi-entity-Practitioner-model.person.headshot"/>
+      <short value="A photograph showing a person&#39;s face."/>
+      <definition value="A photograph showing a person&#39;s face."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.headshot"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.contactPoint">
+      <path value="cimi-entity-Practitioner-model.person.contactPoint"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2986441"/>
+      </code>
+      <short value="An electronic means of contacting an organization or individual."/>
+      <definition value="An electronic means of contacting an organization or individual."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.contactPoint"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.languageUsed">
+      <path value="cimi-entity-Practitioner-model.person.languageUsed"/>
+      <short value="Language used for communication by a human, either the subject of record, parent, or other involved person."/>
+      <definition value="Language used for communication by a human, either the subject of record, parent, or other involved person."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.languageUsed"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-LanguageUsed-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.activeFlag">
+      <path value="cimi-entity-Practitioner-model.person.activeFlag"/>
+      <short value="If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI."/>
+      <definition value="If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.activeFlag"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.maritalStatus">
+      <path value="cimi-entity-Practitioner-model.person.maritalStatus"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0024819"/>
+      </code>
+      <short value="The most recent marital status of a person."/>
+      <definition value="The most recent marital status of a person."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.maritalStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/marital-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Practitioner-model.nationalProviderIdentifier">
+      <path value="cimi-entity-Practitioner-model.nationalProviderIdentifier"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1549728"/>
+      </code>
+      <short value="A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry."/>
+      <definition value="A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.nationalProviderIdentifier"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-NationalProviderIdentifier-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.qualification">
+      <path value="cimi-entity-Practitioner-model.qualification"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0037778"/>
+      </code>
+      <short value="A right to practice medicine obtained by training and certification."/>
+      <definition value="A right to practice medicine obtained by training and certification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.qualification"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Qualification-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Practitioner-model">
+      <path value="cimi-entity-Practitioner-model"/>
+      <definition value="A person who practices a healing art."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person">
+      <path value="cimi-entity-Practitioner-model.person"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0027361"/>
+      </code>
+      <short value="A person relevant to the health or social situation of the subject (including the person of record him or herself)."/>
+      <definition value="A person relevant to the health or social situation of the subject (including the person of record him or herself)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.humanName">
+      <path value="cimi-entity-Practitioner-model.person.humanName"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1547383"/>
+      </code>
+      <short value="The CIMI person name, constrained to map correctly to FHIR."/>
+      <definition value="The CIMI person name, constrained to map correctly to FHIR."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.humanName"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-HumanName-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.dateOfBirth">
+      <path value="cimi-entity-Practitioner-model.person.dateOfBirth"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2919018"/>
+      </code>
+      <code>
+        <system value="http://loinc.org"/>
+        <code value="21112-8"/>
+      </code>
+      <short value="A date of birth or approximate year or period (year or date range), if estimated."/>
+      <definition value="A date of birth or approximate year or period (year or date range), if estimated."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.dateOfBirth"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.administrativeGender">
+      <path value="cimi-entity-Practitioner-model.person.administrativeGender"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1550327"/>
+      </code>
+      <short value="A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender."/>
+      <definition value="A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.administrativeGender"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.address">
+      <path value="cimi-entity-Practitioner-model.person.address"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0682130"/>
+      </code>
+      <short value="An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)."/>
+      <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.address"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Address-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.headshot">
+      <path value="cimi-entity-Practitioner-model.person.headshot"/>
+      <short value="A photograph showing a person&#39;s face."/>
+      <definition value="A photograph showing a person&#39;s face."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.headshot"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.contactPoint">
+      <path value="cimi-entity-Practitioner-model.person.contactPoint"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C2986441"/>
+      </code>
+      <short value="An electronic means of contacting an organization or individual."/>
+      <definition value="An electronic means of contacting an organization or individual."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.contactPoint"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContactPoint-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.languageUsed">
+      <path value="cimi-entity-Practitioner-model.person.languageUsed"/>
+      <short value="Language used for communication by a human, either the subject of record, parent, or other involved person."/>
+      <definition value="Language used for communication by a human, either the subject of record, parent, or other involved person."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.languageUsed"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-LanguageUsed-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.activeFlag">
+      <path value="cimi-entity-Practitioner-model.person.activeFlag"/>
+      <short value="If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI."/>
+      <definition value="If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.activeFlag"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.person.maritalStatus">
+      <path value="cimi-entity-Practitioner-model.person.maritalStatus"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0024819"/>
+      </code>
+      <short value="The most recent marital status of a person."/>
+      <definition value="The most recent marital status of a person."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.person.maritalStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/marital-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-entity-Practitioner-model.nationalProviderIdentifier">
+      <path value="cimi-entity-Practitioner-model.nationalProviderIdentifier"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C1549728"/>
+      </code>
+      <short value="A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry."/>
+      <definition value="A unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.nationalProviderIdentifier"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-NationalProviderIdentifier-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Practitioner-model.qualification">
+      <path value="cimi-entity-Practitioner-model.qualification"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0037778"/>
+      </code>
+      <short value="A right to practice medicine obtained by training and certification."/>
+      <definition value="A right to practice medicine obtained by training and certification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Practitioner-model.qualification"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Qualification-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

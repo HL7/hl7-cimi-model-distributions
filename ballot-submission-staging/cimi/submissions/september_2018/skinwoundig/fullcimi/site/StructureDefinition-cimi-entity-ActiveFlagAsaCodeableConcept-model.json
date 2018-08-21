@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ActiveFlagAsaCodeableConcept Logical Model</b></p>\n  <p>If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-ActiveFlagAsaCodeableConcept-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.ActiveFlagAsaCodeableConcept"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ActiveFlagAsaCodeableConceptModel",
+  "title": "SW ActiveFlagAsaCodeableConcept Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+        "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+        "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+        "short": "Code representing if the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "Code representing if the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+        "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+        "definition": "If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+        "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+        "short": "Code representing if the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "definition": "Code representing if the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ActiveFlagAsaCodeableConcept-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

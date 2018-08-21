@@ -1,0 +1,201 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-core-Attribution-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Attribution Logical Model</b></p>\n  <p>Information ascribing the record to a particular contributor or responsible person.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.core.Attribution"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "AttributionModel",
+  "title": "SW Attribution Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Information ascribing the record to a particular contributor or responsible person.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-core-Attribution-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-core-Attribution-model",
+        "path": "cimi-core-Attribution-model",
+        "definition": "Information ascribing the record to a particular contributor or responsible person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Attribution-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.entityOrRole",
+        "path": "cimi-core-Attribution-model.entityOrRole",
+        "short": "CIMI parent class for both Entity and Role.",
+        "definition": "CIMI parent class for both Entity and Role.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.entityOrRole",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-EntityOrRole-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.recordedOn",
+        "path": "cimi-core-Attribution-model.recordedOn",
+        "short": "The time of the attribution action.",
+        "definition": "The time of the attribution action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.recordedOn",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.signature",
+        "path": "cimi-core-Attribution-model.signature",
+        "short": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "definition": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.signature",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-core-Attribution-model",
+        "path": "cimi-core-Attribution-model",
+        "definition": "Information ascribing the record to a particular contributor or responsible person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-core-Attribution-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.entityOrRole",
+        "path": "cimi-core-Attribution-model.entityOrRole",
+        "short": "CIMI parent class for both Entity and Role.",
+        "definition": "CIMI parent class for both Entity and Role.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.entityOrRole",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-EntityOrRole-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.recordedOn",
+        "path": "cimi-core-Attribution-model.recordedOn",
+        "short": "The time of the attribution action.",
+        "definition": "The time of the attribution action.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.recordedOn",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-core-Attribution-model.signature",
+        "path": "cimi-core-Attribution-model.signature",
+        "short": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "definition": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-core-Attribution-model.signature",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

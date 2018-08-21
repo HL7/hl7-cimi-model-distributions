@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundUnderminingLength-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundUnderminingLength Logical Model</b></p>
+  <p>Length of wound undermining.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundUnderminingLength"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundUnderminingLengthModel"/>
+  <title value="SW WoundUnderminingLength Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Length of wound undermining."/>
+  <keyword>
+    <system value="http://loinc.org"/>
+    <code value="72293-4"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundUnderminingLength-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundUnderminingLength-model">
+      <path value="sw-WoundUnderminingLength-model"/>
+      <definition value="Length of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.findingStatus">
+      <path value="sw-WoundUnderminingLength-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.relevantTime">
+      <path value="sw-WoundUnderminingLength-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.findingMethod">
+      <path value="sw-WoundUnderminingLength-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.subject">
+      <path value="sw-WoundUnderminingLength-model.subject"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="454341000124104"/>
+        <display value="Wound undermining (observable entity)"/>
+      </code>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode">
+      <path value="sw-WoundUnderminingLength-model.observableCode"/>
+      <short value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <definition value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.observableCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.id">
+      <path value="sw-WoundUnderminingLength-model.observableCode.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.extension">
+      <path value="sw-WoundUnderminingLength-model.observableCode.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.system">
+      <path value="sw-WoundUnderminingLength-model.observableCode.system"/>
+      <short value="Identity of the terminology system"/>
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code."/>
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7&#39;s list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously."/>
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://loinc.org"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystem"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.version">
+      <path value="sw-WoundUnderminingLength-model.observableCode.version"/>
+      <short value="Version of the system - if relevant"/>
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged."/>
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.version"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystemVersion"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.code">
+      <path value="sw-WoundUnderminingLength-model.observableCode.code"/>
+      <short value="Symbol in syntax defined by the system"/>
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
+      <requirements value="Need to refer to a particular code in the system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.code"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="72293-4"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="sw-WoundUnderminingLength-model.observableCode.display"/>
+      <short value="Representation defined by the system"/>
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.display"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.2 - but note this is not well followed"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CV.displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.userSelected">
+      <path value="sw-WoundUnderminingLength-model.observableCode.userSelected"/>
+      <short value="If this coding was chosen directly by the user"/>
+      <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)."/>
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly &#39;directly chosen&#39; implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."/>
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.userSelected"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Sometimes implied by being first"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CD.codingRationale"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue">
+      <path value="sw-WoundUnderminingLength-model.resultValue"/>
+      <short value="The finding itself, such as the blood pressure value recorded."/>
+      <definition value="The finding itself, such as the blood pressure value recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.value">
+      <path value="sw-WoundUnderminingLength-model.resultValue.value"/>
+      <short value="Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR"/>
+      <definition value="Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.comparator">
+      <path value="sw-WoundUnderminingLength-model.resultValue.comparator"/>
+      <short value="Comparator"/>
+      <definition value="Comparator"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.comparator"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/quantity-comparator"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.units">
+      <path value="sw-WoundUnderminingLength-model.resultValue.units"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <short value="Code for the unit of measure of the quantity."/>
+      <definition value="Code for the unit of measure of the quantity."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.units"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.qualifier">
+      <path value="sw-WoundUnderminingLength-model.qualifier"/>
+      <short value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <definition value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.qualifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundUnderminingLength-model">
+      <path value="sw-WoundUnderminingLength-model"/>
+      <definition value="Length of wound undermining."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.findingStatus">
+      <path value="sw-WoundUnderminingLength-model.findingStatus"/>
+      <short value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <definition value="Indicates whether the finding is preliminary, amended, final, etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.findingStatus"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.relevantTime">
+      <path value="sw-WoundUnderminingLength-model.relevantTime"/>
+      <short value="The time or time period that the statement addresses."/>
+      <definition value="The time or time period that the statement addresses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.relevantTime"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.findingMethod">
+      <path value="sw-WoundUnderminingLength-model.findingMethod"/>
+      <short value="The method used to determine the finding."/>
+      <definition value="The method used to determine the finding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.findingMethod"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.subject">
+      <path value="sw-WoundUnderminingLength-model.subject"/>
+      <code>
+        <system value="http://snomed.info/sct"/>
+        <code value="454341000124104"/>
+        <display value="Wound undermining (observable entity)"/>
+      </code>
+      <short value="The person, place, event, condition, other statement that this statement addresses or belongs to."/>
+      <definition value="The person, place, event, condition, other statement that this statement addresses or belongs to.&#xA;For an existential finding, the Subject is the &#39;owner&#39; of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode">
+      <path value="sw-WoundUnderminingLength-model.observableCode"/>
+      <short value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <definition value="A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the &#39;question code&#39; that pairs to the &#39;answer&#39; contained in the ResultValue."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.observableCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.id">
+      <path value="sw-WoundUnderminingLength-model.observableCode.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.extension">
+      <path value="sw-WoundUnderminingLength-model.observableCode.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.system">
+      <path value="sw-WoundUnderminingLength-model.observableCode.system"/>
+      <short value="Identity of the terminology system"/>
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code."/>
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7&#39;s list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously."/>
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://loinc.org"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystem"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.version">
+      <path value="sw-WoundUnderminingLength-model.observableCode.version"/>
+      <short value="Version of the system - if relevant"/>
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged."/>
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.version"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./codeSystemVersion"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.code">
+      <path value="sw-WoundUnderminingLength-model.observableCode.code"/>
+      <short value="Symbol in syntax defined by the system"/>
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
+      <requirements value="Need to refer to a particular code in the system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.code"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="72293-4"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="sw-WoundUnderminingLength-model.observableCode.display"/>
+      <short value="Representation defined by the system"/>
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.display"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.2 - but note this is not well followed"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CV.displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.observableCode.userSelected">
+      <path value="sw-WoundUnderminingLength-model.observableCode.userSelected"/>
+      <short value="If this coding was chosen directly by the user"/>
+      <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)."/>
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly &#39;directly chosen&#39; implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely."/>
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coding.userSelected"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Sometimes implied by being first"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="CD.codingRationale"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]"/>
+      </mapping>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue">
+      <path value="sw-WoundUnderminingLength-model.resultValue"/>
+      <short value="The finding itself, such as the blood pressure value recorded."/>
+      <definition value="The finding itself, such as the blood pressure value recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.value">
+      <path value="sw-WoundUnderminingLength-model.resultValue.value"/>
+      <short value="Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR"/>
+      <definition value="Decimal representing a quantity with units, whose value may be bounded from above or below, as defined in FHIR"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.comparator">
+      <path value="sw-WoundUnderminingLength-model.resultValue.comparator"/>
+      <short value="Comparator"/>
+      <definition value="Comparator"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.comparator"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/quantity-comparator"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.resultValue.units">
+      <path value="sw-WoundUnderminingLength-model.resultValue.units"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <short value="Code for the unit of measure of the quantity."/>
+      <definition value="Code for the unit of measure of the quantity."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.resultValue.units"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="sw-WoundUnderminingLength-model.qualifier">
+      <path value="sw-WoundUnderminingLength-model.qualifier"/>
+      <short value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <definition value="A condition or circumstance associated with an observation that affects the interpretation of the result value."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundUnderminingLength-model.qualifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

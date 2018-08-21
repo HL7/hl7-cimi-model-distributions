@@ -1,0 +1,167 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-Stage-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Stage Logical Model</b></p>\n  <p>The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Stage-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.Stage"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "StageModel",
+  "title": "SW Stage Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0699749"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-Stage-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-Stage-model",
+        "path": "cimi-statement-Stage-model",
+        "definition": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Stage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Stage-model.value",
+        "path": "cimi-statement-Stage-model.value",
+        "short": "Code representing the relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "definition": "Code representing the relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Stage-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Stage-model.stageDetail",
+        "path": "cimi-statement-Stage-model.stageDetail",
+        "short": "The full staging information",
+        "definition": "The full staging information",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Stage-model.stageDetail",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-Stage-model",
+        "path": "cimi-statement-Stage-model",
+        "definition": "The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-Stage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Stage-model.value",
+        "path": "cimi-statement-Stage-model.value",
+        "short": "Code representing the relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "definition": "Code representing the relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Stage-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-Stage-model.stageDetail",
+        "path": "cimi-statement-Stage-model.stageDetail",
+        "short": "The full staging information",
+        "definition": "The full staging information",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-Stage-model.stageDetail",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

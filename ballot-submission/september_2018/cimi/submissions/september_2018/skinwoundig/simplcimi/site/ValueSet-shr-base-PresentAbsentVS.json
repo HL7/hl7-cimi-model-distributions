@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-base-PresentAbsentVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW PresentAbsentVS ValueSet</b></p>\n<p>Indicator if the assertion is assertion of presence or absence</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.PresentAbsentVS"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "PresentAbsentVS",
+  "title": "SW PresentAbsentVS ValueSet",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Indicator if the assertion is assertion of presence or absence",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "705057003",
+            "display": "Presence (qualifier value)"
+          },
+          {
+            "code": "2667000",
+            "display": "Absent (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

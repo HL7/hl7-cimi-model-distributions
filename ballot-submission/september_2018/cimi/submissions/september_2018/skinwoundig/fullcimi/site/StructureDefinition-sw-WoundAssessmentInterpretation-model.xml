@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="sw-WoundAssessmentInterpretation-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW WoundAssessmentInterpretation Logical Model</b></p>
+  <p>Overall assessement of whether the wound is within normal parameters.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="sw.WoundAssessmentInterpretation"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="WoundAssessmentInterpretationModel"/>
+  <title value="SW WoundAssessmentInterpretation Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Overall assessement of whether the wound is within normal parameters."/>
+  <keyword>
+    <system value="http://loinc.org"/>
+    <code value="80338-7"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="sw-WoundAssessmentInterpretation-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="sw-WoundAssessmentInterpretation-model">
+      <path value="sw-WoundAssessmentInterpretation-model"/>
+      <definition value="Overall assessement of whether the wound is within normal parameters."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundAssessmentInterpretation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundAssessmentInterpretation-model.value">
+      <path value="sw-WoundAssessmentInterpretation-model.value"/>
+      <short value="Code representing overall assessement of whether the wound is within normal parameters."/>
+      <definition value="Code representing overall assessement of whether the wound is within normal parameters."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAssessmentInterpretation-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://loinc.org/vs/LL3816-7"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="sw-WoundAssessmentInterpretation-model">
+      <path value="sw-WoundAssessmentInterpretation-model"/>
+      <definition value="Overall assessement of whether the wound is within normal parameters."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="sw-WoundAssessmentInterpretation-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="sw-WoundAssessmentInterpretation-model.value">
+      <path value="sw-WoundAssessmentInterpretation-model.value"/>
+      <short value="Code representing overall assessement of whether the wound is within normal parameters."/>
+      <definition value="Code representing overall assessement of whether the wound is within normal parameters."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="sw-WoundAssessmentInterpretation-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://loinc.org/vs/LL3816-7"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

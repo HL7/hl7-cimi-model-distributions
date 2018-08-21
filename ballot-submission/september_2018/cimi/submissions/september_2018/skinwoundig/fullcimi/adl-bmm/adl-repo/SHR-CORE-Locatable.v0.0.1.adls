@@ -1,0 +1,39 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Locatable.locatable.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.core","locatable">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Locatable[id1]
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1"] = <
+        text = <"Locatable">
+        description = <"Abstract top level class in the CIMI hierarchy. The Locatable class reflects CIMI's implementation using Archetype Description Language (ADL). Its attributes (archetype_node_id, name, and archetype_details) are necessary to serialize CIMI definitions in ADL, but have no clinical relevance. To avoid complicating the profiles with irrelevant extensions, the attributes of Locatable have been omitted.">
+      >
+    >
+  >

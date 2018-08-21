@@ -1,0 +1,1123 @@
+-- Basic Metamodel Syntax Version
+bmm_version = <"2.1">
+
+-- ----------------------------------
+-- schema identification
+-- (schema_id computed as <rm_publisher>_<schema_name>_<rm_release>)
+-- ----------------------------------
+rm_publisher = <"SHR">
+schema_name = <"RM_CLINICAL">
+rm_release = <"0.0.1">
+model_name = <"CORE">
+
+-- ----------------------------------
+-- schema documentation
+-- ----------------------------------
+schema_revision = <"Fri Jul 28 17:57:05 PDT 2017">
+schema_lifecycle_state = <"dstu">
+schema_description = <"RM_CLINICAL.v0.0.1 - Schema generated from CIMPL">
+
+
+-- ----------------------------------
+-- archetyping
+-- ----------------------------------
+archetype_rm_closure_packages = <"SHR_CLINICAL.ShrBase, SHR_CLINICAL.ShrCore, SHR_CLINICAL.ShrEntity, SHR_CLINICAL.Sw">
+includes = <
+	["1"] = <
+		id = <"shr_rm_primitives_0.0.1">
+	>
+>
+packages = <
+	["SHR_Clinical"] = <
+		name = <"SHR_Clinical">
+		packages = <
+			["ShrBase"] = <
+				name = <"ShrBase">
+				classes = <"Statement", "Finding", "FindingStatus", "RelevantTime", "FindingMethod", "ExistentialFinding", "PresentOrAbsent", "ObjectPresentOrAbsent", "Subject", "ObjectTypeCode", "ObjectIdentifier", "Observation", "ObservableCode", "ResultValue", "Qualifier", "CodedObservation", "QuantitativeObservation", "Composition", "Cluster", "TypeCode">
+			>
+			["ShrCore"] = <
+				name = <"ShrCore">
+				classes = <"Quantity", "Comparator", "Units", "SimpleQuantity", "EmbeddedContent", "Media", "BinaryData", "ContentType", "Language", "ResourceLocation", "ResourceSize", "Hash", "CreationTime", "Title", "Coding", "CodeSystem", "CodeSystemVersion", "DisplayText", "CodeableConcept", "Range", "LowerBound", "UpperBound", "Ratio", "Numerator", "Denominator", "TimePeriod", "TimePeriodStart", "TimePeriodEnd">
+			>
+			["ShrEntity"] = <
+				name = <"ShrEntity">
+				classes = <"BodyStructurePresentOrAbsent", "Person", "Condition", "TimeOfOnset", "TimeOfAbatement", "ConditionPresentOnAdmission">
+			>
+			["Sw"] = <
+				name = <"Sw">
+				classes = <"WoundPresentOrAbsent", "WoundLocationObservation", "Wound", "WoundAbsent", "WoundTunnelPresentOrAbsent", "WoundTunnel", "WoundUnderminingPresentOrAbsent", "WoundUndermining", "WoundType", "WoundTypeEtiology", "PhotographicImage", "WoundEpisode", "WoundPressureUlcerAssociation", "WoundAssessmentInterpretation", "WoundTrend", "WoundPeriwoundDescription", "WoundVisibleInternalStructure", "WoundBedAppearance", "WoundBedAppearancePercentage", "WoundBedColor", "WoundBedColorPercentage", "WoundEdgeDescription", "WoundEdgeColor", "WoundTunnelLength", "WoundTunnelClockDirection", "WoundUnderminingLength", "WoundUnderminingClockDirection", "WoundExudateAmount", "WoundExudateVolume", "WoundExudateAppearance", "WoundExudateColor", "WoundExudateOdor", "WoundLength", "WoundWidth", "WoundDepth", "WoundArea", "ClinicalInputFormPatientWoundSummary", "WoundPresentCluster", "ClinicalInputFormWoundAssessment", "WoundBedAndEdgeCluster", "WoundBedAppearanceCluster", "WoundBedColorCluster", "WoundEdgeCluster", "WoundTunnelingAndUnderminingCluster", "WoundTunnelingCluster", "WoundUnderminingCluster", "WoundExudateCluster", "WoundSizeCluster", "ExchangeFormWoundComprehensiveHistory">
+			>
+		>
+	>
+>
+
+class_definitions = <
+	["Statement"] = <
+		documentation = <"Base class for all types of clinical statements.">
+		name = <"Statement">
+	>
+	["Finding"] = <
+		documentation = <"A determination, such as an observation, assertion, opinion, fact, or judgment.">
+		name = <"Finding">
+		ancestors = <"Statement", ...>
+		properties = <
+			["findingStatus"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Indicates whether the finding is preliminary, amended, final, etc.">
+				name = <"findingStatus">
+				type = <"FindingStatus">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["relevantTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The time or time period that the statement addresses.">
+				name = <"relevantTime">
+				type = <"RelevantTime">
+			>
+			["findingMethod"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The method used to determine the finding.">
+				name = <"findingMethod">
+				type = <"FindingMethod">
+			>
+		>
+	>
+	["FindingStatus"] = <
+		documentation = <"Indicates whether the finding is preliminary, amended, final, etc.">
+		name = <"FindingStatus">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["RelevantTime"] = <
+		documentation = <"The time or time period that the statement addresses.">
+		name = <"RelevantTime">
+		properties = <
+			["valueChoicedateTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"valueChoicedateTime">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceTimePeriod"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A period of time defined by a start and end time, date, or year.
+					If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.">
+				name = <"valueChoiceTimePeriod">
+				type = <"TimePeriod">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["FindingMethod"] = <
+		documentation = <"The method used to determine the finding.">
+		name = <"FindingMethod">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ExistentialFinding"] = <
+		documentation = <"An assertion of a physical or conceptual entity, relationship, situation, condition, or phenomenon present or absent.">
+		name = <"ExistentialFinding">
+		ancestors = <"Finding", ...>
+		properties = <
+			["presentOrAbsent"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Whether the object is present or absent, exists or does not exist.">
+				name = <"presentOrAbsent">
+				type = <"PresentOrAbsent">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["PresentOrAbsent"] = <
+		documentation = <"Whether the object is present or absent, exists or does not exist.">
+		name = <"PresentOrAbsent">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ObjectPresentOrAbsent"] = <
+		documentation = <"An assertion of a physical or conceptual entity, relationship, role, situation, condition, or phenomenon present or absent.">
+		name = <"ObjectPresentOrAbsent">
+		ancestors = <"ExistentialFinding", ...>
+		properties = <
+			["subject"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+					For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+				name = <"subject">
+				type = <"Subject">
+			>
+			["objectTypeCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.">
+				name = <"objectTypeCode">
+				type = <"ObjectTypeCode">
+			>
+			["objectIdentifier"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.">
+				name = <"objectIdentifier">
+				type = <"ObjectIdentifier">
+			>
+		>
+	>
+	["Subject"] = <
+		documentation = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+			For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+		name = <"Subject">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Base class for all types of clinical statements.">
+				name = <"value">
+				type = <"Statement">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ObjectTypeCode"] = <
+		documentation = <"A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist.">
+		name = <"ObjectTypeCode">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ObjectIdentifier"] = <
+		documentation = <"For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time.">
+		name = <"ObjectIdentifier">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Observation"] = <
+		documentation = <"A statement that asserts the value of a property (observable) of the subject. The subject is often the patient, but may be a condition, a physical structure, or another clinical statement. For example, an interpretation is a finding about an observation.">
+		name = <"Observation">
+		ancestors = <"Finding", ...>
+		properties = <
+			["subject"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+					For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+				name = <"subject">
+				type = <"Subject">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["observableCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.">
+				name = <"observableCode">
+				type = <"ObservableCode">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["resultValue"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The finding itself, such as the blood pressure value recorded.">
+				name = <"resultValue">
+				type = <"ResultValue">
+			>
+			["qualifier"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A condition or circumstance associated with an observation that affects the interpretation of the result value.">
+				name = <"qualifier">
+				type = <"Qualifier">
+				cardinality = <|>=0|>
+			>
+		>
+	>
+	["ObservableCode"] = <
+		documentation = <"A code describing the aspect or property of the subject being observed or measured. The ObservableCode is the 'question code' that pairs to the 'answer' contained in the ResultValue.">
+		name = <"ObservableCode">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ResultValue"] = <
+		documentation = <"The finding itself, such as the blood pressure value recorded.">
+		name = <"ResultValue">
+		properties = <
+			["valueChoiceQuantity"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+				name = <"valueChoiceQuantity">
+				type = <"Quantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceCodeableConcept"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"valueChoiceCodeableConcept">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoicestring"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"valueChoicestring">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceboolean"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: boolean)">
+				name = <"valueChoiceboolean">
+				type = <"BOOLEAN">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceRange"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"An interval defined by a quantitative upper and/or lower bound. One of the two bounds must be specified, and the lower bound must be less than the upper bound. When Quantities are specified, the units of measure must be the same.">
+				name = <"valueChoiceRange">
+				type = <"Range">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceRatio"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A unit of measurement for the quotient of the amount of one entity to another.">
+				name = <"valueChoiceRatio">
+				type = <"Ratio">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoicetime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: time)">
+				name = <"valueChoicetime">
+				type = <"TIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoicedateTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"valueChoicedateTime">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceTimePeriod"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A period of time defined by a start and end time, date, or year.
+					If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.">
+				name = <"valueChoiceTimePeriod">
+				type = <"TimePeriod">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["valueChoiceMedia"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A file that contains audio, video, image, or similar content.">
+				name = <"valueChoiceMedia">
+				type = <"Media">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Qualifier"] = <
+		documentation = <"A condition or circumstance associated with an observation that affects the interpretation of the result value.">
+		name = <"Qualifier">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodedObservation"] = <
+		documentation = <"-">
+		name = <"CodedObservation">
+		ancestors = <"Observation", ...>
+	>
+	["QuantitativeObservation"] = <
+		documentation = <"-">
+		name = <"QuantitativeObservation">
+		ancestors = <"Observation", ...>
+	>
+	["Composition"] = <
+		documentation = <"A set of one or more statements or aggregations that should be interpreted together, exchanged as a collection, or may be aggregregated for the purpose of clinical input or output.">
+		name = <"Composition">
+		ancestors = <"Statement", ...>
+		properties = <
+			["subject"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The person, place, event, condition, other statement that this statement addresses or belongs to.
+					For an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements.">
+				name = <"subject">
+				type = <"Subject">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["typeCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A code that describes the type of composition or section, such as a section or document type identifier.">
+				name = <"typeCode">
+				type = <"TypeCode">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["statement"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Base class for all types of clinical statements.">
+				name = <"statement">
+				type = <"Statement">
+				cardinality = <|>=0|>
+			>
+		>
+	>
+	["Cluster"] = <
+		documentation = <"A collection of statements and groups.">
+		name = <"Cluster">
+		ancestors = <"Statement", ...>
+		properties = <
+			["typeCode"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A code that describes the type of composition or section, such as a section or document type identifier.">
+				name = <"typeCode">
+				type = <"TypeCode">
+			>
+			["statement"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Base class for all types of clinical statements.">
+				name = <"statement">
+				type = <"Statement">
+				cardinality = <|>=0|>
+			>
+		>
+	>
+	["TypeCode"] = <
+		documentation = <"A code that describes the type of composition or section, such as a section or document type identifier.">
+		name = <"TypeCode">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Quantity"] = <
+		documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+		name = <"Quantity">
+		properties = <
+			["comparator"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"undefined">
+				name = <"comparator">
+				type = <"Comparator">
+			>
+			["units"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Code for the unit of measure of the quantity.">
+				name = <"units">
+				type = <"Units">
+			>
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: decimal)">
+				name = <"value">
+				type = <"DECIMAL">
+			>
+		>
+	>
+	["Comparator"] = <
+		documentation = <"-">
+		name = <"Comparator">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Units"] = <
+		documentation = <"Code for the unit of measure of the quantity.">
+		name = <"Units">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+				name = <"value">
+				type = <"Coding">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["SimpleQuantity"] = <
+		documentation = <"A quantity where the comparator is not used, as defined in FHIR">
+		name = <"SimpleQuantity">
+		ancestors = <"Quantity", ...>
+	>
+	["EmbeddedContent"] = <
+		documentation = <"Abstract class defining the common metadata of all types of encapsulated data, such as images.">
+		name = <"EmbeddedContent">
+	>
+	["Media"] = <
+		documentation = <"A file that contains audio, video, image, or similar content.">
+		name = <"Media">
+		ancestors = <"EmbeddedContent", ...>
+		properties = <
+			["binaryData"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The data itself.">
+				name = <"binaryData">
+				type = <"BinaryData">
+			>
+			["contentType"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Mime type of the content, with charset etc.">
+				name = <"contentType">
+				type = <"ContentType">
+			>
+			["language"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A human language, spoken or written.">
+				name = <"language">
+				type = <"Language">
+			>
+			["resourceLocation"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"URI where data can be found.">
+				name = <"resourceLocation">
+				type = <"ResourceLocation">
+			>
+			["resourceSize"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Number of bytes of content in the resource (if url provided)">
+				name = <"resourceSize">
+				type = <"ResourceSize">
+			>
+			["hash"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A hash code of the data (sha-1, base64ed)">
+				name = <"hash">
+				type = <"Hash">
+			>
+			["title"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A distinguishing word or group of words naming an item.">
+				name = <"title">
+				type = <"Title">
+			>
+			["creationTime"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The point in time when the information was recorded in the system of record.">
+				name = <"creationTime">
+				type = <"CreationTime">
+			>
+		>
+	>
+	["BinaryData"] = <
+		documentation = <"The data itself.">
+		name = <"BinaryData">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: base64Binary)">
+				name = <"value">
+				type = <"BASE64BINARY">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ContentType"] = <
+		documentation = <"Mime type of the content, with charset etc.">
+		name = <"ContentType">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Language"] = <
+		documentation = <"A human language, spoken or written.">
+		name = <"Language">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A concept represented by a code or codes.">
+				name = <"value">
+				type = <"CodeableConcept">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ResourceLocation"] = <
+		documentation = <"URI where data can be found.">
+		name = <"ResourceLocation">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: uri)">
+				name = <"value">
+				type = <"URI">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["ResourceSize"] = <
+		documentation = <"Number of bytes of content in the resource (if url provided)">
+		name = <"ResourceSize">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: unsignedInt)">
+				name = <"value">
+				type = <"UNSIGNEDINT">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Hash"] = <
+		documentation = <"A hash code of the data (sha-1, base64ed)">
+		name = <"Hash">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: base64Binary)">
+				name = <"value">
+				type = <"BASE64BINARY">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CreationTime"] = <
+		documentation = <"The point in time when the information was recorded in the system of record.">
+		name = <"CreationTime">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Title"] = <
+		documentation = <"A distinguishing word or group of words naming an item.">
+		name = <"Title">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Coding"] = <
+		documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+		name = <"Coding">
+		properties = <
+			["codeSystem"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A formal terminology system.">
+				name = <"codeSystem">
+				type = <"CodeSystem">
+			>
+			["codeSystemVersion"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The version of the vocabulary being used, if applicable.">
+				name = <"codeSystemVersion">
+				type = <"CodeSystemVersion">
+			>
+			["displayText"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+				name = <"displayText">
+				type = <"DisplayText">
+			>
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: code)">
+				name = <"value">
+				type = <"CODE">
+			>
+		>
+	>
+	["CodeSystem"] = <
+		documentation = <"A formal terminology system.">
+		name = <"CodeSystem">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: uri)">
+				name = <"value">
+				type = <"URI">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodeSystemVersion"] = <
+		documentation = <"The version of the vocabulary being used, if applicable.">
+		name = <"CodeSystemVersion">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["DisplayText"] = <
+		documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+		name = <"DisplayText">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: string)">
+				name = <"value">
+				type = <"STRING">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["CodeableConcept"] = <
+		documentation = <"A concept represented by a code or codes.">
+		name = <"CodeableConcept">
+		properties = <
+			["coding"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"Coding of a concept, drawn from a controlled vocabulary. Includes the vocabulary and version, if applicable. May include a display text, and a descriptor expressing the intended interpretation of the code.">
+				name = <"coding">
+				type = <"Coding">
+				cardinality = <|>=0|>
+			>
+			["displayText"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A string meant for reading by a person, for example, accompanying a code.">
+				name = <"displayText">
+				type = <"DisplayText">
+			>
+		>
+	>
+	["Range"] = <
+		documentation = <"An interval defined by a quantitative upper and/or lower bound. One of the two bounds must be specified, and the lower bound must be less than the upper bound. When Quantities are specified, the units of measure must be the same.">
+		name = <"Range">
+		properties = <
+			["lowerBound"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The lower limit on a range">
+				name = <"lowerBound">
+				type = <"LowerBound">
+			>
+			["upperBound"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The upper limit on a quantitative value.">
+				name = <"upperBound">
+				type = <"UpperBound">
+			>
+		>
+	>
+	["LowerBound"] = <
+		documentation = <"The lower limit on a range">
+		name = <"LowerBound">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity where the comparator is not used, as defined in FHIR">
+				name = <"value">
+				type = <"SimpleQuantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["UpperBound"] = <
+		documentation = <"The upper limit on a quantitative value.">
+		name = <"UpperBound">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity where the comparator is not used, as defined in FHIR">
+				name = <"value">
+				type = <"SimpleQuantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Ratio"] = <
+		documentation = <"A unit of measurement for the quotient of the amount of one entity to another.">
+		name = <"Ratio">
+		properties = <
+			["numerator"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The dividend of a fraction.">
+				name = <"numerator">
+				type = <"Numerator">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+			["denominator"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The divisor of a fraction.">
+				name = <"denominator">
+				type = <"Denominator">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Numerator"] = <
+		documentation = <"The dividend of a fraction.">
+		name = <"Numerator">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+				name = <"value">
+				type = <"Quantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["Denominator"] = <
+		documentation = <"The divisor of a fraction.">
+		name = <"Denominator">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"A quantity with units, whose value may be bounded from above or below, as defined in FHIR">
+				name = <"value">
+				type = <"Quantity">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["TimePeriod"] = <
+		documentation = <"A period of time defined by a start and end time, date, or year.
+			If the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.">
+		name = <"TimePeriod">
+		properties = <
+			["timePeriodStart"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The time at which something is to take effect, start, or did start. Boundary is considered inclusive.">
+				name = <"timePeriodStart">
+				type = <"TimePeriodStart">
+			>
+			["timePeriodEnd"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"The time at which something is to end or did end. Boundary is considered inclusive.">
+				name = <"timePeriodEnd">
+				type = <"TimePeriodEnd">
+			>
+		>
+	>
+	["TimePeriodStart"] = <
+		documentation = <"The time at which something is to take effect, start, or did start. Boundary is considered inclusive.">
+		name = <"TimePeriodStart">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["TimePeriodEnd"] = <
+		documentation = <"The time at which something is to end or did end. Boundary is considered inclusive.">
+		name = <"TimePeriodEnd">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				documentation = <"PrimitiveValue (original type: dateTime)">
+				name = <"value">
+				type = <"DATETIME">
+				is_mandatory = <True>
+				cardinality = <|1..1|>
+			>
+		>
+	>
+	["BodyStructurePresentOrAbsent"] = <
+		documentation = <"-">
+		name = <"BodyStructurePresentOrAbsent">
+		ancestors = <"ObjectPresentOrAbsent", ...>
+	>
+	["Person"] = <
+		documentation = <"-">
+		name = <"Person">
+		ancestors = <"ObjectPresentOrAbsent", ...>
+	>
+	["Condition"] = <
+		documentation = <"A disorder of structure or function in a human, animal, or plant, especially one that produces specific signs or symptoms, and is not simply a direct result of physical injury">
+		name = <"Condition">
+		ancestors = <"ObjectPresentOrAbsent", ...>
+	>
+	["TimeOfOnset"] = <
+		documentation = <"The beginning or first appearance of a mental or physical disorder.">
+		name = <"TimeOfOnset">
+		ancestors = <"Observation", ...>
+	>
+	["TimeOfAbatement"] = <
+		documentation = <"The end, remission or resolution of a disease.">
+		name = <"TimeOfAbatement">
+		ancestors = <"Observation", ...>
+	>
+	["ConditionPresentOnAdmission"] = <
+		documentation = <"Whether the condition was present when the patient was admitted.">
+		name = <"ConditionPresentOnAdmission">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundPresentOrAbsent"] = <
+		documentation = <"The presence or absence of a wound.
+			Observations and measurements associated with the same wound must link back to the same wound assertion. Therefore, the same wound should not be asserted more than once. The 'same-as' relationship can be used to link multiple assertions of the same wound, if necessary.">
+		name = <"WoundPresentOrAbsent">
+		ancestors = <"BodyStructurePresentOrAbsent", ...>
+	>
+	["WoundLocationObservation"] = <
+		documentation = <"Body location of a wound.">
+		name = <"WoundLocationObservation">
+		ancestors = <"CodedObservation", ...>
+	>
+	["Wound"] = <
+		documentation = <"The presence of a wound.">
+		name = <"Wound">
+		ancestors = <"WoundPresentOrAbsent", ...>
+	>
+	["WoundAbsent"] = <
+		documentation = <"Documents the absence of a wound.">
+		name = <"WoundAbsent">
+		ancestors = <"WoundPresentOrAbsent", ...>
+	>
+	["WoundTunnelPresentOrAbsent"] = <
+		documentation = <"The presence or absence of a discharging blind-ended track that extends from the surface of an organ to an underlying area or abscess cavity. Each wound tunnel can be persistently identified to enable tracking of the condition of the tunnel over time.">
+		name = <"WoundTunnelPresentOrAbsent">
+		ancestors = <"BodyStructurePresentOrAbsent", ...>
+	>
+	["WoundTunnel"] = <
+		documentation = <"The presence of a wound tunnel.">
+		name = <"WoundTunnel">
+		ancestors = <"WoundTunnelPresentOrAbsent", ...>
+	>
+	["WoundUnderminingPresentOrAbsent"] = <
+		documentation = <"The presence or absence of deep tissue (subcutaneous fat and muscle) damage around the wound margin.
+			Undermining are narrow sinus tracts away from the wound margins and go downward into the wound.">
+		name = <"WoundUnderminingPresentOrAbsent">
+		ancestors = <"BodyStructurePresentOrAbsent", ...>
+	>
+	["WoundUndermining"] = <
+		documentation = <"The presence of wound undermining.">
+		name = <"WoundUndermining">
+		ancestors = <"WoundUnderminingPresentOrAbsent", ...>
+	>
+	["WoundType"] = <
+		documentation = <"The type of wound, for example, abrasion or laceration.">
+		name = <"WoundType">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundTypeEtiology"] = <
+		documentation = <"The source or key factor in the formation or acquisition of the wound.">
+		name = <"WoundTypeEtiology">
+		ancestors = <"CodedObservation", ...>
+	>
+	["PhotographicImage"] = <
+		documentation = <"A photographic documentation of a condition, location, person, etc...">
+		name = <"PhotographicImage">
+		ancestors = <"Observation", ...>
+	>
+	["WoundEpisode"] = <
+		documentation = <"Whether the wound is initial or recurrent.">
+		name = <"WoundEpisode">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundPressureUlcerAssociation"] = <
+		documentation = <"Is the wound associated with a device or pressure point?">
+		name = <"WoundPressureUlcerAssociation">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundAssessmentInterpretation"] = <
+		documentation = <"Overall assessement of whether the wound is within normal parameters.">
+		name = <"WoundAssessmentInterpretation">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundTrend"] = <
+		documentation = <"Whether a condition is improving, worsening, stable, or resolved.">
+		name = <"WoundTrend">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundPeriwoundDescription"] = <
+		documentation = <"A description of the skin around the wound (periwound).">
+		name = <"WoundPeriwoundDescription">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundVisibleInternalStructure"] = <
+		documentation = <"Exposed body structures, devices, and/or foreign bodies visible by the naked eye in a wound.">
+		name = <"WoundVisibleInternalStructure">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundBedAppearance"] = <
+		documentation = <"Appearance of wound base (bed)">
+		name = <"WoundBedAppearance">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundBedAppearancePercentage"] = <
+		documentation = <"Area of wound bed portion appearance/Entire ​Area of wound bed -- Linked to a wound bed appearance">
+		name = <"WoundBedAppearancePercentage">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundBedColor"] = <
+		documentation = <"Color of a portion or entire wound base (bed).">
+		name = <"WoundBedColor">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundBedColorPercentage"] = <
+		documentation = <"Wound bed area identified by color/​Area of wound bed.">
+		name = <"WoundBedColorPercentage">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundEdgeDescription"] = <
+		documentation = <"The state of the tissue at the edge of the wound.">
+		name = <"WoundEdgeDescription">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundEdgeColor"] = <
+		documentation = <"Color of Wound edge.">
+		name = <"WoundEdgeColor">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundTunnelLength"] = <
+		documentation = <"The length of a wound tunnel, in cm.">
+		name = <"WoundTunnelLength">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundTunnelClockDirection"] = <
+		documentation = <"Clock position of wound tunnel">
+		name = <"WoundTunnelClockDirection">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundUnderminingLength"] = <
+		documentation = <"Length of wound undermining.">
+		name = <"WoundUnderminingLength">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundUnderminingClockDirection"] = <
+		documentation = <"Clock position of wound undermining">
+		name = <"WoundUnderminingClockDirection">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundExudateAmount"] = <
+		documentation = <"Drainage amount of wound">
+		name = <"WoundExudateAmount">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundExudateVolume"] = <
+		documentation = <"Appearance of exudate from wound">
+		name = <"WoundExudateVolume">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundExudateAppearance"] = <
+		documentation = <"Appearance of exudate from wound">
+		name = <"WoundExudateAppearance">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundExudateColor"] = <
+		documentation = <"Color of exudate from wound">
+		name = <"WoundExudateColor">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundExudateOdor"] = <
+		documentation = <"Odor of exudate from wound">
+		name = <"WoundExudateOdor">
+		ancestors = <"CodedObservation", ...>
+	>
+	["WoundLength"] = <
+		documentation = <"Length of the wound (longest dimension).">
+		name = <"WoundLength">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundWidth"] = <
+		documentation = <"Width of the wound (perpendicular to longest dimension).">
+		name = <"WoundWidth">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundDepth"] = <
+		documentation = <"Depth of the wound.">
+		name = <"WoundDepth">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["WoundArea"] = <
+		documentation = <"Area of the wound.">
+		name = <"WoundArea">
+		ancestors = <"QuantitativeObservation", ...>
+	>
+	["ClinicalInputFormPatientWoundSummary"] = <
+		documentation = <"Clinical input form for the initial observation of a wound or wounds on a patient. Includes only basic who/what/where aspects, not the complete assessment. Addresses the use case of a new patient being evaluated for the presence or absence of wounds.">
+		name = <"ClinicalInputFormPatientWoundSummary">
+		ancestors = <"Composition", ...>
+	>
+	["WoundPresentCluster"] = <
+		documentation = <"A group of observations that together describe initial observations about a wound.">
+		name = <"WoundPresentCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["ClinicalInputFormWoundAssessment"] = <
+		documentation = <"Information about a wound at a single time, structured into logical groupings for input or display.">
+		name = <"ClinicalInputFormWoundAssessment">
+		ancestors = <"Composition", ...>
+	>
+	["WoundBedAndEdgeCluster"] = <
+		documentation = <"Assessment of the wound bed (base) and edge, including the appearance and color of each.">
+		name = <"WoundBedAndEdgeCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundBedAppearanceCluster"] = <
+		documentation = <"The appearance of a percentage area of the wound bed (base">
+		name = <"WoundBedAppearanceCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundBedColorCluster"] = <
+		documentation = <"The color of a percentage area of the wound bed (base)">
+		name = <"WoundBedColorCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundEdgeCluster"] = <
+		documentation = <"Description of the color and condition of the edige of the wound.">
+		name = <"WoundEdgeCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundTunnelingAndUnderminingCluster"] = <
+		documentation = <"Assessment and measurement of tunnels and undermining of the wound.">
+		name = <"WoundTunnelingAndUnderminingCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundTunnelingCluster"] = <
+		documentation = <"Description of a specific single tunnel on a specific wound. Applicable only if tunnel(s) are present">
+		name = <"WoundTunnelingCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundUnderminingCluster"] = <
+		documentation = <"Description of the undermining of the wound. Applicable only if undermining is present">
+		name = <"WoundUnderminingCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundExudateCluster"] = <
+		documentation = <"Descriptions of the exudate of the wound. Applicable only if wound exudate is present.">
+		name = <"WoundExudateCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["WoundSizeCluster"] = <
+		documentation = <"The dimensions of the wound.">
+		name = <"WoundSizeCluster">
+		ancestors = <"Cluster", ...>
+	>
+	["ExchangeFormWoundComprehensiveHistory"] = <
+		documentation = <"A collection of all information about a single wound, possibly including many observations taken by different people at different times. Everything in the aggregation relates to the same wound.">
+		name = <"ExchangeFormWoundComprehensiveHistory">
+		ancestors = <"Composition", ...>
+	>
+>
+

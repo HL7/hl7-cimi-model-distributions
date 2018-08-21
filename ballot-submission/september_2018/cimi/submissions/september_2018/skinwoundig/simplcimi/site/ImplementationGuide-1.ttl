@@ -1,0 +1,2769 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/ImplementationGuide/1> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/sw/ImplementationGuide/1</pre></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/sw/ImplementationGuide/1"];
+  fhir:ImplementationGuide.version [ fhir:value "1.0.0"];
+  fhir:ImplementationGuide.name [ fhir:value "MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment) FHIR Profiles"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.fhirVersion [ fhir:value "3.0.1"];
+  fhir:ImplementationGuide.package [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "p1" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Profiles in this Implementation Guide" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-BodyStructurePresentOrAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-BodyStructurePresentOrAbsent" ];
+         fhir:Reference.display [ fhir:value "SW BodyStructurePresentOrAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ClinicalInputForm-PatientWoundSummary.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary" ];
+         fhir:Reference.display [ fhir:value "SW ClinicalInputForm-PatientWoundSummary Profile" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ClinicalInputForm-WoundAssessment.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-WoundAssessment>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ClinicalInputForm-WoundAssessment" ];
+         fhir:Reference.display [ fhir:value "SW ClinicalInputForm-WoundAssessment Profile" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Cluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Cluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Cluster" ];
+         fhir:Reference.display [ fhir:value "SW Cluster Profile" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-CodedObservation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-CodedObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-CodedObservation" ];
+         fhir:Reference.display [ fhir:value "SW CodedObservation Profile" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Composition.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Composition" ];
+         fhir:Reference.display [ fhir:value "SW Composition Profile" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-ConditionPresentOnAdmission.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-ConditionPresentOnAdmission" ];
+         fhir:Reference.display [ fhir:value "SW ConditionPresentOnAdmission Profile" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-Condition.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-Condition" ];
+         fhir:Reference.display [ fhir:value "SW Condition Profile" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ExchangeForm-WoundComprehensiveHistory.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory" ];
+         fhir:Reference.display [ fhir:value "SW ExchangeForm-WoundComprehensiveHistory Profile" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ExistentialFinding.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ExistentialFinding" ];
+         fhir:Reference.display [ fhir:value "SW ExistentialFinding Profile" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Finding.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Finding>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Finding" ];
+         fhir:Reference.display [ fhir:value "SW Finding Profile" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectPresentOrAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectPresentOrAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectPresentOrAbsent" ];
+         fhir:Reference.display [ fhir:value "SW ObjectPresentOrAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Observation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Observation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Observation" ];
+         fhir:Reference.display [ fhir:value "SW Observation Profile" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-Person.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Person>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-Person" ];
+         fhir:Reference.display [ fhir:value "SW Person Profile" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-PhotographicImage.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-PhotographicImage" ];
+         fhir:Reference.display [ fhir:value "SW PhotographicImage Profile" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-QuantitativeObservation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-QuantitativeObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-QuantitativeObservation" ];
+         fhir:Reference.display [ fhir:value "SW QuantitativeObservation Profile" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Ratio.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Ratio" ];
+         fhir:Reference.display [ fhir:value "SW Ratio Profile" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-TimeOfAbatement.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-TimeOfAbatement" ];
+         fhir:Reference.display [ fhir:value "SW TimeOfAbatement Profile" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-TimeOfOnset.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-TimeOfOnset" ];
+         fhir:Reference.display [ fhir:value "SW TimeOfOnset Profile" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundAbsent" ];
+         fhir:Reference.display [ fhir:value "SW WoundAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundArea.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundArea" ];
+         fhir:Reference.display [ fhir:value "SW WoundArea Profile" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundAssessmentInterpretation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundAssessmentInterpretation" ];
+         fhir:Reference.display [ fhir:value "SW WoundAssessmentInterpretation Profile" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAndEdgeCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAndEdgeCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAndEdgeCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedAndEdgeCluster Profile" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearanceCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearanceCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedAppearanceCluster Profile" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearancePercentage.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearancePercentage" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedAppearancePercentage Profile" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearance.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearance" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedAppearance Profile" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColorCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColorCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedColorCluster Profile" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColorPercentage.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColorPercentage" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedColorPercentage Profile" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColor.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColor" ];
+         fhir:Reference.display [ fhir:value "SW WoundBedColor Profile" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundDepth.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundDepth" ];
+         fhir:Reference.display [ fhir:value "SW WoundDepth Profile" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundEdgeCluster Profile" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeColor.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeColor" ];
+         fhir:Reference.display [ fhir:value "SW WoundEdgeColor Profile" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeDescription.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeDescription" ];
+         fhir:Reference.display [ fhir:value "SW WoundEdgeDescription Profile" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEpisode.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEpisode" ];
+         fhir:Reference.display [ fhir:value "SW WoundEpisode Profile" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateAmount.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateAmount" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateAmount Profile" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateAppearance.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateAppearance" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateAppearance Profile" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateCluster Profile" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateColor.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateColor" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateColor Profile" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateOdor.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateOdor" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateOdor Profile" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateVolume.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateVolume" ];
+         fhir:Reference.display [ fhir:value "SW WoundExudateVolume Profile" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundLength.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundLength" ];
+         fhir:Reference.display [ fhir:value "SW WoundLength Profile" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundLocationObservation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundLocationObservation" ];
+         fhir:Reference.display [ fhir:value "SW WoundLocationObservation Profile" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPeriwoundDescription.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPeriwoundDescription" ];
+         fhir:Reference.display [ fhir:value "SW WoundPeriwoundDescription Profile" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPresentCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPresentCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundPresentCluster Profile" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPresentOrAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentOrAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPresentOrAbsent" ];
+         fhir:Reference.display [ fhir:value "SW WoundPresentOrAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPressureUlcerAssociation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPressureUlcerAssociation" ];
+         fhir:Reference.display [ fhir:value "SW WoundPressureUlcerAssociation Profile" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-Wound.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-Wound" ];
+         fhir:Reference.display [ fhir:value "SW Wound Profile" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundSizeCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundSizeCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundSizeCluster Profile" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTrend.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTrend" ];
+         fhir:Reference.display [ fhir:value "SW WoundTrend Profile" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelClockDirection.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelClockDirection" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnelClockDirection Profile" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelLength.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelLength" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnelLength Profile" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelPresentOrAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelPresentOrAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelPresentOrAbsent" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnelPresentOrAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnel.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnel" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnel Profile" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelingAndUnderminingCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingAndUnderminingCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelingAndUnderminingCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnelingAndUnderminingCluster Profile" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelingCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelingCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundTunnelingCluster Profile" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTypeEtiology.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTypeEtiology" ];
+         fhir:Reference.display [ fhir:value "SW WoundTypeEtiology Profile" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundType.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundType" ];
+         fhir:Reference.display [ fhir:value "SW WoundType Profile" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingClockDirection.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingClockDirection" ];
+         fhir:Reference.display [ fhir:value "SW WoundUnderminingClockDirection Profile" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingCluster.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingCluster>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingCluster" ];
+         fhir:Reference.display [ fhir:value "SW WoundUnderminingCluster Profile" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingLength.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingLength" ];
+         fhir:Reference.display [ fhir:value "SW WoundUnderminingLength Profile" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingPresentOrAbsent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingPresentOrAbsent" ];
+         fhir:Reference.display [ fhir:value "SW WoundUnderminingPresentOrAbsent Profile" ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUndermining.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUndermining" ];
+         fhir:Reference.display [ fhir:value "SW WoundUndermining Profile" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundVisibleInternalStructure.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundVisibleInternalStructure" ];
+         fhir:Reference.display [ fhir:value "SW WoundVisibleInternalStructure Profile" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundWidth.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundWidth" ];
+         fhir:Reference.display [ fhir:value "SW WoundWidth Profile" ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-FindingMethod-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingMethod-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-FindingMethod-extension" ];
+         fhir:Reference.display [ fhir:value "SW FindingMethod Extension" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-FindingStatus-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingStatus-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-FindingStatus-extension" ];
+         fhir:Reference.display [ fhir:value "SW FindingStatus Extension" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectIdentifier-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectIdentifier-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectIdentifier-extension" ];
+         fhir:Reference.display [ fhir:value "SW ObjectIdentifier Extension" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectTypeCode-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectTypeCode-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectTypeCode-extension" ];
+         fhir:Reference.display [ fhir:value "SW ObjectTypeCode Extension" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-PresentOrAbsent-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-PresentOrAbsent-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-PresentOrAbsent-extension" ];
+         fhir:Reference.display [ fhir:value "SW PresentOrAbsent Extension" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Qualifier-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Qualifier-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Qualifier-extension" ];
+         fhir:Reference.display [ fhir:value "SW Qualifier Extension" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-RelevantTime-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-RelevantTime-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-RelevantTime-extension" ];
+         fhir:Reference.display [ fhir:value "SW RelevantTime Extension" ]
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Statement-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Statement-extension" ];
+         fhir:Reference.display [ fhir:value "SW Statement Extension" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Subject-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Subject-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Subject-extension" ];
+         fhir:Reference.display [ fhir:value "SW Subject Extension" ]
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-TypeCode-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-TypeCode-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-TypeCode-extension" ];
+         fhir:Reference.display [ fhir:value "SW TypeCode Extension" ]
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-core-AllUnitsVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-core-AllUnitsVS" ];
+         fhir:Reference.display [ fhir:value "SW AllUnitsVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-base-BodyStructureVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-base-BodyStructureVS" ];
+         fhir:Reference.display [ fhir:value "SW BodyStructureVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-core-ClockDirectionVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-core-ClockDirectionVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-core-ClockDirectionVS" ];
+         fhir:Reference.display [ fhir:value "SW ClockDirectionVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-entity-ConditionVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-entity-ConditionVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-entity-ConditionVS" ];
+         fhir:Reference.display [ fhir:value "SW ConditionVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-base-PresentAbsentVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-base-PresentAbsentVS" ];
+         fhir:Reference.display [ fhir:value "SW PresentAbsentVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-shr-core-YesNoUnknownVS.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/shr-core-YesNoUnknownVS" ];
+         fhir:Reference.display [ fhir:value "SW YesNoUnknownVS ValueSet" ]
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-SW-basic-resource-type.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/SW-basic-resource-type" ];
+         fhir:Reference.display [ fhir:value "SW Basic Resource Type CodeSystem" ]
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-BinaryData-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-BinaryData-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-BinaryData-model" ];
+         fhir:Reference.display [ fhir:value "BinaryDataModel" ]
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-BodyStructurePresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "BodyStructurePresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ClinicalInputForm-PatientWoundSummary-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary-model" ];
+         fhir:Reference.display [ fhir:value "ClinicalInputForm-PatientWoundSummaryModel" ]
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ClinicalInputForm-WoundAssessment-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-WoundAssessment-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ClinicalInputForm-WoundAssessment-model" ];
+         fhir:Reference.display [ fhir:value "ClinicalInputForm-WoundAssessmentModel" ]
+       ]
+     ], [
+       fhir:index 85;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Cluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Cluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Cluster-model" ];
+         fhir:Reference.display [ fhir:value "ClusterModel" ]
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-CodeSystem-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CodeSystem-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-CodeSystem-model" ];
+         fhir:Reference.display [ fhir:value "CodeSystemModel" ]
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-CodeSystemVersion-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CodeSystemVersion-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-CodeSystemVersion-model" ];
+         fhir:Reference.display [ fhir:value "CodeSystemVersionModel" ]
+       ]
+     ], [
+       fhir:index 88;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-CodedObservation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-CodedObservation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-CodedObservation-model" ];
+         fhir:Reference.display [ fhir:value "CodedObservationModel" ]
+       ]
+     ], [
+       fhir:index 89;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Comparator-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Comparator-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Comparator-model" ];
+         fhir:Reference.display [ fhir:value "ComparatorModel" ]
+       ]
+     ], [
+       fhir:index 90;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Composition-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Composition-model" ];
+         fhir:Reference.display [ fhir:value "CompositionModel" ]
+       ]
+     ], [
+       fhir:index 91;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-Condition-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Condition-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-Condition-model" ];
+         fhir:Reference.display [ fhir:value "ConditionModel" ]
+       ]
+     ], [
+       fhir:index 92;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-ConditionPresentOnAdmission-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-ConditionPresentOnAdmission-model" ];
+         fhir:Reference.display [ fhir:value "ConditionPresentOnAdmissionModel" ]
+       ]
+     ], [
+       fhir:index 93;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-ContentType-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContentType-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-ContentType-model" ];
+         fhir:Reference.display [ fhir:value "ContentTypeModel" ]
+       ]
+     ], [
+       fhir:index 94;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-CreationTime-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CreationTime-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-CreationTime-model" ];
+         fhir:Reference.display [ fhir:value "CreationTimeModel" ]
+       ]
+     ], [
+       fhir:index 95;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Denominator-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Denominator-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Denominator-model" ];
+         fhir:Reference.display [ fhir:value "DenominatorModel" ]
+       ]
+     ], [
+       fhir:index 96;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-DisplayText-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-DisplayText-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-DisplayText-model" ];
+         fhir:Reference.display [ fhir:value "DisplayTextModel" ]
+       ]
+     ], [
+       fhir:index 97;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-EmbeddedContent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EmbeddedContent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-EmbeddedContent-model" ];
+         fhir:Reference.display [ fhir:value "EmbeddedContentModel" ]
+       ]
+     ], [
+       fhir:index 98;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-ExchangeForm-WoundComprehensiveHistory-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model" ];
+         fhir:Reference.display [ fhir:value "ExchangeForm-WoundComprehensiveHistoryModel" ]
+       ]
+     ], [
+       fhir:index 99;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ExistentialFinding-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ExistentialFinding-model" ];
+         fhir:Reference.display [ fhir:value "ExistentialFindingModel" ]
+       ]
+     ], [
+       fhir:index 100;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-FindingMethod-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingMethod-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-FindingMethod-model" ];
+         fhir:Reference.display [ fhir:value "FindingMethodModel" ]
+       ]
+     ], [
+       fhir:index 101;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Finding-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Finding-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Finding-model" ];
+         fhir:Reference.display [ fhir:value "FindingModel" ]
+       ]
+     ], [
+       fhir:index 102;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-FindingStatus-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingStatus-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-FindingStatus-model" ];
+         fhir:Reference.display [ fhir:value "FindingStatusModel" ]
+       ]
+     ], [
+       fhir:index 103;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Hash-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Hash-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Hash-model" ];
+         fhir:Reference.display [ fhir:value "HashModel" ]
+       ]
+     ], [
+       fhir:index 104;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Language-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Language-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Language-model" ];
+         fhir:Reference.display [ fhir:value "LanguageModel" ]
+       ]
+     ], [
+       fhir:index 105;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-LowerBound-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-LowerBound-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-LowerBound-model" ];
+         fhir:Reference.display [ fhir:value "LowerBoundModel" ]
+       ]
+     ], [
+       fhir:index 106;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Media-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Media-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Media-model" ];
+         fhir:Reference.display [ fhir:value "MediaModel" ]
+       ]
+     ], [
+       fhir:index 107;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Numerator-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Numerator-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Numerator-model" ];
+         fhir:Reference.display [ fhir:value "NumeratorModel" ]
+       ]
+     ], [
+       fhir:index 108;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectIdentifier-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectIdentifier-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectIdentifier-model" ];
+         fhir:Reference.display [ fhir:value "ObjectIdentifierModel" ]
+       ]
+     ], [
+       fhir:index 109;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectPresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectPresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectPresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "ObjectPresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 110;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObjectTypeCode-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectTypeCode-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObjectTypeCode-model" ];
+         fhir:Reference.display [ fhir:value "ObjectTypeCodeModel" ]
+       ]
+     ], [
+       fhir:index 111;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ObservableCode-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObservableCode-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ObservableCode-model" ];
+         fhir:Reference.display [ fhir:value "ObservableCodeModel" ]
+       ]
+     ], [
+       fhir:index 112;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Observation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Observation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Observation-model" ];
+         fhir:Reference.display [ fhir:value "ObservationModel" ]
+       ]
+     ], [
+       fhir:index 113;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-Person-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Person-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-Person-model" ];
+         fhir:Reference.display [ fhir:value "PersonModel" ]
+       ]
+     ], [
+       fhir:index 114;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-PhotographicImage-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-PhotographicImage-model" ];
+         fhir:Reference.display [ fhir:value "PhotographicImageModel" ]
+       ]
+     ], [
+       fhir:index 115;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-PresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-PresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-PresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "PresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 116;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Qualifier-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Qualifier-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Qualifier-model" ];
+         fhir:Reference.display [ fhir:value "QualifierModel" ]
+       ]
+     ], [
+       fhir:index 117;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-QuantitativeObservation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-QuantitativeObservation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-QuantitativeObservation-model" ];
+         fhir:Reference.display [ fhir:value "QuantitativeObservationModel" ]
+       ]
+     ], [
+       fhir:index 118;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Quantity-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Quantity-model" ];
+         fhir:Reference.display [ fhir:value "QuantityModel" ]
+       ]
+     ], [
+       fhir:index 119;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Range-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Range-model" ];
+         fhir:Reference.display [ fhir:value "RangeModel" ]
+       ]
+     ], [
+       fhir:index 120;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Ratio-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Ratio-model" ];
+         fhir:Reference.display [ fhir:value "RatioModel" ]
+       ]
+     ], [
+       fhir:index 121;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-RelevantTime-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-RelevantTime-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-RelevantTime-model" ];
+         fhir:Reference.display [ fhir:value "RelevantTimeModel" ]
+       ]
+     ], [
+       fhir:index 122;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-ResourceLocation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ResourceLocation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-ResourceLocation-model" ];
+         fhir:Reference.display [ fhir:value "ResourceLocationModel" ]
+       ]
+     ], [
+       fhir:index 123;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-ResourceSize-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ResourceSize-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-ResourceSize-model" ];
+         fhir:Reference.display [ fhir:value "ResourceSizeModel" ]
+       ]
+     ], [
+       fhir:index 124;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-ResultValue-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ResultValue-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-ResultValue-model" ];
+         fhir:Reference.display [ fhir:value "ResultValueModel" ]
+       ]
+     ], [
+       fhir:index 125;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-SimpleQuantity-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-SimpleQuantity-model" ];
+         fhir:Reference.display [ fhir:value "SimpleQuantityModel" ]
+       ]
+     ], [
+       fhir:index 126;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Statement-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Statement-model" ];
+         fhir:Reference.display [ fhir:value "StatementModel" ]
+       ]
+     ], [
+       fhir:index 127;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-Subject-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Subject-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-Subject-model" ];
+         fhir:Reference.display [ fhir:value "SubjectModel" ]
+       ]
+     ], [
+       fhir:index 128;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-TimeOfAbatement-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-TimeOfAbatement-model" ];
+         fhir:Reference.display [ fhir:value "TimeOfAbatementModel" ]
+       ]
+     ], [
+       fhir:index 129;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-entity-TimeOfOnset-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-entity-TimeOfOnset-model" ];
+         fhir:Reference.display [ fhir:value "TimeOfOnsetModel" ]
+       ]
+     ], [
+       fhir:index 130;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-TimePeriodEnd-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriodEnd-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-TimePeriodEnd-model" ];
+         fhir:Reference.display [ fhir:value "TimePeriodEndModel" ]
+       ]
+     ], [
+       fhir:index 131;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-TimePeriod-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-TimePeriod-model" ];
+         fhir:Reference.display [ fhir:value "TimePeriodModel" ]
+       ]
+     ], [
+       fhir:index 132;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-TimePeriodStart-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriodStart-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-TimePeriodStart-model" ];
+         fhir:Reference.display [ fhir:value "TimePeriodStartModel" ]
+       ]
+     ], [
+       fhir:index 133;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Title-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Title-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Title-model" ];
+         fhir:Reference.display [ fhir:value "TitleModel" ]
+       ]
+     ], [
+       fhir:index 134;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-base-TypeCode-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-TypeCode-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-base-TypeCode-model" ];
+         fhir:Reference.display [ fhir:value "TypeCodeModel" ]
+       ]
+     ], [
+       fhir:index 135;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-Units-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Units-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-Units-model" ];
+         fhir:Reference.display [ fhir:value "UnitsModel" ]
+       ]
+     ], [
+       fhir:index 136;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-shr-core-UpperBound-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-UpperBound-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/shr-core-UpperBound-model" ];
+         fhir:Reference.display [ fhir:value "UpperBoundModel" ]
+       ]
+     ], [
+       fhir:index 137;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundAbsent-model" ];
+         fhir:Reference.display [ fhir:value "WoundAbsentModel" ]
+       ]
+     ], [
+       fhir:index 138;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundArea-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundArea-model" ];
+         fhir:Reference.display [ fhir:value "WoundAreaModel" ]
+       ]
+     ], [
+       fhir:index 139;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundAssessmentInterpretation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundAssessmentInterpretation-model" ];
+         fhir:Reference.display [ fhir:value "WoundAssessmentInterpretationModel" ]
+       ]
+     ], [
+       fhir:index 140;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAndEdgeCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAndEdgeCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAndEdgeCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedAndEdgeClusterModel" ]
+       ]
+     ], [
+       fhir:index 141;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearanceCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearanceCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedAppearanceClusterModel" ]
+       ]
+     ], [
+       fhir:index 142;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearance-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearance-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedAppearanceModel" ]
+       ]
+     ], [
+       fhir:index 143;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedAppearancePercentage-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedAppearancePercentage-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedAppearancePercentageModel" ]
+       ]
+     ], [
+       fhir:index 144;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColorCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColorCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedColorClusterModel" ]
+       ]
+     ], [
+       fhir:index 145;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColor-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColor-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedColorModel" ]
+       ]
+     ], [
+       fhir:index 146;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundBedColorPercentage-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundBedColorPercentage-model" ];
+         fhir:Reference.display [ fhir:value "WoundBedColorPercentageModel" ]
+       ]
+     ], [
+       fhir:index 147;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundDepth-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundDepth-model" ];
+         fhir:Reference.display [ fhir:value "WoundDepthModel" ]
+       ]
+     ], [
+       fhir:index 148;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundEdgeClusterModel" ]
+       ]
+     ], [
+       fhir:index 149;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeColor-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeColor-model" ];
+         fhir:Reference.display [ fhir:value "WoundEdgeColorModel" ]
+       ]
+     ], [
+       fhir:index 150;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEdgeDescription-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEdgeDescription-model" ];
+         fhir:Reference.display [ fhir:value "WoundEdgeDescriptionModel" ]
+       ]
+     ], [
+       fhir:index 151;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundEpisode-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundEpisode-model" ];
+         fhir:Reference.display [ fhir:value "WoundEpisodeModel" ]
+       ]
+     ], [
+       fhir:index 152;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateAmount-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateAmount-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateAmountModel" ]
+       ]
+     ], [
+       fhir:index 153;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateAppearance-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateAppearance-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateAppearanceModel" ]
+       ]
+     ], [
+       fhir:index 154;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateClusterModel" ]
+       ]
+     ], [
+       fhir:index 155;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateColor-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateColor-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateColorModel" ]
+       ]
+     ], [
+       fhir:index 156;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateOdor-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateOdor-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateOdorModel" ]
+       ]
+     ], [
+       fhir:index 157;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundExudateVolume-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundExudateVolume-model" ];
+         fhir:Reference.display [ fhir:value "WoundExudateVolumeModel" ]
+       ]
+     ], [
+       fhir:index 158;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundLength-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundLength-model" ];
+         fhir:Reference.display [ fhir:value "WoundLengthModel" ]
+       ]
+     ], [
+       fhir:index 159;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundLocationObservation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundLocationObservation-model" ];
+         fhir:Reference.display [ fhir:value "WoundLocationObservationModel" ]
+       ]
+     ], [
+       fhir:index 160;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-Wound-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-Wound-model" ];
+         fhir:Reference.display [ fhir:value "WoundModel" ]
+       ]
+     ], [
+       fhir:index 161;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPeriwoundDescription-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPeriwoundDescription-model" ];
+         fhir:Reference.display [ fhir:value "WoundPeriwoundDescriptionModel" ]
+       ]
+     ], [
+       fhir:index 162;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPresentCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPresentCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundPresentClusterModel" ]
+       ]
+     ], [
+       fhir:index 163;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "WoundPresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 164;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundPressureUlcerAssociation-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundPressureUlcerAssociation-model" ];
+         fhir:Reference.display [ fhir:value "WoundPressureUlcerAssociationModel" ]
+       ]
+     ], [
+       fhir:index 165;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundSizeCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundSizeCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundSizeClusterModel" ]
+       ]
+     ], [
+       fhir:index 166;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTrend-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTrend-model" ];
+         fhir:Reference.display [ fhir:value "WoundTrendModel" ]
+       ]
+     ], [
+       fhir:index 167;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelClockDirection-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelClockDirection-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelClockDirectionModel" ]
+       ]
+     ], [
+       fhir:index 168;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelLength-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelLength-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelLengthModel" ]
+       ]
+     ], [
+       fhir:index 169;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnel-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnel-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelModel" ]
+       ]
+     ], [
+       fhir:index 170;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelPresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelPresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelPresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelPresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 171;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelingAndUnderminingCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingAndUnderminingCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelingAndUnderminingCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelingAndUnderminingClusterModel" ]
+       ]
+     ], [
+       fhir:index 172;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTunnelingCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTunnelingCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundTunnelingClusterModel" ]
+       ]
+     ], [
+       fhir:index 173;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundTypeEtiology-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundTypeEtiology-model" ];
+         fhir:Reference.display [ fhir:value "WoundTypeEtiologyModel" ]
+       ]
+     ], [
+       fhir:index 174;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundType-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundType-model" ];
+         fhir:Reference.display [ fhir:value "WoundTypeModel" ]
+       ]
+     ], [
+       fhir:index 175;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingClockDirection-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingClockDirection-model" ];
+         fhir:Reference.display [ fhir:value "WoundUnderminingClockDirectionModel" ]
+       ]
+     ], [
+       fhir:index 176;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingCluster-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingCluster-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingCluster-model" ];
+         fhir:Reference.display [ fhir:value "WoundUnderminingClusterModel" ]
+       ]
+     ], [
+       fhir:index 177;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingLength-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingLength-model" ];
+         fhir:Reference.display [ fhir:value "WoundUnderminingLengthModel" ]
+       ]
+     ], [
+       fhir:index 178;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUndermining-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUndermining-model" ];
+         fhir:Reference.display [ fhir:value "WoundUnderminingModel" ]
+       ]
+     ], [
+       fhir:index 179;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundUnderminingPresentOrAbsent-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundUnderminingPresentOrAbsent-model" ];
+         fhir:Reference.display [ fhir:value "WoundUnderminingPresentOrAbsentModel" ]
+       ]
+     ], [
+       fhir:index 180;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundVisibleInternalStructure-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundVisibleInternalStructure-model" ];
+         fhir:Reference.display [ fhir:value "WoundVisibleInternalStructureModel" ]
+       ]
+     ], [
+       fhir:index 181;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-sw-WoundWidth-model.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sw-WoundWidth-model" ];
+         fhir:Reference.display [ fhir:value "WoundWidthModel" ]
+       ]
+     ]
+  ];
+  fhir:ImplementationGuide.page [
+     fhir:ImplementationGuide.page.source [ fhir:value "index.html" ];
+     fhir:ImplementationGuide.page.title [ fhir:value "MITRE's 'Mini-CIMI' FHIR Profile: Skin and Wound Assessment, Release 1 (For Comment)" ];
+     fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+  ] .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-WoundAssessment> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Cluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-CodedObservation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Condition> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Finding> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectPresentOrAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Observation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Person> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-QuantitativeObservation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAndEdgeCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentOrAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelPresentOrAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingAndUnderminingCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingCluster> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingMethod-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingStatus-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectIdentifier-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectTypeCode-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-PresentOrAbsent-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Qualifier-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-RelevantTime-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Subject-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-TypeCode-extension> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-core-AllUnitsVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-core-ClockDirectionVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-entity-ConditionVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-core-YesNoUnknownVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-BinaryData-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-PatientWoundSummary-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ClinicalInputForm-WoundAssessment-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Cluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CodeSystem-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CodeSystemVersion-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-CodedObservation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Comparator-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Composition-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Condition-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-ConditionPresentOnAdmission-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ContentType-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-CreationTime-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Denominator-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-DisplayText-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EmbeddedContent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-ExchangeForm-WoundComprehensiveHistory-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ExistentialFinding-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingMethod-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Finding-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingStatus-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Hash-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Language-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-LowerBound-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Media-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Numerator-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectIdentifier-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectPresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObjectTypeCode-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ObservableCode-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Observation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-Person-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-PhotographicImage-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-PresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Qualifier-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-QuantitativeObservation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-RelevantTime-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ResourceLocation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-ResourceSize-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-ResultValue-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Subject-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfAbatement-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-TimeOfOnset-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriodEnd-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriodStart-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Title-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-TypeCode-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Units-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-UpperBound-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundArea-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAssessmentInterpretation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAndEdgeCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearanceCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearance-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedAppearancePercentage-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColor-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundBedColorPercentage-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundDepth-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeColor-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEdgeDescription-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundEpisode-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAmount-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateAppearance-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateColor-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateOdor-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundExudateVolume-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLength-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundLocationObservation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-Wound-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPeriwoundDescription-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundPressureUlcerAssociation-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundSizeCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTrend-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelClockDirection-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelLength-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnel-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelPresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingAndUnderminingCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTunnelingCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundTypeEtiology-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingClockDirection-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingCluster-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingLength-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUndermining-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundUnderminingPresentOrAbsent-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundVisibleInternalStructure-model> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundWidth-model> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/ImplementationGuide/1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/ImplementationGuide/1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

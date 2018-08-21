@@ -1,0 +1,106 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Person.person.v0.0.1
+
+specialize
+  SHR-CORE-Entity.entity.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.entity","person">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Person[id1.1.1.1.1] matches {
+    humanName matches {
+      HumanName[id0.0.0.0.2]
+    }
+    dateOfBirth matches {
+      DateOfBirth[id0.0.0.0.3]
+    }
+    administrativeGender matches {
+      AdministrativeGender[id0.0.0.0.4]
+    }
+    address matches {
+      Address[id0.0.0.0.5]
+    }
+    headshot matches {
+      Headshot[id0.0.0.0.6]
+    }
+    contactPoint matches {
+      ContactPoint[id0.0.0.0.7]
+    }
+    languageUsed matches {
+      LanguageUsed[id0.0.0.0.8]
+    }
+    activeFlag matches {
+      ActiveFlag[id0.0.0.0.9]
+    }
+    maritalStatus matches {
+      MaritalStatus[id0.0.0.0.10]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1"] = <
+        text = <"Person">
+        description = <"A person relevant to the health or social situation of the subject (including the person of record him or herself).">
+      >
+      ["id0.0.0.0.2"] = <
+        text = <"HumanName">
+        description = <"The CIMI person name, constrained to map correctly to FHIR.">
+      >
+      ["id0.0.0.0.3"] = <
+        text = <"DateOfBirth">
+        description = <"A date of birth or approximate year or period (year or date range), if estimated.">
+      >
+      ["id0.0.0.0.4"] = <
+        text = <"AdministrativeGender">
+        description = <"A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.">
+      >
+      ["id0.0.0.0.5"] = <
+        text = <"Address">
+        description = <"An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).">
+      >
+      ["id0.0.0.0.6"] = <
+        text = <"Headshot">
+        description = <"A photograph showing a person's face.">
+      >
+      ["id0.0.0.0.7"] = <
+        text = <"ContactPoint">
+        description = <"An electronic means of contacting an organization or individual.">
+      >
+      ["id0.0.0.0.8"] = <
+        text = <"LanguageUsed">
+        description = <"Language used for communication by a human, either the subject of record, parent, or other involved person.">
+      >
+      ["id0.0.0.0.9"] = <
+        text = <"ActiveFlag">
+        description = <"If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.">
+      >
+      ["id0.0.0.0.10"] = <
+        text = <"MaritalStatus">
+        description = <"The most recent marital status of a person.">
+      >
+    >
+  >

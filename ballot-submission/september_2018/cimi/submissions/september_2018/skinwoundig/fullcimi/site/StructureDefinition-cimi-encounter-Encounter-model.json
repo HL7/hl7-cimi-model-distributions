@@ -1,0 +1,699 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-encounter-Encounter-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Encounter Logical Model</b></p>\n  <p>A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.encounter.Encounter"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "EncounterModel",
+  "title": "SW Encounter Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-encounter-Encounter-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-encounter-Encounter-model",
+        "path": "cimi-encounter-Encounter-model",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.personOfRecord",
+        "path": "cimi-encounter-Encounter-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.personOfRecord",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.recorded",
+        "path": "cimi-encounter-Encounter-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.signed",
+        "path": "cimi-encounter-Encounter-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.additionalText",
+        "path": "cimi-encounter-Encounter-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.encounterClass",
+        "path": "cimi-encounter-Encounter-model.encounterClass",
+        "short": "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.",
+        "definition": "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.encounterClass",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.encounterType",
+        "path": "cimi-encounter-Encounter-model.encounterType",
+        "short": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.encounterType",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+          }
+        }
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.timePeriod",
+        "path": "cimi-encounter-Encounter-model.timePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.status",
+        "path": "cimi-encounter-Encounter-model.status",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0449438"
+          }
+        ],
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "The current standing or state.",
+        "definition": "The current standing or state.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.status.valueCode:code",
+        "path": "cimi-encounter-Encounter-model.status.valueCode",
+        "sliceName": "code",
+        "short": "Choice of types representing the current standing or state.",
+        "definition": "Choice of types representing the current standing or state.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.status.valueCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/encounter-status"
+          }
+        }
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.partOf",
+        "path": "cimi-encounter-Encounter-model.partOf",
+        "short": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.diagnosis",
+        "path": "cimi-encounter-Encounter-model.diagnosis",
+        "short": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.diagnosis",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Diagnosis-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.clinicalNote",
+        "path": "cimi-encounter-Encounter-model.clinicalNote",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0747978",
+            "display": "Progress Note"
+          }
+        ],
+        "short": "An entry concerning a patient where the result is a narrative text.",
+        "definition": "An entry concerning a patient where the result is a narrative text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.clinicalNote",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalNote-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-encounter-Encounter-model",
+        "path": "cimi-encounter-Encounter-model",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.personOfRecord",
+        "path": "cimi-encounter-Encounter-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.personOfRecord",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.recorded",
+        "path": "cimi-encounter-Encounter-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.signed",
+        "path": "cimi-encounter-Encounter-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.additionalText",
+        "path": "cimi-encounter-Encounter-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.encounterClass",
+        "path": "cimi-encounter-Encounter-model.encounterClass",
+        "short": "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.",
+        "definition": "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.encounterClass",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.encounterType",
+        "path": "cimi-encounter-Encounter-model.encounterType",
+        "short": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.encounterType",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+          }
+        }
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.timePeriod",
+        "path": "cimi-encounter-Encounter-model.timePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1948053"
+          }
+        ],
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start element is missing, the start of the period is not known. If the end element is missing, it means that the period is ongoing, or the start may be in the past, and the end date in the future, which means that period is expected/planned to end at the specified time. The end value includes any matching date/time. For example, the period 2011-05-23 to 2011-05-27 includes all the times from the start of the 23rd May through to the end of the 27th of May.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.status",
+        "path": "cimi-encounter-Encounter-model.status",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0449438"
+          }
+        ],
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "The current standing or state.",
+        "definition": "The current standing or state.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.status.valueCode:code",
+        "path": "cimi-encounter-Encounter-model.status.valueCode",
+        "sliceName": "code",
+        "short": "Choice of types representing the current standing or state.",
+        "definition": "Choice of types representing the current standing or state.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.status.valueCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/encounter-status"
+          }
+        }
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.partOf",
+        "path": "cimi-encounter-Encounter-model.partOf",
+        "short": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that this is a portion of. For example, an organization might be part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.diagnosis",
+        "path": "cimi-encounter-Encounter-model.diagnosis",
+        "short": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.diagnosis",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Diagnosis-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-encounter-Encounter-model.clinicalNote",
+        "path": "cimi-encounter-Encounter-model.clinicalNote",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0747978",
+            "display": "Progress Note"
+          }
+        ],
+        "short": "An entry concerning a patient where the result is a narrative text.",
+        "definition": "An entry concerning a patient where the result is a narrative text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-encounter-Encounter-model.clinicalNote",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ClinicalNote-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

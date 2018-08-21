@@ -1,0 +1,776 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-FindingSiteConditionAbsenceStatement-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW FindingSiteConditionAbsenceStatement Logical Model</b></p>\n  <p>Absence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time.</p>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-FindingSiteConditionAbsenceStatement-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "cimi.statement.FindingSiteConditionAbsenceStatement" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "FindingSiteConditionAbsenceStatementModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW FindingSiteConditionAbsenceStatement Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.description [ fhir:value "Absence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time."];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "Absence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0027361" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+       fhir:ElementDefinition.short [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+       fhir:ElementDefinition.short [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0947611" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.definition [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+       fhir:ElementDefinition.short [ fhir:value "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+       fhir:ElementDefinition.short [ fhir:value "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+       fhir:ElementDefinition.short [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0420833" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A clinical interpretation of a finding (applies to both assertions and observation)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A clinical interpretation of a finding (applies to both assertions and observation)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/observation-interpretation>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/observation-interpretation" ]
+         ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+       fhir:ElementDefinition.short [ fhir:value "The time or time period that the finding addresses." ];
+       fhir:ElementDefinition.definition [ fhir:value "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+       fhir:ElementDefinition.short [ fhir:value "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle." ];
+       fhir:ElementDefinition.definition [ fhir:value "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+       fhir:ElementDefinition.short [ fhir:value "A file that contains audio, video, image, or similar content." ];
+       fhir:ElementDefinition.definition [ fhir:value "A file that contains audio, video, image, or similar content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+       fhir:ElementDefinition.short [ fhir:value "The concept representing the finding or action that is the topic of the statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/core/ValueSet/us-core-problem>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-problem" ]
+         ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+       fhir:ElementDefinition.short [ fhir:value "The type, kind, or class of this item." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type, kind, or class of this item." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72369-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72369-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart." ];
+       fhir:ElementDefinition.definition [ fhir:value "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+       fhir:ElementDefinition.definition [ fhir:value "Absence of a distinct anatomical or pathological morphological feature or organizational pattern, acquired or innate. Examples include tissue types, tumors, and wounds. Body structures are continuants that allow observations of the same body structure to be related to be tracked over time." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0027361" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person this entry belongs to." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.personOfRecord" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+       fhir:ElementDefinition.short [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.recorded" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+       fhir:ElementDefinition.short [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Provenance information specific to the signing of the clinical statement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.signed" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0947611" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.definition [ fhir:value "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.additionalText" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+       fhir:ElementDefinition.short [ fhir:value "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.contextCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+       fhir:ElementDefinition.short [ fhir:value "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.statementTopic" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+       fhir:ElementDefinition.short [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.definition [ fhir:value "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.encounter" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0420833" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A clinical interpretation of a finding (applies to both assertions and observation)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A clinical interpretation of a finding (applies to both assertions and observation)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.interpretation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/observation-interpretation>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/observation-interpretation" ]
+         ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+       fhir:ElementDefinition.short [ fhir:value "The time or time period that the finding addresses." ];
+       fhir:ElementDefinition.definition [ fhir:value "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.relevantTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+       fhir:ElementDefinition.short [ fhir:value "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle." ];
+       fhir:ElementDefinition.definition [ fhir:value "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.findingMethod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+       fhir:ElementDefinition.short [ fhir:value "A file that contains audio, video, image, or similar content." ];
+       fhir:ElementDefinition.definition [ fhir:value "A file that contains audio, video, image, or similar content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.media" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+       fhir:ElementDefinition.short [ fhir:value "The concept representing the finding or action that is the topic of the statement." ];
+       fhir:ElementDefinition.definition [ fhir:value "The concept representing the finding or action that is the topic of the statement.\n\nFor action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.topicCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/core/ValueSet/us-core-problem>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-problem" ]
+         ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+       fhir:ElementDefinition.short [ fhir:value "The type, kind, or class of this item." ];
+       fhir:ElementDefinition.definition [ fhir:value "The type, kind, or class of this item." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.category" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+       fhir:ElementDefinition.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         a loinc:72369-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "72369-2" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart." ];
+       fhir:ElementDefinition.definition [ fhir:value "A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cimi-statement-FindingSiteConditionAbsenceStatement-model.anatomicalLocation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalLocation-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-AbsenceContextVS> a fhir:us .
+
+<http://hl7.org/fhir/ValueSet/observation-interpretation> a fhir:ValueSet .
+
+<http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS> a fhir:us .
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-problem> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-core-ConditionCategoryVS> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-FindingSiteConditionAbsenceStatement-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/cimi-statement-FindingSiteConditionAbsenceStatement-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

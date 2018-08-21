@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Entity-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Entity Logical Model</b></p>\n  <p>Root class for entities such as people, organizations, and devices that have a separately identifiable existence.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Entity"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "EntityModel",
+  "title": "SW Entity Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Root class for entities such as people, organizations, and devices that have a separately identifiable existence.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Entity-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Entity-model",
+        "path": "cimi-entity-Entity-model",
+        "definition": "Root class for entities such as people, organizations, and devices that have a separately identifiable existence.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Entity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Entity-model",
+        "path": "cimi-entity-Entity-model",
+        "definition": "Root class for entities such as people, organizations, and devices that have a separately identifiable existence.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Entity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

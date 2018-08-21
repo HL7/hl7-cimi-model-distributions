@@ -1,0 +1,165 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-ResultValue-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ResultValue Logical Model</b></p>\n  <p>The finding itself, such as the blood pressure value recorded.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-ResultValue-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.ResultValue"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ResultValueModel",
+  "title": "SW ResultValue Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The finding itself, such as the blood pressure value recorded.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-ResultValue-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-ResultValue-model",
+        "path": "cimi-statement-ResultValue-model",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ResultValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ResultValue-model.value[x]",
+        "path": "cimi-statement-ResultValue-model.value[x]",
+        "short": "Choice of types representing the finding itself, such as the blood pressure value recorded.",
+        "definition": "Choice of types representing the finding itself, such as the blood pressure value recorded.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ResultValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-ResultValue-model",
+        "path": "cimi-statement-ResultValue-model",
+        "definition": "The finding itself, such as the blood pressure value recorded.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-ResultValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-ResultValue-model.value[x]",
+        "path": "cimi-statement-ResultValue-model.value[x]",
+        "short": "Choice of types representing the finding itself, such as the blood pressure value recorded.",
+        "definition": "Choice of types representing the finding itself, such as the blood pressure value recorded.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-ResultValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

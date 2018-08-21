@@ -1,0 +1,11 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"cimi-entity-Qualification-model","","","",0,*,"","","","","","A right to practice medicine obtained by training and certification.","","","","","","","","","",,,,,"",,,,"cimi-entity-Qualification-model",0,*,"",""
+"cimi-entity-Qualification-model.type","","","",1,1,"","","","Coding {[]} {[]}
+","The most specific code (lowest level term) describing the kind or sort of thing being represented.","The most specific code (lowest level term) describing the kind or sort of thing being represented.","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/c80-practice-codes","http://ncimeta.nci.nih.gov#C0332307
+",,,,"cimi-entity-Qualification-model.type",1,1,"",""
+"cimi-entity-Qualification-model.effectiveTimePeriod","","","",0,1,"","","","http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-EffectiveTimePeriod-model {[]} {[]}
+","The date and time span for which something is active, valid, or in force.","The date and time span for which something is active, valid, or in force.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C2985763
+",,,,"cimi-entity-Qualification-model.effectiveTimePeriod",0,1,"",""
+"cimi-entity-Qualification-model.issuer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model]]}
+","An organization who issues a qualification, identifier, or license.","An organization who issues a qualification, identifier, or license.","","","","","","","","","",,,,,"http://ncimeta.nci.nih.gov#C1561598
+",,,,"cimi-entity-Qualification-model.issuer",0,1,"",""

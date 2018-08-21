@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "sw-WoundType-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundType Logical Model</b></p>\n  <p>A type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundType-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "sw.WoundType"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "WoundTypeModel",
+  "title": "SW WoundType Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.",
+  "keyword": [
+    {
+      "system": "http://loinc.org",
+      "code": "72300-7"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "sw-WoundType-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "sw-WoundType-model",
+        "path": "sw-WoundType-model",
+        "definition": "A type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundType-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundType-model.value",
+        "path": "sw-WoundType-model.value",
+        "short": "Code representing a type code describing the wound or skin injury.",
+        "definition": "Code representing a type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundType-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20.2.6/expansion"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "sw-WoundType-model",
+        "path": "sw-WoundType-model",
+        "definition": "A type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "sw-WoundType-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "sw-WoundType-model.value",
+        "path": "sw-WoundType-model.value",
+        "short": "Code representing a type code describing the wound or skin injury.",
+        "definition": "Code representing a type code describing the wound or skin injury.\nDifferentiating pressure ulcers and other types of wounds is important for an accurate count of their number and for identifying appropriate wound treatment.  The values will be used for documenting and retrieving data regarding the number and types of wounds present.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "sw-WoundType-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20.2.6/expansion"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+<a target="_top" href="http://cimi.hl7.org"><em><strong>HL7&reg;&nbsp;Clinical&nbsp;Information&nbsp;Model&nbsp;Initiative</strong></em></a>

@@ -1,0 +1,413 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-SpecimenContainer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW SpecimenContainer Logical Model</b></p>\n  <p>Direct container of specimen (tube&amp;#47;slide, etc.)</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenContainer-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.SpecimenContainer"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SpecimenContainerModel",
+  "title": "SW SpecimenContainer Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Direct container of specimen (tube&#47;slide, etc.)",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-SpecimenContainer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-SpecimenContainer-model",
+        "path": "cimi-entity-SpecimenContainer-model",
+        "definition": "Direct container of specimen (tube&#47;slide, etc.)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.type",
+        "path": "cimi-entity-SpecimenContainer-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.identifier",
+        "path": "cimi-entity-SpecimenContainer-model.identifier",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0600091"
+          }
+        ],
+        "short": "A unique string that identifies a specific person or thing.",
+        "definition": "A unique string that identifies a specific person or thing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.additionalText",
+        "path": "cimi-entity-SpecimenContainer-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.capacity",
+        "path": "cimi-entity-SpecimenContainer-model.capacity",
+        "short": "Container volume or size.",
+        "definition": "Container volume or size.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.capacity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+        "path": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+        "short": "Quantity of specimen within container.",
+        "definition": "Quantity of specimen within container.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.additive",
+        "path": "cimi-entity-SpecimenContainer-model.additive",
+        "short": "Additive associated with container.",
+        "definition": "Additive associated with container.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.additive",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+        "path": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+        "short": "The sequence number for this specimen in a collection of specimens.",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-SpecimenContainer-model",
+        "path": "cimi-entity-SpecimenContainer-model",
+        "definition": "Direct container of specimen (tube&#47;slide, etc.)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.type",
+        "path": "cimi-entity-SpecimenContainer-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.identifier",
+        "path": "cimi-entity-SpecimenContainer-model.identifier",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0600091"
+          }
+        ],
+        "short": "A unique string that identifies a specific person or thing.",
+        "definition": "A unique string that identifies a specific person or thing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.additionalText",
+        "path": "cimi-entity-SpecimenContainer-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.capacity",
+        "path": "cimi-entity-SpecimenContainer-model.capacity",
+        "short": "Container volume or size.",
+        "definition": "Container volume or size.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.capacity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+        "path": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+        "short": "Quantity of specimen within container.",
+        "definition": "Quantity of specimen within container.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.specimenQuantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.additive",
+        "path": "cimi-entity-SpecimenContainer-model.additive",
+        "short": "Additive associated with container.",
+        "definition": "Additive associated with container.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.additive",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+        "path": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+        "short": "The sequence number for this specimen in a collection of specimens.",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenContainer-model.sequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

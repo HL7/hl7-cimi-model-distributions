@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="shr-base-TypeCode-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW TypeCode Logical Model</b></p>
+  <p>A code that describes the type of composition or section, such as a section or document type identifier.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-TypeCode-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="shr.base.TypeCode"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="TypeCodeModel"/>
+  <title value="SW TypeCode Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="shr-base-TypeCode-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="shr-base-TypeCode-model">
+      <path value="shr-base-TypeCode-model"/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-TypeCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-TypeCode-model.value">
+      <path value="shr-base-TypeCode-model.value"/>
+      <short value="Code representing a code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="Code representing a code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-TypeCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="shr-base-TypeCode-model">
+      <path value="shr-base-TypeCode-model"/>
+      <definition value="A code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="shr-base-TypeCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="shr-base-TypeCode-model.value">
+      <path value="shr-base-TypeCode-model.value"/>
+      <short value="Code representing a code that describes the type of composition or section, such as a section or document type identifier."/>
+      <definition value="Code representing a code that describes the type of composition or section, such as a section or document type identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="shr-base-TypeCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

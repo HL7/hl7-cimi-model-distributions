@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-SpecimenStatus-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW SpecimenStatus Logical Model</b></p>\n  <p>State of the specimen, such as obtained, processed, used.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-SpecimenStatus-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.SpecimenStatus"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SpecimenStatusModel",
+  "title": "SW SpecimenStatus Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "State of the specimen, such as obtained, processed, used.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0449438"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-SpecimenStatus-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-SpecimenStatus-model",
+        "path": "cimi-entity-SpecimenStatus-model",
+        "definition": "State of the specimen, such as obtained, processed, used.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenStatus-model.value",
+        "path": "cimi-entity-SpecimenStatus-model.value",
+        "short": "Code representing state of the specimen, such as obtained, processed, used.",
+        "definition": "Code representing state of the specimen, such as obtained, processed, used.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-SpecimenStatus-model",
+        "path": "cimi-entity-SpecimenStatus-model",
+        "definition": "State of the specimen, such as obtained, processed, used.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-SpecimenStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-SpecimenStatus-model.value",
+        "path": "cimi-entity-SpecimenStatus-model.value",
+        "short": "Code representing state of the specimen, such as obtained, processed, used.",
+        "definition": "Code representing state of the specimen, such as obtained, processed, used.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-SpecimenStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

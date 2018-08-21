@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-Qualifier-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Qualifier Logical Model</b></p>\n  <p>A condition or circumstance associated with an observation that affects the interpretation of the result value.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Qualifier-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.Qualifier"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "QualifierModel",
+  "title": "SW Qualifier Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-Qualifier-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-Qualifier-model",
+        "path": "shr-base-Qualifier-model",
+        "definition": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Qualifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Qualifier-model.value",
+        "path": "shr-base-Qualifier-model.value",
+        "short": "Code representing a condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "definition": "Code representing a condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Qualifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-Qualifier-model",
+        "path": "shr-base-Qualifier-model",
+        "definition": "A condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-Qualifier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-Qualifier-model.value",
+        "path": "shr-base-Qualifier-model.value",
+        "short": "Code representing a condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "definition": "Code representing a condition or circumstance associated with an observation that affects the interpretation of the result value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-Qualifier-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

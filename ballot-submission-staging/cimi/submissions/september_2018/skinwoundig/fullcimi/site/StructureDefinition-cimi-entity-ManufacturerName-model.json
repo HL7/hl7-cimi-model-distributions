@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-ManufacturerName-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW ManufacturerName Logical Model</b></p>\n  <p>The name of the company who produce the device.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-ManufacturerName-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.ManufacturerName"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ManufacturerNameModel",
+  "title": "SW ManufacturerName Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The name of the company who produce the device.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-ManufacturerName-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-ManufacturerName-model",
+        "path": "cimi-entity-ManufacturerName-model",
+        "definition": "The name of the company who produce the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ManufacturerName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ManufacturerName-model.value",
+        "path": "cimi-entity-ManufacturerName-model.value",
+        "short": "String representing the name of the company who produce the device.",
+        "definition": "String representing the name of the company who produce the device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ManufacturerName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-ManufacturerName-model",
+        "path": "cimi-entity-ManufacturerName-model",
+        "definition": "The name of the company who produce the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-ManufacturerName-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-ManufacturerName-model.value",
+        "path": "cimi-entity-ManufacturerName-model.value",
+        "short": "String representing the name of the company who produce the device.",
+        "definition": "String representing the name of the company who produce the device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-ManufacturerName-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

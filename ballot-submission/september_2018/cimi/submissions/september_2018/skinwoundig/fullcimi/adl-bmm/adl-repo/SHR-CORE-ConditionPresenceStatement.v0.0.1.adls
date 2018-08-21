@@ -1,0 +1,122 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-ConditionPresenceStatement.condition_presence_statement.v0.0.1
+
+specialize
+  SHR-CORE-AssertionPresenceStatement.assertion_presence_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing cimi-derived classes representing complete clinical statements. In this specification, these classes derive from the StatementTopic class hierarchy, not ClinicalStatement, which is a significant departure from CIMI. This simplifies the resulting logical models.">
+      use = <"The namespace containing cimi-derived classes representing complete clinical statements. In this specification, these classes derive from the StatementTopic class hierarchy, not ClinicalStatement, which is a significant departure from CIMI. This simplifies the resulting logical models.">
+      keywords = <"cimi.statement","condition presence statement">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  ConditionPresenceStatement[id1.1.1.1.1.1.1.1.1] matches {
+    topicCode matches {
+      TopicCode[id0.0.0.0.0.0.0.0.2]
+    }
+    category matches {
+      Category[id0.0.0.0.0.0.0.0.3]
+    }
+    anatomicalLocation matches {
+      AnatomicalLocation[id0.0.0.0.0.0.0.0.4]
+    }
+    conditionCause matches {
+      ConditionCause[id0.0.0.0.0.0.0.0.5]
+    }
+    conditionIdentifier matches {
+      ConditionIdentifier[id0.0.0.0.0.0.0.0.6]
+    }
+    clinicalStatus matches {
+      ClinicalStatus[id0.0.0.0.0.0.0.0.7]
+    }
+    whenClinicallyRecognized matches {
+      WhenClinicallyRecognized[id0.0.0.0.0.0.0.0.8]
+    }
+    presentOnAdmission matches {
+      PresentOnAdmission[id0.0.0.0.0.0.0.0.9]
+    }
+    severity matches {
+      Severity[id0.0.0.0.0.0.0.0.10]
+    }
+    criticality matches {
+      Criticality[id0.0.0.0.0.0.0.0.11]
+    }
+    stage matches {
+      Stage[id0.0.0.0.0.0.0.0.12]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1.1.1.1.1"] = <
+        text = <"ConditionPresenceStatement">
+        description = <"A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.">
+      >
+      ["id0.0.0.0.0.0.0.0.2"] = <
+        text = <"TopicCode">
+        description = <"The concept representing the finding or action that is the topic of the statement.
+                      
+                      For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.">
+      >
+      ["id0.0.0.0.0.0.0.0.3"] = <
+        text = <"Category">
+        description = <"The type, kind, or class of this item.">
+      >
+      ["id0.0.0.0.0.0.0.0.4"] = <
+        text = <"AnatomicalLocation">
+        description = <"A location or structure in the body, including tissues, regions, cavities, and spaces; for example, right elbow, or left ventricle of the heart.">
+      >
+      ["id0.0.0.0.0.0.0.0.5"] = <
+        text = <"ConditionCause">
+        description = <"The cause of the condition. This includes such causes as disease vectors and endogenous states (e.g., macular degeneration due to diabetes), substances, medications, micro-organisms, and forces associated with the occurrence of a Condition from temporal or causative perspectives">
+      >
+      ["id0.0.0.0.0.0.0.0.6"] = <
+        text = <"ConditionIdentifier">
+        description = <"A human-readable identifier for the condition at the finding site, for example, a wound number or tumor identifier.">
+      >
+      ["id0.0.0.0.0.0.0.0.7"] = <
+        text = <"ClinicalStatus">
+        description = <"A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).">
+      >
+      ["id0.0.0.0.0.0.0.0.8"] = <
+        text = <"WhenClinicallyRecognized">
+        description = <"The time at which a condition or condition was first identified in a healthcare context.">
+      >
+      ["id0.0.0.0.0.0.0.0.9"] = <
+        text = <"PresentOnAdmission">
+        description = <"If the problem or condition existed before the current episode of care.">
+      >
+      ["id0.0.0.0.0.0.0.0.10"] = <
+        text = <"Severity">
+        description = <"Degree of harshness or extent of a symptom, disorder, or condition.">
+      >
+      ["id0.0.0.0.0.0.0.0.11"] = <
+        text = <"Criticality">
+        description = <"The potential clinical harm associated with a condition. When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.">
+      >
+      ["id0.0.0.0.0.0.0.0.12"] = <
+        text = <"Stage">
+        description = <"The relative advancement in the course of a disease. The value is the summary stage or stage group. StageDetail optionally contains the full staging information.">
+      >
+    >
+  >

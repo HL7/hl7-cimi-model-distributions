@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-OrganizationAlias-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW OrganizationAlias Logical Model</b></p>\n  <p>A list of alternate names that the organization is known as, or was known as in the past.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-OrganizationAlias-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.OrganizationAlias"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "OrganizationAliasModel",
+  "title": "SW OrganizationAlias Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A list of alternate names that the organization is known as, or was known as in the past.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-OrganizationAlias-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-OrganizationAlias-model",
+        "path": "cimi-entity-OrganizationAlias-model",
+        "definition": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-OrganizationAlias-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationAlias-model.value",
+        "path": "cimi-entity-OrganizationAlias-model.value",
+        "short": "String representing a list of alternate names that the organization is known as, or was known as in the past.",
+        "definition": "String representing a list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationAlias-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-OrganizationAlias-model",
+        "path": "cimi-entity-OrganizationAlias-model",
+        "definition": "A list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-OrganizationAlias-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-OrganizationAlias-model.value",
+        "path": "cimi-entity-OrganizationAlias-model.value",
+        "short": "String representing a list of alternate names that the organization is known as, or was known as in the past.",
+        "definition": "String representing a list of alternate names that the organization is known as, or was known as in the past.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-OrganizationAlias-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

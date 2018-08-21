@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-Ingredient-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Ingredient Logical Model</b></p>
+  <p>Specifies an material component in a non-medication substance.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Ingredient-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.Ingredient"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="IngredientModel"/>
+  <title value="SW Ingredient Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Specifies an material component in a non-medication substance."/>
+  <keyword>
+    <system value="http://ncimeta.nci.nih.gov"/>
+    <code value="C3176062"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-Ingredient-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-Ingredient-model">
+      <path value="cimi-entity-Ingredient-model"/>
+      <definition value="Specifies an material component in a non-medication substance."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Ingredient-model.value[x]">
+      <path value="cimi-entity-Ingredient-model.value[x]"/>
+      <short value="Code or Substance representing specifies an material component in a non-medication substance."/>
+      <definition value="Code or Substance representing specifies an material component in a non-medication substance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Ingredient-model.ingredientAmount">
+      <path value="cimi-entity-Ingredient-model.ingredientAmount"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0456603"/>
+      </code>
+      <short value="The amount of an ingredient in a mixture, as a ratio. For example, 250 mg per tablet is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet."/>
+      <definition value="The amount of an ingredient in a mixture, as a ratio. For example, 250 mg per tablet is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model.ingredientAmount"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-Ingredient-model">
+      <path value="cimi-entity-Ingredient-model"/>
+      <definition value="Specifies an material component in a non-medication substance."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Ingredient-model.value[x]">
+      <path value="cimi-entity-Ingredient-model.value[x]"/>
+      <short value="Code or Substance representing specifies an material component in a non-medication substance."/>
+      <definition value="Code or Substance representing specifies an material component in a non-medication substance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model.value[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Substance-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-Ingredient-model.ingredientAmount">
+      <path value="cimi-entity-Ingredient-model.ingredientAmount"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0456603"/>
+      </code>
+      <short value="The amount of an ingredient in a mixture, as a ratio. For example, 250 mg per tablet is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet."/>
+      <definition value="The amount of an ingredient in a mixture, as a ratio. For example, 250 mg per tablet is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-Ingredient-model.ingredientAmount"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Ratio-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

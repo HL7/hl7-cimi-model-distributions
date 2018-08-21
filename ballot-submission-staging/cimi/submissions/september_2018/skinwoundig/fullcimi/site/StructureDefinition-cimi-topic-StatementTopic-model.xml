@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-topic-StatementTopic-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW StatementTopic Logical Model</b></p>
+  <p>Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.
+
+StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.topic.StatementTopic"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="StatementTopicModel"/>
+  <title value="SW StatementTopic Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-topic-StatementTopic-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-topic-StatementTopic-model">
+      <path value="cimi-topic-StatementTopic-model"/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-topic-StatementTopic-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-topic-StatementTopic-model.topicCode">
+      <path value="cimi-topic-StatementTopic-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-topic-StatementTopic-model.topicCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-topic-StatementTopic-model">
+      <path value="cimi-topic-StatementTopic-model"/>
+      <definition value="Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.&#xA;&#xA;StatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-topic-StatementTopic-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-topic-StatementTopic-model.topicCode">
+      <path value="cimi-topic-StatementTopic-model.topicCode"/>
+      <short value="The concept representing the finding or action that is the topic of the statement."/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-topic-StatementTopic-model.topicCode"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

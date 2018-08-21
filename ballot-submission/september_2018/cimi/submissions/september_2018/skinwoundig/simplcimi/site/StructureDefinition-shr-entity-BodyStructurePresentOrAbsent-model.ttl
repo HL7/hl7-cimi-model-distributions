@@ -1,0 +1,425 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW BodyStructurePresentOrAbsent Logical Model</b></p>\n  <p/>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "shr.entity.BodyStructurePresentOrAbsent" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "BodyStructurePresentOrAbsentModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW BodyStructurePresentOrAbsent Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.keyword [
+     fhir:index 0;
+     fhir:Coding.system [ fhir:value "urn:tbd" ];
+     fhir:Coding.code [ fhir:value "TBD" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+       fhir:ElementDefinition.short [ fhir:value "BodyStructurePresentOrAbsent" ];
+       fhir:ElementDefinition.definition [ fhir:value "BodyStructurePresentOrAbsent" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+       fhir:ElementDefinition.short [ fhir:value "Indicates whether the finding is preliminary, amended, final, etc." ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates whether the finding is preliminary, amended, final, etc." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/observation-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/observation-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+       fhir:ElementDefinition.short [ fhir:value "The time or time period that the statement addresses." ];
+       fhir:ElementDefinition.definition [ fhir:value "The time or time period that the statement addresses." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+       fhir:ElementDefinition.short [ fhir:value "The method used to determine the finding." ];
+       fhir:ElementDefinition.definition [ fhir:value "The method used to determine the finding." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the object is present or absent, exists or does not exist." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the object is present or absent, exists or does not exist." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time." ];
+       fhir:ElementDefinition.definition [ fhir:value "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+       fhir:ElementDefinition.short [ fhir:value "BodyStructurePresentOrAbsent" ];
+       fhir:ElementDefinition.definition [ fhir:value "BodyStructurePresentOrAbsent" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+       fhir:ElementDefinition.short [ fhir:value "Indicates whether the finding is preliminary, amended, final, etc." ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates whether the finding is preliminary, amended, final, etc." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingStatus" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/observation-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/observation-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+       fhir:ElementDefinition.short [ fhir:value "The time or time period that the statement addresses." ];
+       fhir:ElementDefinition.definition [ fhir:value "The time or time period that the statement addresses." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.relevantTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+       fhir:ElementDefinition.short [ fhir:value "The method used to determine the finding." ];
+       fhir:ElementDefinition.definition [ fhir:value "The method used to determine the finding." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.findingMethod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+       fhir:ElementDefinition.short [ fhir:value "Whether the object is present or absent, exists or does not exist." ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the object is present or absent, exists or does not exist." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.presentOrAbsent" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to." ];
+       fhir:ElementDefinition.definition [ fhir:value "The person, place, event, condition, other statement that this statement addresses or belongs to.\nFor an existential finding, the Subject is the 'owner' of the object said to exist or not exist. For example, the subject for a condition is a patient; the subject for wound size is a wound. Subjects are themselves statements." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-Statement-model" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+       fhir:ElementDefinition.short [ fhir:value "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist." ];
+       fhir:ElementDefinition.definition [ fhir:value "A code representing the type of entity, person, role, condition, or phenomenon that is being asserted to exist or not exist." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectTypeCode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time." ];
+       fhir:ElementDefinition.definition [ fhir:value "For later reference, an identifier for the object implied by the assertion, which allows the object to be tracked over time. For example, a wound number is used to track a specific wound's condition over time." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "shr-entity-BodyStructurePresentOrAbsent-model.objectIdentifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/observation-status> a fhir:ValueSet .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-base-PresentAbsentVS> a fhir:us .
+
+<http://hl7.org/fhir/us/sw/ValueSet/shr-base-BodyStructureVS> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/shr-entity-BodyStructurePresentOrAbsent-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

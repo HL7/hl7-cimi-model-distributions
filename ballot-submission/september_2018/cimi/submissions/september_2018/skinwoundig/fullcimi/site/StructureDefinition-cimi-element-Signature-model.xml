@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-element-Signature-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW Signature Logical Model</b></p>
+  <p>A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.element.Signature"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SignatureModel"/>
+  <title value="SW Signature Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-element-Signature-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-element-Signature-model">
+      <path value="cimi-element-Signature-model"/>
+      <definition value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Signature-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.signatureType">
+      <path value="cimi-element-Signature-model.signatureType"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="Type of signature"/>
+      <definition value="Type of signature"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Signature-model.signatureType"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/signature-type"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Signature-model.creationTime">
+      <path value="cimi-element-Signature-model.creationTime"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C3669169"/>
+      </code>
+      <short value="The point in time when the information was recorded in the system of record."/>
+      <definition value="The point in time when the information was recorded in the system of record."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.creationTime"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.signatory">
+      <path value="cimi-element-Signature-model.signatory"/>
+      <short value="The party signing."/>
+      <definition value="The party signing."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.signatory"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.onBehalfOf">
+      <path value="cimi-element-Signature-model.onBehalfOf"/>
+      <short value="The party represented by the actual participant."/>
+      <definition value="The party represented by the actual participant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.onBehalfOf"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.contentType">
+      <path value="cimi-element-Signature-model.contentType"/>
+      <short value="Mime type of the content, with charset etc."/>
+      <definition value="Mime type of the content, with charset etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.contentType"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.binaryData">
+      <path value="cimi-element-Signature-model.binaryData"/>
+      <short value="The data itself."/>
+      <definition value="The data itself."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.binaryData"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-element-Signature-model">
+      <path value="cimi-element-Signature-model"/>
+      <definition value="A digital Signature - XML DigSig, JWT, Graphical image of signature, etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Signature-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.signatureType">
+      <path value="cimi-element-Signature-model.signatureType"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0805701"/>
+      </code>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C0332307"/>
+      </code>
+      <short value="Type of signature"/>
+      <definition value="Type of signature"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-Signature-model.signatureType"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/signature-type"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="cimi-element-Signature-model.creationTime">
+      <path value="cimi-element-Signature-model.creationTime"/>
+      <code>
+        <system value="http://ncimeta.nci.nih.gov"/>
+        <code value="C3669169"/>
+      </code>
+      <short value="The point in time when the information was recorded in the system of record."/>
+      <definition value="The point in time when the information was recorded in the system of record."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.creationTime"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.signatory">
+      <path value="cimi-element-Signature-model.signatory"/>
+      <short value="The party signing."/>
+      <definition value="The party signing."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.signatory"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.onBehalfOf">
+      <path value="cimi-element-Signature-model.onBehalfOf"/>
+      <short value="The party represented by the actual participant."/>
+      <definition value="The party represented by the actual participant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.onBehalfOf"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.contentType">
+      <path value="cimi-element-Signature-model.contentType"/>
+      <short value="Mime type of the content, with charset etc."/>
+      <definition value="Mime type of the content, with charset etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.contentType"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-Signature-model.binaryData">
+      <path value="cimi-element-Signature-model.binaryData"/>
+      <short value="The data itself."/>
+      <definition value="The data itself."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-Signature-model.binaryData"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

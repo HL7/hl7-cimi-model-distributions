@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-statement-StageDetail-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW StageDetail Logical Model</b></p>
+  <p>The full staging information</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-StageDetail-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.statement.StageDetail"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="StageDetailModel"/>
+  <title value="SW StageDetail Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The full staging information"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-statement-StageDetail-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-statement-StageDetail-model">
+      <path value="cimi-statement-StageDetail-model"/>
+      <definition value="The full staging information"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-StageDetail-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-StageDetail-model.value">
+      <path value="cimi-statement-StageDetail-model.value"/>
+      <short value="Observation representing the full staging information"/>
+      <definition value="Observation representing the full staging information"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-StageDetail-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-statement-StageDetail-model">
+      <path value="cimi-statement-StageDetail-model"/>
+      <definition value="The full staging information"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-statement-StageDetail-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-statement-StageDetail-model.value">
+      <path value="cimi-statement-StageDetail-model.value"/>
+      <short value="Observation representing the full staging information"/>
+      <definition value="Observation representing the full staging information"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-statement-StageDetail-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

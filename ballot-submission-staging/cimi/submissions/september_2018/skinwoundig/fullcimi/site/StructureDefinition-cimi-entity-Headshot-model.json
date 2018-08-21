@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Headshot-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Headshot Logical Model</b></p>\n  <p>A photograph showing a person's face.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Headshot-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Headshot"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "HeadshotModel",
+  "title": "SW Headshot Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A photograph showing a person's face.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Headshot-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Headshot-model",
+        "path": "cimi-entity-Headshot-model",
+        "definition": "A photograph showing a person's face.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Headshot-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Headshot-model.value",
+        "path": "cimi-entity-Headshot-model.value",
+        "short": "Media representing a photograph showing a person's face.",
+        "definition": "Media representing a photograph showing a person's face.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Headshot-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Headshot-model",
+        "path": "cimi-entity-Headshot-model",
+        "definition": "A photograph showing a person's face.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Headshot-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Headshot-model.value",
+        "path": "cimi-entity-Headshot-model.value",
+        "short": "Media representing a photograph showing a person's face.",
+        "definition": "Media representing a photograph showing a person's face.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Headshot-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

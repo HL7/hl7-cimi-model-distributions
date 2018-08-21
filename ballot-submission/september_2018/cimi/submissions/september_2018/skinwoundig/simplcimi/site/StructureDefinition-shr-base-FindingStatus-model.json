@@ -1,0 +1,129 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-base-FindingStatus-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW FindingStatus Logical Model</b></p>\n  <p>Indicates whether the finding is preliminary, amended, final, etc.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-base-FindingStatus-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.base.FindingStatus"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "FindingStatusModel",
+  "title": "SW FindingStatus Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates whether the finding is preliminary, amended, final, etc.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-base-FindingStatus-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-base-FindingStatus-model",
+        "path": "shr-base-FindingStatus-model",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-FindingStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-FindingStatus-model.value",
+        "path": "shr-base-FindingStatus-model.value",
+        "short": "Code representing indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Code representing indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-FindingStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-base-FindingStatus-model",
+        "path": "shr-base-FindingStatus-model",
+        "definition": "Indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-base-FindingStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-base-FindingStatus-model.value",
+        "path": "shr-base-FindingStatus-model.value",
+        "short": "Code representing indicates whether the finding is preliminary, amended, final, etc.",
+        "definition": "Code representing indicates whether the finding is preliminary, amended, final, etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-base-FindingStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-Group.group.v0.0.1
+
+specialize
+  SHR-CORE-EntityOrRole.entity_or_role.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"The namespace containing definitions for basic classes in CIMI.">
+      use = <"The namespace containing definitions for basic classes in CIMI.">
+      keywords = <"cimi.entity","group">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  Group[id1.1.1.1] matches {
+    activeFlag matches {
+      ActiveFlag[id0.0.0.2]
+    }
+    type matches {
+      Type[id0.0.0.3]
+    }
+    title matches {
+      Title[id0.0.0.4]
+    }
+    actual matches {
+      Actual[id0.0.0.5]
+    }
+    groupCharacteristic matches {
+      GroupCharacteristic[id0.0.0.6]
+    }
+    member matches {
+      Member[id0.0.0.7]
+    }
+    count matches {
+      Count[id0.0.0.8]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1"] = <
+        text = <"Group">
+        description = <"A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.">
+      >
+      ["id0.0.0.2"] = <
+        text = <"ActiveFlag">
+        description = <"If the ActiveFlag is false, it indicates the record or item is no longer to be used and should generally be hidden for the user in the UI.">
+      >
+      ["id0.0.0.3"] = <
+        text = <"Type">
+        description = <"The most specific code (lowest level term) describing the kind or sort of thing being represented.">
+      >
+      ["id0.0.0.4"] = <
+        text = <"Title">
+        description = <"A distinguishing word or group of words naming an item.">
+      >
+      ["id0.0.0.5"] = <
+        text = <"Actual">
+        description = <"True if the group is an actual group (as opposed to definitional).">
+      >
+      ["id0.0.0.6"] = <
+        text = <"GroupCharacteristic">
+        description = <"An inclusion or exclusion criterion as part of defining a cohort. If the criterion is an unary, then TopicCode must be SCT#385432009 (not applicable)">
+      >
+      ["id0.0.0.7"] = <
+        text = <"Member">
+        description = <"A person or entity in a group.">
+      >
+      ["id0.0.0.8"] = <
+        text = <"Count">
+        description = <"The number of items (0 or more), as an integer.">
+      >
+    >
+  >

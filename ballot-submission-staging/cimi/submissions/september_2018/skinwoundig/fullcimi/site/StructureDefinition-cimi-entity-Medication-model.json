@@ -1,0 +1,565 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-Medication-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Medication Logical Model</b></p>\n  <p>A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Medication-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.Medication"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "MedicationModel",
+  "title": "SW Medication Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0013227"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-Medication-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-Medication-model",
+        "path": "cimi-entity-Medication-model",
+        "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Medication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.type",
+        "path": "cimi-entity-Medication-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Medication-model.doseForm",
+        "path": "cimi-entity-Medication-model.doseForm",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0013058"
+          }
+        ],
+        "short": "The form in which active and/or inert ingredient(s) are physically presented.",
+        "definition": "The form in which active and/or inert ingredient(s) are physically presented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.doseForm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-form-codes"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Medication-model.brand",
+        "path": "cimi-entity-Medication-model.brand",
+        "short": "If the product is branded, and if so, the brand name of a product.",
+        "definition": "If the product is branded, and if so, the brand name of a product.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.brand",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.overTheCounter",
+        "path": "cimi-entity-Medication-model.overTheCounter",
+        "short": "True if the medication is available to consumers without a prescription.",
+        "definition": "True if the medication is available to consumers without a prescription.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.overTheCounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.medicationIngredient",
+        "path": "cimi-entity-Medication-model.medicationIngredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a medication.",
+        "definition": "Specifies an material component in a medication.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Medication-model.medicationIngredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MedicationIngredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.manufacturer",
+        "path": "cimi-entity-Medication-model.manufacturer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          },
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1114744"
+          }
+        ],
+        "short": "The organization producing the product or test.",
+        "definition": "The organization producing the product or test.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.lotNumber",
+        "path": "cimi-entity-Medication-model.lotNumber",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1115660"
+          }
+        ],
+        "short": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.",
+        "definition": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.lotNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.expirationDate",
+        "path": "cimi-entity-Medication-model.expirationDate",
+        "short": "When the item (medication, device, etc.) will expire.",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.package",
+        "path": "cimi-entity-Medication-model.package",
+        "short": "The kind of container the medication comes in.",
+        "definition": "The kind of container the medication comes in.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.package",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-package-form"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-Medication-model",
+        "path": "cimi-entity-Medication-model",
+        "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Medication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.type",
+        "path": "cimi-entity-Medication-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "definition": "The most specific code (lowest level term) describing the kind or sort of thing being represented.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Medication-model.doseForm",
+        "path": "cimi-entity-Medication-model.doseForm",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0013058"
+          }
+        ],
+        "short": "The form in which active and/or inert ingredient(s) are physically presented.",
+        "definition": "The form in which active and/or inert ingredient(s) are physically presented.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.doseForm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-form-codes"
+          }
+        }
+      },
+      {
+        "id": "cimi-entity-Medication-model.brand",
+        "path": "cimi-entity-Medication-model.brand",
+        "short": "If the product is branded, and if so, the brand name of a product.",
+        "definition": "If the product is branded, and if so, the brand name of a product.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.brand",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Brand-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.overTheCounter",
+        "path": "cimi-entity-Medication-model.overTheCounter",
+        "short": "True if the medication is available to consumers without a prescription.",
+        "definition": "True if the medication is available to consumers without a prescription.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.overTheCounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.medicationIngredient",
+        "path": "cimi-entity-Medication-model.medicationIngredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a medication.",
+        "definition": "Specifies an material component in a medication.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-Medication-model.medicationIngredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-MedicationIngredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.manufacturer",
+        "path": "cimi-entity-Medication-model.manufacturer",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1561598"
+          },
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1114744"
+          }
+        ],
+        "short": "The organization producing the product or test.",
+        "definition": "The organization producing the product or test.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.lotNumber",
+        "path": "cimi-entity-Medication-model.lotNumber",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1115660"
+          }
+        ],
+        "short": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.",
+        "definition": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.lotNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.expirationDate",
+        "path": "cimi-entity-Medication-model.expirationDate",
+        "short": "When the item (medication, device, etc.) will expire.",
+        "definition": "When the item (medication, device, etc.) will expire.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-Medication-model.package",
+        "path": "cimi-entity-Medication-model.package",
+        "short": "The kind of container the medication comes in.",
+        "definition": "The kind of container the medication comes in.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-Medication-model.package",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-package-form"
+          }
+        }
+      }
+    ]
+  }
+}

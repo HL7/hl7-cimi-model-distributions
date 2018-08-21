@@ -1,0 +1,129 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-Version-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Version Logical Model</b></p>\n  <p>A number or code associated with the product that identifies a particular release iteration.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Version-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "shr.core.Version"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "VersionModel",
+  "title": "SW Version Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A number or code associated with the product that identifies a particular release iteration.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0333052"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-Version-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-Version-model",
+        "path": "shr-core-Version-model",
+        "definition": "A number or code associated with the product that identifies a particular release iteration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Version-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Version-model.value[x]",
+        "path": "shr-core-Version-model.value[x]",
+        "short": "String or id representing a number or code associated with the product that identifies a particular release iteration.",
+        "definition": "String or id representing a number or code associated with the product that identifies a particular release iteration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Version-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-Version-model",
+        "path": "shr-core-Version-model",
+        "definition": "A number or code associated with the product that identifies a particular release iteration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Version-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Version-model.value[x]",
+        "path": "shr-core-Version-model.value[x]",
+        "short": "String or id representing a number or code associated with the product that identifies a particular release iteration.",
+        "definition": "String or id representing a number or code associated with the product that identifies a particular release iteration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Version-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

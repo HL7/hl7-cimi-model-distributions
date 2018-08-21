@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-topic-TopicCode-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW TopicCode Logical Model</b></p>
+  <p>The concept representing the finding or action that is the topic of the statement.
+
+For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the 'question' or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-TopicCode-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.topic.TopicCode"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="TopicCodeModel"/>
+  <title value="SW TopicCode Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-topic-TopicCode-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-topic-TopicCode-model">
+      <path value="cimi-topic-TopicCode-model"/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-topic-TopicCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-topic-TopicCode-model.value">
+      <path value="cimi-topic-TopicCode-model.value"/>
+      <short value="Code representing the concept representing the finding or action that is the topic of the statement."/>
+      <definition value="Code representing the concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-topic-TopicCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-topic-TopicCode-model">
+      <path value="cimi-topic-TopicCode-model"/>
+      <definition value="The concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-topic-TopicCode-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-topic-TopicCode-model.value">
+      <path value="cimi-topic-TopicCode-model.value"/>
+      <short value="Code representing the concept representing the finding or action that is the topic of the statement."/>
+      <definition value="Code representing the concept representing the finding or action that is the topic of the statement.&#xA;&#xA;For action topics, the TopicCode represents the action being described. For findings, the TopicCode represents the &#39;question&#39; or property being investigated. For evaluation result findings, the TopicCode contains a concept for an observable entity, such as systolic blood pressure. For assertion findings, the TopicCode contains a code representing the condition, allergy, or other item being asserted. In all cases, the TopicCode describes the topic  of the action or the finding."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-topic-TopicCode-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,119 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-StageDetail-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW StageDetail Logical Model</b></p>\n  <p>The full staging information</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-StageDetail-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.StageDetail"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "StageDetailModel",
+  "title": "SW StageDetail Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The full staging information",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-StageDetail-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-StageDetail-model",
+        "path": "cimi-statement-StageDetail-model",
+        "definition": "The full staging information",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-StageDetail-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-StageDetail-model.value",
+        "path": "cimi-statement-StageDetail-model.value",
+        "short": "Observation representing the full staging information",
+        "definition": "Observation representing the full staging information",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-StageDetail-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-StageDetail-model",
+        "path": "cimi-statement-StageDetail-model",
+        "definition": "The full staging information",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-StageDetail-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-StageDetail-model.value",
+        "path": "cimi-statement-StageDetail-model.value",
+        "short": "Observation representing the full staging information",
+        "definition": "Observation representing the full staging information",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-StageDetail-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

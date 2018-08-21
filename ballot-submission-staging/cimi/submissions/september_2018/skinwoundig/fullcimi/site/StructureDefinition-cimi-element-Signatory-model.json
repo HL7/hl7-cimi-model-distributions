@@ -1,0 +1,125 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-Signatory-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Signatory Logical Model</b></p>\n  <p>The party signing.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signatory-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.Signatory"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SignatoryModel",
+  "title": "SW Signatory Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The party signing.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-Signatory-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-Signatory-model",
+        "path": "cimi-element-Signatory-model",
+        "definition": "The party signing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signatory-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signatory-model.value[x]",
+        "path": "cimi-element-Signatory-model.value[x]",
+        "short": "Uri or Entity representing the party signing.",
+        "definition": "Uri or Entity representing the party signing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signatory-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-Signatory-model",
+        "path": "cimi-element-Signatory-model",
+        "definition": "The party signing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signatory-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signatory-model.value[x]",
+        "path": "cimi-element-Signatory-model.value[x]",
+        "short": "Uri or Entity representing the party signing.",
+        "definition": "Uri or Entity representing the party signing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signatory-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

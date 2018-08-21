@@ -1,0 +1,387 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-element-Signature-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW Signature Logical Model</b></p>\n  <p>A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-Signature-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.element.Signature"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "SignatureModel",
+  "title": "SW Signature Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-element-Signature-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-element-Signature-model",
+        "path": "cimi-element-Signature-model",
+        "definition": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signature-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.signatureType",
+        "path": "cimi-element-Signature-model.signatureType",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          },
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "Type of signature",
+        "definition": "Type of signature",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signature-model.signatureType",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/signature-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Signature-model.creationTime",
+        "path": "cimi-element-Signature-model.creationTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the information was recorded in the system of record.",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.creationTime",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.signatory",
+        "path": "cimi-element-Signature-model.signatory",
+        "short": "The party signing.",
+        "definition": "The party signing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.signatory",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.onBehalfOf",
+        "path": "cimi-element-Signature-model.onBehalfOf",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.onBehalfOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.contentType",
+        "path": "cimi-element-Signature-model.contentType",
+        "short": "Mime type of the content, with charset etc.",
+        "definition": "Mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.binaryData",
+        "path": "cimi-element-Signature-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-element-Signature-model",
+        "path": "cimi-element-Signature-model",
+        "definition": "A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signature-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.signatureType",
+        "path": "cimi-element-Signature-model.signatureType",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0805701"
+          },
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "Type of signature",
+        "definition": "Type of signature",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "cimi-element-Signature-model.signatureType",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/signature-type"
+          }
+        }
+      },
+      {
+        "id": "cimi-element-Signature-model.creationTime",
+        "path": "cimi-element-Signature-model.creationTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the information was recorded in the system of record.",
+        "definition": "The point in time when the information was recorded in the system of record.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.creationTime",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.signatory",
+        "path": "cimi-element-Signature-model.signatory",
+        "short": "The party signing.",
+        "definition": "The party signing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.signatory",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Entity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.onBehalfOf",
+        "path": "cimi-element-Signature-model.onBehalfOf",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.onBehalfOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.contentType",
+        "path": "cimi-element-Signature-model.contentType",
+        "short": "Mime type of the content, with charset etc.",
+        "definition": "Mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-element-Signature-model.binaryData",
+        "path": "cimi-element-Signature-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-element-Signature-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

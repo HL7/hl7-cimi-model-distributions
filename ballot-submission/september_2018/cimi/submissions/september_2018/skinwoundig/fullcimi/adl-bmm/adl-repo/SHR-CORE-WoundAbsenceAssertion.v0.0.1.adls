@@ -1,0 +1,51 @@
+archetype (adl_version=2.3; rm_release=0.0.1)
+  SHR-CORE-WoundAbsenceAssertion.wound_absence_assertion.v0.0.1
+
+specialize
+  SHR-CORE-FindingSiteConditionAbsenceStatement.finding_site_condition_absence_statement.v0.0.1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"Mark Kramer">
+    ["organisation"] = <"The MITRE Corporation">
+    ["email"] = <"mkramer@mitre.org">
+    ["date"] = <"2018-8-17">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      use = <"SHR implementation of the HL7 Pressure Ulcer Prevention Domain Analysis Model (May, 2011).">
+      keywords = <"sw","wound absence assertion">
+    >
+  >
+  lifecycle_state = <"initial">
+  other_contributors = <"Rute Martins Baptista <rbatiste@mitre.org>, Abhijay Bhatnagar <abhatnagar@mitre.org>, Chris Moesel <cmoesel@mitre.org>, May Terry <mokeefe@mitre.org>">
+  custodian_organisation = <"HL7 Patient Care and Clinical Information Modeling Initiative Work Groups">
+  licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
+  copyright = <"Copyright (c) The MITRE Organization <http://mitre.org>">
+
+definition
+  WoundAbsenceAssertion[id1.1.1.1.1.1.1.1.1.1.1] matches {
+    anatomicalLocation matches {
+      WoundAnatomicalLocation[id0.0.0.0.0.0.0.0.0.0.3]
+    }
+  }
+
+terminology
+  term_definitions = <
+    ["en"] = <
+      ["id1.1.1.1.1.1.1.1.1.1.1"] = <
+        text = <"WoundAbsenceAssertion">
+        description = <"Documents the absence of a wound at a given body site.
+                      No wounds anywhere on the body can be indicated by omitting the anatomical location, or using the Snomed code #181469002 (Entire skin (body structure)) in WoundAnatomicalLocation.">
+      >
+      ["id0.0.0.0.0.0.0.0.0.0.3"] = <
+        text = <"WoundAnatomicalLocation">
+        description = <"-">
+      >
+    >
+  >

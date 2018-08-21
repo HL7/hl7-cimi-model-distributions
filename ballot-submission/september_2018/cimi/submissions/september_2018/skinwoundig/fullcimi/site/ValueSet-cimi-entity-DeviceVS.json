@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cimi-entity-DeviceVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW DeviceVS ValueSet</b></p>\n<p>Codes describing medical devices.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/ValueSet/cimi-entity-DeviceVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.DeviceVS"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "DeviceVS",
+  "title": "SW DeviceVS ValueSet",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes describing medical devices.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "49062001"
+          }
+        ]
+      }
+    ]
+  }
+}

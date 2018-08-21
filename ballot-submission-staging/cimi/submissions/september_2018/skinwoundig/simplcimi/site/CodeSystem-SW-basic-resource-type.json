@@ -1,0 +1,79 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "SW-basic-resource-type",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SW Basic Resource Type CodeSystem</b></p>\n<p>Codes representing profiles on the Basic resource.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/CodeSystem/SW-basic-resource-type",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/sw",
+    "value": "SW-basic-resource-type"
+  },
+  "version": "1.0.0",
+  "name": "BasicResourceType",
+  "title": "SW Basic Resource Type CodeSystem",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes representing profiles on the Basic resource.",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 11,
+  "concept": [
+    {
+      "code": "shr-base-ExistentialFinding",
+      "display": "SW ExistentialFinding Profile"
+    },
+    {
+      "code": "shr-base-ObjectPresentOrAbsent",
+      "display": "SW ObjectPresentOrAbsent Profile"
+    },
+    {
+      "code": "shr-entity-BodyStructurePresentOrAbsent",
+      "display": "SW BodyStructurePresentOrAbsent Profile"
+    },
+    {
+      "code": "shr-entity-Condition",
+      "display": "SW Condition Profile"
+    },
+    {
+      "code": "sw-WoundPresentOrAbsent",
+      "display": "SW WoundPresentOrAbsent Profile"
+    },
+    {
+      "code": "sw-Wound",
+      "display": "SW Wound Profile"
+    },
+    {
+      "code": "sw-WoundAbsent",
+      "display": "SW WoundAbsent Profile"
+    },
+    {
+      "code": "sw-WoundTunnelPresentOrAbsent",
+      "display": "SW WoundTunnelPresentOrAbsent Profile"
+    },
+    {
+      "code": "sw-WoundTunnel",
+      "display": "SW WoundTunnel Profile"
+    },
+    {
+      "code": "sw-WoundUnderminingPresentOrAbsent",
+      "display": "SW WoundUnderminingPresentOrAbsent Profile"
+    },
+    {
+      "code": "sw-WoundUndermining",
+      "display": "SW WoundUndermining Profile"
+    }
+  ]
+}

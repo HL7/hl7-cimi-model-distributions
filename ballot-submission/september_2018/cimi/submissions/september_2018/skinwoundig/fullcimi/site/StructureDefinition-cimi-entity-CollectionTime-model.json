@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-entity-CollectionTime-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW CollectionTime Logical Model</b></p>\n  <p>When the sample was obtained, as a specific time or time period.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-CollectionTime-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.entity.CollectionTime"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "CollectionTimeModel",
+  "title": "SW CollectionTime Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "When the sample was obtained, as a specific time or time period.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-entity-CollectionTime-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-entity-CollectionTime-model",
+        "path": "cimi-entity-CollectionTime-model",
+        "definition": "When the sample was obtained, as a specific time or time period.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-CollectionTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-CollectionTime-model.value[x]",
+        "path": "cimi-entity-CollectionTime-model.value[x]",
+        "short": "DateTime or TimePeriod representing when the sample was obtained, as a specific time or time period.",
+        "definition": "DateTime or TimePeriod representing when the sample was obtained, as a specific time or time period.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-CollectionTime-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-entity-CollectionTime-model",
+        "path": "cimi-entity-CollectionTime-model",
+        "definition": "When the sample was obtained, as a specific time or time period.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-entity-CollectionTime-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-entity-CollectionTime-model.value[x]",
+        "path": "cimi-entity-CollectionTime-model.value[x]",
+        "short": "DateTime or TimePeriod representing when the sample was obtained, as a specific time or time period.",
+        "definition": "DateTime or TimePeriod representing when the sample was obtained, as a specific time or time period.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-entity-CollectionTime-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

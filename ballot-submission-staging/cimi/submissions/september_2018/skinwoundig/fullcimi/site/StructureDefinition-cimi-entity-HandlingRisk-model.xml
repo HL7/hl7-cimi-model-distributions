@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-entity-HandlingRisk-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW HandlingRisk Logical Model</b></p>
+  <p>Cautions on the handling of this specimen.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-HandlingRisk-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.entity.HandlingRisk"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="HandlingRiskModel"/>
+  <title value="SW HandlingRisk Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Cautions on the handling of this specimen."/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-entity-HandlingRisk-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-entity-HandlingRisk-model">
+      <path value="cimi-entity-HandlingRisk-model"/>
+      <definition value="Cautions on the handling of this specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-HandlingRisk-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-HandlingRisk-model.value">
+      <path value="cimi-entity-HandlingRisk-model.value"/>
+      <short value="Code representing cautions on the handling of this specimen."/>
+      <definition value="Code representing cautions on the handling of this specimen."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-HandlingRisk-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-entity-HandlingRisk-model">
+      <path value="cimi-entity-HandlingRisk-model"/>
+      <definition value="Cautions on the handling of this specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-entity-HandlingRisk-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-entity-HandlingRisk-model.value">
+      <path value="cimi-entity-HandlingRisk-model.value"/>
+      <short value="Code representing cautions on the handling of this specimen."/>
+      <definition value="Code representing cautions on the handling of this specimen."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-entity-HandlingRisk-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

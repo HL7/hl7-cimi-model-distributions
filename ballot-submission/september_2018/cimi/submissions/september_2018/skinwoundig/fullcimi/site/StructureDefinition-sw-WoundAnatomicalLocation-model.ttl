@@ -1,0 +1,282 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAnatomicalLocation-model> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "sw-WoundAnatomicalLocation-model"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW WoundAnatomicalLocation Logical Model</b></p>\n  <p/>\n</div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAnatomicalLocation-model"];
+  fhir:StructureDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/sw" ];
+     fhir:Identifier.value [ fhir:value "sw.WoundAnatomicalLocation" ]
+  ];
+  fhir:StructureDefinition.version [ fhir:value "1.0.0"];
+  fhir:StructureDefinition.name [ fhir:value "WoundAnatomicalLocationModel"];
+  fhir:StructureDefinition.title [ fhir:value "SW WoundAnatomicalLocation Logical Model"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.date [ fhir:value "2018-08-17T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.keyword [
+     fhir:index 0;
+     a loinc:39111-0;
+     fhir:Coding.system [ fhir:value "http://loinc.org" ];
+     fhir:Coding.code [ fhir:value "39111-0" ];
+     fhir:Coding.display [ fhir:value "Body Site" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "logical"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "sw-WoundAnatomicalLocation-model"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Element"];
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+       fhir:ElementDefinition.short [ fhir:value "WoundAnatomicalLocation" ];
+       fhir:ElementDefinition.definition [ fhir:value "WoundAnatomicalLocation" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+       fhir:ElementDefinition.short [ fhir:value "Code representing the logical model instance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Code representing the logical model instance" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion>;
+           fhir:Reference.reference [ fhir:value "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0925205" ];
+         fhir:Coding.display [ fhir:value "Anatomical laterality" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Anatomical location or specimen further detailing the side(s) of interest." ];
+       fhir:ElementDefinition.definition [ fhir:value "Anatomical location or specimen further detailing the side(s) of interest." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/bodysite-laterality>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/bodysite-laterality" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://evs.nci.nih.gov/ftp1/CDISC/SDTM/" ];
+         fhir:Coding.code [ fhir:value "C99074" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Anatomical location or specimen further detailing directionality." ];
+       fhir:ElementDefinition.definition [ fhir:value "Anatomical location or specimen further detailing directionality." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "0" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+       fhir:ElementDefinition.short [ fhir:value "WoundAnatomicalLocation" ];
+       fhir:ElementDefinition.definition [ fhir:value "WoundAnatomicalLocation" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+       fhir:ElementDefinition.short [ fhir:value "Code representing the logical model instance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Code representing the logical model instance" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.value" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion>;
+           fhir:Reference.reference [ fhir:value "https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1181.14/expansion" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+         fhir:Coding.code [ fhir:value "C0925205" ];
+         fhir:Coding.display [ fhir:value "Anatomical laterality" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Anatomical location or specimen further detailing the side(s) of interest." ];
+       fhir:ElementDefinition.definition [ fhir:value "Anatomical location or specimen further detailing the side(s) of interest." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.laterality" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/bodysite-laterality>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/bodysite-laterality" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+       fhir:ElementDefinition.path [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+       fhir:ElementDefinition.code [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://evs.nci.nih.gov/ftp1/CDISC/SDTM/" ];
+         fhir:Coding.code [ fhir:value "C99074" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Anatomical location or specimen further detailing directionality." ];
+       fhir:ElementDefinition.definition [ fhir:value "Anatomical location or specimen further detailing directionality." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "sw-WoundAnatomicalLocation-model.anatomicalDirection" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "0" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS" ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/bodysite-laterality> a fhir:ValueSet .
+
+<http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/sw/StructureDefinition/sw-WoundAnatomicalLocation-model.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/sw/StructureDefinition/sw-WoundAnatomicalLocation-model.ttl> .
+
+# -------------------------------------------------------------------------------------
+

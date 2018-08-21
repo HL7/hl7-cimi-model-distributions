@@ -1,0 +1,863 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cimi-statement-AssertionPresenceStatement-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SW AssertionPresenceStatement Logical Model</b></p>\n  <p>Statement that a finding is present.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-statement-AssertionPresenceStatement-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/sw",
+      "value": "cimi.statement.AssertionPresenceStatement"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "AssertionPresenceStatementModel",
+  "title": "SW AssertionPresenceStatement Logical Model",
+  "status": "draft",
+  "date": "2018-08-17T00:00:00-04:00",
+  "publisher": "HL7 Patient Care and Clinical Information Modeling Initiative Work Groups",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "Statement that a finding is present.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "cimi-statement-AssertionPresenceStatement-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model",
+        "path": "cimi-statement-AssertionPresenceStatement-model",
+        "definition": "Statement that a finding is present.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+        "path": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.recorded",
+        "path": "cimi-statement-AssertionPresenceStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.signed",
+        "path": "cimi-statement-AssertionPresenceStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+        "path": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+        "path": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+        "path": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.encounter",
+        "path": "cimi-statement-AssertionPresenceStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+        "path": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+        "path": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+        "path": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.media",
+        "path": "cimi-statement-AssertionPresenceStatement-model.media",
+        "short": "A file that contains audio, video, image, or similar content.",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.media",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+        "path": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+        "short": "Whether an assessment has been confirmed by testing or observation.",
+        "definition": "Whether an assessment has been confirmed by testing or observation.\nCIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.onset",
+        "path": "cimi-statement-AssertionPresenceStatement-model.onset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.abatement",
+        "path": "cimi-statement-AssertionPresenceStatement-model.abatement",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "88878-4"
+          }
+        ],
+        "short": "The end, remission or resolution.",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.certainty",
+        "path": "cimi-statement-AssertionPresenceStatement-model.certainty",
+        "short": "The degree of confidence in a conclusion or assertion.",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model",
+        "path": "cimi-statement-AssertionPresenceStatement-model",
+        "definition": "Statement that a finding is present.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+        "path": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0027361"
+          }
+        ],
+        "short": "The person this entry belongs to.",
+        "definition": "The person this entry belongs to.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.personOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-entity-Person-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.recorded",
+        "path": "cimi-statement-AssertionPresenceStatement-model.recorded",
+        "short": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.recorded",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.signed",
+        "path": "cimi-statement-AssertionPresenceStatement-model.signed",
+        "short": "Provenance information specific to the signing of the clinical statement.",
+        "definition": "Provenance information specific to the signing of the clinical statement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.signed",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-core-Attribution-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+        "path": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0947611"
+          }
+        ],
+        "short": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization. Details can discuss, support, explain changes to, or dispute information.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.additionalText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+        "path": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+        "short": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "definition": "Code representing the sense in which the statement is interpreted, for example, the degree of presence in a PresenceStatement.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.contextCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-PresenceContextVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+        "path": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+        "short": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.",
+        "definition": "Compositional and reusable grouping of clinical statement attributes that make up the clinical focus of a statement.\n\nStatementTopic class attributes are aligned with SNOMED CT Concept Model attributes when such an overlap exists. Note that this class does not include contextual attributes such as the nature of the action (ordered, proposed, planned, etc...), the nature of the patient state being described (e.g., present, suspected present, absent), and the attribution of this information (the who, when, where, how, why of the information recorded).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.statementTopic",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-topic-StatementTopic-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.encounter",
+        "path": "cimi-statement-AssertionPresenceStatement-model.encounter",
+        "short": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-encounter-Encounter-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+        "path": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0420833"
+          }
+        ],
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+        "path": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+        "short": "The time or time period that the finding addresses.",
+        "definition": "The time or time period that the finding addresses.\nThe clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.relevantTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+        "path": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+        "short": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "definition": "The technique used to create the finding, for example, the specific imaging technical, lab test code, or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.findingMethod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/sw/ValueSet/cimi-statement-FindingMethodVS"
+          }
+        }
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.media",
+        "path": "cimi-statement-AssertionPresenceStatement-model.media",
+        "short": "A file that contains audio, video, image, or similar content.",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.media",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/cimi-datatypes-Media-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+        "path": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+        "short": "Whether an assessment has been confirmed by testing or observation.",
+        "definition": "Whether an assessment has been confirmed by testing or observation.\nCIMI Alignment: This attribute has been defined to align with FHIR. In AllergyIntolerance, the type is code.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.verificationStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.onset",
+        "path": "cimi-statement-AssertionPresenceStatement-model.onset",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "85585-8"
+          }
+        ],
+        "short": "The beginning or first appearance of a mental or physical disorder.",
+        "definition": "The beginning or first appearance of a mental or physical disorder.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.abatement",
+        "path": "cimi-statement-AssertionPresenceStatement-model.abatement",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "88878-4"
+          }
+        ],
+        "short": "The end, remission or resolution.",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/sw/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "cimi-statement-AssertionPresenceStatement-model.certainty",
+        "path": "cimi-statement-AssertionPresenceStatement-model.certainty",
+        "short": "The degree of confidence in a conclusion or assertion.",
+        "definition": "The degree of confidence in a conclusion or assertion.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "cimi-statement-AssertionPresenceStatement-model.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

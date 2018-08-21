@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cimi-element-AnatomicalDirection-model"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+  <p><b>SW AnatomicalDirection Logical Model</b></p>
+  <p>Anatomical location or specimen further detailing directionality.</p>
+</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sw/StructureDefinition/cimi-element-AnatomicalDirection-model"/>
+  <identifier>
+    <system value="http://hl7.org/fhir/us/sw"/>
+    <value value="cimi.element.AnatomicalDirection"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="AnatomicalDirectionModel"/>
+  <title value="SW AnatomicalDirection Logical Model"/>
+  <status value="draft"/>
+  <date value="2018-08-17T00:00:00-04:00"/>
+  <publisher value="HL7 Patient Care and Clinical Information Modeling Initiative Work Groups"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Anatomical location or specimen further detailing directionality."/>
+  <keyword>
+    <system value="https://evs.nci.nih.gov/ftp1/CDISC/SDTM/"/>
+    <code value="C99074"/>
+  </keyword>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="cimi-element-AnatomicalDirection-model"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="cimi-element-AnatomicalDirection-model">
+      <path value="cimi-element-AnatomicalDirection-model"/>
+      <definition value="Anatomical location or specimen further detailing directionality."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-AnatomicalDirection-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-AnatomicalDirection-model.value">
+      <path value="cimi-element-AnatomicalDirection-model.value"/>
+      <short value="Code representing anatomical location or specimen further detailing directionality."/>
+      <definition value="Code representing anatomical location or specimen further detailing directionality."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-AnatomicalDirection-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cimi-element-AnatomicalDirection-model">
+      <path value="cimi-element-AnatomicalDirection-model"/>
+      <definition value="Anatomical location or specimen further detailing directionality."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cimi-element-AnatomicalDirection-model"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="cimi-element-AnatomicalDirection-model.value">
+      <path value="cimi-element-AnatomicalDirection-model.value"/>
+      <short value="Code representing anatomical location or specimen further detailing directionality."/>
+      <definition value="Code representing anatomical location or specimen further detailing directionality."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cimi-element-AnatomicalDirection-model.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/sw/ValueSet/cimi-element-AnatomicalDirectionVS"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
